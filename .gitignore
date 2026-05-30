@@ -2,6 +2,8 @@
 .env
 *.pem
 *.key
+.youtube_token.json
+.google_token.json
 
 # Python
 __pycache__/

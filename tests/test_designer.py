@@ -2,25 +2,25 @@ import pytest
 from pathlib import Path
 from PIL import Image
 from src.core.brand import Brand, Dimensions
-from src.content_engine.designer import Designer, _galaxy_bg, _pick_template, _TEMPLATES
+from src.content_engine.designer import Designer, _sketch_galaxy_bg, _pick_template, _TEMPLATES
 
 
 def test_galaxy_bg_correct_size():
-    img = _galaxy_bg((1280, 720))
+    img = _sketch_galaxy_bg((1280, 720))
     assert img.size == (1280, 720)
     assert img.mode == "RGB"
 
 
 def test_galaxy_bg_is_dark():
-    img = _galaxy_bg((100, 100), seed=1)
+    img = _sketch_galaxy_bg((100, 100), seed=1)
     raw = img.tobytes()
     avg = sum(raw) / len(raw)
     assert avg < 80  # background is predominantly dark
 
 
 def test_galaxy_bg_different_seeds_differ():
-    img1 = _galaxy_bg((200, 200), seed=1)
-    img2 = _galaxy_bg((200, 200), seed=2)
+    img1 = _sketch_galaxy_bg((200, 200), seed=1)
+    img2 = _sketch_galaxy_bg((200, 200), seed=2)
     assert img1.tobytes() != img2.tobytes()
 
 

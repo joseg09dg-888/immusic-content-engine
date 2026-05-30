@@ -99,9 +99,9 @@ class RebelBrainMethod:
 
 class Brand:
     BLACK: str = "#000000"
-    # (VoiceProfile defined below — references Brand constants)
-    VIOLET: str = "#6200FF"
-    WHITE: str = "#FFFFFF"
+    VIOLET: str = "#5E17EB"   # Violet — primary brand color
+    CREAM: str = "#F2EDE5"    # Cream — secondary light color
+    WHITE: str = "#FFFFFF"    # Pure white — text on dark
 
     CONCEPT: str = "REBEL LUXURY"
     LABEL: str = "IM Music"
@@ -125,9 +125,10 @@ class Brand:
     @classmethod
     def palette(cls) -> dict:
         return {
-            "black": cls.BLACK,
+            "black":  cls.BLACK,
             "violet": cls.VIOLET,
-            "white": cls.WHITE,
+            "cream":  cls.CREAM,
+            "white":  cls.WHITE,
         }
 
 

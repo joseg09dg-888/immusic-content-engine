@@ -53,7 +53,7 @@ def test_burn_subtitles_command_es_white():
 
 def test_burn_subtitles_command_en_violet():
     cmd = burn_subtitles_command(Path("v.mp4"), Path("s.srt"), Path("out.mp4"), lang="en")
-    assert "6200FF" in " ".join(cmd)
+    assert "5E17EB" in " ".join(cmd)
 
 
 def test_broll_fetcher_no_key_returns_empty():

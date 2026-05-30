@@ -65,8 +65,12 @@ def _fit(title: str, promise: str, max_len: int) -> str:
     full = f"{title} — {promise}"
     if len(full) <= max_len:
         return full
+    if len(title) >= max_len:
+        return title[:max_len]
     available = max_len - len(title) - 4
-    return f"{title} — {promise[:max(0, available)].rstrip()}"
+    if available <= 0:
+        return title[:max_len]
+    return f"{title} — {promise[:available].rstrip()}"
 
 
 class SEOEngine:

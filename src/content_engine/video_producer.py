@@ -125,7 +125,8 @@ def burn_subtitles_command(
     lang: str = "es",
 ) -> List[str]:
     """Returns FFmpeg command to burn subtitles onto video."""
-    color = "FFFFFF" if lang == "es" else "6200FF"  # white ES, violet EN
+    from src.core.brand import Brand
+    color = "FFFFFF" if lang == "es" else Brand.VIOLET.lstrip("#")
     return [
         "ffmpeg", "-y",
         "-i", str(video_path),

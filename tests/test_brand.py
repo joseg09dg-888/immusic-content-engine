@@ -2,9 +2,10 @@ from src.core.brand import Brand, Dimensions, Character, ContentDurations, Rebel
 
 
 def test_primary_colors():
-    assert Brand.BLACK == "#000000"
-    assert Brand.VIOLET == "#6200FF"
-    assert Brand.WHITE == "#FFFFFF"
+    assert Brand.BLACK  == "#000000"
+    assert Brand.VIOLET == "#5E17EB"
+    assert Brand.CREAM  == "#F2EDE5"
+    assert Brand.WHITE  == "#FFFFFF"
 
 
 def test_concept():
@@ -58,9 +59,10 @@ def test_publish_times():
 
 def test_color_palette_completeness():
     palette = Brand.palette()
-    assert "black" in palette
+    assert "black"  in palette
     assert "violet" in palette
-    assert "white" in palette
+    assert "cream"  in palette
+    assert "white"  in palette
     assert all(v.startswith("#") for v in palette.values())
 
 
