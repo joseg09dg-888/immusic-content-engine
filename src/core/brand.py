@@ -99,6 +99,7 @@ class RebelBrainMethod:
 
 class Brand:
     BLACK: str = "#000000"
+    # (VoiceProfile defined below — references Brand constants)
     VIOLET: str = "#6200FF"
     WHITE: str = "#FFFFFF"
 
@@ -128,3 +129,81 @@ class Brand:
             "violet": cls.VIOLET,
             "white": cls.WHITE,
         }
+
+
+class VoiceProfile:
+    """
+    Personalidad de marca IM Music — REBEL LUXURY (Lujo Rebelde).
+    Motor: Respeto. Ni el amor ni el odio.
+    Tono: Urbano-profesional. Medellín → Mundo.
+    """
+    TAGLINE: str = "Lujo Rebelde"
+    MOTOR: str = "Respeto — ni el amor ni el odio, el respeto"
+    CEO_TRAITS: list = ["Original", "Directo", "Técnico"]
+
+    TONE: list = [
+        "Urbano-profesional: mezcla calle con sala de juntas",
+        "Directo: no adorna, no da rodeos, no pide disculpas por incomodar",
+        "Accesible: tecnicismos explicados sin condescendencia — todo el mundo entiende",
+        "Original: NUNCA hace lo que hace todo el mundo",
+        "Respetuoso: incomoda con clase, sin groserías",
+    ]
+
+    AUDIENCE: dict = {
+        "primary": "artistas emergentes sin capital, 17-25 años",
+        "secondary": "artistas establecidos, 25-35 años",
+        "geo": "Medellín → Colombia → Latinoamérica → Mundo",
+    }
+
+    DIFFERENTIATORS: list = [
+        "Psicología aplicada al marketing — neuromarketing real, no teoría",
+        "IA aplicada a estrategia musical",
+        "Diagnósticos personalizados — cada artista es un mundo",
+        "Tokenización de proyectos musicales con blockchain",
+        "Modelo de sello no tradicional: plataforma de acceso para emergentes",
+    ]
+
+    WORDS_YES: list = [
+        "el que entiende esto tiene ventaja",
+        "la industria lleva años usando esto en silencio",
+        "esto no es opinión, es biología del mercado",
+        "cada artista es un mundo, la estrategia también",
+        "no es ego, es técnica",
+        "REBEL LUXURY no es un look, es un modelo de negocio",
+        "en Medellín se fabrica talento, en IM Music se gestiona estrategia",
+        "esto cambia cómo lo entendías",
+        "el cerebro no procesa esto como crees",
+    ]
+
+    WORDS_NO: list = [
+        "síguenos", "dale like", "no te pierdas", "en este video te enseño",
+        "qué opinas", "comparte con tus amigos", "haz clic aquí",
+        "somos los mejores", "somos expertos", "contenido de valor",
+        "déjame tu comentario", "activa la campana",
+    ]
+
+    REFERENCE_BRANDS: list = [
+        "Feid — concepto visual, coherencia de marca, posicionamiento",
+        "Sony/Warner — escala global como norte",
+    ]
+
+    HATES: list = [
+        "Ego sin técnica — 'somos expertos porque tenemos contactos'",
+        "Experiencia sin aplicación técnica real",
+        "Modelos de sello tradicionales y estáticos",
+        "Contenido mediocre sin estrategia",
+        "Industria que no innova",
+    ]
+
+    @classmethod
+    def as_prompt_block(cls) -> str:
+        return (
+            f"VOZ DE MARCA — {Brand.LABEL} | {Brand.CONCEPT} ({cls.TAGLINE})\n"
+            f"Motor: {cls.MOTOR}\n"
+            f"Tono: {' | '.join(t.split(':')[0] for t in cls.TONE)}\n"
+            f"Audiencia: {cls.AUDIENCE['primary']} + {cls.AUDIENCE['secondary']} | {cls.AUDIENCE['geo']}\n"
+            f"SÍ usar: {' / '.join(cls.WORDS_YES[:4])}\n"
+            f"NUNCA usar: {' / '.join(cls.WORDS_NO[:6])}\n"
+            "Regla de oro: NUNCA hagas lo que hace todo el mundo. "
+            "Si suena genérico, reescríbelo.\n"
+        )

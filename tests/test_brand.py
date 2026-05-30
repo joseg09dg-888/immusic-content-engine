@@ -1,4 +1,4 @@
-from src.core.brand import Brand, Dimensions, Character, ContentDurations, RebelBrainMethod
+from src.core.brand import Brand, Dimensions, Character, ContentDurations, RebelBrainMethod, VoiceProfile
 
 
 def test_primary_colors():
@@ -97,3 +97,36 @@ def test_rebel_brain_method_prompt_block():
     assert "CREDIBILITY ANCHOR" in block
     assert "INSIGHT REVELATION" in block
     assert "REBEL REFRAME" in block
+
+
+def test_voice_profile_motor():
+    assert "Respeto" in VoiceProfile.MOTOR
+
+
+def test_voice_profile_tagline():
+    assert VoiceProfile.TAGLINE == "Lujo Rebelde"
+
+
+def test_voice_profile_ceo_traits():
+    assert len(VoiceProfile.CEO_TRAITS) == 3
+    assert "Original" in VoiceProfile.CEO_TRAITS
+    assert "Directo" in VoiceProfile.CEO_TRAITS
+
+
+def test_voice_profile_audience_keys():
+    assert "primary" in VoiceProfile.AUDIENCE
+    assert "secondary" in VoiceProfile.AUDIENCE
+    assert "geo" in VoiceProfile.AUDIENCE
+    assert "Medellín" in VoiceProfile.AUDIENCE["geo"]
+
+
+def test_voice_profile_words_no_includes_key_terms():
+    assert "síguenos" in VoiceProfile.WORDS_NO
+    assert "somos los mejores" in VoiceProfile.WORDS_NO
+
+
+def test_voice_profile_prompt_block_has_voice():
+    block = VoiceProfile.as_prompt_block()
+    assert Brand.LABEL in block
+    assert "Respeto" in block
+    assert "NUNCA" in block
