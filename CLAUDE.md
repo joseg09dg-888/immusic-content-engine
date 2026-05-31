@@ -12,10 +12,11 @@ Spec maestro: `docs/superpowers/specs/2026-05-28-immusic-system-design.md`
 ## Marca (INMUTABLE)
 ```
 Negro:   #000000
-Violeta: #6200FF
-Blanco:  #FFFFFF
+Violeta: #5E17EB
+Crema:   #F2EDE5
 Concepto: REBEL LUXURY
 Motivos:  Galaxia, constelaciones, polvo estelar
+Fuentes:  Anton (títulos/subtítulos)
 ```
 brand.py es la única fuente de verdad. Todo cambio visual pasa por ahí.
 

@@ -16,7 +16,8 @@ _WIN_FONTS = Path(r"C:\Windows\Fonts")
 _ASSETS    = Path(__file__).resolve().parent.parent.parent / "assets"
 
 _FONT_MAP = {
-    "title":   ["Anton-Regular.ttf", "impact.ttf"],
+    "title":   ["Sceageus-Regular.otf", "Anton-Regular.ttf", "impact.ttf"],
+    "subtitle": ["Anton-Regular.ttf", "impact.ttf"],
     "bold":    ["segoeuib.ttf", "arialbd.ttf", "calibrib.ttf"],
     "regular": ["segoeui.ttf",  "arial.ttf",   "calibri.ttf"],
 }
