@@ -409,6 +409,97 @@ class Designer:
             img.save(save_path, "PNG")
         return img
 
+    def generate_youtube_short_thumbnail(
+        self, title: str, subtitle: str = "", save_path: Optional[Path] = None
+    ) -> Image.Image:
+        tmpl = _pick_template(title + "ys")
+        img  = _sketch_galaxy_bg(Dimensions.YOUTUBE_SHORT, seed=(hash(title) + 17) & 0xFFFF, template=tmpl)
+        w, h = img.size
+
+        # Violet bar at top (80px) with "SHORTS" label centered
+        bar_h = 80
+        overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        od = ImageDraw.Draw(overlay)
+        violet_rgb = _hex_to_rgb(Brand.VIOLET)
+        od.rectangle([0, 0, w, bar_h], fill=violet_rgb + (255,))
+        img = img.convert("RGBA")
+        img = Image.alpha_composite(img, overlay).convert("RGB")
+        draw = ImageDraw.Draw(img)
+        shorts_font = _font("title", 42)
+        sb = draw.textbbox((0, 0), "SHORTS", font=shorts_font)
+        sx = (w - (sb[2] - sb[0])) // 2
+        sy = (bar_h - (sb[3] - sb[1])) // 2
+        draw.text((sx, sy), "SHORTS", font=shorts_font, fill=Brand.CREAM)
+
+        img  = _draw_text_block(img, title, subtitle, anchor="bottom", max_width_ratio=0.82)
+        img  = _draw_logo_badge(img, badge_h=62)
+        if save_path:
+            save_path.parent.mkdir(parents=True, exist_ok=True)
+            img.save(save_path, "PNG")
+        return img
+
+    def generate_tiktok_carousel_slides(
+        self, slides_data: list, save_dir: Optional[Path] = None
+    ) -> list:
+        size = Dimensions.TIKTOK_CAROUSEL
+        w, h = size
+        images = []
+        total = len(slides_data)
+        for i, slide in enumerate(slides_data):
+            tmpl = _TEMPLATES[i % len(_TEMPLATES)]
+            # Lower star density than carousel
+            tmpl_low = dict(tmpl)
+            tmpl_low["star_density"] = tmpl["star_density"] + 600
+            img = _sketch_galaxy_bg(size, seed=i * 211 + 7, template=tmpl_low)
+
+            # Constellation lines
+            rng = random.Random(i * 211 + 7)
+            draw = ImageDraw.Draw(img)
+            violet_rgb = _hex_to_rgb(Brand.VIOLET)
+            n_pts = rng.randint(4, 6)
+            pts = [
+                (rng.randint(w // 6, 5 * w // 6), rng.randint(h // 6, 5 * h // 6))
+                for _ in range(n_pts)
+            ]
+            for j in range(len(pts) - 1):
+                dim_v = (violet_rgb[0]//4, violet_rgb[1]//4, violet_rgb[2]//4)
+                _sketchy_line(draw, pts[j], pts[j+1], dim_v, width=2, roughness=3, rng=rng)
+                _sketchy_line(draw, pts[j], pts[j+1], violet_rgb, width=1, roughness=1, rng=rng)
+
+            # Slide counter top-left in small cream text
+            num_f = _font("regular", max(18, w // 36))
+            counter = f"{i+1}/{total}"
+            draw.text((28, 28), counter, font=num_f, fill=_hex_to_rgb(Brand.CREAM))
+
+            # Title text block
+            titulo = slide.get("titulo", slide.get("title", ""))
+            subtitulo = slide.get("subtitulo", slide.get("subtitle", ""))
+            dato = slide.get("dato", "")
+            if dato and not subtitulo:
+                subtitulo = dato
+            img = _draw_text_block(img, titulo, subtitulo, anchor="bottom", max_width_ratio=0.84)
+
+            # Logo small bottom-right (badge_h=48)
+            img = _draw_logo_badge(img, badge_h=48)
+
+            if save_dir:
+                save_dir.mkdir(parents=True, exist_ok=True)
+                img.save(save_dir / f"tiktok_slide_{i+1:02d}.png", "PNG")
+            images.append(img)
+        return images
+
+    def generate_pinterest_pin(
+        self, title: str, subtitle: str = "", save_path: Optional[Path] = None
+    ) -> Image.Image:
+        tmpl = _pick_template(title + "pp")
+        img  = _sketch_galaxy_bg(Dimensions.PINTEREST_PIN, seed=(hash(title) + 23) & 0xFFFF, template=tmpl)
+        img  = _draw_text_block(img, title, subtitle, anchor="bottom", max_width_ratio=0.84)
+        img  = _draw_logo_badge(img, badge_h=60)
+        if save_path:
+            save_path.parent.mkdir(parents=True, exist_ok=True)
+            img.save(save_path, "PNG")
+        return img
+
     def generate_pack(self, title: str, subtitle: str, save_dir: Path) -> dict:
         save_dir.mkdir(parents=True, exist_ok=True)
         return {
