@@ -345,8 +345,18 @@ def main():
 
     print(f"\nOutputs en: {base_out}")
     print()
-    print("Para subir a Drive:")
-    print(f"  python scripts/sync_to_drive.py --folder {base_out}")
+
+    # Auto-sincronizar con Google Drive for Desktop
+    try:
+        from src.core.drive_sync import sync_folder_to_drive, drive_status
+        print(f"Drive: {drive_status()}")
+        if sync_folder_to_drive(base_out, subfolder="CONTENIDO"):
+            print("[OK] Contenido disponible en Google Drive automaticamente")
+        else:
+            print("Cuando instales Drive para Escritorio, corre:")
+            print(f"  python scripts/sync_to_drive.py --folder {base_out}")
+    except Exception as e:
+        print(f"[!] Auto-sync: {e}")
 
 
 if __name__ == "__main__":
