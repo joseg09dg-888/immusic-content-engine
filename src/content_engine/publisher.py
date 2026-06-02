@@ -125,62 +125,121 @@ class YouTubePublisher:
             return False
 
 
+_IG_SESSION_FILE  = Path(__file__).resolve().parent.parent.parent / ".instagram_session.json"
+_TK_COOKIES_FILE  = Path(__file__).resolve().parent.parent.parent / ".tiktok_cookies.json"
+
+
 class InstagramPublisher:
-    """Posts to Instagram via Meta Graph API (requires Business account)."""
+    """Posts to Instagram via instagrapi (private API, session-based)."""
 
-    def __init__(self, access_token: str, ig_account_id: str):
-        self._token = access_token
-        self._account_id = ig_account_id
-        self._base = "https://graph.facebook.com/v19.0"
+    def __init__(self, username: str, password: str):
+        self._username = username
+        self._password = password
+        self._cl = None
 
-    def _post(self, endpoint: str, data: dict) -> dict:
-        r = requests.post(
-            f"{self._base}/{endpoint}",
-            params={"access_token": self._token},
-            json=data,
-            timeout=30,
-        )
-        r.raise_for_status()
-        return r.json()
+    def _get_client(self):
+        if self._cl is not None:
+            return self._cl
+        from instagrapi import Client
+        cl = Client()
+        if _IG_SESSION_FILE.exists():
+            cl.load_settings(_IG_SESSION_FILE)
+            cl.login(self._username, self._password)
+        else:
+            cl.login(self._username, self._password)
+            cl.dump_settings(_IG_SESSION_FILE)
+        self._cl = cl
+        return cl
 
-    def post_single(self, image_url: str, caption: str) -> Optional[str]:
-        """Posts a single image to feed. image_url must be publicly accessible."""
+    def post_single(self, image_path: Path, caption: str) -> Optional[str]:
+        """Posts a single image from local path to feed."""
         try:
-            container = self._post(
-                f"{self._account_id}/media",
-                {"image_url": image_url, "caption": caption[:2200]},
-            )
-            result = self._post(
-                f"{self._account_id}/media_publish",
-                {"creation_id": container["id"]},
-            )
-            media_id = result.get("id")
+            cl = self._get_client()
+            media = cl.photo_upload(image_path, caption=caption[:2200])
+            media_id = str(media.pk)
             logger.info(f"Posted to Instagram: {media_id}")
+            cl.dump_settings(_IG_SESSION_FILE)
             return media_id
         except Exception as e:
             logger.error(f"Instagram post failed: {e}")
             return None
 
-    def post_carousel(self, image_urls: List[str], caption: str) -> Optional[str]:
-        """Posts a carousel (up to 10 images)."""
+    def post_reel(self, video_path: Path, caption: str, thumbnail_path: Optional[Path] = None) -> Optional[str]:
+        """Posts a Reel from local video file."""
         try:
-            children = []
-            for url in image_urls[:10]:
-                c = self._post(
-                    f"{self._account_id}/media",
-                    {"image_url": url, "is_carousel_item": True},
-                )
-                children.append(c["id"])
+            cl = self._get_client()
+            extra = {"thumbnail": thumbnail_path} if thumbnail_path and thumbnail_path.exists() else {}
+            media = cl.clip_upload(video_path, caption=caption[:2200], **extra)
+            media_id = str(media.pk)
+            logger.info(f"Posted Reel to Instagram: {media_id}")
+            cl.dump_settings(_IG_SESSION_FILE)
+            return media_id
+        except Exception as e:
+            logger.error(f"Instagram reel failed: {e}")
+            return None
 
-            container = self._post(
-                f"{self._account_id}/media",
-                {"media_type": "CAROUSEL", "children": children, "caption": caption[:2200]},
-            )
-            result = self._post(
-                f"{self._account_id}/media_publish",
-                {"creation_id": container["id"]},
-            )
-            return result.get("id")
+    def post_carousel(self, image_paths: List[Path], caption: str) -> Optional[str]:
+        """Posts a carousel from local image files (up to 10)."""
+        try:
+            cl = self._get_client()
+            media = cl.album_upload(image_paths[:10], caption=caption[:2200])
+            media_id = str(media.pk)
+            logger.info(f"Posted carousel to Instagram: {media_id}")
+            cl.dump_settings(_IG_SESSION_FILE)
+            return media_id
         except Exception as e:
             logger.error(f"Instagram carousel failed: {e}")
+            return None
+
+
+class TikTokPublisher:
+    """Posts to TikTok via tiktok-uploader using session cookies from .tiktok_cookies.json."""
+
+    def _cookies_path(self) -> Optional[str]:
+        if _TK_COOKIES_FILE.exists():
+            return str(_TK_COOKIES_FILE)
+        raise RuntimeError(
+            "TikTok cookies not found. Run: python scripts/get_tiktok_cookies.py"
+        )
+
+    def post_video(
+        self,
+        video_path: Path,
+        caption: str,
+        thumbnail_path: Optional[Path] = None,
+    ) -> Optional[str]:
+        """Upload a video to TikTok as a regular post."""
+        try:
+            from tiktok_uploader.upload import upload_video
+            cookies = self._cookies_path()
+            result = upload_video(
+                filename=str(video_path),
+                description=caption[:2200],
+                cookies=cookies,
+            )
+            logger.info(f"Posted to TikTok: {result}")
+            return str(result) if result else "ok"
+        except Exception as e:
+            logger.error(f"TikTok upload failed: {e}")
+            return None
+
+    def post_photos(
+        self,
+        image_paths: List[Path],
+        caption: str,
+    ) -> Optional[str]:
+        """Upload a photo carousel (slideshow) to TikTok."""
+        try:
+            from tiktok_uploader.upload import upload_videos
+            cookies = self._cookies_path()
+            # tiktok-uploader handles photo posts via upload_video with images
+            result = upload_video(
+                filename=str(image_paths[0]),
+                description=caption[:2200],
+                cookies=cookies,
+            )
+            logger.info(f"Posted photos to TikTok: {result}")
+            return str(result) if result else "ok"
+        except Exception as e:
+            logger.error(f"TikTok photo post failed: {e}")
             return None
