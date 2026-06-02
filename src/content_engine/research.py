@@ -115,6 +115,15 @@ class ResearchEngine:
     def top_stories(self, stories: List[Story], n: int = 5) -> List[Story]:
         return sorted(stories, key=lambda s: s.virality_score, reverse=True)[:n]
 
+    @staticmethod
+    def _clean_text(text: str) -> str:
+        """Elimina HTML tags y caracteres especiales de texto RSS."""
+        import re, html
+        text = html.unescape(text)
+        text = re.sub(r"<[^>]+>", " ", text)
+        text = re.sub(r"\s+", " ", text).strip()
+        return text
+
     def build_brief(self, story: Story) -> dict:
         neuro_angle = (
             "Ángulo neurociencia/psicología: hay datos de comportamiento, atención o emoción en la historia."
@@ -124,11 +133,14 @@ class ResearchEngine:
         # Hook tipo Rebel Brain Method — Pattern Interrupt
         title_lower = story.title.lower().rstrip(".")
         hook = f"Lo que {story.source} acaba de revelar cambia todo lo que creías saber."
+        clean_summary = self._clean_text(story.summary)[:300] if story.summary else ""
+        clean_title   = self._clean_text(story.title)
+
         return {
-            "titulo_principal": story.title,
+            "titulo_principal": clean_title,
             "angulo_neurociencia": neuro_angle,
             "hook_apertura": hook,
-            "datos_clave": [story.summary[:300]] if story.summary else [],
+            "datos_clave": [clean_summary] if clean_summary else [],
             "controversia": f"La industria lleva tiempo sabiendo esto. La pregunta es: ¿por qué no te lo dijeron antes?",
             "fuentes": [{"source": story.source, "url": story.url}],
             "audiencia": "Artistas independientes 17-35 años, Medellín y Latinoamérica",
