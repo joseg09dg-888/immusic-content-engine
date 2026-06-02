@@ -177,38 +177,34 @@ def _synthesize_voice(text: str, output_mp3: Path, lang: str = "es") -> bool:
         return False
 
 
-def _image_to_video(img: Image.Image, duration: float, output: Path, size: tuple, fps: int = 30) -> Path:
+def _image_to_video(img: Image.Image, duration: float, output: Path, size: tuple, fps: int = 24) -> Path:
     """
-    Convierte una imagen en clip de video usando frame-sequence.
-    Método más confiable en Windows: genera N frames JPEG → encode.
+    Convierte una imagen en clip de video (frame-sequence, 24fps).
+    24fps es suficiente para contenido de texto/imágenes estáticas.
     """
     output.parent.mkdir(parents=True, exist_ok=True)
     seq_dir = output.parent / f"_seq_{output.stem}"
     seq_dir.mkdir(exist_ok=True)
 
-    # Redimensionar imagen a tamaño target
-    frame = img.convert("RGB").resize(size, Image.LANCZOS)
-    total_frames = int(fps * duration)
-    fade_frames  = max(1, int(fps * 0.3))
+    frame      = img.convert("RGB").resize(size, Image.LANCZOS)
+    n_frames   = int(fps * duration)
+    fade_n     = max(1, int(fps * 0.25))
 
-    for n in range(total_frames):
-        # Fade in primeros frames
-        if n < fade_frames:
-            alpha = n / fade_frames
-            f = Image.blend(Image.new("RGB", size, (0, 0, 0)), frame, alpha)
-        # Fade out últimos frames
-        elif n >= total_frames - fade_frames:
-            alpha = (total_frames - n) / fade_frames
-            f = Image.blend(Image.new("RGB", size, (0, 0, 0)), frame, alpha)
+    for n in range(n_frames):
+        if n < fade_n:
+            alpha = n / fade_n
+            f = Image.blend(Image.new("RGB", size, BLACK), frame, alpha)
+        elif n >= n_frames - fade_n:
+            alpha = (n_frames - n) / fade_n
+            f = Image.blend(Image.new("RGB", size, BLACK), frame, alpha)
         else:
             f = frame
-        f.save(seq_dir / f"f{n:05d}.jpg", "JPEG", quality=88)
+        f.save(seq_dir / f"f{n:05d}.jpg", "JPEG", quality=85)
 
     cmd = [
-        "ffmpeg", "-y",
-        "-framerate", str(fps),
+        "ffmpeg", "-y", "-framerate", str(fps),
         "-i", str(seq_dir / "f%05d.jpg"),
-        "-c:v", "libx264", "-crf", "18", "-preset", "fast", "-pix_fmt", "yuv420p",
+        "-c:v", "libx264", "-crf", "20", "-preset", "fast", "-pix_fmt", "yuv420p",
         str(output)
     ]
     r = subprocess.run(cmd, capture_output=True, text=True)
