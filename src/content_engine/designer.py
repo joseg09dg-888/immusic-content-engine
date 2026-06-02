@@ -55,14 +55,43 @@ def _wrap_text(draw, text: str, font, max_w: int) -> List[str]:
     return lines
 
 
-def _pick_engraving(seed: int = 0) -> Optional[Path]:
-    """Pick a vintage engraving from assets/engravings/ deterministically by seed."""
-    files = sorted(
+
+# Engravings que NO encajan con REBEL LUXURY o tienen problemas de calidad
+_ENGRAVING_BLACKLIST = {
+    "eng_08_Greek_woman__classical_figure__engraved_by_Pikao.j.png",  # 10KB, demasiado pequeño
+    "eng_05_Brutus_fibula_compared_with_antique_coin.png",              # tiene texto anotaciones
+    "eng_19_Dr_Batson_in_faquir_dress_after_Delhi_Massacre__In.png",   # contexto inapropiado
+    "eng_02_Eagle_Map_of_the_United_States_Engraved_For_Rudime.png",   # mapa con texto legible
+}
+
+def _pick_engraving(seed: int = 0, exclude: list = None) -> Optional[Path]:
+    """
+    Pick a vintage engraving deterministically by seed.
+    - Filtra archivos < 50KB (baja calidad)
+    - Filtra blacklist (no encajan con REBEL LUXURY)
+    - Nunca repite en el mismo carrusel (exclude list)
+    - Distribuye uniformemente entre todos los disponibles
+    """
+    MIN_SIZE_KB = 50
+    all_files = sorted(
         list(_ENGRAVINGS.glob("*.png")) + list(_ENGRAVINGS.glob("*.jpg"))
     )
+    # Filtrar: mínimo 50KB + no en blacklist
+    files = [
+        f for f in all_files
+        if f.stat().st_size > MIN_SIZE_KB * 1024
+        and f.name not in _ENGRAVING_BLACKLIST
+    ]
+    if not files:
+        files = all_files  # fallback
     if not files:
         return None
-    return files[seed % len(files)]
+    exclude = exclude or []
+    available = [f for f in files if f not in exclude]
+    if not available:
+        available = files  # cycle when all used
+    rng = random.Random(seed)
+    return rng.choice(available)
 
 
 def _rebel_luxury_bg(
@@ -120,58 +149,77 @@ def _draw_rebel_text(
     cta: str = "",
 ) -> Image.Image:
     """
-    REBEL LUXURY text hierarchy — matches @immusicsello exactly:
-      [small CONTEXT TEXT]       ~48-52% vertical
-      [MASSIVE WHITE HEADLINE]   ~53-68% vertical
-      [small SUBTITLE]           ~68-72% vertical
-      [small CTA]                ~87-89% vertical (always near bottom)
-    All text: pure white, centered, uppercase Anton.
+    REBEL LUXURY text hierarchy — matches @immusicsello exactly.
+    Auto-sizes headline so context + headline + subtitle NEVER overlap.
+    Safe zone: text block fits between 47%-85% vertical.
+      [small CONTEXT]    ~47-51%
+      [MASSIVE HEADLINE] ~52-72%
+      [small SUBTITLE]   ~73-76%
+      [CTA]              ~88%
     """
     w, h = img.size
     draw = ImageDraw.Draw(img)
 
-    ctx_sz  = max(22, w // 56)   # ~26px @ 1440w
-    head_sz = max(88, w // 10)   # ~144px @ 1440w — fills most of width
-    sub_sz  = max(22, w // 56)
-    cta_sz  = max(18, w // 70)
+    ctx_sz = max(20, w // 58)
+    sub_sz = max(20, w // 58)
+    cta_sz = max(16, w // 72)
 
-    ctx_font  = _font("title",   ctx_sz)
-    head_font = _font("title",   head_sz)
-    sub_font  = _font("title",   sub_sz)
-    cta_font  = _font("regular", cta_sz)
+    ctx_font = _font("title",   ctx_sz)
+    sub_font = _font("title",   sub_sz)
+    cta_font = _font("regular", cta_sz)
 
     max_w_head = int(w * 0.93)
     max_w_ctx  = int(w * 0.88)
 
-    head_lines = _wrap_text(draw, headline.upper(), head_font, max_w_head) if headline else []
-    head_lh    = int(head_sz * 0.97)  # tight leading for display font
+    # ── Auto-size headline to fit available vertical space ────────────────
+    # Available: from ~52% to ~72% of height
+    available_h = int(h * 0.20)  # 20% of canvas for headline
 
-    # Block start position: ~50% down (context pushes it up slightly)
+    # Start with max size and reduce until it fits
+    head_sz = max(88, w // 9)
+    for attempt in range(8):
+        head_font = _font("title", head_sz)
+        head_lines = _wrap_text(draw, headline.upper(), head_font, max_w_head) if headline else []
+        head_lh = int(head_sz * 0.96)
+        total_head_h = head_lh * len(head_lines)
+        if total_head_h <= available_h or head_sz <= 52:
+            break
+        head_sz = int(head_sz * 0.88)
+
+    head_font  = _font("title", head_sz)
+    head_lines = _wrap_text(draw, headline.upper(), head_font, max_w_head) if headline else []
+    head_lh    = int(head_sz * 0.96)
+
+    # ── Measure context lines ─────────────────────────────────────────────
+    ctx_lines = _wrap_text(draw, context.upper(), ctx_font, max_w_ctx) if context else []
+
+    # ── Calculate block start (push up if more content) ──────────────────
     y = int(h * 0.50)
     if context:
         y = int(h * 0.47)
+    if context and len(ctx_lines) > 1:
+        y = int(h * 0.44)
 
-    # Small context text (above headline)
-    if context:
-        ctx_lines = _wrap_text(draw, context.upper(), ctx_font, max_w_ctx)
-        for ln in ctx_lines:
-            bx = draw.textbbox((0, 0), ln, font=ctx_font)
-            x = (w - (bx[2] - bx[0])) // 2
-            draw.text((x, y), ln, font=ctx_font, fill=(255, 255, 255))
-            y += ctx_sz + 3
-        y += 8
+    # ── Draw context (small, above headline) ─────────────────────────────
+    for ln in ctx_lines:
+        bx = draw.textbbox((0, 0), ln, font=ctx_font)
+        x  = (w - (bx[2] - bx[0])) // 2
+        draw.text((x, y), ln, font=ctx_font, fill=(255, 255, 255))
+        y += ctx_sz + 2
+    if ctx_lines:
+        y += 6
 
-    # MASSIVE headline — the hero element
+    # ── Draw MASSIVE headline ─────────────────────────────────────────────
     for ln in head_lines:
         bx = draw.textbbox((0, 0), ln, font=head_font)
         lw = bx[2] - bx[0]
-        x = (w - lw) // 2
-        # Black shadow for legibility on engraving
-        draw.text((x + 4, y + 4), ln, font=head_font, fill=(0, 0, 0))
+        x  = (w - lw) // 2
+        # Strong black shadow — legible over any engraving
+        draw.text((x + 3, y + 3), ln, font=head_font, fill=(0, 0, 0))
         draw.text((x,     y    ), ln, font=head_font, fill=(255, 255, 255))
         y += head_lh
 
-    y += 10
+    y += 8
 
     # Small subtitle below headline
     if subtitle:
@@ -306,15 +354,20 @@ class Designer:
     ) -> List[Image.Image]:
         """
         Instagram carousel: N content slides + 1 closing brand card.
-        Each content slide: violet BG + vintage engraving + REBEL LUXURY text.
+        Each slide uses a DIFFERENT engraving — never repeats.
         Final slide: black BG + centered violet logo + MUSIC.
         """
         size = Dimensions.INSTAGRAM_SQUARE
         images = []
-        content_slides = slides[:9]  # max 9 content + 1 brand card = 10
+        content_slides = slides[:9]
+        used_engravings = []
 
         for i, slide in enumerate(content_slides):
-            img = _rebel_luxury_bg(size, seed=i)
+            # Pick unique engraving for each slide
+            eng = _pick_engraving(seed=i * 7 + 13, exclude=used_engravings)
+            if eng:
+                used_engravings.append(eng)
+            img = _rebel_luxury_bg(size, engraving_path=eng, seed=i * 7 + 13)
             img = _draw_rebel_text(
                 img,
                 context=slide.get("context", slide.get("supra", "")),

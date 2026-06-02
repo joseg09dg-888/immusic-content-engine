@@ -1,9 +1,11 @@
-# Secrets
+# Secrets — NUNCA al repo
 .env
 *.pem
 *.key
 .youtube_token.json
 .google_token.json
+.instagram_session.json
+.tiktok_cookies.json
 
 # Python
 __pycache__/
@@ -16,9 +18,11 @@ env/
 dist/
 build/
 
-# Outputs (archivos grandes — usar Git LFS o Drive)
+# Outputs — archivos generados van a Drive, no al repo
+outputs/
 releases/
 logs/*.log
+_tmp_*
 
 # OS
 .DS_Store

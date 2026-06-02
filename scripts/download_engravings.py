@@ -19,18 +19,45 @@ HEADERS = {"User-Agent": "IMMusic-ContentEngine/1.0 (immusicsello@gmail.com)"}
 
 # Wikimedia Commons searches — each yields vintage B&W engraving suitable for REBEL LUXURY
 SEARCH_TERMS = [
-    "Gustave Dore engraving angel",
-    "vintage engraving lion heraldic",
-    "antique engraving eagle",
-    "memento mori skull engraving",
-    "baroque engraving hand",
-    "vintage engraving crown royal",
-    "botanical engraving rose flower",
-    "vintage engraving snake serpent",
-    "classical engraving figure",
-    "antique engraving building architecture",
-    "vintage engraving cupid cherub",
-    "engraving money coins gold",
+    # Angeles y figuras divinas
+    "Gustave Dore Paradise Lost engraving",
+    "Doré Bible illustration engraving",
+    "baroque angel engraving classical",
+    "Raphael cherub angel drawing",
+    # Figuras humanas y retratos
+    "classical Greek sculpture engraving",
+    "Roman bust engraving antique",
+    "medieval knight armor engraving",
+    "renaissance portrait woodcut",
+    # Animales emblemáticos
+    "heraldic lion engraving vintage",
+    "eagle imperial engraving antique",
+    "wolf engraving vintage woodcut",
+    "panther jaguar engraving vintage",
+    # Símbolos poder y lujo
+    "royal crown engraving heraldic",
+    "sword dagger engraving vintage",
+    "key antique engraving baroque",
+    "hourglass engraving memento mori",
+    # Naturaleza dramática
+    "skull memento mori engraving baroque",
+    "botanical illustration orchid vintage",
+    "rose thorns engraving romantic",
+    "tree of life engraving vintage",
+    # Arquitectura y monumentos
+    "gothic cathedral engraving vintage",
+    "pyramid egypt engraving antique",
+    "colosseum rome engraving vintage",
+    # Música e industria
+    "violin lute instrument engraving vintage",
+    "piano forte engraving antique",
+    "hand pointing finger engraving vintage",
+    "lightning thunder engraving vintage",
+    # Temas REBEL LUXURY
+    "ouroboros snake circle engraving",
+    "medusa head engraving greek",
+    "atlas globe world engraving vintage",
+    "infinity mirror labyrinth engraving",
 ]
 
 
