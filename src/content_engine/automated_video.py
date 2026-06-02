@@ -139,7 +139,7 @@ def _wrap(draw, text: str, font, max_w: int) -> List[str]:
 # es-MX-DaliaNeural  = voz femenina mexicana, muy neutra
 # es-ES-AlvaroNeural = voz masculina española (castellano estándar)
 # es-CO-GonzaloNeural = voz colombiana (opción regional)
-_VOICE_MODEL = "es-MX-JorgeNeural"
+_VOICE_MODEL = "es-MX-DaliaNeural"  # Femenina mexicana — más persuasiva, mayor retención
 
 
 def _synthesize_voice(text: str, output_mp3: Path, lang: str = "es") -> bool:
