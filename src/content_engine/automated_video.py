@@ -134,10 +134,12 @@ def _wrap(draw, text: str, font, max_w: int) -> List[str]:
     return lines
 
 
-# Voz de marca IM Music — Colombiana, masculina, neural
-# es-CO-GonzaloNeural = voz masculina colombiana (Medellín)
-# es-CO-SalomeNeural  = voz femenina colombiana
-_VOICE_MODEL = "es-CO-GonzaloNeural"
+# Voz IM Music — Español neutro, masculina, neural (sin acento regional)
+# es-MX-JorgeNeural  = voz masculina mexicana, muy neutra, estándar medios LatAm
+# es-MX-DaliaNeural  = voz femenina mexicana, muy neutra
+# es-ES-AlvaroNeural = voz masculina española (castellano estándar)
+# es-CO-GonzaloNeural = voz colombiana (opción regional)
+_VOICE_MODEL = "es-MX-JorgeNeural"
 
 
 def _synthesize_voice(text: str, output_mp3: Path, lang: str = "es") -> bool:
