@@ -1,26 +1,40 @@
 """
 IM Music Video Editor — REBEL LUXURY brand treatment.
 
-Características:
-  - Color grading cinematográfico (look cine: contraste alto, sombras frías, skin tone cálido)
-  - Corte automático de silencios (silences removed)
-  - Subtítulos con fuente Anton (marca) — archivo SRT manual o con Whisper
-  - B-roll / imágenes de identidad de marca insertadas según guión
-  - Intro 3s con logo IM + título
-  - Watermark logo siempre visible
-  - Outro 4s con logo + redes
-  - Exporta YouTube 16:9, Reel/TikTok/Short 9:16
+PERFILES DE EDICIÓN POR TIPO DE CONTENIDO:
+Cada formato del plan de contenidos tiene su propio perfil de edición coherente.
 
-Uso básico:
+  organico     → Storytelling / Celular en mano
+                 Silencios cortados, transiciones crossfade 0.3s, subtítulos grandes,
+                 watermark, sin intro larga — feel auténtico y raw
+
+  blog         → Documentación / Día en la Vida
+                 Silencios cortados, B-roll de marca insertado, subtítulos,
+                 transiciones suaves, intro + watermark
+
+  fake_podcast → Educativo / Fake Podcast
+                 Sin corte de silencios (las pausas dan autoridad), lower thirds con
+                 la pregunta en pantalla, subtítulos Anton, cortes limpios
+
+  atraccion    → Atracción / Reel Rápido
+                 Silencios cortados agresivo (-30dB, 0.2s min), texto en pantalla
+                 enorme (Pattern Interrupt), sin intro — arranca directo al hook,
+                 cortes rápidos cada 2-3s
+
+  validacion   → Validación / Comparativa
+                 Limpio y estructurado, callouts de texto, cortes precisos,
+                 color grade moderado, subtítulos
+
+  fidelizacion → Fidelización / Manifiesto / Visión
+                 Pacing lento y cinematográfico, color grade fuerte,
+                 sin subtítulos permanentes (deja respirar), outro largo con logo
+
+Uso:
     editor = VideoEditor()
-    pack = editor.produce_pack("raw_video.mp4", titulo="Por que fracasan los artistas")
-
-Con todas las funciones:
     pack = editor.produce_pack(
-        "raw.mp4", titulo="...",
-        srt_path="subtitulos.srt",        # opcional — subtítulos manuales
-        broll_images=["img1.png", ...],   # opcional — B-roll de marca
-        remove_silence=True,              # corta silencios automáticamente
+        "raw.mp4",
+        titulo="Por que fracasan los artistas",
+        content_type="organico",   # ← perfil automático de edición
     )
 """
 import logging
@@ -35,6 +49,107 @@ logger = logging.getLogger(__name__)
 
 _ASSETS = Path(__file__).resolve().parent.parent.parent / "assets"
 _OUTPUTS = Path(__file__).resolve().parent.parent.parent / "outputs"
+
+# ── PERFILES DE EDICIÓN POR TIPO DE CONTENIDO ────────────────────────────────
+# Cada perfil define exactamente cómo se edita ese tipo de video.
+# Coherencia total: edición ↔ formato ↔ guión.
+
+EDIT_PROFILES = {
+    "organico": {
+        # Storytelling / Celular en mano — feel auténtico, sin pulir de más
+        "remove_silence":     True,
+        "silence_threshold":  -32.0,   # dB — agresivo para cortar dudas/uhh
+        "min_silence_dur":    0.35,    # segundos
+        "silence_padding":    0.12,    # deja mínimo margen natural
+        "cinema_grade":       True,
+        "add_intro":          False,   # arranca directo — orgánico no tiene intro de logo
+        "add_outro":          True,
+        "add_watermark":      True,
+        "subtitle_size":      "large", # subtítulos grandes para móvil
+        "subtitle_position":  "bottom",
+        "transition_dur":     0.25,    # crossfade breve y suave
+        "description": "Storytelling auténtico: silencios cortados, subtítulos grandes, sin intro.",
+    },
+    "blog": {
+        # Documentación / Día en la Vida / Vlog
+        "remove_silence":     True,
+        "silence_threshold":  -35.0,
+        "min_silence_dur":    0.5,
+        "silence_padding":    0.18,
+        "cinema_grade":       True,
+        "add_intro":          True,
+        "add_outro":          True,
+        "add_watermark":      True,
+        "subtitle_size":      "medium",
+        "subtitle_position":  "bottom",
+        "transition_dur":     0.35,
+        "use_broll":          True,    # usa B-roll de marca si hay imágenes
+        "description": "Vlog/blog: B-roll insertado, transiciones suaves, intro+outro.",
+    },
+    "fake_podcast": {
+        # Educativo / Fake Podcast — autoridad y pausas intencionales
+        "remove_silence":     False,   # las pausas dan peso a las palabras
+        "cinema_grade":       True,
+        "add_intro":          True,
+        "add_outro":          True,
+        "add_watermark":      True,
+        "subtitle_size":      "medium",
+        "subtitle_position":  "bottom",
+        "transition_dur":     0.15,    # cortes limpios, sin crossfade romántico
+        "lower_thirds":       True,    # pregunta/tema en pantalla
+        "description": "Podcast: pauses kept for authority, lower thirds, clean cuts.",
+    },
+    "atraccion": {
+        # Reel Rápido / Controversia — agresivo, sin respiro, hook inmediato
+        "remove_silence":     True,
+        "silence_threshold":  -28.0,   # muy agresivo
+        "min_silence_dur":    0.20,    # corta hasta micro-silencios
+        "silence_padding":    0.08,
+        "cinema_grade":       True,
+        "add_intro":          False,   # NUNCA intro en contenido de atracción
+        "add_outro":          False,   # tampoco outro — termina y ya
+        "add_watermark":      True,
+        "subtitle_size":      "xl",    # subtítulos enormes tipo TikTok/Reels viral
+        "subtitle_position":  "center",
+        "transition_dur":     0.0,     # cortes duros, sin fade
+        "description": "Reel de atracción: hook inmediato, cortes duros, subtítulos enormes.",
+    },
+    "validacion": {
+        # Comparativa / Demostración
+        "remove_silence":     True,
+        "silence_threshold":  -33.0,
+        "min_silence_dur":    0.4,
+        "silence_padding":    0.15,
+        "cinema_grade":       True,
+        "add_intro":          True,
+        "add_outro":          True,
+        "add_watermark":      True,
+        "subtitle_size":      "medium",
+        "subtitle_position":  "bottom",
+        "transition_dur":     0.2,
+        "description": "Validación: limpio, estructurado, callouts de texto.",
+    },
+    "fidelizacion": {
+        # Manifiesto / Visión de Marca — cinematográfico y poderoso
+        "remove_silence":     False,   # los silencios son dramáticos
+        "cinema_grade":       True,
+        "add_intro":          True,
+        "add_outro":          True,
+        "add_watermark":      True,
+        "subtitle_size":      "small",  # subtítulos discretos — no distraen
+        "subtitle_position":  "bottom",
+        "transition_dur":     0.5,     # fades lentos y elegantes
+        "description": "Manifiesto: cinematográfico, pacing lento, sombras profundas.",
+    },
+}
+
+# Alias para facilitar uso
+EDIT_PROFILES["storytelling"] = EDIT_PROFILES["organico"]
+EDIT_PROFILES["vlog"]         = EDIT_PROFILES["blog"]
+EDIT_PROFILES["podcast"]      = EDIT_PROFILES["fake_podcast"]
+EDIT_PROFILES["reel"]         = EDIT_PROFILES["atraccion"]
+EDIT_PROFILES["manifiesto"]   = EDIT_PROFILES["fidelizacion"]
+EDIT_PROFILES["default"]      = EDIT_PROFILES["blog"]  # fallback
 
 # Colores marca
 VIOLET  = (94, 23, 235)
@@ -702,46 +817,75 @@ class VideoEditor:
         raw_video: Path,
         titulo: str,
         out_dir: Optional[Path] = None,
+        content_type: str = "default",     # organico | blog | fake_podcast | atraccion | validacion | fidelizacion
         youtube_full: bool = True,
         reel_duration: float = 45.0,
         tiktok_duration: float = 60.0,
         short_duration: float = 58.0,
-        # Nuevas opciones
-        cinema_grade: bool = True,         # Color grading cinematográfico
-        remove_silence: bool = True,       # Cortar silencios automáticamente
-        srt_path: Optional[Path] = None,   # Subtítulos SRT con fuente Anton
-        broll_data: Optional[list] = None, # B-roll de imágenes de marca
+        # Overrides opcionales (sobreescriben el perfil si se pasan)
+        cinema_grade: Optional[bool] = None,
+        remove_silence: Optional[bool] = None,
+        srt_path: Optional[Path] = None,
+        broll_data: Optional[list] = None,
     ) -> dict:
         """
         Pipeline completo: raw video → pack con todos los formatos.
-        Calidad máxima en todo: 4K cuando el video lo permite, CRF bajo, H.264 High Profile.
+        El content_type determina automáticamente el estilo de edición.
+        Calidad máxima: 4K cuando el video lo permite, CRF 16-18, H.264 High Profile.
 
         Retorna dict con rutas de todos los archivos generados.
         """
+        # ── Cargar perfil de edición ─────────────────────────────────────────
+        profile = EDIT_PROFILES.get(content_type, EDIT_PROFILES["default"]).copy()
+
+        # Overrides manuales sobreescriben el perfil
+        if cinema_grade is not None:
+            profile["cinema_grade"] = cinema_grade
+        if remove_silence is not None:
+            profile["remove_silence"] = remove_silence
+
+        print(f"\n{'='*50}")
+        print(f"EDITOR IM MUSIC — REBEL LUXURY")
+        print(f"Tipo: {content_type.upper()} | {profile['description']}")
+        print(f"{'='*50}")
+
         if out_dir is None:
             slug = titulo[:30].lower().replace(" ", "_").replace("?", "").replace("¿", "")
             out_dir = _OUTPUTS / f"edited_{slug}"
         out_dir.mkdir(parents=True, exist_ok=True)
 
-        pack = {"titulo": titulo, "raw": str(raw_video), "outputs": {}}
+        pack = {
+            "titulo": titulo,
+            "content_type": content_type,
+            "raw": str(raw_video),
+            "profile": profile["description"],
+            "outputs": {}
+        }
         tmp_dir = out_dir / "_tmp"
         tmp_dir.mkdir(exist_ok=True)
 
         # ── PASO 1: Pre-procesar video ───────────────────────────────────────
         working = raw_video
 
-        # 1a. Cortar silencios (si el video tiene audio)
-        if remove_silence and self._has_audio(working):
+        # 1a. Cortar silencios — solo si el perfil lo indica
+        _remove_sil = profile.get("remove_silence", True)
+        if _remove_sil and self._has_audio(working):
             print("Cortando silencios...")
             no_silence = tmp_dir / "no_silence.mp4"
             try:
-                working = self.remove_silences(working, no_silence)
+                working = self.remove_silences(
+                    working, no_silence,
+                    silence_threshold=profile.get("silence_threshold", -35.0),
+                    min_silence_dur=profile.get("min_silence_dur", 0.4),
+                    padding=profile.get("silence_padding", 0.15),
+                )
                 print(f"  [OK] Silencios eliminados")
             except Exception as e:
                 print(f"  [!] Silencio removal saltado: {e}")
 
         # 1b. Color grading cinematográfico
-        if cinema_grade:
+        _cinema = profile.get("cinema_grade", True)
+        if _cinema:
             print("Aplicando color grade cine REBEL LUXURY...")
             graded = tmp_dir / "graded.mp4"
             try:
@@ -749,6 +893,12 @@ class VideoEditor:
                 print(f"  [OK] Color grade aplicado")
             except Exception as e:
                 print(f"  [!] Color grade saltado: {e}")
+
+        # Guardar configuración de subtítulos en pack para procesamiento externo
+        pack["subtitle_config"] = {
+            "size": profile.get("subtitle_size", "medium"),
+            "position": profile.get("subtitle_position", "bottom"),
+        }
 
         # 1c. B-roll inserts
         if broll_data:
@@ -782,8 +932,10 @@ class VideoEditor:
             try:
                 self.add_branding(
                     working, yt_path, titulo=titulo,
-                    add_intro=True, add_outro=True, add_watermark=True,
-                    quality="ultra",  # CRF 16 para YouTube
+                    add_intro=profile.get("add_intro", True),
+                    add_outro=profile.get("add_outro", True),
+                    add_watermark=profile.get("add_watermark", True),
+                    quality="ultra",  # CRF 16 para YouTube — máxima calidad REBEL LUXURY
                 )
                 pack["outputs"]["youtube"] = str(yt_path)
                 print(f"[OK] YouTube 16:9: {yt_path.stat().st_size//1024}KB")
