@@ -134,12 +134,43 @@ def _wrap(draw, text: str, font, max_w: int) -> List[str]:
     return lines
 
 
+# Voz de marca IM Music — Colombiana, masculina, neural
+# es-CO-GonzaloNeural = voz masculina colombiana (Medellín)
+# es-CO-SalomeNeural  = voz femenina colombiana
+_VOICE_MODEL = "es-CO-GonzaloNeural"
+
+
 def _synthesize_voice(text: str, output_mp3: Path, lang: str = "es") -> bool:
-    """Genera audio con gTTS (Google TTS). Retorna True si OK."""
+    """
+    Genera narración con voz neural colombiana.
+    Prioridad: Edge TTS (Microsoft, gratis) → gTTS (fallback)
+
+    Edge TTS usa voz es-CO-GonzaloNeural — masculina colombiana, calidad premium.
+    Instalación: pip install edge-tts
+    """
+    # 1. Intentar Edge TTS (voz colombiana neural — mucho mejor calidad)
+    try:
+        import asyncio
+        import edge_tts
+
+        async def _run():
+            communicate = edge_tts.Communicate(text, voice=_VOICE_MODEL, rate="+5%")
+            await communicate.save(str(output_mp3))
+
+        asyncio.run(_run())
+        logger.info(f"Edge TTS OK ({_VOICE_MODEL}): {output_mp3.name}")
+        return True
+    except ImportError:
+        logger.info("Edge TTS no instalado, usando gTTS. Instala: pip install edge-tts")
+    except Exception as e:
+        logger.warning(f"Edge TTS failed: {e}")
+
+    # 2. Fallback a gTTS (Google, calidad básica)
     try:
         from gtts import gTTS
         tts = gTTS(text=text, lang=lang, slow=False)
         tts.save(str(output_mp3))
+        logger.info(f"gTTS OK: {output_mp3.name}")
         return True
     except Exception as e:
         logger.warning(f"gTTS failed: {e}")
@@ -147,21 +178,41 @@ def _synthesize_voice(text: str, output_mp3: Path, lang: str = "es") -> bool:
 
 
 def _image_to_video(img: Image.Image, duration: float, output: Path, size: tuple, fps: int = 30) -> Path:
-    """Convierte una imagen en un clip de video de duración fija."""
+    """
+    Convierte una imagen en clip de video usando frame-sequence.
+    Método más confiable en Windows: genera N frames JPEG → encode.
+    """
     output.parent.mkdir(parents=True, exist_ok=True)
-    tmp_img = output.parent / f"_tmp_{output.stem}.png"
-    img.save(tmp_img)
+    seq_dir = output.parent / f"_seq_{output.stem}"
+    seq_dir.mkdir(exist_ok=True)
 
-    # Fade in/out
+    # Redimensionar imagen a tamaño target
+    frame = img.convert("RGB").resize(size, Image.LANCZOS)
+    total_frames = int(fps * duration)
+    fade_frames  = max(1, int(fps * 0.3))
+
+    for n in range(total_frames):
+        # Fade in primeros frames
+        if n < fade_frames:
+            alpha = n / fade_frames
+            f = Image.blend(Image.new("RGB", size, (0, 0, 0)), frame, alpha)
+        # Fade out últimos frames
+        elif n >= total_frames - fade_frames:
+            alpha = (total_frames - n) / fade_frames
+            f = Image.blend(Image.new("RGB", size, (0, 0, 0)), frame, alpha)
+        else:
+            f = frame
+        f.save(seq_dir / f"f{n:05d}.jpg", "JPEG", quality=88)
+
     cmd = [
         "ffmpeg", "-y",
-        "-loop", "1", "-t", str(duration), "-i", str(tmp_img),
-        "-vf", f"scale={size[0]}:{size[1]},setsar=1,fps={fps},fade=t=in:st=0:d=0.3,fade=t=out:st={max(0,duration-0.3)}:d=0.3",
+        "-framerate", str(fps),
+        "-i", str(seq_dir / "f%05d.jpg"),
         "-c:v", "libx264", "-crf", "18", "-preset", "fast", "-pix_fmt", "yuv420p",
         str(output)
     ]
     r = subprocess.run(cmd, capture_output=True, text=True)
-    tmp_img.unlink(missing_ok=True)
+    shutil.rmtree(seq_dir, ignore_errors=True)
     if r.returncode != 0:
         raise RuntimeError(f"image_to_video failed: {r.stderr[-200:]}")
     return output
@@ -269,7 +320,7 @@ class AutomatedVideoProducer:
         self,
         brief: dict,
         output_path: Path,
-        size: tuple = (1080, 1920),
+        size: tuple = (720, 1280),   # 720p vertical — comprobado en Windows
         with_voice: bool = True,
     ) -> Path:
         """Crea un Reel completo con voz, texto y grabados."""
