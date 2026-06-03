@@ -85,6 +85,130 @@ class ContentWriter:
     def __init__(self, api_key: str):
         self._client = anthropic.Anthropic(api_key=api_key)
 
+    def _call_api(self, prompt: str, max_tokens: int = 2048) -> str:
+        response = self._client.messages.create(
+            model="claude-sonnet-4-6",
+            max_tokens=max_tokens,
+            system=[{"type": "text", "text": _SYSTEM_PROMPT, "cache_control": {"type": "ephemeral"}}],
+            messages=[{"role": "user", "content": prompt}],
+        )
+        return response.content[0].text
+
+    def generate_youtube_short(self, brief: dict) -> dict:
+        prompt = f"""Crea guión YouTube Short 55-58 segundos sobre: "{brief.get('titulo_principal', '')}"
+Ángulo neurociencia: {brief.get('angulo_neurociencia', '')}
+
+ESTRUCTURA OBLIGATORIA:
+- 0-3s: Pattern Interrupt — rompe el scroll con frase o visual impactante
+- 3-15s: Dato sorprendente con número concreto
+- 15-45s: Neurociencia explicada — técnico pero accesible, voz REBEL LUXURY
+- 45-55s: Rebel Reframe — la verdad que nadie te dijo
+- 55-58s: CTA IM Music — directo, sin pedir permiso
+
+Responde EXACTAMENTE en este formato JSON (sin texto fuera del JSON):
+{{
+  "guion_completo": "guión completo hablado de 55-58 segundos",
+  "texto_pantalla": ["texto slide 1", "texto slide 2", "texto slide 3", "texto slide 4", "texto slide 5"],
+  "hook_visual": "descripción del gancho visual primeros 3 segundos",
+  "hashtags_youtube_short": ["#hashtag1", "#hashtag2", "#hashtag3", "#hashtag4", "#hashtag5"]
+}}"""
+        raw = self._call_api(prompt, max_tokens=1200)
+        return self._parse_json(raw)
+
+    def generate_tiktok_carousel(self, brief: dict, num_slides: int = 6) -> dict:
+        prompt = f"""Crea carrusel {num_slides} slides TikTok sobre: "{brief.get('titulo_principal', '')}"
+Ángulo neurociencia: {brief.get('angulo_neurociencia', '')}
+Hook: {brief.get('hook_apertura', '')}
+
+REGLAS POR SLIDE:
+- Slide 1: título impactante máximo 6 palabras — para el scroll
+- Slides 2 a {num_slides - 1}: insight poderoso máximo 15 palabras por slide
+- Slide {num_slides}: verdad incómoda como CTA — sin "síguenos" ni genéricos
+
+Responde EXACTAMENTE en este formato JSON (sin texto fuera del JSON):
+{{
+  "slides": [
+    {{"numero": 1, "titulo": "título máx 6 palabras", "subtitulo": "subtítulo opcional", "dato": "dato o stat si aplica"}},
+    {{"numero": 2, "titulo": "insight poderoso máx 15 palabras", "subtitulo": "", "dato": ""}},
+    {{"numero": 3, "titulo": "insight poderoso máx 15 palabras", "subtitulo": "", "dato": ""}},
+    {{"numero": 4, "titulo": "insight poderoso máx 15 palabras", "subtitulo": "", "dato": ""}},
+    {{"numero": 5, "titulo": "insight poderoso máx 15 palabras", "subtitulo": "", "dato": ""}},
+    {{"numero": {num_slides}, "titulo": "verdad incómoda CTA máx 15 palabras", "subtitulo": "", "dato": ""}}
+  ],
+  "caption_tiktok": "caption TikTok máximo 150 caracteres con 3-5 hashtags"
+}}"""
+        raw = self._call_api(prompt, max_tokens=1500)
+        return self._parse_json(raw)
+
+    def generate_instagram_reel(self, brief: dict) -> dict:
+        prompt = f"""Crea guión Instagram Reel 15-30 segundos sobre: "{brief.get('titulo_principal', '')}"
+Ángulo neurociencia: {brief.get('angulo_neurociencia', '')}
+
+ESTRUCTURA OBLIGATORIA:
+- 0-3s: Hook visual — 3 palabras máximo en pantalla, acción que detiene el scroll
+- 3-20s: Core insight neurociencia — técnico y accesible, voz REBEL LUXURY
+- 20-28s: Rebel Reframe — la perspectiva que nadie más da
+- 28-30s: IM Music brand moment — identidad, no CTA genérico
+
+Responde EXACTAMENTE en este formato JSON (sin texto fuera del JSON):
+{{
+  "guion_escenas": [
+    {{"tiempo": "0-3s", "accion": "descripción acción visual", "texto_pantalla": "texto en pantalla", "narracion": "narración hablada"}},
+    {{"tiempo": "3-20s", "accion": "descripción acción visual", "texto_pantalla": "texto en pantalla", "narracion": "narración hablada"}},
+    {{"tiempo": "20-28s", "accion": "descripción acción visual", "texto_pantalla": "texto en pantalla", "narracion": "narración hablada"}},
+    {{"tiempo": "28-30s", "accion": "descripción acción visual", "texto_pantalla": "texto en pantalla", "narracion": "narración hablada"}}
+  ],
+  "caption_instagram": "caption completo hasta 2200 caracteres voz REBEL LUXURY con hashtags",
+  "hashtags_instagram": ["#hashtag1", "#hashtag2", "#hashtag3", "#hashtag4", "#hashtag5", "#hashtag6", "#hashtag7", "#hashtag8", "#hashtag9", "#hashtag10"]
+}}"""
+        raw = self._call_api(prompt, max_tokens=1400)
+        return self._parse_json(raw)
+
+    def generate_youtube_monetization_pack(self, brief: dict, video_duration_min: int = 8) -> dict:
+        prompt = f"""Crea pack monetización YouTube para video {video_duration_min} minutos sobre: "{brief.get('titulo_principal', '')}"
+Ángulo neurociencia: {brief.get('angulo_neurociencia', '')}
+Hook: {brief.get('hook_apertura', '')}
+
+GENERAR LOS 6 COMPONENTES:
+
+1. CAPÍTULOS: mínimo 5 capítulos en formato "0:00 Título del capítulo" — distribuidos estratégicamente en los {video_duration_min} minutos
+2. DESCRIPCIÓN SEO: primeras 2 líneas con keyword principal + hook visible sin expandir, luego timestamps, keywords secundarias, links placeholders [LINK_1] [LINK_2] [LINK_3], créditos IM Music al final
+3. PINNED COMMENT: pregunta de debate que genere respuestas, máximo 200 caracteres
+4. END SCREEN SCRIPT: texto hablado exacto para los últimos 20 segundos del video — natural, no robótico
+5. COMMUNITY POST: post para publicar 24h antes del video — genera expectativa sin spoilear
+6. TAGS YOUTUBE: exactamente 30 tags relevantes para el algoritmo
+
+Responde EXACTAMENTE en este formato JSON (sin texto fuera del JSON):
+{{
+  "capitulos": ["0:00 Título", "1:30 Título", "3:00 Título", "5:00 Título", "7:00 Título"],
+  "descripcion_seo": "descripción SEO completa con timestamps, keywords, links placeholder y créditos",
+  "pinned_comment": "pregunta debate máximo 200 caracteres",
+  "end_screen_script": "texto hablado últimos 20 segundos natural y fluido",
+  "community_post": "post comunidad para publicar 24h antes del video",
+  "tags_youtube": ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6", "tag7", "tag8", "tag9", "tag10", "tag11", "tag12", "tag13", "tag14", "tag15", "tag16", "tag17", "tag18", "tag19", "tag20", "tag21", "tag22", "tag23", "tag24", "tag25", "tag26", "tag27", "tag28", "tag29", "tag30"]
+}}"""
+        raw = self._call_api(prompt, max_tokens=2500)
+        return self._parse_json(raw)
+
+    def _parse_json(self, raw: str) -> dict:
+        import json
+        raw = raw.strip()
+        # Extract JSON block if wrapped in markdown code fences
+        fence_match = re.search(r"```(?:json)?\s*(\{.*\})\s*```", raw, re.DOTALL)
+        if fence_match:
+            raw = fence_match.group(1)
+        else:
+            # Find first { and last } to extract JSON object
+            start = raw.find("{")
+            end = raw.rfind("}") + 1
+            if start != -1 and end > start:
+                raw = raw[start:end]
+        try:
+            return json.loads(raw)
+        except json.JSONDecodeError as e:
+            logger.warning("JSON parse failed: %s — returning raw text", e)
+            return {"raw": raw}
+
     def generate(self, brief: dict) -> PublicationPackage:
         sources = ", ".join(f['source'] for f in brief.get('fuentes', []))
         datos = ", ".join(brief.get('datos_clave', []))

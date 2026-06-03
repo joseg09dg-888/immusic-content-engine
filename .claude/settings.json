@@ -1,0 +1,21 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python \"C:\\Users\\jose-\\projects\\immusic-content-engine\\scripts\\autodebug.py\"",
+            "shell": "powershell",
+            "timeout": 180,
+            "asyncRewake": true,
+            "statusMessage": "AutoDebug: corriendo pytest...",
+            "rewakeMessage": "AUTODEBUG: tests fallaron —",
+            "rewakeSummary": "Tests fallaron — AutoDebug alerta"
+          }
+        ]
+      }
+    ]
+  }
+}

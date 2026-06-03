@@ -34,6 +34,10 @@ class Dimensions:
     TIKTOK_COVER: Tuple[int, int] = (1080, 1920)
     COVER_ART: Tuple[int, int] = (3000, 3000)
     YOUTUBE_VIDEO: Tuple[int, int] = (1920, 1080)
+    PINTEREST_PIN: Tuple[int, int] = (1000, 1500)
+    FACEBOOK_REEL: Tuple[int, int] = (1080, 1920)
+    YOUTUBE_SHORT: Tuple[int, int] = (1080, 1920)
+    TIKTOK_CAROUSEL: Tuple[int, int] = (1080, 1080)
 
 
 class ContentDurations:
