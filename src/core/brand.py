@@ -27,8 +27,10 @@ class Character:
 
 class Dimensions:
     YOUTUBE_THUMBNAIL: Tuple[int, int] = (1280, 720)
-    INSTAGRAM_SQUARE: Tuple[int, int] = (1080, 1080)
-    INSTAGRAM_STORY: Tuple[int, int] = (1080, 1920)
+    INSTAGRAM_POST: Tuple[int, int] = (1080, 1350)   # 4:5 portrait — single posts (feed)
+    INSTAGRAM_SQUARE: Tuple[int, int] = (1080, 1080)  # legacy square
+    INSTAGRAM_STORY: Tuple[int, int] = (1080, 1920)   # 9:16 Stories
+    INSTAGRAM_REEL: Tuple[int, int] = (1080, 1920)    # 9:16 Reels + Carousel vertical
     TIKTOK_COVER: Tuple[int, int] = (1080, 1920)
     COVER_ART: Tuple[int, int] = (3000, 3000)
     YOUTUBE_VIDEO: Tuple[int, int] = (1920, 1080)

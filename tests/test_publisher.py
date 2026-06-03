@@ -52,9 +52,13 @@ def test_build_video_metadata_empty_titles():
 
 
 def test_youtube_publisher_no_credentials_raises():
-    yt = YouTubePublisher(client_id="", client_secret="")
-    with pytest.raises(RuntimeError, match="GOOGLE_CLIENT_ID"):
-        yt._get_client()
+    yt = YouTubePublisher()
+    with patch("src.content_engine.publisher._CREDENTIALS_FILE") as mock_creds, \
+         patch("src.content_engine.publisher._YT_TOKEN_FILE") as mock_token:
+        mock_creds.exists.return_value = False
+        mock_token.exists.return_value = False
+        with pytest.raises(RuntimeError, match="credentials.json"):
+            yt._get_client()
 
 
 def test_instagram_publisher_post_mock():

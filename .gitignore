@@ -31,3 +31,16 @@ Thumbs.db
 # Audio/Video temporales
 *.tmp
 *.temp
+credentials.json
+.instagram_session.json
+.youtube_token.json
+.tiktok_cookies.json
+logs/canva_match_v1/
+logs/canva_match_v2/
+logs/canva_match_v3/
+logs/urban_luxury_v1/
+logs/channel_banner*.png
+logs/test_*.mp3
+logs/test_*.wav
+releases/
+assets/illustrations/archive/canva_p*.png

@@ -1,40 +1,43 @@
 """
 IM Music Designer — REBEL LUXURY aesthetic.
-Visual concept: luxury fashion sketchbook. Pencil/ink sketch marks on dark canvas.
-Black (#000000) + Violet (#5E17EB) + Cream (#F2EDE5).
-Anton (display) + Segoe UI Bold (body).
-NOT smooth, NOT generic. Raw sketch quality IS the luxury statement.
+
+Visual system derived from @immusicsello feed:
+  - Background: solid electric violet #6200FF
+  - Illustration: black ink/engraving PNG centered on violet
+  - Typography: Sceageus HUGE (main statement) + Anton small (context + CTA)
+  - Palette: violet #6200FF | white #FFFFFF | black #000000
+  - NO galaxies, NO gradients for content posts. Raw. Bold. Luxury.
+
+YouTube thumbnails use black bg + violet for contrast on dark platforms.
 """
-import math
 import random
 from pathlib import Path
 from typing import List, Optional, Tuple
-from PIL import Image, ImageDraw, ImageFont, ImageFilter
+from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageEnhance
 from src.core.brand import Brand, Dimensions
 
-_WIN_FONTS = Path(r"C:\Windows\Fonts")
-_ASSETS    = Path(__file__).resolve().parent.parent.parent / "assets"
+_WIN_FONTS  = Path(r"C:\Windows\Fonts")
+_ASSETS     = Path(__file__).resolve().parent.parent.parent / "assets"
+_ILLUS_DIR  = _ASSETS / "illustrations"
+_LOGO_PATH  = _ASSETS / "logo" / "logo_immusic.png"
+
+_VIOLET_RGB = (98, 0, 255)   # #6200FF
+_BLACK_RGB  = (0, 0, 0)
+_WHITE_RGB  = (255, 255, 255)
+_CREAM_RGB  = (242, 237, 229) # #F2EDE5
 
 _FONT_MAP = {
-    "title":   ["Anton-Regular.ttf", "impact.ttf"],
-    "bold":    ["segoeuib.ttf", "arialbd.ttf", "calibrib.ttf"],
-    "regular": ["segoeui.ttf",  "arial.ttf",   "calibri.ttf"],
+    "hero":    ["Sceageus-Regular.otf", "Anton-Regular.ttf", "impact.ttf"],
+    "label":   ["Anton-Regular.ttf", "segoeuib.ttf", "arialbd.ttf"],
+    "body":    ["segoeui.ttf", "arial.ttf", "calibri.ttf"],
 }
 
-_TEMPLATES = [
-    {"star_density": 2600, "accent_count": 5, "text_anchor": "bottom"},
-    {"star_density": 2000, "accent_count": 8, "text_anchor": "center"},
-    {"star_density": 3200, "accent_count": 3, "text_anchor": "bottom"},
-]
 
-
-def _pick_template(key: str) -> dict:
-    return _TEMPLATES[hash(key) % len(_TEMPLATES)]
-
+# ── Helpers ──────────────────────────────────────────────────────────────────
 
 def _font(style: str, size: int) -> ImageFont.FreeTypeFont:
     af = _ASSETS / "fonts"
-    for fname in _FONT_MAP.get(style, _FONT_MAP["regular"]):
+    for fname in _FONT_MAP.get(style, _FONT_MAP["body"]):
         for base in (af, _WIN_FONTS):
             p = base / fname
             if p.exists():
@@ -42,151 +45,7 @@ def _font(style: str, size: int) -> ImageFont.FreeTypeFont:
     return ImageFont.load_default(size=size)
 
 
-# ── Sketch drawing utilities ────────────────────────────────────────────────
-
-def _hex_to_rgb(hex_color: str) -> Tuple[int, int, int]:
-    h = hex_color.lstrip("#")
-    return tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
-
-
-def _sketchy_line(
-    draw: ImageDraw.ImageDraw,
-    pt1: Tuple[int, int],
-    pt2: Tuple[int, int],
-    color: Tuple,
-    width: int = 1,
-    roughness: int = 2,
-    rng: random.Random = None,
-):
-    """Wobbly line simulating pencil stroke — NOT a computer-straight line."""
-    if rng is None:
-        rng = random.Random(0)
-    x1, y1 = pt1
-    x2, y2 = pt2
-    dist = math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-    steps = max(int(dist / 6), 2)
-    prev = pt1
-    for i in range(1, steps + 1):
-        t = i / steps
-        jx = rng.randint(-roughness, roughness)
-        jy = rng.randint(-roughness, roughness)
-        nx = int(x1 + (x2 - x1) * t) + jx
-        ny = int(y1 + (y2 - y1) * t) + jy
-        # Occasionally break stroke (pencil lift)
-        if rng.random() > 0.06:
-            draw.line([prev, (nx, ny)], fill=color, width=width)
-        prev = (nx, ny)
-
-
-def _sketch_star(
-    draw: ImageDraw.ImageDraw,
-    x: int, y: int,
-    size: int = 3,
-    color: Tuple = (220, 220, 220),
-    rng: random.Random = None,
-    style: str = "cross",
-):
-    """Draw a sketch-style star mark instead of a filled circle."""
-    if rng is None:
-        rng = random.Random(0)
-    if style == "cross":
-        draw.line([(x - size, y), (x + size, y)], fill=color, width=1)
-        draw.line([(x, y - size), (x, y + size)], fill=color, width=1)
-    elif style == "dot":
-        draw.ellipse([x - 1, y - 1, x + 1, y + 1], fill=color)
-    else:  # diamond
-        draw.line([(x, y - size), (x + size, y)], fill=color, width=1)
-        draw.line([(x + size, y), (x, y + size)], fill=color, width=1)
-        draw.line([(x, y + size), (x - size, y)], fill=color, width=1)
-        draw.line([(x - size, y), (x, y - size)], fill=color, width=1)
-
-
-def _add_grain(img: Image.Image, intensity: int = 12, seed: int = 0) -> Image.Image:
-    """Add paper-grain texture for analog/sketch feel."""
-    rng = random.Random(seed)
-    w, h = img.size
-    grain = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    gd = ImageDraw.Draw(grain)
-    for _ in range(int(w * h * 0.015)):
-        x = rng.randint(0, w - 1)
-        y = rng.randint(0, h - 1)
-        v = 128 + rng.randint(-intensity, intensity)
-        alpha = rng.randint(8, 30)
-        gd.point((x, y), fill=(v, v, v, alpha))
-    img = img.convert("RGBA")
-    return Image.alpha_composite(img, grain).convert("RGB")
-
-
-def _sketch_galaxy_bg(size: Tuple[int, int], seed: int = 42, template: dict = None) -> Image.Image:
-    """
-    REBEL LUXURY background: deep black canvas + pencil sketch marks.
-    Stars as cross/diamond glyphs. Constellation as wobbly ink lines.
-    """
-    if template is None:
-        template = _TEMPLATES[0]
-    rng = random.Random(seed)
-    w, h = size
-    img = Image.new("RGB", size, (4, 2, 8))  # near-black with very slight violet tint
-    draw = ImageDraw.Draw(img)
-
-    violet_rgb = _hex_to_rgb(Brand.VIOLET)
-    cream_rgb  = _hex_to_rgb(Brand.CREAM)
-
-    # Star field: mix of sketch marks
-    n_stars = int(w * h / template["star_density"])
-    styles  = ["cross", "dot", "dot", "dot", "diamond"]
-    for _ in range(n_stars):
-        x = rng.randint(0, w - 1)
-        y = rng.randint(0, h - 1)
-        size_star = rng.choices([1, 2, 3, 4], weights=[55, 28, 13, 4])[0]
-        brightness = rng.randint(80, 200)
-        # Most stars white/cream, few warm/cool
-        tint = rng.choices(["cream", "white", "dim"], weights=[20, 50, 30])[0]
-        if tint == "cream":
-            c = (min(255, cream_rgb[0] - 40 + brightness // 4),
-                 min(255, cream_rgb[1] - 40 + brightness // 4),
-                 min(255, cream_rgb[2] - 40 + brightness // 4))
-        elif tint == "dim":
-            c = (brightness // 2, brightness // 2, brightness // 2)
-        else:
-            c = (brightness, brightness, brightness)
-        style = rng.choice(styles)
-        _sketch_star(draw, x, y, size_star, c, rng, style)
-
-    # Violet accent marks (brand color)
-    for _ in range(template["accent_count"]):
-        x = rng.randint(0, w - 1)
-        y = rng.randint(0, h - 1)
-        r = rng.randint(3, 7)
-        _sketch_star(draw, x, y, r, violet_rgb, rng, "cross")
-        # Tiny bright center
-        draw.ellipse([x-1, y-1, x+1, y+1], fill=(160, 120, 255))
-
-    # Constellation: wobbly pencil lines connecting 5-7 points
-    n_pts = rng.randint(5, 7)
-    pts = [
-        (rng.randint(w // 6, 5 * w // 6), rng.randint(h // 6, 5 * h // 6))
-        for _ in range(n_pts)
-    ]
-    # Draw lines in layers: faint outer, then precise inner
-    for i in range(len(pts) - 1):
-        dim_violet = (violet_rgb[0]//4, violet_rgb[1]//4, violet_rgb[2]//4)
-        _sketchy_line(draw, pts[i], pts[i+1], dim_violet, width=2, roughness=3, rng=rng)
-        _sketchy_line(draw, pts[i], pts[i+1], violet_rgb,  width=1, roughness=1, rng=rng)
-
-    # Small circle at each constellation node (like dots on a map)
-    for px, py in pts:
-        draw.ellipse([px-4, py-4, px+4, py+4], outline=violet_rgb, width=1)
-        draw.ellipse([px-1, py-1, px+1, py+1], fill=(200, 180, 255))
-
-    # Paper grain
-    img = _add_grain(img, intensity=14, seed=seed + 1)
-    return img
-
-
-# ── Text rendering ───────────────────────────────────────────────────────────
-
-def _wrap_text(draw, text: str, font, max_w: int) -> List[str]:
+def _wrap(draw: ImageDraw.ImageDraw, text: str, font, max_w: int) -> List[str]:
     words, lines, line = text.split(), [], ""
     for word in words:
         test = (line + " " + word).strip()
@@ -198,224 +57,637 @@ def _wrap_text(draw, text: str, font, max_w: int) -> List[str]:
             line = word
     if line:
         lines.append(line)
-    return lines
+    return lines or [""]
 
 
-def _draw_text_block(
-    img: Image.Image,
-    title: str,
-    subtitle: str = "",
-    anchor: str = "bottom",
-    max_width_ratio: float = 0.86,
+def _pick_illustration(seed: int) -> Optional[Path]:
+    """Pick a random illustration from the library."""
+    illus = sorted(_ILLUS_DIR.glob("*.png")) + sorted(_ILLUS_DIR.glob("*.webp"))
+    if not illus:
+        return None
+    return illus[seed % len(illus)]
+
+
+def _load_illustration(path: Path, target_size: Tuple[int, int]) -> Optional[Image.Image]:
+    """
+    Load a black-ink illustration PNG and scale it to fill target_size.
+    White/near-white backgrounds are made transparent using numpy (fast).
+    """
+    try:
+        import numpy as np
+        illus = Image.open(path).convert("RGBA")
+        iw, ih = illus.size
+
+        # Vectorized white-background removal
+        arr = np.array(illus)
+        mask = (arr[:, :, 0] > 220) & (arr[:, :, 1] > 220) & (arr[:, :, 2] > 220)
+        arr[mask, 3] = 0
+        illus = Image.fromarray(arr, "RGBA")
+
+        # Scale illustration to 85% of target width for breathing room
+        tw, th = target_size
+        scale = (tw * 0.85) / iw
+        new_h = int(ih * scale)
+        illus = illus.resize((int(iw * scale), new_h), Image.LANCZOS)
+        return illus
+    except Exception:
+        return None
+
+
+def _add_noise(img: Image.Image, amount: int = 8, seed: int = 0) -> Image.Image:
+    """Subtle film grain — analog texture, not smooth digital."""
+    rng = random.Random(seed)
+    w, h = img.size
+    noise = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    nd = ImageDraw.Draw(noise)
+    for _ in range(w * h // 80):
+        x = rng.randint(0, w - 1)
+        y = rng.randint(0, h - 1)
+        v = rng.randint(200, 255)
+        a = rng.randint(5, amount)
+        nd.point((x, y), fill=(v, v, v, a))
+    return Image.alpha_composite(img.convert("RGBA"), noise).convert("RGB")
+
+
+def _add_urban_luxury_elements(img: Image.Image, seed: int = 0) -> Image.Image:
+    """
+    Urban Luxury elements — REBEL LUXURY aesthetic.
+    Varies by seed: constellation stars, geometric lines, city grid, luxury dots.
+    Each seed produces a different visual element set.
+    """
+    rng = random.Random(seed)
+    w, h = img.size
+    overlay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(overlay)
+
+    style = seed % 5  # 5 different element styles
+
+    if style == 0:
+        # Constellation: scattered stars + connecting lines
+        stars = [(rng.randint(20, w-20), rng.randint(20, h//2)) for _ in range(18)]
+        for x, y in stars:
+            r = rng.randint(2, 5)
+            a = rng.randint(60, 130)
+            draw.ellipse([x-r, y-r, x+r, y+r], fill=(255, 255, 255, a))
+        # Connect nearby stars
+        for i, (x1, y1) in enumerate(stars):
+            for x2, y2 in stars[i+1:]:
+                dist = ((x2-x1)**2 + (y2-y1)**2) ** 0.5
+                if dist < w * 0.22:
+                    draw.line([(x1, y1), (x2, y2)], fill=(255, 255, 255, 25), width=1)
+
+    elif style == 1:
+        # Geometric luxury: thin diagonal grid lines
+        step = w // 10
+        for i in range(-h, w + h, step):
+            a = rng.randint(15, 35)
+            draw.line([(i, 0), (i + h, h)], fill=(255, 255, 255, a), width=1)
+        for i in range(-h, w + h, step * 3):
+            draw.line([(i, 0), (i + h, h)], fill=(255, 255, 255, 50), width=2)
+
+    elif style == 2:
+        # City grid: horizontal + vertical lines (urban skyline reference)
+        for y_line in range(h // 6, h // 2, h // 14):
+            a = rng.randint(20, 45)
+            draw.line([(0, y_line), (w, y_line)], fill=(255, 255, 255, a), width=1)
+        for x_line in range(0, w, w // 12):
+            a = rng.randint(15, 30)
+            lh = rng.randint(h // 8, h // 3)
+            draw.line([(x_line, 0), (x_line, lh)], fill=(255, 255, 255, a), width=1)
+
+    elif style == 3:
+        # Luxury dots pattern (halftone inspired)
+        for row in range(0, h // 2, h // 18):
+            for col in range(0, w, w // 16):
+                r = rng.randint(1, 4)
+                a = rng.randint(30, 80)
+                jx = rng.randint(-10, 10)
+                jy = rng.randint(-5, 5)
+                x, y = col + jx, row + jy
+                draw.ellipse([x-r, y-r, x+r, y+r], fill=(255, 255, 255, a))
+
+    else:
+        # Star dust: many tiny stars scattered in upper half
+        for _ in range(120):
+            x = rng.randint(0, w)
+            y = rng.randint(0, int(h * 0.55))
+            a = rng.randint(20, 100)
+            r = rng.choices([1, 2, 3], weights=[60, 30, 10])[0]
+            draw.ellipse([x-r, y-r, x+r, y+r], fill=(255, 255, 255, a))
+        # A few bright accent stars
+        for _ in range(8):
+            x = rng.randint(w//6, w*5//6)
+            y = rng.randint(0, int(h * 0.40))
+            draw.ellipse([x-4, y-4, x+4, y+4], fill=(255, 255, 255, 180))
+            draw.ellipse([x-8, y-8, x+8, y+8], fill=(255, 255, 255, 40))
+
+    return Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB")
+
+
+# ── Background builders ───────────────────────────────────────────────────────
+
+def _violet_bg(size: Tuple[int, int], seed: int = 0) -> Image.Image:
+    """
+    Solid electric violet background — the signature IM Music canvas.
+    Includes urban-luxury overlay elements that vary per seed.
+    """
+    w, h = size
+    img = Image.new("RGB", size, _VIOLET_RGB)
+    draw = ImageDraw.Draw(img)
+
+    # Very subtle darker band at bottom — gives weight without gradient
+    for i in range(h // 6):
+        alpha_factor = i / (h // 6)
+        r = int(_VIOLET_RGB[0] * (1 - 0.12 * alpha_factor))
+        g = int(_VIOLET_RGB[1] * (1 - 0.12 * alpha_factor))
+        b = int(_VIOLET_RGB[2] * (1 - 0.05 * alpha_factor))
+        draw.rectangle([0, h - i - 1, w, h - i], fill=(r, g, b))
+
+    img = _add_noise(img, amount=10, seed=seed)
+    img = _add_urban_luxury_elements(img, seed=seed)  # urban-luxury variation per seed
+    return img
+
+
+def _black_bg(size: Tuple[int, int], seed: int = 0) -> Image.Image:
+    """Deep black background for YouTube thumbnails — with star dust + violet glow."""
+    w, h = size
+    img = Image.new("RGB", size, (4, 2, 8))
+    draw = ImageDraw.Draw(img)
+    # Faint violet glow center
+    cx, cy = w // 2, h // 2
+    for r in range(min(w, h) // 2, 0, -20):
+        alpha = max(0, 18 - (r // 20))
+        color = (int(_VIOLET_RGB[0] * alpha / 18),
+                 int(_VIOLET_RGB[1] * alpha / 18),
+                 int(_VIOLET_RGB[2] * alpha / 18))
+        draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=color)
+    img = _add_noise(img, amount=12, seed=seed)
+    img = _add_urban_luxury_elements(img, seed=seed + 99)  # star dust on black
+    return img
+
+
+# ── Illustration layer ────────────────────────────────────────────────────────
+
+def _paste_illustration(
+    bg: Image.Image,
+    illus_path: Path,
+    position: str = "top",  # "top" | "center" | "full"
+    opacity: float = 0.92,
 ) -> Image.Image:
+    """
+    Paste black-ink engraving onto background.
+    'top' fills upper 65% — text lives in center/bottom area.
+    'center' centers illustration — text overlaps it.
+    'full' fills entire frame — dramatic full-bleed.
+    """
+    try:
+        import numpy as np
+        illus_raw = Image.open(illus_path).convert("RGBA")
+        orig_w, orig_h = illus_raw.size
+    except Exception:
+        return bg
+
+    w, h = bg.size
+
+    # Target size depends on position
+    if position == "top":
+        target_h = int(h * 0.68)
+        scale = min(w / orig_w, target_h / orig_h)
+    elif position == "full":
+        scale = max(w / orig_w, h / orig_h)
+    else:  # center
+        scale = min(w / orig_w, h / orig_h) * 0.90
+
+    new_w = int(orig_w * scale)
+    new_h = int(orig_h * scale)
+    illus = illus_raw.resize((new_w, new_h), Image.LANCZOS)
+
+    # Remove near-white backgrounds (for non-removebg illustrations)
+    arr = np.array(illus)
+    white_mask = (arr[:, :, 0] > 210) & (arr[:, :, 1] > 210) & (arr[:, :, 2] > 210)
+    arr[white_mask, 3] = 0
+    illus = Image.fromarray(arr, "RGBA")
+
+    # Position
+    x = (w - new_w) // 2
+    if position == "top":
+        y = -new_h // 12  # slight bleed at top edge
+    elif position == "full":
+        y = (h - new_h) // 2
+    else:  # center
+        y = (h - new_h) // 2 - h // 14
+
+    # Apply opacity
+    if opacity < 1.0:
+        r, g, b, a = illus.split()
+        a = a.point(lambda p: int(p * opacity))
+        illus = Image.merge("RGBA", (r, g, b, a))
+
+    result = bg.convert("RGBA")
+    result.paste(illus, (x, y), illus)
+    return result.convert("RGB")
+
+
+# ── Logo badge ────────────────────────────────────────────────────────────────
+
+def _paste_logo(img: Image.Image, size: int = 80, corner: str = "top-left") -> Image.Image:
+    """Small IM Music logo badge — minimal, never dominant."""
+    if not _LOGO_PATH.exists():
+        # Try any PNG in logo dir
+        logos = list((_ASSETS / "logo").glob("*.png"))
+        if not logos:
+            return img
+        logo_path = logos[0]
+    else:
+        logo_path = _LOGO_PATH
+
+    try:
+        logo = Image.open(logo_path).convert("RGBA")
+        lw, lh = logo.size
+        scale = size / max(lw, lh)
+        logo = logo.resize((int(lw * scale), int(lh * scale)), Image.LANCZOS)
+        lw, lh = logo.size
+
+        w, h = img.size
+        margin = int(w * 0.04)
+        positions = {
+            "top-left":     (margin, margin),
+            "top-right":    (w - lw - margin, margin),
+            "bottom-left":  (margin, h - lh - margin),
+            "bottom-right": (w - lw - margin, h - lh - margin),
+        }
+        x, y = positions.get(corner, positions["top-left"])
+
+        result = img.convert("RGBA")
+        result.paste(logo, (x, y), logo)
+        return result.convert("RGB")
+    except Exception:
+        return img
+
+
+# ── Text layout — THE REBEL LUXURY 3-TIER SYSTEM ─────────────────────────────
+
+def _draw_rebel_text(
+    img: Image.Image,
+    hook: str,
+    headline: str,
+    cta: str = "",
+    invert: bool = False,
+) -> Image.Image:
+    """
+    3-tier text system matching @immusicsello Canva feed:
+      [small Anton — context/hook]
+      [ENORMOUS Sceageus — the statement, CENTERED in image]
+      [small Anton — subtitle]
+      ── fixed bottom ──
+      [small Anton — CTA always at base]
+
+    Main block centers around 55% of image height.
+    CTA is a fixed independent element at the bottom.
+    """
     w, h = img.size
     draw = ImageDraw.Draw(img)
-    max_w   = int(w * max_width_ratio)
-    pad     = int(h * 0.055)
 
-    title_sz = max(44, w // 13)
-    sub_sz   = max(22, w // 28)
-    label_sz = max(13, w // 54)
+    text_color   = _WHITE_RGB
+    shadow_color = _BLACK_RGB
+    label_size   = max(22, w // 30)
+    label_font   = _font("label", label_size)
+    hero_max_w   = int(w * 0.82)  # 9% margin each side — text never touches edges
 
-    t_font = _font("title",   title_sz)
-    s_font = _font("bold",    sub_sz)
-    l_font = _font("regular", label_sz)
+    hook_lines = _wrap(draw, hook.upper(), label_font, int(w * 0.86)) if hook else []
 
-    lines   = _wrap_text(draw, title.upper(), t_font, max_w)
-    line_h  = int(title_sz * 1.15)
-    block_h = line_h * len(lines) + ((sub_sz + 10) if subtitle else 0) + label_sz + 28
+    # Shrink hero font until main block fits within 68% of height (leaves room for illus + cta)
+    hero_size = w // 3
+    while hero_size > 18:
+        hero_font  = _font("hero", hero_size)
+        hero_lines = _wrap(draw, headline.upper(), hero_font, hero_max_w)
+        hero_lh    = int(hero_size * 1.08)
+        hero_block = hero_lh * len(hero_lines)
+        hook_block = (label_size + 4) * len(hook_lines) + 10 if hook_lines else 0
+        main_block = hook_block + hero_block
+        max_line_w = max(
+            draw.textbbox((0, 0), ln, font=hero_font)[2] for ln in hero_lines
+        )
+        if main_block <= int(h * 0.64) and max_line_w <= int(w * 0.82):
+            break
+        hero_size -= 6
 
-    y_start = {
-        "top":    pad * 2,
-        "center": max(pad, (h - block_h) // 2),
-    }.get(anchor, h - block_h - pad * 2)
+    # Recompute final values
+    hero_font  = _font("hero", hero_size)
+    hero_lines = _wrap(draw, headline.upper(), hero_font, hero_max_w)
+    hero_lh    = int(hero_size * 1.08)
+    hero_block = hero_lh * len(hero_lines)
+    hook_block = (label_size + 4) * len(hook_lines) + 10 if hook_lines else 0
+    main_block = hook_block + hero_block
 
-    # Dark strip behind text — spans full width
-    strip = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    sd = ImageDraw.Draw(strip)
-    sd.rectangle([0, y_start - 16, w, y_start + block_h + 16], fill=(0, 0, 0, 205))
-    img = img.convert("RGBA")
-    img = Image.alpha_composite(img, strip).convert("RGB")
-    draw = ImageDraw.Draw(img)
+    # Center the main block around 56% of image height
+    center_y = int(h * 0.56)
+    y = center_y - main_block // 2
+    y = max(int(h * 0.08), y)
 
-    # Thin violet line above text strip (brand accent)
-    draw.rectangle([0, y_start - 16, w, y_start - 14], fill=Brand.VIOLET)
-
-    y = y_start
-    for ln in lines:
-        bx = draw.textbbox((0, 0), ln, font=t_font)
+    # ── Hook lines ──
+    for ln in hook_lines:
+        bx = draw.textbbox((0, 0), ln, font=label_font)
         x  = (w - (bx[2] - bx[0])) // 2
-        # Subtle shadow
-        draw.text((x + 2, y + 2), ln, font=t_font, fill=(0, 0, 0))
-        # Cream-white main text (not pure white — cream is warmer, luxury)
-        draw.text((x, y), ln, font=t_font, fill=Brand.CREAM)
-        y += line_h
+        draw.text((x + 1, y + 1), ln, font=label_font, fill=shadow_color)
+        draw.text((x, y), ln, font=label_font, fill=text_color)
+        y += label_size + 4
+    if hook_lines:
+        y += 10
 
-    if subtitle:
-        bx = draw.textbbox((0, 0), subtitle, font=s_font)
+    # ── Hero headline ──
+    for ln in hero_lines:
+        bx = draw.textbbox((0, 0), ln, font=hero_font)
+        tw = bx[2] - bx[0]
+        x  = (w - tw) // 2
+        for dx, dy in [(-2, 3), (2, 3), (0, 4)]:
+            draw.text((x + dx, y + dy), ln, font=hero_font, fill=shadow_color)
+        draw.text((x, y), ln, font=hero_font, fill=text_color)
+        y += hero_lh
+
+    # ── CTA — fixed at bottom, independent of main block ──
+    if cta:
+        cta_y = h - label_size - int(h * 0.05)
+        bx = draw.textbbox((0, 0), cta.upper(), font=label_font)
         x  = (w - (bx[2] - bx[0])) // 2
-        draw.text((x, y + 5), subtitle, font=s_font, fill=Brand.VIOLET)
-        y += sub_sz + 13
-
-    label = "IM MUSIC  ·  REBEL LUXURY"
-    bx = draw.textbbox((0, 0), label, font=l_font)
-    x  = (w - (bx[2] - bx[0])) // 2
-    draw.text((x, y + 8), label, font=l_font, fill=(140, 130, 120))
+        draw.text((x + 1, cta_y + 1), cta.upper(), font=label_font, fill=shadow_color)
+        draw.text((x, cta_y), cta.upper(), font=label_font, fill=text_color)
 
     return img
 
 
-def _draw_logo_badge(img: Image.Image, badge_h: int = 72) -> Image.Image:
-    """Minimal geometric IM MUSIC badge — sketch-style, bottom-right corner."""
-    w, h = img.size
-    margin  = int(w * 0.018)
-    badge_w = int(badge_h * 2.2)
-    x0 = w - badge_w - margin
-    y0 = h - badge_h - margin
-
-    # Try logo file first
-    for path in (_ASSETS / "logo").glob("*.png"):
-        try:
-            logo = Image.open(path).convert("RGBA").resize((badge_w, badge_h), Image.LANCZOS)
-            img  = img.convert("RGBA")
-            img.paste(logo, (x0, y0), logo)
-            return img.convert("RGB")
-        except Exception:
-            pass
-
-    overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
-    od = ImageDraw.Draw(overlay)
-    # Sketch-style border instead of solid fill — more in line with the aesthetic
-    od.rectangle([x0, y0, x0 + badge_w, y0 + badge_h], fill=(0, 0, 0, 200))
-    od.rectangle([x0, y0, x0 + badge_w, y0 + badge_h], outline=_hex_to_rgb(Brand.VIOLET) + (220,), width=2)
-    # Top violet accent stripe
-    od.rectangle([x0, y0, x0 + badge_w, y0 + 3], fill=_hex_to_rgb(Brand.VIOLET) + (255,))
-
-    img = img.convert("RGBA")
-    img = Image.alpha_composite(img, overlay).convert("RGB")
-    draw = ImageDraw.Draw(img)
-
-    im_font    = _font("title",   int(badge_h * 0.52))
-    music_font = _font("regular", int(badge_h * 0.25))
-
-    im_b  = draw.textbbox((0, 0), "IM",    font=im_font)
-    ms_b  = draw.textbbox((0, 0), "MUSIC", font=music_font)
-    im_w, im_h = im_b[2] - im_b[0], im_b[3] - im_b[1]
-    ms_w       = ms_b[2] - ms_b[0]
-    total_h    = im_h + int(badge_h * 0.25) + 4
-    iy = y0 + (badge_h - total_h) // 2 + 4
-
-    draw.text((x0 + (badge_w - im_w) // 2, iy),           "IM",    font=im_font,    fill=Brand.CREAM)
-    draw.text((x0 + (badge_w - ms_w) // 2, iy + im_h + 2), "MUSIC", font=music_font, fill=Brand.VIOLET)
-    return img
-
-
-# ── Public API ───────────────────────────────────────────────────────────────
+# ── Public API ────────────────────────────────────────────────────────────────
 
 class Designer:
-    def generate_thumbnail(
-        self, title: str, subtitle: str = "", save_path: Optional[Path] = None
+
+    def generate_post(
+        self,
+        hook: str,
+        headline: str,
+        cta: str = "DESCUBRE COMO EN NUESTRO CANAL",
+        save_path: Optional[Path] = None,
+        seed: int = 0,
     ) -> Image.Image:
-        tmpl = _pick_template(title)
-        img  = _sketch_galaxy_bg(Dimensions.YOUTUBE_THUMBNAIL, seed=hash(title) & 0xFFFF, template=tmpl)
-        img  = _draw_text_block(img, title, subtitle, anchor=tmpl["text_anchor"])
-        img  = _draw_logo_badge(img, badge_h=68)
+        """
+        Instagram post (1080×1350, 4:5 portrait) — REBEL LUXURY style.
+        Igual que el Canva del usuario: ilustracion superior + texto centrado + CTA al pie.
+        """
+        size  = Dimensions.INSTAGRAM_POST
+        bg    = _violet_bg(size, seed=seed)
+        illus = _pick_illustration(seed)
+        if illus:
+            bg = _paste_illustration(bg, illus, position="top", opacity=0.92)
+        bg = _draw_rebel_text(bg, hook, headline, cta)
+        bg = _paste_logo(bg, size=int(size[0] * 0.09), corner="top-left")
+        if save_path:
+            save_path.parent.mkdir(parents=True, exist_ok=True)
+            bg.save(save_path, "PNG", optimize=True)
+        return bg
+
+    def generate_story(
+        self,
+        hook: str,
+        headline: str,
+        cta: str = "VER EN NUESTRO CANAL",
+        save_path: Optional[Path] = None,
+        seed: int = 0,
+    ) -> Image.Image:
+        """Instagram Story / TikTok cover (1080×1920)."""
+        size  = Dimensions.INSTAGRAM_STORY
+        bg    = _violet_bg(size, seed=seed + 7)
+        illus = _pick_illustration(seed + 1)
+        if illus:
+            bg = _paste_illustration(bg, illus, position="top", opacity=0.88)
+        bg = _draw_rebel_text(bg, hook, headline, cta)
+        bg = _paste_logo(bg, size=int(size[0] * 0.10), corner="top-left")
+        if save_path:
+            save_path.parent.mkdir(parents=True, exist_ok=True)
+            bg.save(save_path, "PNG")
+        return bg
+
+    def generate_tiktok_cover(
+        self,
+        hook: str,
+        headline: str,
+        save_path: Optional[Path] = None,
+        seed: int = 0,
+    ) -> Image.Image:
+        """TikTok vertical cover (1080×1920)."""
+        return self.generate_story(hook, headline, cta="@IMMUSICSELLO",
+                                   save_path=save_path, seed=seed + 13)
+
+    def generate_thumbnail(
+        self,
+        hook: str,
+        headline: str,
+        cta: str = "",
+        save_path: Optional[Path] = None,
+        seed: int = 0,
+    ) -> Image.Image:
+        """
+        YouTube thumbnail (1280×720) — black bg + violet glow.
+        More contrast-heavy than Instagram posts.
+        """
+        size  = Dimensions.YOUTUBE_THUMBNAIL
+        bg    = _black_bg(size, seed=seed + 3)
+        illus = _pick_illustration(seed + 2)
+        if illus:
+            bg = _paste_illustration(bg, illus, position="top", opacity=0.80)
+
+        # Violet bar at bottom — brand signature
+        w, h = size
+        draw = ImageDraw.Draw(bg)
+        draw.rectangle([0, h - 8, w, h], fill=_VIOLET_RGB)
+
+        bg = _draw_rebel_text(bg, hook, headline, cta, invert=True)
+        bg = _paste_logo(bg, size=int(size[0] * 0.08), corner="top-left")
+        if save_path:
+            save_path.parent.mkdir(parents=True, exist_ok=True)
+            bg.save(save_path, "PNG", optimize=True)
+        return bg
+
+    def generate_carousel(
+        self,
+        slides: List[dict],
+        save_dir: Optional[Path] = None,
+        seed: int = 0,
+    ) -> List[Path]:
+        """
+        Carousel slides (1080×1920, 9:16) — para Reels y TikTok.
+        Cada slide tiene fondo distinto: ilustracion + elementos urban-luxury variados.
+        Returns list of saved paths.
+        """
+        size   = Dimensions.INSTAGRAM_REEL  # 9:16 vertical
+        paths  = []
+        n      = min(len(slides), 10)
+
+        for i, slide in enumerate(slides[:10]):
+            hook     = slide.get("hook", "")
+            headline = slide.get("headline", slide.get("title", ""))
+            body     = slide.get("body", "")
+            cta      = slide.get("cta", f"{i+1}/{n}")
+
+            s = seed + i * 17
+            # Alternate between violet and near-black slides for rhythm
+            if i % 4 == 3:  # Every 4th slide: black for contrast
+                bg = _black_bg(size, seed=s)
+            else:
+                bg = _violet_bg(size, seed=s)
+
+            illus = _pick_illustration(s + i)
+            if illus:
+                bg = _paste_illustration(bg, illus, position="center", opacity=0.85)
+
+            # For slides with body text, use it as hook
+            effective_hook = hook or body[:80]
+            bg = _draw_rebel_text(bg, effective_hook, headline, cta)
+            bg = _paste_logo(bg, size=int(size[0] * 0.10), corner="top-left")
+
+            if save_dir:
+                save_dir.mkdir(parents=True, exist_ok=True)
+                out_path = save_dir / f"slide_{i+1:02d}.png"
+                bg.save(out_path, "PNG")
+                paths.append(out_path)
+
+        return paths
+
+    def generate_youtube_banner(
+        self,
+        tagline: str = "NO LANZAMOS MUSICA. JAQUEAMOS MENTES.",
+        handle: str = "@IMMUSICSELLO",
+        save_path: Optional[Path] = None,
+        seed: int = 0,
+    ) -> Image.Image:
+        """
+        YouTube channel art — 2560x1440 px.
+        Safe zone center (1546x423) contains all critical text.
+        Left/right edges are cut on TV — keep text in center 60%.
+        """
+        W, H = 2560, 1440
+        img = Image.new("RGB", (W, H), _VIOLET_RGB)
+
+        # Subtle darker bottom band
+        draw_tmp = ImageDraw.Draw(img)
+        for i in range(H // 5):
+            factor = i / (H // 5)
+            r = int(_VIOLET_RGB[0] * (1 - 0.15 * factor))
+            g = int(_VIOLET_RGB[1] * (1 - 0.15 * factor))
+            b = int(_VIOLET_RGB[2] * (1 - 0.05 * factor))
+            draw_tmp.rectangle([0, H - i - 1, W, H - i], fill=(r, g, b))
+
+        img = _add_noise(img, amount=8, seed=seed)
+
+        # Illustration — subtle, LEFT side (safe zone center carries text)
+        illus_path = _pick_illustration(seed)
+        if illus_path:
+            try:
+                import numpy as np
+                illus_raw = Image.open(illus_path).convert("RGBA")
+                ow, oh = illus_raw.size
+                target_w = int(W * 0.30)
+                scale = target_w / ow
+                illus = illus_raw.resize((target_w, int(oh * scale)), Image.LANCZOS)
+                arr = np.array(illus)
+                white_mask = (arr[:,:,0] > 210) & (arr[:,:,1] > 210) & (arr[:,:,2] > 210)
+                arr[white_mask, 3] = 0
+                arr[:,:,3] = (arr[:,:,3] * 0.35).astype(np.uint8)
+                illus = Image.fromarray(arr, "RGBA")
+                iw, ih = illus.size
+                x = int(W * 0.01)
+                y = (H - ih) // 2
+                result = img.convert("RGBA")
+                result.paste(illus, (x, y), illus)
+                img = result.convert("RGB")
+            except Exception:
+                pass
+
+        # Recreate draw on the final img (after noise + illustration)
+        draw = ImageDraw.Draw(img)
+
+        # IM MUSIC logotype — huge, centered
+        logo_font_size = W // 8
+        logo_font = _font("hero", logo_font_size)
+        logo_text = "IM MUSIC"
+        bx = draw.textbbox((0, 0), logo_text, font=logo_font)
+        tw = bx[2] - bx[0]
+        lx = (W - tw) // 2
+        ly = H // 2 - logo_font_size // 2 - H // 12
+
+        # Shadow
+        for dx, dy in [(-4, 4), (4, 4), (0, 6)]:
+            draw.text((lx + dx, ly + dy), logo_text, font=logo_font, fill=_BLACK_RGB)
+        draw.text((lx, ly), logo_text, font=logo_font, fill=_WHITE_RGB)
+
+        # Tagline — small, below logo
+        tag_size = max(36, W // 48)
+        tag_font = _font("label", tag_size)
+        tag_lines = _wrap(draw, tagline.upper(), tag_font, int(W * 0.55))
+        ty = ly + logo_font_size + 20
+        for ln in tag_lines:
+            bx = draw.textbbox((0, 0), ln, font=tag_font)
+            tx = (W - (bx[2] - bx[0])) // 2
+            draw.text((tx + 1, ty + 1), ln, font=tag_font, fill=_BLACK_RGB)
+            draw.text((tx, ty), ln, font=tag_font, fill=_WHITE_RGB)
+            ty += tag_size + 6
+
+        # Handle — bottom center
+        handle_size = max(28, W // 60)
+        handle_font = _font("label", handle_size)
+        bx = draw.textbbox((0, 0), handle.upper(), font=handle_font)
+        hx = (W - (bx[2] - bx[0])) // 2
+        hy = H - handle_size - int(H * 0.06)
+        draw.text((hx + 1, hy + 1), handle.upper(), font=handle_font, fill=_BLACK_RGB)
+        draw.text((hx, hy), handle.upper(), font=handle_font, fill=_WHITE_RGB)
+
+        # Bottom violet accent bar
+        draw.rectangle([0, H - 6, W, H], fill=_VIOLET_RGB)
+
+        img = _paste_logo(img, size=int(W * 0.04), corner="top-left")
+
         if save_path:
             save_path.parent.mkdir(parents=True, exist_ok=True)
             img.save(save_path, "PNG", optimize=True)
         return img
 
-    def generate_carousel(
-        self, slides: List[dict], save_dir: Optional[Path] = None
-    ) -> List[Image.Image]:
-        size = Dimensions.INSTAGRAM_SQUARE
-        w, h = size
-        images = []
-        n = min(len(slides), 10)
-        for i, slide in enumerate(slides[:10]):
-            tmpl = _TEMPLATES[i % len(_TEMPLATES)]
-            img  = _sketch_galaxy_bg(size, seed=i * 137 + 3, template=tmpl)
-
-            # Bottom gradient strip for text
-            grad = Image.new("RGBA", size, (0, 0, 0, 0))
-            gd   = ImageDraw.Draw(grad)
-            strip_h = h // 2
-            for band in range(strip_h):
-                alpha = int(220 * band / strip_h)
-                gd.rectangle([0, h - strip_h + band, w, h - strip_h + band + 1], fill=(0, 0, 0, alpha))
-            img = img.convert("RGBA")
-            img = Image.alpha_composite(img, grad).convert("RGB")
-            draw = ImageDraw.Draw(img)
-
-            # Slide counter — top left, minimal
-            num_f = _font("regular", max(16, w // 40))
-            draw.text((28, 28), f"{i+1}/{n}", font=num_f, fill=(90, 80, 80))
-
-            # Horizontal violet rule under counter
-            draw.rectangle([28, 28 + max(16, w//40) + 6, 80, 28 + max(16, w//40) + 8], fill=Brand.VIOLET)
-
-            # Title — large Anton, lower half
-            t_f     = _font("title",   max(38, w // 14))
-            b_f     = _font("regular", max(20, w // 32))
-            t_lines = _wrap_text(draw, slide.get("title", "").upper(), t_f, int(w * 0.86))
-            b_lines = _wrap_text(draw, slide.get("body", ""), b_f, int(w * 0.86))
-            t_lh    = int(w // 14 * 1.15)
-            b_lh    = int(w // 32 * 1.3)
-            total   = t_lh * len(t_lines) + b_lh * len(b_lines) + 24
-            y       = h - total - 72
-
-            for ln in t_lines:
-                bx = draw.textbbox((0, 0), ln, font=t_f)
-                x  = (w - (bx[2] - bx[0])) // 2
-                draw.text((x + 2, y + 2), ln, font=t_f, fill=(0, 0, 0))
-                draw.text((x, y), ln, font=t_f, fill=Brand.CREAM)
-                y += t_lh
-            y += 10
-            for ln in b_lines:
-                bx = draw.textbbox((0, 0), ln, font=b_f)
-                x  = (w - (bx[2] - bx[0])) // 2
-                draw.text((x, y), ln, font=b_f, fill=(190, 185, 175))
-                y += b_lh
-
-            img = _draw_logo_badge(img, badge_h=50)
-            if save_dir:
-                save_dir.mkdir(parents=True, exist_ok=True)
-                img.save(save_dir / f"slide_{i+1:02d}.png", "PNG")
-            images.append(img)
-        return images
-
-    def generate_story(
-        self, title: str, subtitle: str = "", save_path: Optional[Path] = None
-    ) -> Image.Image:
-        tmpl = _pick_template(title + "s")
-        img  = _sketch_galaxy_bg(Dimensions.INSTAGRAM_STORY, seed=(hash(title) + 7) & 0xFFFF, template=tmpl)
-        img  = _draw_text_block(img, title, subtitle, anchor="center", max_width_ratio=0.80)
-        img  = _draw_logo_badge(img, badge_h=62)
-        if save_path:
-            save_path.parent.mkdir(parents=True, exist_ok=True)
-            img.save(save_path, "PNG")
-        return img
-
-    def generate_tiktok_cover(
-        self, title: str, save_path: Optional[Path] = None
-    ) -> Image.Image:
-        tmpl = _pick_template(title + "t")
-        img  = _sketch_galaxy_bg(Dimensions.TIKTOK_COVER, seed=(hash(title) + 13) & 0xFFFF, template=tmpl)
-        img  = _draw_text_block(img, title, anchor="bottom", max_width_ratio=0.80)
-        img  = _draw_logo_badge(img, badge_h=62)
-        if save_path:
-            save_path.parent.mkdir(parents=True, exist_ok=True)
-            img.save(save_path, "PNG")
-        return img
-
-    def generate_pack(self, title: str, subtitle: str, save_dir: Path) -> dict:
+    def generate_pack(
+        self,
+        brief: dict,
+        save_dir: Path,
+        seed: int = 0,
+    ) -> dict:
+        """
+        Full content pack from a research brief.
+        Returns dict with all saved paths.
+        """
         save_dir.mkdir(parents=True, exist_ok=True)
+        (save_dir / "carousel").mkdir(exist_ok=True)
+
+        title    = brief.get("titulo_principal", "")
+        hook     = brief.get("hook_apertura", "")
+        subtitle = brief.get("angulo_neurociencia", "")
+        datos    = brief.get("datos_clave", [])
+
+        # Carousel slides — one per dato + intro + outro
+        slides = [{"hook": hook, "headline": title, "cta": "DESLIZA →"}]
+        for dato in datos[:6]:
+            words = dato.split()
+            hl    = " ".join(words[:4]).upper() if len(words) > 4 else dato.upper()
+            slides.append({"hook": dato, "headline": hl, "cta": "SIGUIENTE →"})
+        slides.append({
+            "hook": "¿QUIERES SABER MÁS?",
+            "headline": "SÍGUENOS",
+            "cta": "@IMMUSICSELLO",
+        })
+
+        post_path  = save_dir / "post.png"
+        story_path = save_dir / "story.png"
+        tiktok_path= save_dir / "tiktok.png"
+        thumb_path = save_dir / "thumbnail.png"
+
         return {
-            "thumbnail":    self.generate_thumbnail(title, subtitle, save_dir / "thumbnail.png"),
-            "story":        self.generate_story(title, subtitle, save_dir / "story.png"),
-            "tiktok_cover": self.generate_tiktok_cover(title, save_dir / "tiktok_cover.png"),
-            "carousel":     self.generate_carousel(
-                [{"title": f"Punto {i+1}", "body": title} for i in range(8)],
-                save_dir / "carousel",
-            ),
+            "post":      self.generate_post(hook, title, save_path=post_path, seed=seed),
+            "story":     self.generate_story(hook, title, save_path=story_path, seed=seed),
+            "tiktok":    self.generate_tiktok_cover(hook, title, save_path=tiktok_path, seed=seed),
+            "thumbnail": self.generate_thumbnail(hook, title, cta=subtitle[:60], save_path=thumb_path, seed=seed),
+            "carousel":  self.generate_carousel(slides, save_dir / "carousel", seed=seed),
         }
