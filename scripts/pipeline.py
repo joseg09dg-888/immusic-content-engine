@@ -114,7 +114,7 @@ TOPICS = [
 # ── TTS Narracion ─────────────────────────────────────────────────────────────
 
 _SPANISH_VOICE_ID = (
-    "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Speech\\Voices\\Tokens\\TTS_MS_ES-MX_SABINA_11.0"
+    r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_ES-MX_SABINA_11.0"
 )
 
 
