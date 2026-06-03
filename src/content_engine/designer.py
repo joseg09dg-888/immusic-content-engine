@@ -248,11 +248,19 @@ def _paste_illustration(
         return bg
 
     w, h = bg.size
+    aspect = orig_w / orig_h  # > 1 = wide, < 1 = tall
 
-    # Target size depends on position
     if position == "top":
-        target_h = int(h * 0.68)
-        scale = min(w / orig_w, target_h / orig_h)
+        if aspect >= 0.85:
+            # Wide/square illustration (diamond, starburst, rose, crown):
+            # Cap width at 62% of image width to not overwhelm text area
+            target_w = int(w * 0.62)
+            scale = target_w / orig_w
+        else:
+            # Tall illustration (baroque engravings, angel, mic, money):
+            # Fill upper 68% of height
+            target_h = int(h * 0.68)
+            scale = min(w / orig_w, target_h / orig_h)
     elif position == "full":
         scale = max(w / orig_w, h / orig_h)
     else:  # center
@@ -271,7 +279,8 @@ def _paste_illustration(
     # Position
     x = (w - new_w) // 2
     if position == "top":
-        y = -new_h // 12  # slight bleed at top edge
+        # Baroque engravings bleed at top; geometric shapes sit fully visible
+        y = -new_h // 12 if aspect < 0.85 else int(h * 0.02)
     elif position == "full":
         y = (h - new_h) // 2
     else:  # center
@@ -332,17 +341,18 @@ def _draw_rebel_text(
     hook: str,
     headline: str,
     cta: str = "",
+    sub_text: str = "",
     invert: bool = False,
 ) -> Image.Image:
     """
-    3-tier text system matching @immusicsello Canva feed:
+    4-tier text system matching @immusicsello Canva feed EXACTLY:
       [small Anton — context/hook]
       [ENORMOUS Sceageus — the statement, CENTERED in image]
-      [small Anton — subtitle]
+      [small Anton — sub_text below headline (e.g. MENTES, CAMBIO)]
       ── fixed bottom ──
       [small Anton — CTA always at base]
 
-    Main block centers around 55% of image height.
+    Main block (hook + headline + sub_text) centers around 56% of image height.
     CTA is a fixed independent element at the bottom.
     """
     w, h = img.size
@@ -405,6 +415,17 @@ def _draw_rebel_text(
         draw.text((x, y), ln, font=hero_font, fill=text_color)
         y += hero_lh
 
+    # ── Sub text — small label below headline (e.g. MENTES, CAMBIO) ──
+    if sub_text:
+        y += 8
+        sub_lines = _wrap(draw, sub_text.upper(), label_font, int(w * 0.84))
+        for ln in sub_lines:
+            bx = draw.textbbox((0, 0), ln, font=label_font)
+            x  = (w - (bx[2] - bx[0])) // 2
+            draw.text((x + 1, y + 1), ln, font=label_font, fill=shadow_color)
+            draw.text((x, y), ln, font=label_font, fill=text_color)
+            y += label_size + 4
+
     # ── CTA — fixed at bottom, independent of main block ──
     if cta:
         cta_y = h - label_size - int(h * 0.05)
@@ -425,19 +446,21 @@ class Designer:
         hook: str,
         headline: str,
         cta: str = "DESCUBRE COMO EN NUESTRO CANAL",
+        sub_text: str = "",
         save_path: Optional[Path] = None,
         seed: int = 0,
     ) -> Image.Image:
         """
         Instagram post (1080×1350, 4:5 portrait) — REBEL LUXURY style.
-        Igual que el Canva del usuario: ilustracion superior + texto centrado + CTA al pie.
+        Identical to Canva DAHFZBTb7g0: illustration top + centered text + CTA at base.
+        sub_text: small label below headline (e.g. 'MENTES', 'CAMBIO').
         """
         size  = Dimensions.INSTAGRAM_POST
         bg    = _violet_bg(size, seed=seed)
         illus = _pick_illustration(seed)
         if illus:
             bg = _paste_illustration(bg, illus, position="top", opacity=0.92)
-        bg = _draw_rebel_text(bg, hook, headline, cta)
+        bg = _draw_rebel_text(bg, hook, headline, cta, sub_text)
         bg = _paste_logo(bg, size=int(size[0] * 0.09), corner="top-left")
         if save_path:
             save_path.parent.mkdir(parents=True, exist_ok=True)

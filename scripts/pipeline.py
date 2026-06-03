@@ -173,50 +173,63 @@ def _run_ffmpeg(cmd: list, label: str) -> bool:
 
 
 def create_short(slides: list, audio: Path, out: Path, secs: float = 5.0) -> bool:
-    """Vertical 1080x1920 — YouTube Shorts + TikTok. Calidad maxima."""
+    """Vertical 1080x1920 — YouTube Shorts + TikTok."""
     n = len(slides)
+    total_dur = n * secs
     cmd = ["ffmpeg", "-y"]
     for p in slides:
         cmd += ["-loop", "1", "-t", str(secs), "-i", str(p)]
-    if audio and audio.exists():
-        cmd += ["-i", str(audio)]
     filters = "".join(
         f"[{i}:v]scale=1080:1920:force_original_aspect_ratio=increase,"
         f"crop=1080:1920,setsar=1[v{i}];" for i in range(n)
     )
     concat = "".join(f"[v{i}]" for i in range(n))
-    cmd += ["-filter_complex", f"{filters}{concat}concat=n={n}:v=1:a=0[vo]",
-            "-map", "[vo]"]
+    filter_complex = f"{filters}{concat}concat=n={n}:v=1:a=0[vo]"
+
     if audio and audio.exists():
-        cmd += ["-map", f"{n}:a", "-shortest"]
-    cmd += ["-c:v", "libx264", "-crf", "16", "-preset", "slow",  # calidad maxima
+        cmd += ["-i", str(audio)]
+        filter_complex += f";[{n}:a]atrim=0:{total_dur},asetpts=PTS-STARTPTS[ao]"
+        cmd += ["-filter_complex", filter_complex,
+                "-map", "[vo]", "-map", "[ao]"]
+    else:
+        cmd += ["-filter_complex", filter_complex, "-map", "[vo]"]
+
+    cmd += ["-c:v", "libx264", "-crf", "18", "-preset", "medium",
+            "-c:a", "aac", "-b:a", "192k",
+            "-t", str(total_dur),
             "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(out)]
     out.parent.mkdir(parents=True, exist_ok=True)
     return _run_ffmpeg(cmd, "Short")
 
 
 def create_long_video(slides: list, audio: Path, out: Path, secs: float = 10.0) -> bool:
-    """4K UHD (3840x2160) — YouTube canal, watch hours, calidad maxima."""
+    """Full HD 1920x1080 — YouTube canal, watch hours. (1080p para compatibilidad)."""
     n = len(slides)
+    total_dur = n * secs
     cmd = ["ffmpeg", "-y"]
     for p in slides:
         cmd += ["-loop", "1", "-t", str(secs), "-i", str(p)]
-    if audio and audio.exists():
-        cmd += ["-i", str(audio)]
-    # 4K upscale — partimos de 1080x1920 (vertical) y hacemos landscape 3840x2160
     filters = "".join(
-        f"[{i}:v]scale=3840:2160:force_original_aspect_ratio=increase,"
-        f"crop=3840:2160,setsar=1[v{i}];" for i in range(n)
+        f"[{i}:v]scale=1920:1080:force_original_aspect_ratio=increase,"
+        f"crop=1920:1080,setsar=1[v{i}];" for i in range(n)
     )
     concat = "".join(f"[v{i}]" for i in range(n))
-    cmd += ["-filter_complex", f"{filters}{concat}concat=n={n}:v=1:a=0[vo]",
-            "-map", "[vo]"]
+    filter_complex = f"{filters}{concat}concat=n={n}:v=1:a=0[vo]"
+
     if audio and audio.exists():
-        cmd += ["-map", f"{n}:a", "-shortest"]
-    cmd += ["-c:v", "libx264", "-crf", "16", "-preset", "slow",  # 4K calidad maxima
+        cmd += ["-i", str(audio)]
+        filter_complex += f";[{n}:a]atrim=0:{total_dur},asetpts=PTS-STARTPTS[ao]"
+        cmd += ["-filter_complex", filter_complex,
+                "-map", "[vo]", "-map", "[ao]"]
+    else:
+        cmd += ["-filter_complex", filter_complex, "-map", "[vo]"]
+
+    cmd += ["-c:v", "libx264", "-crf", "18", "-preset", "medium",
+            "-c:a", "aac", "-b:a", "192k",
+            "-t", str(total_dur),
             "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(out)]
     out.parent.mkdir(parents=True, exist_ok=True)
-    return _run_ffmpeg(cmd, "4K-Canal")
+    return _run_ffmpeg(cmd, "Canal-1080p")
 
 
 # ── Publishers ────────────────────────────────────────────────────────────────
