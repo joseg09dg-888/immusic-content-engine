@@ -18,10 +18,13 @@ _ASSETS     = Path(__file__).resolve().parent.parent.parent / "assets"
 _ENGRAVINGS = _ASSETS / "engravings"
 
 _FONT_MAP = {
-    "title":    ["Anton-Regular.ttf", "impact.ttf"],
-    "subtitle": ["Anton-Regular.ttf", "impact.ttf"],
-    "bold":     ["segoeuib.ttf", "arialbd.ttf", "calibrib.ttf"],
-    "regular":  ["segoeui.ttf",  "arial.ttf",   "calibri.ttf"],
+    # FUENTES DE MARCA IM MUSIC (verificadas con @immusicsello):
+    # - Sceageus: headline principal (la fuente display gótica/redondeada del brand)
+    # - Anton: textos secundarios, contexto, CTA
+    "title":    ["sceageus.otf", "Sceageus-Regular.otf", "Anton-Regular.ttf", "Anton.ttf", "impact.ttf"],
+    "subtitle": ["Anton-Regular.ttf", "Anton.ttf", "impact.ttf"],
+    "bold":     ["Anton-Regular.ttf", "Anton.ttf", "segoeuib.ttf", "arialbd.ttf"],
+    "regular":  ["Anton-Regular.ttf", "Anton.ttf", "segoeui.ttf",  "arial.ttf"],
 }
 
 
@@ -58,10 +61,26 @@ def _wrap_text(draw, text: str, font, max_w: int) -> List[str]:
 
 # Engravings que NO encajan con REBEL LUXURY o tienen problemas de calidad
 _ENGRAVING_BLACKLIST = {
-    "eng_08_Greek_woman__classical_figure__engraved_by_Pikao.j.png",  # 10KB, demasiado pequeño
-    "eng_05_Brutus_fibula_compared_with_antique_coin.png",              # tiene texto anotaciones
-    "eng_19_Dr_Batson_in_faquir_dress_after_Delhi_Massacre__In.png",   # contexto inapropiado
-    "eng_02_Eagle_Map_of_the_United_States_Engraved_For_Rudime.png",   # mapa con texto legible
+    # Demasiado pequeño
+    "eng_08_Greek_woman__classical_figure__engraved_by_Pikao.j.png",
+    # Mapas con texto
+    "eng_02_Eagle_Map_of_the_United_States_Engraved_For_Rudime.png",
+    # Contexto inapropiado
+    "eng_19_Dr_Batson_in_faquir_dress_after_Delhi_Massacre__In.png",
+    # Coin con texto anotado
+    "eng_05_Brutus_fibula_compared_with_antique_coin.png",
+    # Grabados tonales/fotográficos — crean manchas negras sólidas, no líneas finas
+    "eng_06_Rose_flowers__5_varieties_._Coloured_engraving_by_.png",  # coloreado, tonal
+    "eng_03_Musée_des_arts_décoratifs_-_Memento_mori_-_Johann_.png",  # muy oscuro
+    "eng_15_Titelprent_met_een_schedel_en_een_zandloper_Mement.png",  # muy oscuro
+    "eng_06_The_story_of_the_greatest_nations__from_the_dawn_o.png",  # texto/mapa
+    "eng_24_Coppée_-_Œuvres_complètes__Poésies__t2__1892.djvu.png",  # texto
+    "eng_11_1928__20_Gold_Certificate.jpg",  # texto impreso en billete
+    "eng_04_Michel_Richard_Delalande_engraving_BNF_Gallica.jpg",  # retrato tonal gris
+    "eng_03_Putto_wearing_a_filtering_half_mask.svg.png",            # SVG plano, silueta sin detalle
+    "eng_16_Jean_Morin_-_Memento_Mori_-_WGA16234.jpg",              # retrato oscuro, sin líneas finas
+    "eng_07_Giovanni_Britto_-_Self-Portrait_by_Titian_-_WGA032.png", # retrato tonal gris
+    "eng_02_Ignaz-Schwarz-Institutiones-juris-universalis_MG_0.png", # arquitectura muy densa
 }
 
 def _pick_engraving(seed: int = 0, exclude: list = None) -> Optional[Path]:
@@ -113,7 +132,7 @@ def _rebel_luxury_bg(
             eng_gray = Image.open(eng_path).convert("L")
             ew, eh = eng_gray.size
 
-            # Scale: cover mode — fill ~88% of height or full width, whichever is larger
+            # Scale: cover mode — fill ~88% of height or full width
             scale_h = (h * 0.88) / eh
             scale_w = w / ew
             scale = max(scale_h, scale_w)
@@ -121,13 +140,18 @@ def _rebel_luxury_bg(
             new_h = int(eh * scale)
             eng_gray = eng_gray.resize((new_w, new_h), Image.LANCZOS)
 
-            # Boost contrast so ink lines are crisp and clean
-            eng_gray = ImageEnhance.Contrast(eng_gray).enhance(1.9)
+            # Sharpen to preserve fine line detail
+            eng_gray = ImageEnhance.Sharpness(eng_gray).enhance(1.3)
+            # Gentle contrast — only to separate ink from paper
+            eng_gray = ImageEnhance.Contrast(eng_gray).enhance(1.1)
 
-            # Convert to RGBA: dark pixels → black opaque, white → transparent
-            inverted = ImageOps.invert(eng_gray)
+            # THRESHOLD: 190 — solo los píxeles MÁS OSCUROS (trazos de tinta) se vuelven opacos
+            # Valor más alto = solo líneas muy oscuras = más violeta visible = más fiel al original
+            # El original de @immusicsello: el fondo violeta siempre es visible
+            threshold = 190
+            alpha_mask = eng_gray.point(lambda px: 0 if px > threshold else 255)
             eng_rgba = Image.new("RGBA", (new_w, new_h), (0, 0, 0, 255))
-            eng_rgba.putalpha(inverted)
+            eng_rgba.putalpha(alpha_mask)
 
             # Center horizontally, minimal top offset
             x_off = (w - new_w) // 2
