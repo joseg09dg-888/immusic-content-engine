@@ -34,9 +34,10 @@ log = logging.getLogger("pipeline")
 
 TOPICS = [
     {
-        "titulo_principal": "JAQUEAMOS MENTES",
+        "titulo_principal": "JAQUEAMOS",
+        "sub_texto": "MENTES",
         "angulo_neurociencia": "Como la neurociencia convierte musica en exito",
-        "hook_apertura": "No lanzamos musica. Jaqueamos mentes.",
+        "hook_apertura": "No lanzamos musica, ni subimos videos al azar",
         "datos_clave": [
             "El 95% de las decisiones musicales son inconscientes",
             "Un hook de 7 segundos decide si alguien escucha o skippea",
@@ -49,7 +50,8 @@ TOPICS = [
         "fuentes": ["IM Music Research 2026", "Nature Neuroscience 2024"],
     },
     {
-        "titulo_principal": "NEUROCIENCIA DEL HIT",
+        "titulo_principal": "NEUROCIENCIA",
+        "sub_texto": "Y PSICOLOGIA APLICADA AL EXITO REAL",
         "angulo_neurociencia": "Por que tu cerebro repite la misma cancion",
         "hook_apertura": "Por que no puedes dejar de escuchar esa cancion?",
         "datos_clave": [
@@ -64,9 +66,10 @@ TOPICS = [
         "fuentes": ["IM Music Research 2026", "Journal of Neuroscience 2023"],
     },
     {
-        "titulo_principal": "EL JUEGO CAMBIO",
+        "titulo_principal": "JUEGO",
+        "sub_texto": "CAMBIO",
         "angulo_neurociencia": "Estrategia y tecnologia al servicio del artista",
-        "hook_apertura": "Como logramos resultados que otros solo suenan?",
+        "hook_apertura": "El",
         "datos_clave": [
             "Distribucion directa = 92% de regalias para el artista",
             "Un Short viral genera 50K streams organicos en 48h",
@@ -80,6 +83,7 @@ TOPICS = [
     },
     {
         "titulo_principal": "SOLO SUENAN",
+        "sub_texto": "?",
         "angulo_neurociencia": "La diferencia entre sonar y dominar la industria",
         "hook_apertura": "Como logramos resultados que otros solo suenan?",
         "datos_clave": [
@@ -94,19 +98,36 @@ TOPICS = [
         "fuentes": ["IM Music Research 2026", "Billboard Analytics 2025"],
     },
     {
-        "titulo_principal": "DEL EXITO",
+        "titulo_principal": "DEL EXITO.",
+        "sub_texto": "NO TE QUEDES FUERA.",
         "angulo_neurociencia": "El mapa que la industria no quiere que veas",
-        "hook_apertura": "Estamos a punto de revelar el mapa del exito.",
+        "hook_apertura": "Estamos a punto de revelar el mapa.",
         "datos_clave": [
-            "Paso 1: Identidad de marca — sin esto nada funciona",
-            "Paso 2: Contenido consistente — algoritmo necesita rutina",
-            "Paso 3: Distribucion inteligente — Nexus + plataformas propias",
-            "Paso 4: Monetizacion — YouTube + regalias + sync licensing",
-            "Paso 5: Escala — reinvierte el 20% en paid media",
+            "Identidad de marca — sin esto nada funciona",
+            "Contenido consistente — el algoritmo necesita rutina",
+            "Distribucion inteligente — Nexus + plataformas propias",
+            "Monetizacion — YouTube + regalias + sync licensing",
+            "Escala — reinvierte el 20% en paid media",
             "IM Music te acompana en cada paso",
         ],
         "controversia": "No te quedes fuera del sistema que ya funciona.",
         "fuentes": ["IM Music Research 2026", "Forbes Music 2025"],
+    },
+    {
+        "titulo_principal": "REBEL LUXURY",
+        "sub_texto": "NO ES UN LOOK. ES UN SISTEMA.",
+        "angulo_neurociencia": "El modelo de negocio que redefine la industria musical",
+        "hook_apertura": "No es un estilo. Es una filosofia.",
+        "datos_clave": [
+            "92% de regalias directo al artista via Nexus",
+            "Neurociencia aplicada a cada decision de lanzamiento",
+            "IA + estrategia + distribucion = ventaja competitiva",
+            "Medellín liderando la innovacion musical en Latinoamerica",
+            "Artistas IM Music crecen 3x mas rapido que el promedio",
+            "El sello que pone al artista primero — siempre",
+        ],
+        "controversia": "Los sellos tradicionales venden suenos. IM Music vende estrategia.",
+        "fuentes": ["IM Music Research 2026", "Musically 2025"],
     },
 ]
 
@@ -386,6 +407,7 @@ def run(args):
         brief = random.choice(TOPICS)
 
     titulo = brief["titulo_principal"]
+    sub_texto = brief.get("sub_texto", "")
     hook = brief["hook_apertura"]
     angulo = brief["angulo_neurociencia"]
     datos = brief["datos_clave"]
@@ -419,7 +441,7 @@ def run(args):
     thumb_path = work_dir / "thumbnail.png"
     story_path = work_dir / "story.png"
 
-    d.generate_post(hook, titulo, "DESCUBRE COMO EN NUESTRO CANAL", post_path, seed=seed)
+    d.generate_post(hook, titulo, "DESCUBRE COMO EN NUESTRO CANAL", sub_texto, post_path, seed=seed)
     d.generate_thumbnail(hook, titulo, angulo[:50], thumb_path, seed=seed)
     d.generate_story(hook, titulo, "DESCUBRE COMO EN NUESTRO CANAL", story_path, seed=seed)
     print(f"     Post, thumbnail, story y {len(carousel_paths)} slides generados")
