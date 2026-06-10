@@ -392,7 +392,8 @@ def publish_tiktok(video_path: Path, brief: dict) -> bool:
 # ── Pipeline principal ────────────────────────────────────────────────────────
 
 def run(args):
-    ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+    now = datetime.now()
+    ts = now.strftime("%Y%m%d_%H%M%S")
     work_dir = ROOT / "releases" / f"run_{ts}"
     work_dir.mkdir(parents=True, exist_ok=True)
 
@@ -411,6 +412,10 @@ def run(args):
     hook = brief["hook_apertura"]
     angulo = brief["angulo_neurociencia"]
     datos = brief["datos_clave"]
+
+    # Guardar brief para aprobar_publicar.py
+    import json as _json
+    (work_dir / "brief.json").write_text(_json.dumps(brief, ensure_ascii=False, indent=2), encoding="utf-8")
 
     print(f"\n{'='*60}")
     print(f"  IM MUSIC — REBEL LUXURY PIPELINE")
@@ -562,6 +567,16 @@ Hasta la proxima. IM Music. REBEL LUXURY. Jaqueamos mentes.
     if ok_long:
         total_secs = len(canal_slide_paths) * secs_per_slide
         print(f"     Canal: {long_path.stat().st_size//1024//1024}MB (~{total_secs/60:.1f}min)")
+
+    # ── PASO 3.5: Beat del dia (Chill Hop / Afro House) ─────────────────────
+    print("\n[3.5/5] Generando beat...")
+    from src.music_engine.beat_generator import BeatGenerator
+    beat_genre = "afro_house" if now.weekday() in (2, 3, 5) else "chill_hop"
+    bg = BeatGenerator()
+    if beat_genre == "afro_house":
+        beat_path = bg.generate_afro_house(output_path=work_dir / "beat_afro_house.wav", seed=seed)
+    else:
+        beat_path = bg.generate_chill_hop(output_path=work_dir / "beat_chill_hop.wav", seed=seed)
 
     if args.dry_run:
         print(f"\n  DRY RUN — todo generado en: {work_dir}")
