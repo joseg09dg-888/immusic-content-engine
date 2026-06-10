@@ -1,5 +1,7 @@
 # IM Music Content Engine — Plan Completo Todas las Fases
 
+> ⚠️ **SUPERADO (2026-06-10):** Las TAREA 0-7 de este plan ya están implementadas en el código real (con nombres/arquitectura distintos a los descritos aquí — ver auditoría en memoria `immusic-content-engine.md`, sección "Auditoría 2026-06-10"). 153/153 tests pasan. Roadmap vigente: `docs/ESTRATEGIA_ALGORITMOS_2026.md`. No usar este plan para nuevo trabajo — los checkboxes `- [ ]` están desactualizados y NO reflejan el estado real.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Sistema 100% automatizado que genera contenido para YouTube (long + Shorts), TikTok (Reels + Carruseles), Instagram (Reels + Carruseles), con portadas, copys y SEO optimizado, además de producción musical completa (beats Chill Hop / Afro House) con masterización, visualizer y distribución Nexus.
