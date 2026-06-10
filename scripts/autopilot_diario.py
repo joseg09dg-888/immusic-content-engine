@@ -11,6 +11,7 @@ Uso:
     python scripts/autopilot_diario.py
 """
 import sys
+import json
 import argparse
 from pathlib import Path
 
@@ -19,6 +20,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import pipeline  # noqa: E402
+from src.core.drive_sync import sync_pack_to_drive  # noqa: E402
 
 
 def main():
@@ -28,10 +30,15 @@ def main():
     )
     work_dir = pipeline.run(args)
 
+    brief = json.loads((work_dir / "brief.json").read_text(encoding="utf-8"))
+    drive_dest = sync_pack_to_drive(work_dir, brief["titulo_principal"])
+
     rel = work_dir.relative_to(ROOT)
     print(f"\n{'='*60}")
     print("  LISTO PARA APROBAR")
-    print(f"  {work_dir}")
+    print(f"  Local: {work_dir}")
+    if drive_dest:
+        print(f"  Drive: {drive_dest}")
     print()
     print("  Para publicar en YouTube + Instagram + TikTok:")
     print(f"    python scripts/aprobar_publicar.py {rel}")
