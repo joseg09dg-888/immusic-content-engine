@@ -13,6 +13,7 @@ Uso:
 import sys
 import io
 import os
+import asyncio
 import argparse
 import logging
 import subprocess
@@ -140,13 +141,33 @@ _SPANISH_VOICE_ID = (
     r"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_ES-MX_SABINA_11.0"
 )
 
+# Voz neural de Edge (gratis, sin API key) — español Colombia, alineada con el
+# brand voice "Medellin -> Mundo" (referencia Feid). Mucho mas natural que el
+# SAPI Sabina (pausas extranas, tono robotico).
+_EDGE_VOICE = "es-CO-GonzaloNeural"
+_EDGE_RATE = "+8%"
+
 
 def create_narration(text: str, output_path: Path) -> bool:
     """
-    TTS natural con Microsoft Sabina (español México) via pyttsx3.
-    Fallback a gTTS si pyttsx3 falla.
+    TTS natural con Edge Neural (es-CO-GonzaloNeural, gratis, requiere internet).
+    Fallback a Microsoft Sabina (pyttsx3, offline) y luego gTTS si Edge falla.
     """
-    # Intento 1: pyttsx3 con voz nativa Windows (Sabina — español México)
+    # Intento 1: Edge TTS neural — voz natural, requiere internet
+    try:
+        async def _gen():
+            communicate = edge_tts.Communicate(text, _EDGE_VOICE, rate=_EDGE_RATE)
+            await communicate.save(str(output_path))
+
+        import edge_tts
+        asyncio.run(_gen())
+        if output_path.exists() and output_path.stat().st_size > 1000:
+            log.info("TTS Edge (%s) OK: %s", _EDGE_VOICE, output_path.name)
+            return True
+    except Exception as e:
+        log.warning("Edge TTS fallido: %s — intentando Sabina", e)
+
+    # Intento 2: pyttsx3 con voz nativa Windows (Sabina — español México)
     try:
         import pyttsx3
         import tempfile, os
@@ -173,7 +194,7 @@ def create_narration(text: str, output_path: Path) -> bool:
     except Exception as e:
         log.warning("pyttsx3 fallido: %s — intentando gTTS", e)
 
-    # Fallback: gTTS
+    # Intento 3: gTTS
     try:
         from gtts import gTTS
         tts = gTTS(text=text, lang="es", slow=False)
