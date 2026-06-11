@@ -236,6 +236,7 @@ def _build_caption_ass(words: list, out_ass: Path, width: int, height: int, chun
     fontsize = max(28, width // 16)
     margin_v = int(height * 0.20)  # arriba del CTA fijo del diseno (~88% alto)
     margin_lr = int(width * 0.04)
+    box_pad = max(8, fontsize // 6)
 
     header = (
         "[Script Info]\n"
@@ -247,8 +248,10 @@ def _build_caption_ass(words: list, out_ass: Path, width: int, height: int, chun
         "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, "
         "BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, "
         "BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
+        # BorderStyle 3 = caja opaca (BackColour) detras del texto: legible siempre,
+        # incluso cuando el Ken Burns recorta un slide y el headline queda detras.
         f"Style: Caption,Anton,{fontsize},&H00FFFFFF,&H000000FF,&H00000000,&H00000000,"
-        f"1,0,0,0,100,100,0,0,1,3,0,2,{margin_lr},{margin_lr},{margin_v},1\n\n"
+        f"1,0,0,0,100,100,0,0,3,{box_pad},0,2,{margin_lr},{margin_lr},{margin_v},1\n\n"
         "[Events]\n"
         "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
     )
