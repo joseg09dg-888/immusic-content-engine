@@ -2,13 +2,15 @@
 IM Music Designer — REBEL LUXURY aesthetic.
 
 Visual system derived from @immusicsello feed:
-  - Background: solid electric violet #6200FF
+  - Background: solid electric violet #5E17EB ALWAYS (never black, never gradient)
   - Illustration: black ink/engraving PNG centered on violet
   - Typography: Sceageus HUGE (main statement) + Anton small (context + CTA)
-  - Palette: violet #6200FF | white #FFFFFF | black #000000
-  - NO galaxies, NO gradients for content posts. Raw. Bold. Luxury.
+  - Palette: violet #5E17EB | white #FFFFFF | black #000000 | cream #F2EDE5
+  - NO galaxies, NO gradients, NO grid/star overlays. Raw. Bold. Luxury.
 
-YouTube thumbnails use black bg + violet for contrast on dark platforms.
+The ONLY exception is the closing/outro card: pure black background with
+the IM Music logo centered and "MUSIC" in cream — used as the carousel
+closer, never as a backdrop for headline content or thumbnails.
 """
 import random
 from pathlib import Path
@@ -21,7 +23,7 @@ _ASSETS     = Path(__file__).resolve().parent.parent.parent / "assets"
 _ILLUS_DIR  = _ASSETS / "illustrations"
 _LOGO_PATH  = _ASSETS / "logo" / "logo_immusic.png"
 
-_VIOLET_RGB = (98, 0, 255)   # #6200FF
+_VIOLET_RGB = (94, 23, 235)  # #5E17EB — brand.py canonical violet
 _BLACK_RGB  = (0, 0, 0)
 _WHITE_RGB  = (255, 255, 255)
 _CREAM_RGB  = (242, 237, 229) # #F2EDE5
@@ -60,9 +62,24 @@ def _wrap(draw: ImageDraw.ImageDraw, text: str, font, max_w: int) -> List[str]:
     return lines or [""]
 
 
+# Files with an opaque (non-transparent, non-white) canvas baked in — pasting
+# these onto the violet background produces a visible black box, breaking
+# "el violeta SIEMPRE debe ser visible a traves de la ilustracion" (CLAUDE.md).
+_ILLUS_BLACKLIST = {
+    "_burj_high_contrast.png",
+    "_burj_lines_only.png",
+    "illus_angel_sm.png",
+    "illus_bandana.png",
+    "illus_mic_sm.png",
+    "illus_money_sm.png",
+    "illus_ring.png",
+}
+
+
 def _pick_illustration(seed: int) -> Optional[Path]:
     """Pick a random illustration from the library."""
     illus = sorted(_ILLUS_DIR.glob("*.png")) + sorted(_ILLUS_DIR.glob("*.webp"))
+    illus = [p for p in illus if p.name not in _ILLUS_BLACKLIST]
     if not illus:
         return None
     return illus[seed % len(illus)]
@@ -109,120 +126,51 @@ def _add_noise(img: Image.Image, amount: int = 8, seed: int = 0) -> Image.Image:
     return Image.alpha_composite(img.convert("RGBA"), noise).convert("RGB")
 
 
-def _add_urban_luxury_elements(img: Image.Image, seed: int = 0) -> Image.Image:
-    """
-    Urban Luxury elements — REBEL LUXURY aesthetic.
-    Varies by seed: constellation stars, geometric lines, city grid, luxury dots.
-    Each seed produces a different visual element set.
-    """
-    rng = random.Random(seed)
-    w, h = img.size
-    overlay = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-    draw = ImageDraw.Draw(overlay)
-
-    style = seed % 5  # 5 different element styles
-
-    if style == 0:
-        # Constellation: scattered stars + connecting lines
-        stars = [(rng.randint(20, w-20), rng.randint(20, h//2)) for _ in range(18)]
-        for x, y in stars:
-            r = rng.randint(2, 5)
-            a = rng.randint(60, 130)
-            draw.ellipse([x-r, y-r, x+r, y+r], fill=(255, 255, 255, a))
-        # Connect nearby stars
-        for i, (x1, y1) in enumerate(stars):
-            for x2, y2 in stars[i+1:]:
-                dist = ((x2-x1)**2 + (y2-y1)**2) ** 0.5
-                if dist < w * 0.22:
-                    draw.line([(x1, y1), (x2, y2)], fill=(255, 255, 255, 25), width=1)
-
-    elif style == 1:
-        # Geometric luxury: thin diagonal grid lines
-        step = w // 10
-        for i in range(-h, w + h, step):
-            a = rng.randint(15, 35)
-            draw.line([(i, 0), (i + h, h)], fill=(255, 255, 255, a), width=1)
-        for i in range(-h, w + h, step * 3):
-            draw.line([(i, 0), (i + h, h)], fill=(255, 255, 255, 50), width=2)
-
-    elif style == 2:
-        # City grid: horizontal + vertical lines (urban skyline reference)
-        for y_line in range(h // 6, h // 2, h // 14):
-            a = rng.randint(20, 45)
-            draw.line([(0, y_line), (w, y_line)], fill=(255, 255, 255, a), width=1)
-        for x_line in range(0, w, w // 12):
-            a = rng.randint(15, 30)
-            lh = rng.randint(h // 8, h // 3)
-            draw.line([(x_line, 0), (x_line, lh)], fill=(255, 255, 255, a), width=1)
-
-    elif style == 3:
-        # Luxury dots pattern (halftone inspired)
-        for row in range(0, h // 2, h // 18):
-            for col in range(0, w, w // 16):
-                r = rng.randint(1, 4)
-                a = rng.randint(30, 80)
-                jx = rng.randint(-10, 10)
-                jy = rng.randint(-5, 5)
-                x, y = col + jx, row + jy
-                draw.ellipse([x-r, y-r, x+r, y+r], fill=(255, 255, 255, a))
-
-    else:
-        # Star dust: many tiny stars scattered in upper half
-        for _ in range(120):
-            x = rng.randint(0, w)
-            y = rng.randint(0, int(h * 0.55))
-            a = rng.randint(20, 100)
-            r = rng.choices([1, 2, 3], weights=[60, 30, 10])[0]
-            draw.ellipse([x-r, y-r, x+r, y+r], fill=(255, 255, 255, a))
-        # A few bright accent stars
-        for _ in range(8):
-            x = rng.randint(w//6, w*5//6)
-            y = rng.randint(0, int(h * 0.40))
-            draw.ellipse([x-4, y-4, x+4, y+4], fill=(255, 255, 255, 180))
-            draw.ellipse([x-8, y-8, x+8, y+8], fill=(255, 255, 255, 40))
-
-    return Image.alpha_composite(img.convert("RGBA"), overlay).convert("RGB")
-
-
 # ── Background builders ───────────────────────────────────────────────────────
 
 def _violet_bg(size: Tuple[int, int], seed: int = 0) -> Image.Image:
     """
     Solid electric violet background — the signature IM Music canvas.
-    Includes urban-luxury overlay elements that vary per seed.
+    Pure solid #5E17EB + subtle film grain only. NO gradients, NO overlay
+    patterns — matches the verified @immusicsello brand identity.
     """
-    w, h = size
     img = Image.new("RGB", size, _VIOLET_RGB)
-    draw = ImageDraw.Draw(img)
-
-    # Very subtle darker band at bottom — gives weight without gradient
-    for i in range(h // 6):
-        alpha_factor = i / (h // 6)
-        r = int(_VIOLET_RGB[0] * (1 - 0.12 * alpha_factor))
-        g = int(_VIOLET_RGB[1] * (1 - 0.12 * alpha_factor))
-        b = int(_VIOLET_RGB[2] * (1 - 0.05 * alpha_factor))
-        draw.rectangle([0, h - i - 1, w, h - i], fill=(r, g, b))
-
-    img = _add_noise(img, amount=10, seed=seed)
-    img = _add_urban_luxury_elements(img, seed=seed)  # urban-luxury variation per seed
-    return img
+    return _add_noise(img, amount=10, seed=seed)
 
 
 def _black_bg(size: Tuple[int, int], seed: int = 0) -> Image.Image:
-    """Deep black background for YouTube thumbnails — with star dust + violet glow."""
-    w, h = size
-    img = Image.new("RGB", size, (4, 2, 8))
+    """Pure black background — used ONLY for the closing/outro card."""
+    img = Image.new("RGB", size, _BLACK_RGB)
+    return _add_noise(img, amount=6, seed=seed)
+
+
+def _closing_card(size: Tuple[int, int], seed: int = 0) -> Image.Image:
+    """Closing/outro card: pure black bg + centered logo + 'MUSIC' in cream."""
+    img = _black_bg(size, seed=seed)
+    if not _LOGO_PATH.exists():
+        return img
+
+    logo = Image.open(_LOGO_PATH).convert("RGBA")
+    lw, lh = logo.size
+    target_w = int(size[0] * 0.45)
+    scale = target_w / lw
+    logo = logo.resize((target_w, int(lh * scale)), Image.LANCZOS)
+    lw, lh = logo.size
+    lx = (size[0] - lw) // 2
+    ly = (size[1] - lh) // 2 - size[1] // 14
+
+    result = img.convert("RGBA")
+    result.paste(logo, (lx, ly), logo)
+    img = result.convert("RGB")
+
     draw = ImageDraw.Draw(img)
-    # Faint violet glow center
-    cx, cy = w // 2, h // 2
-    for r in range(min(w, h) // 2, 0, -20):
-        alpha = max(0, 18 - (r // 20))
-        color = (int(_VIOLET_RGB[0] * alpha / 18),
-                 int(_VIOLET_RGB[1] * alpha / 18),
-                 int(_VIOLET_RGB[2] * alpha / 18))
-        draw.ellipse([cx - r, cy - r, cx + r, cy + r], fill=color)
-    img = _add_noise(img, amount=12, seed=seed)
-    img = _add_urban_luxury_elements(img, seed=seed + 99)  # star dust on black
+    music_font = _font("hero", size[0] // 7)
+    music_text = "MUSIC"
+    bx = draw.textbbox((0, 0), music_text, font=music_font)
+    tw = bx[2] - bx[0]
+    tx = (size[0] - tw) // 2
+    ty = ly + lh + int(size[1] * 0.015)
+    draw.text((tx, ty), music_text, font=music_font, fill=_CREAM_RGB)
     return img
 
 
@@ -508,21 +456,20 @@ class Designer:
         seed: int = 0,
     ) -> Image.Image:
         """
-        YouTube thumbnail (1280×720) — black bg + violet glow.
-        More contrast-heavy than Instagram posts.
+        YouTube thumbnail (1280×720) — solid violet bg, brand-consistent.
         """
         size  = Dimensions.YOUTUBE_THUMBNAIL
-        bg    = _black_bg(size, seed=seed + 3)
+        bg    = _violet_bg(size, seed=seed + 3)
         illus = _pick_illustration(seed + 2)
         if illus:
-            bg = _paste_illustration(bg, illus, position="top", opacity=0.80)
+            bg = _paste_illustration(bg, illus, position="top", opacity=0.92)
 
-        # Violet bar at bottom — brand signature
+        # Black bar at bottom — brand contrast accent
         w, h = size
         draw = ImageDraw.Draw(bg)
-        draw.rectangle([0, h - 8, w, h], fill=_VIOLET_RGB)
+        draw.rectangle([0, h - 8, w, h], fill=_BLACK_RGB)
 
-        bg = _draw_rebel_text(bg, hook, headline, cta, invert=True)
+        bg = _draw_rebel_text(bg, hook, headline, cta)
         bg = _paste_logo(bg, size=int(size[0] * 0.08), corner="top-left")
         if save_path:
             save_path.parent.mkdir(parents=True, exist_ok=True)
@@ -551,20 +498,20 @@ class Designer:
             cta      = slide.get("cta", f"{i+1}/{n}")
 
             s = seed + i * 17
-            # Alternate between violet and near-black slides for rhythm
-            if i % 4 == 3:  # Every 4th slide: black for contrast
-                bg = _black_bg(size, seed=s)
+
+            if i == n - 1:
+                # Closing slide: pure black + logo + "MUSIC" — brand outro
+                bg = _closing_card(size, seed=s)
             else:
                 bg = _violet_bg(size, seed=s)
+                illus = _pick_illustration(s + i)
+                if illus:
+                    bg = _paste_illustration(bg, illus, position="center", opacity=0.85)
 
-            illus = _pick_illustration(s + i)
-            if illus:
-                bg = _paste_illustration(bg, illus, position="center", opacity=0.85)
-
-            # For slides with body text, use it as hook
-            effective_hook = hook or body[:80]
-            bg = _draw_rebel_text(bg, effective_hook, headline, cta)
-            bg = _paste_logo(bg, size=int(size[0] * 0.10), corner="top-left")
+                # For slides with body text, use it as hook
+                effective_hook = hook or body[:80]
+                bg = _draw_rebel_text(bg, effective_hook, headline, cta)
+                bg = _paste_logo(bg, size=int(size[0] * 0.10), corner="top-left")
 
             if save_dir:
                 save_dir.mkdir(parents=True, exist_ok=True)

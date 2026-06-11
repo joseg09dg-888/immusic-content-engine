@@ -193,64 +193,79 @@ def _run_ffmpeg(cmd: list, label: str) -> bool:
     return True
 
 
-def create_short(slides: list, audio: Path, out: Path, secs: float = 5.0) -> bool:
-    """Vertical 1080x1920 — YouTube Shorts + TikTok."""
+def _create_kenburns_video(
+    slides: list, audio: Path, out: Path,
+    width: int, height: int, secs: float, label: str, fps: int = 25,
+) -> bool:
+    """
+    Concatena slides con efecto Ken Burns (zoom in/out alternado por slide,
+    centrado) + transiciones crossfade entre cada uno. Reemplaza los cortes
+    secos sobre imagenes estaticas por movimiento continuo — usa solo
+    filtros nativos de FFmpeg (zoompan + xfade), sin dependencias nuevas.
+    """
     n = len(slides)
-    total_dur = n * secs
+    xfade_dur = min(1.0, secs / 4)
+    total_dur = n * secs - (n - 1) * xfade_dur if n > 1 else secs
+    d_frames = max(1, int(secs * fps))
+    z_max = 1.15
+    step = (z_max - 1.0) / max(1, d_frames - 1)
+
     cmd = ["ffmpeg", "-y"]
     for p in slides:
-        cmd += ["-loop", "1", "-t", str(secs), "-i", str(p)]
-    filters = "".join(
-        f"[{i}:v]scale=1080:1920:force_original_aspect_ratio=increase,"
-        f"crop=1080:1920,setsar=1[v{i}];" for i in range(n)
-    )
-    concat = "".join(f"[v{i}]" for i in range(n))
-    filter_complex = f"{filters}{concat}concat=n={n}:v=1:a=0[vo]"
+        cmd += ["-loop", "1", "-framerate", str(fps), "-t", str(secs), "-i", str(p)]
+
+    parts = []
+    for i in range(n):
+        # Alterna zoom-in / zoom-out por slide para variar el movimiento
+        if i % 2 == 0:
+            zexpr = f"min(1+on*{step:.8f},{z_max})"
+        else:
+            zexpr = f"max({z_max}-on*{step:.8f},1)"
+        parts.append(
+            f"[{i}:v]scale={width}:{height}:force_original_aspect_ratio=increase,"
+            f"crop={width}:{height},setsar=1,"
+            f"zoompan=z='{zexpr}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':"
+            f"d=1:s={width}x{height}:fps={fps}[v{i}]"
+        )
+
+    if n == 1:
+        vout = "v0"
+    else:
+        for k in range(1, n):
+            offset = max(0.0, k * (secs - xfade_dur) - 0.02)
+            src = "v0" if k == 1 else f"x{k-1}"
+            parts.append(
+                f"[{src}][v{k}]xfade=transition=fade:duration={xfade_dur}:"
+                f"offset={offset:.3f}[x{k}]"
+            )
+        vout = f"x{n-1}"
+
+    filter_complex = ";".join(parts)
 
     if audio and audio.exists():
         cmd += ["-i", str(audio)]
         filter_complex += f";[{n}:a]atrim=0:{total_dur},asetpts=PTS-STARTPTS[ao]"
         cmd += ["-filter_complex", filter_complex,
-                "-map", "[vo]", "-map", "[ao]"]
+                "-map", f"[{vout}]", "-map", "[ao]"]
     else:
-        cmd += ["-filter_complex", filter_complex, "-map", "[vo]"]
+        cmd += ["-filter_complex", filter_complex, "-map", f"[{vout}]"]
 
     cmd += ["-c:v", "libx264", "-crf", "18", "-preset", "medium",
             "-c:a", "aac", "-b:a", "192k",
             "-t", str(total_dur),
             "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(out)]
     out.parent.mkdir(parents=True, exist_ok=True)
-    return _run_ffmpeg(cmd, "Short")
+    return _run_ffmpeg(cmd, label)
+
+
+def create_short(slides: list, audio: Path, out: Path, secs: float = 5.0) -> bool:
+    """Vertical 1080x1920 — YouTube Shorts + TikTok. Ken Burns + crossfade."""
+    return _create_kenburns_video(slides, audio, out, 1080, 1920, secs, "Short")
 
 
 def create_long_video(slides: list, audio: Path, out: Path, secs: float = 10.0) -> bool:
-    """Full HD 1920x1080 — YouTube canal, watch hours. (1080p para compatibilidad)."""
-    n = len(slides)
-    total_dur = n * secs
-    cmd = ["ffmpeg", "-y"]
-    for p in slides:
-        cmd += ["-loop", "1", "-t", str(secs), "-i", str(p)]
-    filters = "".join(
-        f"[{i}:v]scale=1920:1080:force_original_aspect_ratio=increase,"
-        f"crop=1920:1080,setsar=1[v{i}];" for i in range(n)
-    )
-    concat = "".join(f"[v{i}]" for i in range(n))
-    filter_complex = f"{filters}{concat}concat=n={n}:v=1:a=0[vo]"
-
-    if audio and audio.exists():
-        cmd += ["-i", str(audio)]
-        filter_complex += f";[{n}:a]atrim=0:{total_dur},asetpts=PTS-STARTPTS[ao]"
-        cmd += ["-filter_complex", filter_complex,
-                "-map", "[vo]", "-map", "[ao]"]
-    else:
-        cmd += ["-filter_complex", filter_complex, "-map", "[vo]"]
-
-    cmd += ["-c:v", "libx264", "-crf", "18", "-preset", "medium",
-            "-c:a", "aac", "-b:a", "192k",
-            "-t", str(total_dur),
-            "-pix_fmt", "yuv420p", "-movflags", "+faststart", str(out)]
-    out.parent.mkdir(parents=True, exist_ok=True)
-    return _run_ffmpeg(cmd, "Canal-1080p")
+    """Full HD 1920x1080 — YouTube canal, watch hours. Ken Burns + crossfade."""
+    return _create_kenburns_video(slides, audio, out, 1920, 1080, secs, "Canal-1080p")
 
 
 # ── Publishers ────────────────────────────────────────────────────────────────

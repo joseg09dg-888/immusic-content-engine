@@ -14,6 +14,7 @@ Uso:
 import sys
 import json
 import argparse
+from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -105,6 +106,17 @@ def main():
     print(f"  Instagram Carr.: {'OK' if results.get('ig_carousel') else 'SKIP/FAIL'}")
     print(f"  TikTok:          {'OK' if results.get('tiktok') else 'SKIP/FAIL'}")
     print(f"{'='*60}\n")
+
+    # Marca de aprobacion — protege este pack del auto-cleanup de autopilot_diario.py
+    marker = work_dir / "APROBADO.txt"
+    marker.write_text(
+        f"Aprobado: {datetime.now().isoformat()}\n"
+        f"YouTube Short:   {'OK' if results.get('yt_short') else 'SKIP/FAIL'}\n"
+        f"YouTube Canal:   {'OK' if results.get('yt_long') else 'SKIP/FAIL'}\n"
+        f"Instagram Carr.: {'OK' if results.get('ig_carousel') else 'SKIP/FAIL'}\n"
+        f"TikTok:          {'OK' if results.get('tiktok') else 'SKIP/FAIL'}\n",
+        encoding="utf-8",
+    )
 
 
 if __name__ == "__main__":

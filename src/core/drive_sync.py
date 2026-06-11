@@ -121,6 +121,31 @@ def sync_pack_to_drive(work_dir: Path, titulo: str, fecha: datetime = None) -> P
     return dest
 
 
+def delete_pack_from_drive(titulo: str, fecha: datetime) -> bool:
+    """
+    Borra la carpeta de Drive 'CONTENIDO - Por Fecha/{año}/{mes}_{Mes}/
+    {fecha} {dia} - {titulo} (PENDIENTE APROBACION)' correspondiente a un
+    pack que no fue aprobado dentro del periodo de retencion.
+    Returns True si se borro, False si Drive no esta disponible o no existia.
+    """
+    drive_root = _find_drive_root()
+    if not drive_root:
+        return False
+
+    mes_folder = f"{fecha.month:02d}_{MESES[fecha.month - 1]}"
+    dia_nombre = DIAS[fecha.weekday()]
+    safe_titulo = "".join(c for c in titulo if c not in '<>:"/\\|?*').strip()
+    dest_name = f"{fecha:%Y-%m-%d} {dia_nombre} - {safe_titulo} (PENDIENTE APROBACION)"
+
+    dest = (drive_root / DRIVE_FOLDER_NAME / DRIVE_POR_FECHA_NAME
+            / str(fecha.year) / mes_folder / dest_name)
+    if dest.exists():
+        shutil.rmtree(dest)
+        print(f"[Drive] Borrado pack no aprobado: {dest}")
+        return True
+    return False
+
+
 def is_drive_available() -> bool:
     return _find_drive_root() is not None
 
