@@ -12,6 +12,7 @@ Uso:
 """
 import sys
 import io
+import os
 import argparse
 import logging
 import subprocess
@@ -19,6 +20,7 @@ import shutil
 import time
 from pathlib import Path
 from datetime import datetime
+from typing import Optional
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
@@ -193,15 +195,122 @@ def _run_ffmpeg(cmd: list, label: str) -> bool:
     return True
 
 
+# ── Captions virales (Whisper + ASS) ─────────────────────────────────────────
+# Subtitulos animados quemados sobre el video — el elemento visual que mas
+# impacta retencion en Shorts/Reels/TikTok (la mayoria ve sin sonido).
+# Usa solo herramientas gratuitas ya instaladas: openai-whisper + libass (FFmpeg).
+
+_FONTS_DIR = ROOT / "assets" / "fonts"
+_WHISPER_MODEL_SIZE = "base"
+
+
+def _transcribe_words(audio_path: Path) -> list:
+    """Transcribe audio con Whisper, retorna lista plana de palabras con timestamps."""
+    import whisper
+    model = whisper.load_model(_WHISPER_MODEL_SIZE)
+    result = model.transcribe(str(audio_path), language="es", word_timestamps=True)
+    words = []
+    for seg in result.get("segments", []):
+        for w in seg.get("words", []):
+            text = w["word"].strip()
+            if text:
+                words.append({"word": text, "start": w["start"], "end": w["end"]})
+    return words
+
+
+def _ass_time(t: float) -> str:
+    h = int(t // 3600)
+    m = int((t % 3600) // 60)
+    s = t % 60
+    return f"{h:d}:{m:02d}:{s:05.2f}"
+
+
+def _build_caption_ass(words: list, out_ass: Path, width: int, height: int, chunk_size: int = 3) -> bool:
+    """
+    Genera subtitulos .ass estilo 'viral captions': palabras grandes en
+    mayusculas, blancas con contorno negro, fade rapido por frase corta.
+    """
+    if not words:
+        return False
+
+    fontsize = max(28, width // 16)
+    margin_v = int(height * 0.20)  # arriba del CTA fijo del diseno (~88% alto)
+    margin_lr = int(width * 0.04)
+
+    header = (
+        "[Script Info]\n"
+        "ScriptType: v4.00+\n"
+        f"PlayResX: {width}\n"
+        f"PlayResY: {height}\n"
+        "ScaledBorderAndShadow: yes\n\n"
+        "[V4+ Styles]\n"
+        "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, "
+        "BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, "
+        "BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
+        f"Style: Caption,Anton,{fontsize},&H00FFFFFF,&H000000FF,&H00000000,&H00000000,"
+        f"1,0,0,0,100,100,0,0,1,3,0,2,{margin_lr},{margin_lr},{margin_v},1\n\n"
+        "[Events]\n"
+        "Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n"
+    )
+
+    lines = []
+    for i in range(0, len(words), chunk_size):
+        chunk = words[i:i + chunk_size]
+        start, end = chunk[0]["start"], chunk[-1]["end"]
+        text = " ".join(w["word"] for w in chunk).upper()
+        lines.append(
+            f"Dialogue: 0,{_ass_time(start)},{_ass_time(end)},Caption,,0,0,0,,{{\\fad(60,60)}}{text}"
+        )
+
+    out_ass.write_text(header + "\n".join(lines) + "\n", encoding="utf-8")
+    return True
+
+
+def _ff_path(p: Path) -> str:
+    """Path relativo al cwd (sin ':' de unidad de Windows) para usarlo como
+    valor de opcion dentro de un filtro FFmpeg (ass/subtitles) — el ':' de
+    'C:/...' rompe el parser de opciones del filtro incluso escapado."""
+    rel = Path(os.path.relpath(p, Path.cwd()))
+    return str(rel).replace("\\", "/")
+
+
+def prepare_captions(audio_path: Optional[Path], width: int, height: int) -> Optional[Path]:
+    """
+    Transcribe la narracion con Whisper y genera un archivo .ass de subtitulos
+    junto al audio. Returns la ruta del .ass, o None si Whisper no esta
+    disponible o la transcripcion falla (el video se genera sin subtitulos).
+    """
+    if not audio_path or not audio_path.exists():
+        return None
+    try:
+        import whisper  # noqa: F401
+    except ImportError:
+        log.info("Whisper no instalado — videos sin subtitulos")
+        return None
+
+    try:
+        words = _transcribe_words(audio_path)
+        if not words:
+            return None
+        ass_path = audio_path.with_suffix(".ass")
+        if _build_caption_ass(words, ass_path, width, height):
+            return ass_path
+    except Exception as e:
+        log.warning("Transcripcion de subtitulos fallida: %s — video sin subtitulos", e)
+    return None
+
+
 def _create_kenburns_video(
     slides: list, audio: Path, out: Path,
     width: int, height: int, secs: float, label: str, fps: int = 25,
+    captions_ass: Optional[Path] = None,
 ) -> bool:
     """
     Concatena slides con efecto Ken Burns (zoom in/out alternado por slide,
     centrado) + transiciones crossfade entre cada uno. Reemplaza los cortes
     secos sobre imagenes estaticas por movimiento continuo — usa solo
     filtros nativos de FFmpeg (zoompan + xfade), sin dependencias nuevas.
+    Si se pasa `captions_ass`, quema subtitulos en el mismo paso (sin re-encode extra).
     """
     n = len(slides)
     xfade_dur = min(1.0, secs / 4)
@@ -240,6 +349,12 @@ def _create_kenburns_video(
             )
         vout = f"x{n-1}"
 
+    if captions_ass and captions_ass.exists():
+        parts.append(
+            f"[{vout}]ass={_ff_path(captions_ass)}:fontsdir={_ff_path(_FONTS_DIR)}[vcap]"
+        )
+        vout = "vcap"
+
     filter_complex = ";".join(parts)
 
     if audio and audio.exists():
@@ -258,14 +373,16 @@ def _create_kenburns_video(
     return _run_ffmpeg(cmd, label)
 
 
-def create_short(slides: list, audio: Path, out: Path, secs: float = 5.0) -> bool:
-    """Vertical 1080x1920 — YouTube Shorts + TikTok. Ken Burns + crossfade."""
-    return _create_kenburns_video(slides, audio, out, 1080, 1920, secs, "Short")
+def create_short(slides: list, audio: Path, out: Path, secs: float = 5.0,
+                  captions_ass: Optional[Path] = None) -> bool:
+    """Vertical 1080x1920 — YouTube Shorts + TikTok. Ken Burns + crossfade + subtitulos."""
+    return _create_kenburns_video(slides, audio, out, 1080, 1920, secs, "Short", captions_ass=captions_ass)
 
 
-def create_long_video(slides: list, audio: Path, out: Path, secs: float = 10.0) -> bool:
-    """Full HD 1920x1080 — YouTube canal, watch hours. Ken Burns + crossfade."""
-    return _create_kenburns_video(slides, audio, out, 1920, 1080, secs, "Canal-1080p")
+def create_long_video(slides: list, audio: Path, out: Path, secs: float = 10.0,
+                       captions_ass: Optional[Path] = None) -> bool:
+    """Full HD 1920x1080 — YouTube canal, watch hours. Ken Burns + crossfade + subtitulos."""
+    return _create_kenburns_video(slides, audio, out, 1920, 1080, secs, "Canal-1080p", captions_ass=captions_ass)
 
 
 # ── Publishers ────────────────────────────────────────────────────────────────
@@ -539,9 +656,13 @@ Hasta la proxima. IM Music. REBEL LUXURY. Jaqueamos mentes.
 
     # Short vertical (YouTube Shorts + TikTok — 40-55 segundos)
     short_path = work_dir / "short.mp4"
-    ok_short = create_short(carousel_paths[:8], audio_short, short_path, secs=5.5)
+    captions_short = prepare_captions(audio_short, 1080, 1920)
+    ok_short = create_short(carousel_paths[:8], audio_short, short_path, secs=5.5, captions_ass=captions_short)
     if ok_short:
-        print(f"     Short: {short_path.stat().st_size//1024}KB (~44s)")
+        subs = " + subtitulos" if captions_short else ""
+        print(f"     Short: {short_path.stat().st_size//1024}KB (~44s){subs}")
+    if captions_short:
+        captions_short.unlink(missing_ok=True)
 
     # Video largo — canal YouTube (8+ minutos para watch hours)
     # Generar slides adicionales para llenar el tiempo
@@ -578,10 +699,14 @@ Hasta la proxima. IM Music. REBEL LUXURY. Jaqueamos mentes.
     long_path = work_dir / "video_canal.mp4"
     # ~32 slides × 18 segundos ≈ 8+ minutos para watch hours
     secs_per_slide = max(18.0, 520.0 / max(len(canal_slide_paths), 1))
-    ok_long = create_long_video(canal_slide_paths, audio_canal, long_path, secs=secs_per_slide)
+    captions_canal = prepare_captions(audio_canal, 1920, 1080)
+    ok_long = create_long_video(canal_slide_paths, audio_canal, long_path, secs=secs_per_slide, captions_ass=captions_canal)
     if ok_long:
         total_secs = len(canal_slide_paths) * secs_per_slide
-        print(f"     Canal: {long_path.stat().st_size//1024//1024}MB (~{total_secs/60:.1f}min)")
+        subs = " + subtitulos" if captions_canal else ""
+        print(f"     Canal: {long_path.stat().st_size//1024//1024}MB (~{total_secs/60:.1f}min){subs}")
+    if captions_canal:
+        captions_canal.unlink(missing_ok=True)
 
     # ── PASO 3.5: Beat del dia (Chill Hop / Afro House) ─────────────────────
     print("\n[3.5/5] Generando beat...")
