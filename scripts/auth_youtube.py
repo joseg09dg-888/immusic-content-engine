@@ -9,12 +9,12 @@ Uso:
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "src"))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 
 def main():
-    from core.config import Config
-    from content_engine.publisher import _build_yt_client, _YT_TOKEN_FILE
+    from src.core.config import Config
+    from src.content_engine.publisher import _build_yt_client, _YT_TOKEN_FILE
 
     print("Iniciando flujo OAuth de YouTube...")
     print(f"Client ID: {Config.GOOGLE_CLIENT_ID[:40]}...")
