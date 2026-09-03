@@ -222,7 +222,7 @@ def _run_ffmpeg(cmd: list, label: str) -> bool:
 # Usa solo herramientas gratuitas ya instaladas: openai-whisper + libass (FFmpeg).
 
 _FONTS_DIR = ROOT / "assets" / "fonts"
-_WHISPER_MODEL_SIZE = "tiny"
+_WHISPER_MODEL_SIZE = "base"
 
 
 def _transcribe_words(audio_path: Path) -> list:
