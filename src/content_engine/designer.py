@@ -65,6 +65,10 @@ def _wrap(draw: ImageDraw.ImageDraw, text: str, font, max_w: int) -> List[str]:
 # Files with an opaque (non-transparent, non-white) canvas baked in — pasting
 # these onto the violet background produces a visible black box, breaking
 # "el violeta SIEMPRE debe ser visible a traves de la ilustracion" (CLAUDE.md).
+# Also blacklisted: files with a third-party stock watermark or leftover
+# rendered-CTA-text baked into the source PNG (found via visual audit
+# 2026-09-03 — e.g. illus_angel.png/illus_burj.png), and illus_af1.png which
+# shows a visible "NIKE" logo (trademark risk).
 _ILLUS_BLACKLIST = {
     "_burj_high_contrast.png",
     "_burj_lines_only.png",
@@ -73,6 +77,13 @@ _ILLUS_BLACKLIST = {
     "illus_mic_sm.png",
     "illus_money_sm.png",
     "illus_ring.png",
+    "illus_angel.png",
+    "illus_angel_clean.png",
+    "illus_money.png",
+    "illus_money_clean.png",
+    "illus_burj.png",
+    "illus_af1.png",
+    "illus_skull.png",
 }
 
 
