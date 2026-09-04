@@ -93,6 +93,7 @@ Al final vas a encontrar un glosario completo, un anexo comparativo del marco le
 30. Anexo: Proyección financiera de tu primer año independiente
 31. Preguntas frecuentes
 32. Sobre IM Music
+📚 Recursos y próximos pasos
 
 ---
 
