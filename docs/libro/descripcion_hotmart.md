@@ -30,3 +30,27 @@ Si haces música — o si diriges a alguien que la hace — esto es lo que neces
 - Cómo funcionan los algoritmos de YouTube, Instagram y TikTok — y qué necesita tu contenido para que te distribuyan de verdad
 - Todas las formas de generar ingresos con tu música más allá del streaming (sync, marcas, merch, comunidad)
 - Un mapa completo de sociedades de gestión de derechos en más de 15 países — encuentra la tuya y empieza a cobrar lo que ya te pertenece
+
+---
+
+## Descripción para el Programa de Afiliados de Hotmart
+
+*(Reemplaza [XX]% por la comisión real que vas a ofrecer antes de publicar)*
+
+**Music Business Para Todos Los Humanos** es la guía de negocio musical que resuelve un dolor real y constante en un nicho que casi nadie está atendiendo bien: millones de artistas independientes en todo el mundo hispanohablante que están perdiendo dinero — regalías sin cobrar, contratos firmados a ciegas, derechos regalados — simplemente porque nadie les explicó las reglas del juego en un idioma que entendieran.
+
+**Por qué es fácil de vender:**
+
+- **Precio de entrada bajo, fricción mínima.** A $16,90 USD, es una decisión de compra rápida para cualquiera que ya sospecha que está dejando dinero sobre la mesa — no requiere una venta larga ni convencer con presentaciones extensas.
+- **Dolor universal, audiencia enorme.** Cualquier persona que haga música, produzca, cante, escriba canciones o dirija un proyecto musical es cliente potencial — un nicho global, sin fecha de caducidad, que crece cada vez que sale un artista nuevo a internet.
+- **Autoridad real detrás del producto.** No es un ebook genérico de "gurú" — está escrito por IM Music, un sello discográfico independiente en operación real, con metodología propia (no teoría reciclada de otros libros).
+- **Contenido verificado y actual.** Incluye información 2026 sobre inteligencia artificial en la industria musical, un tema en tendencia que genera curiosidad y comparticiones orgánicas.
+- **Gancho de copy ya probado.** La página de ventas está construida sobre pérdida potencial ("¿sabes cuánto dinero se está quedando en el camino?") — uno de los ángulos de conversión más fuertes en nichos financieros/educativos.
+
+**Lo que te llevas como afiliado:**
+
+- **[XX]% de comisión** por cada venta que generes
+- Acceso a la descripción del producto, bullets de valor y ángulos de copy ya redactados, listos para adaptar a tus propios canales
+- Un producto evergreen — sin lanzamientos de temporada ni fecha de vencimiento, puedes promoverlo indefinidamente
+
+Si tu audiencia son músicos independientes, productores, estudiantes de industria musical, o creadores de contenido dentro del mundo urbano/musical, este producto convierte porque resuelve algo que tu propia audiencia ya está buscando resolver.
