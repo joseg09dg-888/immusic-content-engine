@@ -131,9 +131,9 @@ Ese cálculo — apalancamiento a cambio de porcentaje — es el negocio de la m
 
 Imagina dos artistas independientes en Medellín, ambos con el mismo nivel de talento y el mismo primer sencillo listo para lanzar.
 
-*Artista A* firma con el primer sello que le ofrece contrato, cediendo el 80% de sus regalías y los derechos de master por diez años, porque "por fin alguien cree en mí". El sello le da un presupuesto de video de $8 millones de pesos. Ese dinero entra en recoupment. Dieciocho meses después, la canción generó $12 millones en regalías — pero el artista no ha visto un peso, porque el sello sigue recuperando su inversión inicial más los costos de marketing que fue sumando en el camino.
+*Artista A* firma con el primer sello que le ofrece contrato, cediendo el 80% de sus regalías y los derechos de master por diez años, porque "por fin alguien cree en mí". El sello le da un presupuesto de video de $2,000 USD. Ese dinero entra en recoupment. Dieciocho meses después, la canción generó $3,000 USD en regalías — pero el artista no ha visto un dólar, porque el sello sigue recuperando su inversión inicial más los costos de marketing que fue sumando en el camino.
 
-*Artista B* se distribuye de forma independiente, se queda con el 100% de sus derechos, invierte $1.5 millones de su bolsillo en producción y contenido, y reinvierte cada peso que genera en más contenido. Genera menos en términos absolutos el primer año — pero cada peso es suyo, sin negociación, sin recoupment, sin cláusulas ocultas. Al año siguiente, con el catálogo y la audiencia ya construidos, negocia una alianza de distribución con mejores términos porque ya tiene apalancamiento propio: audiencia real, no una promesa.
+*Artista B* se distribuye de forma independiente, se queda con el 100% de sus derechos, invierte $400 USD de su bolsillo en producción y contenido, y reinvierte cada dólar que genera en más contenido. Genera menos en términos absolutos el primer año — pero cada dólar es suyo, sin negociación, sin recoupment, sin cláusulas ocultas. Al año siguiente, con el catálogo y la audiencia ya construidos, negocia una alianza de distribución con mejores términos porque ya tiene apalancamiento propio: audiencia real, no una promesa.
 
 Ninguno de los dos caminos es automáticamente "correcto" — dependen del punto de partida y del apalancamiento real disponible. El error es elegir el camino del Artista A sin entender exactamente lo que está cediendo a cambio.
 
@@ -316,7 +316,7 @@ Cada vez que alguien usa tu música de una de estas seis formas, existe una rega
 
 **Caso práctico: el bar que nunca pagó**
 
-Un restaurante en Medellín pone música en vivo todos los fines de semana, incluyendo canciones de artistas locales independientes, y nunca ha pagado un peso de regalías de comunicación pública. Técnicamente, ese establecimiento debería tener una licencia de SAYCO que cubra el uso de música con derechos de autor en su local — y esa licencia genera un fondo que se reparte entre los compositores afiliados cuya música efectivamente sonó ahí (via reportes de programación, cuando existen, o de forma proporcional según el repertorio general).
+Un restaurante en Medellín pone música en vivo todos los fines de semana, incluyendo canciones de artistas locales independientes, y nunca ha pagado un centavo de regalías de comunicación pública. Técnicamente, ese establecimiento debería tener una licencia de SAYCO que cubra el uso de música con derechos de autor en su local — y esa licencia genera un fondo que se reparte entre los compositores afiliados cuya música efectivamente sonó ahí (via reportes de programación, cuando existen, o de forma proporcional según el repertorio general).
 
 Si el artista local nunca se afilió a SAYCO, ese dinero nunca llega a él — no porque no le correspondiera, sino porque no existía ningún mecanismo para identificarlo como beneficiario. Este es, en la práctica, uno de los flujos de dinero más ignorados por artistas independientes en toda Latinoamérica: dinero que la ley ya contempla, pero que exige registro activo para poder cobrarse.
 
@@ -493,9 +493,9 @@ Pregúntate: si le pagara solo por subir mi música a las plataformas, ¿pagarí
 
 **Caso práctico: comparando el costo real de dos modelos**
 
-Un artista que genera $2,000,000 de pesos al año en regalías tiene dos opciones: un distribuidor de suscripción fija a $150,000 pesos/año (se queda con el 100% de sus regalías, paga la tarifa fija sin importar cuánto genere), o un distribuidor de comisión del 15% sin costo fijo. En el modelo de suscripción, el costo total anual es de $150,000 pesos. En el modelo de comisión, el costo es de $300,000 pesos (15% de $2,000,000). Para este nivel de ingresos, la suscripción fija resulta más barata.
+Un artista que genera $500 USD al año en regalías tiene dos opciones: un distribuidor de suscripción fija a $35 USD/año (se queda con el 100% de sus regalías, paga la tarifa fija sin importar cuánto genere), o un distribuidor de comisión del 15% sin costo fijo. En el modelo de suscripción, el costo total anual es de $35 USD. En el modelo de comisión, el costo es de $75 USD (15% de $500). Para este nivel de ingresos, la suscripción fija resulta más barata.
 
-Pero si ese mismo artista solo genera $500,000 pesos al año, la comisión del 15% cuesta $75,000 pesos — más barata que la suscripción fija de $150,000. El modelo correcto depende directamente del volumen de ingresos esperado, y por eso conviene proyectar (aunque sea de forma aproximada) antes de comprometerse con un distribuidor a largo plazo.
+Pero si ese mismo artista solo genera $150 USD al año, la comisión del 15% cuesta $22.50 USD — más barata que la suscripción fija de $35. El modelo correcto depende directamente del volumen de ingresos esperado, y por eso conviene proyectar (aunque sea de forma aproximada) antes de comprometerse con un distribuidor a largo plazo.
 
 **Puntos clave del capítulo**
 
@@ -525,11 +525,11 @@ En el caso de IM Music, de cada $100 que genera la música de un artista a trav�
 
 Un modelo de comisión baja funciona porque es honesto sobre lo que cubre: distribución. Los servicios adicionales — estrategia de contenido, producción de video, marketing algorítmico — se estructuran de forma separada y transparente, para que el artista sepa exactamente qué está pagando y por qué, en lugar de que todo quede escondido dentro de una comisión alta y opaca.
 
-Esta transparencia es, en sí misma, el verdadero valor agregado: no es solo un número más bajo, es un modelo de negocio que le explica al artista exactamente de dónde sale cada peso — un estándar que cualquier artista, en cualquier país, debería exigir de quien distribuya su música.
+Esta transparencia es, en sí misma, el verdadero valor agregado: no es solo un número más bajo, es un modelo de negocio que le explica al artista exactamente de dónde sale cada dólar — un estándar que cualquier artista, en cualquier país, debería exigir de quien distribuya su música.
 
 **Caso práctico: comparando un modelo transparente contra el modelo tradicional**
 
-Un artista genera el equivalente a $10,000,000 de pesos colombianos en regalías en un año a través de su música distribuida. Bajo un contrato de sello tradicional con comisión del 50%, ese artista recibiría $5,000,000. Bajo un modelo transparente de comisión baja (como el 92% de IM Music), recibiría $9,200,000 — una diferencia de $4,200,000 en un solo año, generados por exactamente la misma música, exactamente los mismos streams.
+Un artista genera $2,500 USD en regalías en un año a través de su música distribuida. Bajo un contrato de sello tradicional con comisión del 50%, ese artista recibiría $1,250 USD. Bajo un modelo transparente de comisión baja (como el 92% de IM Music), recibiría $2,300 USD — una diferencia de $1,050 USD en un solo año, generados por exactamente la misma música, exactamente los mismos streams.
 
 Esa diferencia, compuesta a lo largo de una carrera de varios años con un catálogo creciente, representa una cantidad de dinero que puede literalmente decidir si un artista puede dedicarse a la música de tiempo completo o no — sin importar en qué país del mundo esté construyendo su carrera.
 
@@ -565,7 +565,7 @@ Un contrato discográfico puede parecer un muro de texto legal diseñado para co
 El porcentaje que recibes, sobre qué base se calcula (ingresos brutos vs. netos — la diferencia es enorme), y cuándo y cómo se te paga.
 
 **6. Recuperación de costos (Recoupment)**
-Si el sello invierte en tu producción, marketing o video, ¿ese dinero se descuenta de tus regalías futuras antes de que veas un peso? Esta es una de las cláusulas más importantes y menos entendidas del negocio — la desarrollamos a fondo más adelante.
+Si el sello invierte en tu producción, marketing o video, ¿ese dinero se descuenta de tus regalías futuras antes de que veas un dólar? Esta es una de las cláusulas más importantes y menos entendidas del negocio — la desarrollamos a fondo más adelante.
 
 **7. Propiedad de los masters**
 ¿Quién es dueño de las grabaciones al final del contrato? ¿Tú, el sello, o se revierte a ti después de cierto tiempo?
@@ -575,15 +575,15 @@ Si el sello invierte en tu producción, marketing o video, ¿ese dinero se descu
 
 **El concepto que cambia todo: Recoupment**
 
-Cuando un sello dice "te vamos a pagar 20% de regalías", esa cifra suena bien hasta que entiendes el recoupment: antes de que veas un solo peso de esas regalías, el sello primero se cobra a sí mismo todo lo que invirtió en ti (producción, videos, marketing, adelantos). Solo después de que esa inversión se "recupera" completamente, empiezas a recibir tu porcentaje. Un contrato de "20% de regalías" con una inversión de $50 millones de pesos sin recuperar puede significar años sin ver un peso, aunque tu música esté generando ingresos activamente.
+Cuando un sello dice "te vamos a pagar 20% de regalías", esa cifra suena bien hasta que entiendes el recoupment: antes de que veas un solo dólar de esas regalías, el sello primero se cobra a sí mismo todo lo que invirtió en ti (producción, videos, marketing, adelantos). Solo después de que esa inversión se "recupera" completamente, empiezas a recibir tu porcentaje. Un contrato de "20% de regalías" con una inversión de $12,000 USD sin recuperar puede significar años sin ver un dólar, aunque tu música esté generando ingresos activamente.
 
 Esto no es necesariamente abusivo — es una práctica estándar de la industria. El problema es cuando el artista no lo sabe y firma pensando que va a empezar a recibir el 20% desde el primer stream.
 
 **Caso práctico: leyendo el recoupment línea por línea**
 
-Un sello ofrece a un artista un contrato con 25% de regalías y una inversión inicial de $30,000,000 de pesos en producción de álbum, video musical y campaña de marketing. El artista, entusiasmado, firma sin preguntar el detalle del recoupment. Un año después, su álbum generó $18,000,000 de pesos en regalías — pero como el sello aún no ha recuperado su inversión de $30,000,000, el artista no ha recibido ni un peso de ese 25% acordado.
+Un sello ofrece a un artista un contrato con 25% de regalías y una inversión inicial de $7,500 USD en producción de álbum, video musical y campaña de marketing. El artista, entusiasmado, firma sin preguntar el detalle del recoupment. Un año después, su álbum generó $4,500 USD en regalías — pero como el sello aún no ha recuperado su inversión de $7,500, el artista no ha recibido ni un dólar de ese 25% acordado.
 
-Ahora compara con un contrato negociado con transparencia: mismo 25% de regalías, misma inversión de $30,000,000 — pero con una cláusula que limita qué gastos entran en el recoupment (por ejemplo, excluyendo gastos de viaje o comidas que el sello quiera cargar de forma discrecional), y con reportes trimestrales obligatorios que muestran exactamente cuánto se ha recuperado. El resultado económico puede ser similar en el largo plazo, pero el artista sabe en todo momento dónde está parado — y puede verificar que los números sean correctos.
+Ahora compara con un contrato negociado con transparencia: mismo 25% de regalías, misma inversión de $7,500 USD — pero con una cláusula que limita qué gastos entran en el recoupment (por ejemplo, excluyendo gastos de viaje o comidas que el sello quiera cargar de forma discrecional), y con reportes trimestrales obligatorios que muestran exactamente cuánto se ha recuperado. El resultado económico puede ser similar en el largo plazo, pero el artista sabe en todo momento dónde está parado — y puede verificar que los números sean correctos.
 
 **Puntos clave del capítulo**
 
@@ -952,7 +952,7 @@ Pensar que el sync "llega solo" si la música es buena. El sync es, ante todo, u
 
 **Caso práctico: la oportunidad que se perdió por no estar listo**
 
-Un supervisor musical de una agencia de publicidad encuentra la canción de un artista independiente y quiere usarla en un comercial con presupuesto nacional — una oportunidad que podría representar varios millones de pesos en un solo pago. Contacta al artista con un plazo de 48 horas para confirmar disponibilidad de licencia. El artista no tiene claro quién es dueño de qué porcentaje de la composición (nunca formalizó el split con su productor), no tiene una versión instrumental lista, y tarda cuatro días en resolver la situación internamente. Para entonces, la agencia ya avanzó con otra canción, de otro artista que sí pudo responder en el plazo.
+Un supervisor musical de una agencia de publicidad encuentra la canción de un artista independiente y quiere usarla en un comercial con presupuesto nacional — una oportunidad que podría representar varios miles de dólares en un solo pago. Contacta al artista con un plazo de 48 horas para confirmar disponibilidad de licencia. El artista no tiene claro quién es dueño de qué porcentaje de la composición (nunca formalizó el split con su productor), no tiene una versión instrumental lista, y tarda cuatro días en resolver la situación internamente. Para entonces, la agencia ya avanzó con otra canción, de otro artista que sí pudo responder en el plazo.
 
 La música era exactamente igual de buena en ambos casos — la diferencia fue la preparación técnica y legal previa, no el talento.
 
@@ -1556,28 +1556,28 @@ Uno de los mayores vacíos en la educación de un artista independiente es no sa
 
 **Paso 1: Define tus costos fijos del primer año**
 
-| Concepto | Costo estimado (COP/año) |
+| Concepto | Costo estimado (USD/año) |
 |---|---|
-| Distribución digital (suscripción anual) | $ 150,000 |
-| Producción de 6 sencillos (self-produced) | $ 3,600,000 |
-| Contenido visual (fotos, portadas, thumbnails) | $ 1,200,000 |
-| Registro de obras (DNDA, afiliación SAYCO/ACINPRO) | $ 400,000 |
-| Herramientas (edición, diseño, plugins) | $ 600,000 |
-| **Total costos fijos estimados** | **$ 5,950,000** |
+| Distribución digital (suscripción anual) | $ 40 |
+| Producción de 6 sencillos (self-produced) | $ 900 |
+| Contenido visual (fotos, portadas, thumbnails) | $ 300 |
+| Registro de obras y afiliación a tu sociedad de gestión local | $ 100 |
+| Herramientas (edición, diseño, plugins) | $ 150 |
+| **Total costos fijos estimados** | **$ 1,490** |
 
 **Paso 2: Proyecta tus flujos de ingreso, de forma conservadora**
 
-| Fuente de ingreso | Supuesto conservador | Ingreso estimado (COP/año) |
+| Fuente de ingreso | Supuesto conservador | Ingreso estimado (USD/año) |
 |---|---|---|
-| Streaming (master + composición) | 500,000 streams acumulados, valor promedio bajo por mercado mixto | $ 1,800,000 |
-| Regalías SAYCO (ejecución pública) | Actividad mínima, pocos usos públicos reportados | $ 150,000 |
-| 2-3 shows en vivo pequeños | $ 400,000 promedio por show | $ 1,000,000 |
-| Merch básico (una prenda) | 50 unidades vendidas, margen neto $15,000 c/u | $ 750,000 |
-| **Total ingresos estimados** | | **$ 3,700,000** |
+| Streaming (master + composición) | 500,000 streams acumulados, valor promedio bajo por mercado mixto | $ 450 |
+| Regalías de ejecución pública (tu sociedad de gestión local) | Actividad mínima, pocos usos públicos reportados | $ 40 |
+| 2-3 shows en vivo pequeños | $ 100 promedio por show | $ 250 |
+| Merch básico (una prenda) | 50 unidades vendidas, margen neto $3.80 c/u | $ 190 |
+| **Total ingresos estimados** | | **$ 930** |
 
 **Paso 3: Interpreta el resultado, no solo el número final**
 
-En este ejemplo conservador, el primer año cierra con un déficit aparente de aproximadamente $2,250,000 pesos (costos de $5,950,000 contra ingresos de $3,700,000). Esto NO significa que el proyecto sea un fracaso — significa que el primer año de cualquier negocio, incluido uno musical, suele ser una fase de inversión, no de retorno. Lo que importa es la tendencia: si el catálogo generado en el año 1 sigue generando streaming pasivo en el año 2 (sin nuevos costos de producción para esas canciones específicas), y si la audiencia construida reduce el costo de adquisición de atención para el contenido futuro, el año 2 debería mostrar una brecha mucho menor, o incluso superávit, sin necesidad de duplicar la inversión inicial.
+En este ejemplo conservador, el primer año cierra con un déficit aparente de aproximadamente $560 USD (costos de $1,490 contra ingresos de $930). Esto NO significa que el proyecto sea un fracaso — significa que el primer año de cualquier negocio, incluido uno musical, suele ser una fase de inversión, no de retorno. Lo que importa es la tendencia: si el catálogo generado en el año 1 sigue generando streaming pasivo en el año 2 (sin nuevos costos de producción para esas canciones específicas), y si la audiencia construida reduce el costo de adquisición de atención para el contenido futuro, el año 2 debería mostrar una brecha mucho menor, o incluso superávit, sin necesidad de duplicar la inversión inicial.
 
 **Paso 4: Ajusta las variables a tu realidad**
 
@@ -1637,7 +1637,7 @@ El estilo, como se explica en el Capítulo 2, no está protegido por derecho de 
 
 ## 32. SOBRE IM MUSIC
 
-IM Music es un sello discográfico independiente construido sobre una premisa simple: la industria musical no tiene que elegir entre autenticidad y estructura, entre cultura callejera y estrategia de negocio sofisticada. REBEL LUXURY es esa síntesis — identidad visual radical, contenido con densidad de valor real, y un modelo de distribución transparente (92% para el artista) diseñado para ser honesto sobre de dónde sale cada peso.
+IM Music es un sello discográfico independiente construido sobre una premisa simple: la industria musical no tiene que elegir entre autenticidad y estructura, entre cultura callejera y estrategia de negocio sofisticada. REBEL LUXURY es esa síntesis — identidad visual radical, contenido con densidad de valor real, y un modelo de distribución transparente (92% para el artista) diseñado para ser honesto sobre de dónde sale cada dólar.
 
 Este libro es una extensión de esa misma filosofía: la información que la industria musical tradicional prefiere mantener complicada, explicada en el lenguaje directo que un artista independiente necesita para dejar de firmar a ciegas y empezar a construir con conocimiento real.
 
