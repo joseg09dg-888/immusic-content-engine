@@ -159,6 +159,6 @@ Si ya tienes tu música lista y quieres que alguien más se encargue de la parte
 **No te quedes solo con el libro — síguenos donde publicamos contenido gratis todas las semanas:**
 
 📸 Instagram: **[@immusicsello](https://instagram.com/immusicsello)**
-▶️ YouTube: **IM Music** — *(pon aquí el link exacto de tu canal)*
+▶️ YouTube: **[IM Music](https://youtube.com/@immusicsello)**
 
 Contenido sobre negocio musical, neurociencia aplicada al marketing, y todo lo que no te van a enseñar en ningún curso tradicional — gratis, tres veces por semana.
