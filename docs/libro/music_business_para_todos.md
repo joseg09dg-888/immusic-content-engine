@@ -50,9 +50,9 @@ Al final vas a encontrar un glosario completo, un anexo comparativo del marco le
 
 **PARTE 2 — EL DINERO**
 6. Cómo te paga Spotify de verdad
-7. Sociedades de gestión colectiva: SAYCO, ACINPRO y por qué te importan
+7. Sociedades de gestión colectiva en el mundo — y por qué te importan sin importar dónde vivas
 8. Distribución digital: qué hace un distribuidor y qué no
-9. El modelo Nexus/IM Music: 92% para el artista
+9. Modelos de distribución transparente: el ejemplo de IM Music
 
 **PARTE 3 — CONTRATOS**
 10. Anatomía de un contrato discográfico
@@ -65,6 +65,7 @@ Al final vas a encontrar un glosario completo, un anexo comparativo del marco le
 15. Neurociencia aplicada al marketing musical
 16. Cómo deciden los algoritmos quién te ve
 17. REBEL LUXURY: construir una identidad que no se ve genérica
+📐 Metodología IM Music: cómo se construye una marca de artista desde cero
 18. Consistencia por encima de perfección
 🔧 Herramientas rápidas: doce tácticas de marketing musical
 
@@ -108,7 +109,7 @@ Hoy la industria musical es una red de plataformas, algoritmos, distribuidores d
 **Las tres capas de la industria musical moderna**
 
 1. **Capa de creación**: tú, el estudio, el productor, el ingeniero de mezcla. Aquí nace el activo.
-2. **Capa de distribución**: las plataformas (Spotify, Apple Music, YouTube Music) y los distribuidores digitales que llevan tu música ahí (DistroKid, TuneCore, Nexus, etc.).
+2. **Capa de distribución**: las plataformas (Spotify, Apple Music, YouTube Music) y los distribuidores digitales que llevan tu música ahí (DistroKid, TuneCore, CD Baby, y decenas de otros según tu región).
 3. **Capa de derechos**: las sociedades de gestión colectiva, los editores musicales y los administradores de publishing que cobran y reparten el dinero que genera tu música cuando se reproduce, se sincroniza con video, o se interpreta en vivo.
 
 Un sello discográfico tradicional intentaba controlar las tres capas a la vez — y por eso se quedaba con la mayoría del dinero. Hoy, un artista independiente puede operar en las tres capas por su cuenta, o asociarse solo donde de verdad necesita ayuda.
@@ -370,9 +371,11 @@ Esto no significa que un artista deba ignorar mercados de menor valor por stream
 
 ---
 
-## CAPÍTULO 7: Sociedades de gestión colectiva — SAYCO, ACINPRO y por qué te importan
+## CAPÍTULO 7: Sociedades de gestión colectiva en el mundo — y por qué te importan sin importar dónde vivas
 
-En Colombia existen dos sociedades de gestión colectiva de derechos que todo artista debe conocer:
+En prácticamente todos los países del mundo existe al menos una sociedad de gestión colectiva (también llamada, según la región, "collecting society", "performing rights organization" o "PRO") que administra y cobra las regalías de ejecución pública que genera tu música cuando suena en radio, televisión, espacios públicos, o eventos en vivo. Sin importar en qué país vivas o distribuyas tu música, este capítulo te ayuda a identificar cuál te corresponde.
+
+Empecemos con el ejemplo detallado de Colombia, y luego revisamos el panorama global completo.
 
 **SAYCO (Sociedad de Autores y Compositores de Colombia)**
 
@@ -394,21 +397,76 @@ Cualquier compositor, sin importar cuántos streams tenga, puede y debe afiliars
 
 Afiliarte a SAYCO como compositor y a ACINPRO como intérprete/productor fonográfico (si eres ambas cosas, puedes y debes afiliarte a las dos) generalmente implica: presentar tu identificación, registrar tus obras (composiciones) o fonogramas (grabaciones) con la información correspondiente, y mantener actualizado un repertorio con cada nuevo lanzamiento. Una vez afiliado, esas sociedades monitorean el uso público de música en su jurisdicción (a través de reportes de radio, licencias comerciales a bares y establecimientos, eventos en vivo reportados) y distribuyen periódicamente las regalías recaudadas entre los afiliados cuyo repertorio fue utilizado.
 
-**Un matiz importante: sociedades internacionales**
+**El panorama global: tu sociedad de gestión, según tu país**
 
-Si tu música se reproduce fuera de Colombia, existen acuerdos de reciprocidad entre sociedades de gestión de distintos países (SAYCO tiene acuerdos con sociedades hermanas en otros territorios) que permiten cobrar regalías generadas internacionalmente. Sin embargo, este proceso no siempre es automático ni completo — muchos artistas independientes complementan su afiliación local con administradores de publishing internacionales para asegurar cobertura global.
+La Confederación Internacional de Sociedades de Autores y Compositores (CISAC) agrupa a 227 sociedades de gestión colectiva en 116 países, lo que da una idea de cuán extendido está este sistema en todo el mundo. Esta tabla cubre las principales sociedades por región — identifica la de tu país como primer paso para empezar a cobrar lo que te corresponde:
+
+**América Latina y el Caribe**
+
+| País | Composiciones (autores) | Grabaciones (productores/intérpretes) |
+|---|---|---|
+| Colombia | SAYCO | ACINPRO |
+| México | SACM | AMPROFON |
+| Argentina | SADAIC | CAPIF |
+| Brasil | UBC y otras asociaciones (centralizadas vía ECAD) | ABPD |
+| Chile | SCD | — |
+| Perú | APDAYC | — |
+| Uruguay | AGADU | — |
+| Venezuela | SACVEN | — |
+
+**Norteamérica**
+
+| País | Composiciones (autores) |
+|---|---|
+| Estados Unidos | ASCAP, BMI, SESAC, GMR (sistema competitivo — puedes elegir una) |
+| Canadá | SOCAN |
+
+**Europa**
+
+| País | Composiciones (autores) |
+|---|---|
+| España | SGAE (con AIE para intérpretes) |
+| Francia | SACEM |
+| Alemania | GEMA |
+| Reino Unido | PRS for Music |
+| Italia | SIAE |
+| Portugal | SPA |
+| Países Bajos | BUMA/STEMRA |
+
+**Asia-Pacífico**
+
+| País | Composiciones (autores) |
+|---|---|
+| Japón | JASRAC |
+| Corea del Sur | KOMCA |
+| China | MCSC |
+| India | IPRS |
+| Australia / Nueva Zelanda | APRA AMCOS |
+
+**África**
+
+| País | Composiciones (autores) |
+|---|---|
+| Sudáfrica | SAMRO |
+| Nigeria | COSON |
+
+*Esta tabla cubre las sociedades más relevantes por volumen y reconocimiento internacional — no es una lista exhaustiva de las 227 sociedades afiliadas a CISAC. Si tu país no aparece aquí, busca "sociedad de gestión colectiva de derechos de autor" seguido del nombre de tu país, o consulta el directorio de miembros en cisac.org.*
+
+**Un matiz importante: acuerdos de reciprocidad**
+
+Cuando tu música se reproduce fuera de tu país, existen acuerdos de reciprocidad entre sociedades de gestión de distintos países (por ejemplo, SAYCO tiene acuerdos con sociedades hermanas en otros territorios, y lo mismo ocurre entre la mayoría de las sociedades listadas arriba) que permiten cobrar regalías generadas internacionalmente sin necesidad de afiliarte a cada sociedad extranjera por separado. Sin embargo, este proceso no siempre es automático ni completo — muchos artistas independientes complementan su afiliación local con administradores de publishing internacionales para asegurar cobertura global más completa.
 
 **Puntos clave del capítulo**
 
-- SAYCO gestiona regalías de ejecución pública de composiciones; ACINPRO gestiona regalías conexas de grabaciones (masters) — son entidades distintas, con roles distintos.
-- La afiliación no es automática — si no te registras, el dinero que te corresponde legalmente no llega a ti, sin importar cuánto suene tu música.
-- La afiliación temprana, incluso con pocos streams o presentaciones, empieza a capturar regalías que de otra forma se pierden para siempre.
+- Prácticamente todo país tiene al menos una sociedad de gestión colectiva de composiciones (y frecuentemente una segunda para grabaciones/derechos conexos) — identifica la tuya según tu país de residencia.
+- La afiliación no es automática — si no te registras, el dinero que te corresponde legalmente no llega a ti, sin importar cuánto suene tu música, en ningún país.
+- Los acuerdos de reciprocidad entre sociedades de distintos países permiten cobrar regalías internacionales sin afiliarte a cada una por separado, aunque el proceso puede no ser completo — vale la pena investigar la cobertura específica de tu sociedad local.
 
 ---
 
 ## CAPÍTULO 8: Distribución digital — qué hace un distribuidor y qué no
 
-Un distribuidor digital (DistroKid, TuneCore, CD Baby, Nexus, entre otros) es el puente técnico entre tu archivo de audio y las plataformas de streaming. Es fundamental entender exactamente qué servicio están vendiendo — porque no todos son iguales, y confundir "distribución" con "sello discográfico" cuesta dinero y control.
+Un distribuidor digital (DistroKid, TuneCore, CD Baby, entre muchos otros según tu región) es el puente técnico entre tu archivo de audio y las plataformas de streaming. Es fundamental entender exactamente qué servicio están vendiendo — porque no todos son iguales, y confundir "distribución" con "sello discográfico" cuesta dinero y control.
 
 **Lo que SÍ hace un distribuidor:**
 
@@ -447,39 +505,39 @@ Pero si ese mismo artista solo genera $500,000 pesos al año, la comisión del 1
 
 ---
 
-## CAPÍTULO 9: El modelo Nexus/IM Music — 92% para el artista
+## CAPÍTULO 9: Modelos de distribución transparente — el ejemplo de IM Music
 
-IM Music distribuye a través de Nexus bajo un modelo simple: **el artista se queda con el 92% de las regalías generadas**. Esto no es una promoción de marketing — es una decisión estructural sobre cómo debe funcionar un sello en 2026.
+En todo el mundo está surgiendo una nueva generación de sellos y distribuidores independientes construidos sobre un principio simple: comisiones bajas, transparentes, y honestas sobre qué cubren exactamente. IM Music opera bajo este principio: **el artista se queda con el 92% de las regalías generadas** a través de su distribución. No es una cifra de marketing — es una decisión estructural sobre cómo debería funcionar un sello independiente hoy, sin importar en qué país operes.
 
 **Por qué el modelo tradicional se quedaba con más**
 
-Los sellos tradicionales justificaban comisiones de 50-80% con el argumento de que asumían todo el riesgo financiero de producir, promocionar y distribuir físicamente la música — prensar vinilos, financiar giras, comprar espacio en radio. Ese riesgo y ese costo, en el modelo físico, era real.
+Los sellos tradicionales, en cualquier parte del mundo, justificaban comisiones de 50-80% con el argumento de que asumían todo el riesgo financiero de producir, promocionar y distribuir físicamente la música — prensar vinilos, financiar giras, comprar espacio en radio. Ese riesgo y ese costo, en el modelo físico del siglo pasado, era real.
 
 **Por qué ese argumento ya no aplica igual**
 
-La distribución digital eliminó casi todo el costo de "poner la música en el mercado". Producir y publicar contenido de calidad, hoy, cuesta una fracción de lo que costaba hace veinte años. El riesgo financiero real que justificaba comisiones altísimas se redujo drásticamente — pero muchos sellos siguen cobrando comisiones diseñadas para un mundo que ya no existe.
+La distribución digital eliminó casi todo el costo de "poner la música en el mercado". Producir y publicar contenido de calidad, hoy, cuesta una fracción de lo que costaba hace veinte años, en cualquier país con acceso a internet y herramientas digitales. El riesgo financiero real que justificaba comisiones altísimas se redujo drásticamente — pero muchos sellos, en todas las regiones, siguen cobrando comisiones diseñadas para un mundo que ya no existe.
 
-**Qué significa el 92% en la práctica**
+**Qué significa un modelo de comisión baja y transparente, en la práctica**
 
-De cada $100 USD que genera tu música a través de la distribución de IM Music vía Nexus, $92 USD vuelven directamente a ti. El 8% restante cubre la infraestructura de distribución y operación del sello — no financia oficinas de lujo ni intermediarios innecesarios.
+En el caso de IM Music, de cada $100 que genera la música de un artista a través de su distribución, $92 vuelven directamente a ese artista. El 8% restante cubre la infraestructura de distribución y operación del sello — no financia oficinas de lujo ni intermediarios innecesarios. Este es un ejemplo concreto, pero el principio es replicable en cualquier mercado: entre más bajo y transparente sea el costo de llevar tu música al mundo, más valor conservas tú como creador.
 
-**Lo que el 92% NO incluye (y por qué eso es correcto)**
+**Lo que un modelo así NO incluye (y por qué eso es correcto)**
 
 Un modelo de comisión baja funciona porque es honesto sobre lo que cubre: distribución. Los servicios adicionales — estrategia de contenido, producción de video, marketing algorítmico — se estructuran de forma separada y transparente, para que el artista sepa exactamente qué está pagando y por qué, en lugar de que todo quede escondido dentro de una comisión alta y opaca.
 
-Esta transparencia es, en sí misma, el verdadero valor agregado: no es solo un número más bajo, es un modelo de negocio que le explica al artista exactamente de dónde sale cada peso.
+Esta transparencia es, en sí misma, el verdadero valor agregado: no es solo un número más bajo, es un modelo de negocio que le explica al artista exactamente de dónde sale cada peso — un estándar que cualquier artista, en cualquier país, debería exigir de quien distribuya su música.
 
-**Caso práctico: comparando el 92% contra el modelo tradicional**
+**Caso práctico: comparando un modelo transparente contra el modelo tradicional**
 
-Un artista genera $10,000,000 de pesos en regalías en un año a través de su música distribuida. Bajo un contrato de sello tradicional con comisión del 50%, ese artista recibiría $5,000,000 de pesos. Bajo el modelo de 92% del artista vía Nexus/IM Music, recibiría $9,200,000 de pesos — una diferencia de $4,200,000 de pesos en un solo año, generados por exactamente la misma música, exactamente los mismos streams.
+Un artista genera el equivalente a $10,000,000 de pesos colombianos en regalías en un año a través de su música distribuida. Bajo un contrato de sello tradicional con comisión del 50%, ese artista recibiría $5,000,000. Bajo un modelo transparente de comisión baja (como el 92% de IM Music), recibiría $9,200,000 — una diferencia de $4,200,000 en un solo año, generados por exactamente la misma música, exactamente los mismos streams.
 
-Esa diferencia compuesta a lo largo de una carrera de varios años, con un catálogo creciente, representa una cantidad de dinero que puede literalmente decidir si un artista puede dedicarse a la música de tiempo completo o no.
+Esa diferencia, compuesta a lo largo de una carrera de varios años con un catálogo creciente, representa una cantidad de dinero que puede literalmente decidir si un artista puede dedicarse a la música de tiempo completo o no — sin importar en qué país del mundo esté construyendo su carrera.
 
 **Puntos clave del capítulo**
 
-- Los sellos tradicionales justificaban comisiones altas (50-80%) con el riesgo financiero del modelo físico — un riesgo que la distribución digital redujo drásticamente.
-- El modelo Nexus/IM Music retiene el 92% de las regalías para el artista, cubriendo con el 8% restante únicamente la infraestructura de distribución.
-- La transparencia sobre qué cubre exactamente la comisión (y qué no) es tan valiosa como el porcentaje mismo — evita sorpresas y construye confianza a largo plazo.
+- Los sellos tradicionales, en cualquier país, justificaban comisiones altas (50-80%) con el riesgo financiero del modelo físico — un riesgo que la distribución digital redujo drásticamente en todo el mundo.
+- Modelos de comisión baja y transparente (como el 92% de IM Music) están surgiendo globalmente como alternativa a las comisiones heredadas del modelo físico.
+- La transparencia sobre qué cubre exactamente la comisión (y qué no) es tan valiosa como el porcentaje mismo — evita sorpresas y construye confianza a largo plazo, en cualquier mercado.
 
 ---
 
@@ -776,6 +834,58 @@ Ese reconocimiento instantáneo es un activo de negocio real: reduce el costo de
 - Una identidad de marca defendible se construye sobre tres pilares: consistencia visual radical, un punto de vista claro (no solo un producto), y densidad de valor por segundo.
 - La variedad sin sistema genera lo contrario de lo que promete: en lugar de evitar el encasillamiento, produce contenido indistinguible del resto del mercado.
 - Ser visualmente reconocible sin necesidad de ver el nombre de la cuenta es, en sí mismo, un activo de negocio que reduce el costo de captar atención nueva.
+
+---
+
+## METODOLOGÍA IM MUSIC: cómo se construye una marca de artista desde cero
+
+El Capítulo 17 explicó los pilares de una identidad de marca defendible. Este capítulo explica el proceso — la metodología completa que IM Music usa para construir la marca de un artista antes de producir una sola pieza de contenido. No es una fórmula genérica de "branding" — combina investigación de mercado tradicional con neurociencia y psicología aplicada, para llegar a una estrategia mucho más específica que "define tus colores y tu tono de voz".
+
+**Paso 1: Encontrar el arquetipo**
+
+Todo artista tiene, de forma implícita, un arquetipo — un patrón narrativo universal (el rebelde, el sabio, el héroe, el creador, el explorador) que la audiencia reconoce instintivamente, incluso sin poder nombrarlo. El primer paso no es inventar una identidad desde cero — es identificar cuál arquetipo ya vive genuinamente en la personalidad, la historia y la música del artista, y hacerlo consciente y explícito para poder construir sobre él de forma deliberada.
+
+**Paso 2: Conceptualizar la marca**
+
+Con el arquetipo identificado, se traduce en un concepto de marca concreto: un nombre, una estética, un lenguaje verbal y visual coherente con ese arquetipo. REBEL LUXURY, la identidad de IM Music, es un ejemplo de este proceso — la síntesis de un arquetipo rebelde con una estética de sofisticación, en lugar de forzar al artista a elegir entre autenticidad callejera y elegancia, como si fueran opuestos.
+
+**Paso 3: Investigación de mercado y perfiles psicológicos de la audiencia**
+
+Aquí es donde la metodología va más allá del branding tradicional. No basta con definir un "público objetivo" por edad y ubicación geográfica — se investiga el perfil psicológico real del segmento de audiencia: qué valores sostienen, qué historias consumen, qué comunidades digitales habitan, y qué necesidades emocionales no resueltas los hacen buscar contenido como el que el artista podría ofrecer.
+
+**Paso 4: Sesgos cognitivos e intereses específicos alineados con el arquetipo**
+
+Este es el paso distintivo de la metodología: identificar los sesgos cognitivos específicos de esa audiencia (por ejemplo, el sesgo de confirmación hacia narrativas de superación, o la aversión a la pérdida frente a oportunidades percibidas como limitadas) y los intereses concretos — no genéricos — que están más alineados con el arquetipo, el concepto de marca, y la identidad del artista. Esto convierte una audiencia abstracta ("personas de 18-30 años interesadas en música urbana") en un perfil psicográfico accionable: qué gatillos de atención funcionan, qué objeciones hay que resolver, y qué lenguaje específico resuena de verdad.
+
+**Paso 5: Estrategia de marketing basada en la marca, no al revés**
+
+Con el arquetipo, el concepto y el perfil psicográfico definidos, recién ahí se construye la estrategia de marketing — nunca antes. Cada pieza de contenido, cada campaña, cada colaboración se diseña para reforzar esa identidad específica frente a esa audiencia específica, en lugar de perseguir tendencias genéricas que cualquier otro artista podría replicar igual de bien.
+
+**Paso 6: Contenido personalizado — digital y tradicional**
+
+La estrategia se traduce en contenido totalmente personalizado para ese arquetipo y esa audiencia, distribuido tanto en canales digitales (redes sociales, streaming, contenido educativo) como tradicionales (prensa, radio, eventos físicos, alianzas locales), según dónde esa audiencia específica realmente esté presente — no según qué canal esté de moda.
+
+**Paso 7: Conversión hacia objetivos claros**
+
+Todo el proceso anterior existe para llevar a la audiencia hacia objetivos de negocio medibles y específicos, no solo "más seguidores":
+
+- **Tráfico** hacia canales propios (sitio web, catálogo de streaming)
+- **Oyentes** recurrentes, no solo escuchas puntuales
+- **Comunidad** activa (Discord, grupos de mensajería, listas de correo)
+- **Base de datos** propia, que no depende de ningún algoritmo externo
+- **Eventos** con asistencia real, no solo alcance digital
+- **Colaboraciones con marcas alineadas** con el arquetipo y los valores de la identidad
+- **Merchandising propio** que extiende la identidad más allá del contenido digital
+
+**Por qué esta metodología funciona mejor que el branding genérico**
+
+La mayoría de estrategias de marca se detienen en el Paso 2: definir un logo, una paleta de colores, un tono de voz. Sin los pasos 3 a 5 — investigación psicográfica real, identificación de sesgos cognitivos específicos, y una estrategia de marketing derivada de esa investigación, no al revés — la identidad de marca queda bonita pero desconectada de lo que realmente mueve a la audiencia a prestar atención, confiar, y eventualmente convertirse en oyente, comunidad, o cliente.
+
+**Puntos clave del capítulo**
+
+- La metodología completa de construcción de marca tiene siete pasos: arquetipo, conceptualización, investigación de mercado y perfiles psicológicos, sesgos cognitivos e intereses específicos, estrategia de marketing basada en la marca, contenido personalizado, y conversión a objetivos claros.
+- Ir más allá de la investigación de mercado tradicional hacia sesgos cognitivos e intereses específicos es lo que distingue una identidad de marca genérica de una que realmente conecta.
+- El objetivo final nunca es solo "más seguidores" — es conversión medible: tráfico, oyentes, comunidad, base de datos, eventos, colaboraciones de marca y merchandising propio.
 
 ---
 
@@ -1178,7 +1288,7 @@ El enfoque de Spotify no es prohibir la IA — es exigir transparencia. Una canc
 1. **Si usas herramientas de IA en tu proceso creativo** (para producción, mezcla asistida, generación de ideas), divulgarlo correctamente ante las plataformas que lo exijan no es opcional — es, cada vez más, un requisito estructural, no una formalidad.
 2. **Nunca uses IA para clonar la voz o el estilo de otro artista sin autorización explícita** — esto no es una zona gris: es una violación directa de derechos de imagen y, potencialmente, de derechos de autor, con consecuencias legales reales y ya documentadas en casos activos.
 3. **Documenta y registra tu trabajo con más rigor que nunca** — en un ecosistema donde el entrenamiento no autorizado de modelos de IA es un litigio activo a nivel mundial, tener evidencia clara de autoría y fecha de creación te protege tanto de que otros usen tu trabajo sin permiso, como de acusaciones infundadas hacia ti.
-4. **La transparencia no es una limitación — es una ventaja competitiva.** Igual que el modelo Nexus/IM Music del Capítulo 9 construye confianza siendo honesto sobre qué cubre su comisión, un artista que es transparente sobre el uso de herramientas de IA en su proceso construye una relación de confianza más sólida con su audiencia que uno que intenta ocultarlo y eventualmente es descubierto.
+4. **La transparencia no es una limitación — es una ventaja competitiva.** Igual que el modelo de distribución transparente del Capítulo 9 construye confianza siendo honesto sobre qué cubre su comisión, un artista que es transparente sobre el uso de herramientas de IA en su proceso construye una relación de confianza más sólida con su audiencia que uno que intenta ocultarlo y eventualmente es descubierto.
 
 **La postura de IM Music**
 
@@ -1527,7 +1637,7 @@ El estilo, como se explica en el Capítulo 2, no está protegido por derecho de 
 
 ## 32. SOBRE IM MUSIC
 
-IM Music es un sello discográfico independiente construido sobre una premisa simple: la industria musical no tiene que elegir entre autenticidad y estructura, entre cultura callejera y estrategia de negocio sofisticada. REBEL LUXURY es esa síntesis — identidad visual radical, contenido con densidad de valor real, y un modelo de distribución (Nexus, 92% para el artista) diseñado para ser honesto sobre de dónde sale cada peso.
+IM Music es un sello discográfico independiente construido sobre una premisa simple: la industria musical no tiene que elegir entre autenticidad y estructura, entre cultura callejera y estrategia de negocio sofisticada. REBEL LUXURY es esa síntesis — identidad visual radical, contenido con densidad de valor real, y un modelo de distribución transparente (92% para el artista) diseñado para ser honesto sobre de dónde sale cada peso.
 
 Este libro es una extensión de esa misma filosofía: la información que la industria musical tradicional prefiere mantener complicada, explicada en el lenguaje directo que un artista independiente necesita para dejar de firmar a ciegas y empezar a construir con conocimiento real.
 
