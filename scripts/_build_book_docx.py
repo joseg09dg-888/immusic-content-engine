@@ -13,6 +13,7 @@ from docx.oxml import OxmlElement
 
 ROOT = Path(__file__).resolve().parent.parent
 MD_PATH = ROOT / "docs" / "libro" / "music_business_para_todos.md"
+COVER_IMG = ROOT / "docs" / "libro" / "portada_music_business.png"
 OUT_PATH = ROOT / "docs" / "libro" / "Music_Business_Para_Todos_IM_Music.docx"
 
 VIOLETA = RGBColor(0x5E, 0x17, 0xEB)
@@ -41,50 +42,26 @@ def build_cover(doc):
     section = doc.sections[0]
     page_w = section.page_width
     page_h = section.page_height
-    # Full-bleed violet background via a borderless full-page table cell
-    table = doc.add_table(rows=1, cols=1)
-    table.alignment = WD_TABLE_ALIGNMENT.CENTER
-    cell = table.rows[0].cells[0]
-    set_cell_background(cell, "5E17EB")
-    tbl = table._tbl
-    tblPr = tbl.tblPr
-    layout = OxmlElement("w:tblLayout")
-    layout.set(qn("w:type"), "fixed")
-    tblPr.append(layout)
-    grid = OxmlElement("w:tblGrid")
-    gridCol = OxmlElement("w:gridCol")
-    gridCol.set(qn("w:w"), str(page_w - section.left_margin - section.right_margin))
-    grid.append(gridCol)
-    tbl.insert(1, grid)
-    trPr = table.rows[0]._tr.get_or_add_trPr()
-    trHeight = OxmlElement("w:trHeight")
-    trHeight.set(qn("w:val"), str(page_h - section.top_margin - section.bottom_margin))
-    trHeight.set(qn("w:hRule"), "exact")
-    trPr.append(trHeight)
-    cell.vertical_alignment = 1  # center
+    # Remove margins for this section only so the image bleeds full-page
+    section.left_margin = Inches(0)
+    section.right_margin = Inches(0)
+    section.top_margin = Inches(0)
+    section.bottom_margin = Inches(0)
+    p = doc.add_paragraph()
+    p.paragraph_format.space_before = Pt(0)
+    p.paragraph_format.space_after = Pt(0)
+    run = p.add_run()
+    run.add_picture(str(COVER_IMG), width=page_w, height=page_h)
 
-    def cover_para(text, size, color, bold=True, space_before=0, space_after=0, font=HEADING_FONT):
-        p = cell.paragraphs[0] if not cell.paragraphs[0].runs and text == "MUSIC" else cell.add_paragraph()
-        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        p.paragraph_format.space_before = Pt(space_before)
-        p.paragraph_format.space_after = Pt(space_after)
-        r = p.add_run(text)
-        r.font.size = Pt(size)
-        r.font.bold = bold
-        r.font.color.rgb = color
-        r.font.name = font
-        return p
-
-    cell.paragraphs[0].text = ""
-    for _ in range(6):
-        cell.add_paragraph()
-    cover_para("IM MUSIC", 20, CREMA, font=BODY_FONT, space_after=30)
-    cover_para("MUSIC BUSINESS", 46, BLANCO, space_after=0)
-    cover_para("PARA TODOS", 46, BLANCO, space_after=20)
-    cover_para("La guía REBEL LUXURY de la industria musical", 16, CREMA, bold=False, font=BODY_FONT, space_after=200)
-    cover_para("No lanzamos música. Jaqueamos mentes.", 13, CREMA, bold=False, font=BODY_FONT)
-    cover_para("@immusicsello", 12, CREMA, bold=False, font=BODY_FONT)
     add_page_break(doc)
+
+    # New section for the rest of the book, with normal margins restored
+    from docx.enum.section import WD_SECTION
+    new_section = doc.add_section(WD_SECTION.NEW_PAGE)
+    new_section.left_margin = Inches(0.7)
+    new_section.right_margin = Inches(0.7)
+    new_section.top_margin = Inches(0.7)
+    new_section.bottom_margin = Inches(0.7)
 
 
 def style_heading(p, text, size, color, font=HEADING_FONT, space_before=18, space_after=8, align_center=False):
