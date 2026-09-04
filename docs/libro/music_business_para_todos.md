@@ -192,15 +192,17 @@ Compáralo con un escenario donde ambos guardaron las sesiones de Ableton con fe
 
 **Guía paso a paso: cómo registrar tu primera obra en Colombia**
 
-Muchos artistas independientes nunca registran formalmente sus obras porque asumen que el proceso es costoso o complicado. En la práctica, es más accesible de lo que parece:
+Muchos artistas independientes nunca registran formalmente sus obras porque asumen que el proceso es costoso o complicado. En la práctica, **el registro ante la DNDA es gratuito** — no existe una tarifa oficial por registrar una obra:
 
 1. **Reúne tu material**: la letra escrita, la partitura si existe, y/o el archivo de audio de la grabación (según si registras la composición, el master, o ambos).
 2. **Define qué estás registrando**: recuerda la distinción del Capítulo 4 — la composición y la grabación son registros separados, con formularios distintos.
-3. **Ingresa al portal de la Dirección Nacional de Derecho de Autor (DNDA)**: el registro se puede iniciar de forma virtual, sin necesidad de presentarte físicamente en la mayoría de los casos.
-4. **Completa el formulario correspondiente**: información del autor o autores (con porcentajes de titularidad si hay varios), título de la obra, fecha de creación, y descripción del contenido.
+3. **Ingresa a registroenlinea.gov.co**, el portal oficial de la Dirección Nacional de Derecho de Autor (DNDA), y crea una cuenta si es tu primera vez.
+4. **Completa el formulario correspondiente**: información del autor o autores (con porcentajes de titularidad si hay varios), título de la obra — debe coincidir exactamente con el título real —, fecha de creación, y descripción del contenido.
 5. **Adjunta el soporte de la obra**: el archivo de audio, la letra, o ambos, según corresponda al tipo de registro.
-6. **Paga la tarifa correspondiente**: las tarifas de registro de obra individual suelen ser accesibles comparadas con el valor de protección que otorgan — verifica el valor vigente directamente en el portal, ya que se actualiza periódicamente.
-7. **Conserva el certificado de registro**: este documento es tu prueba oficial de autoría y fecha ante cualquier disputa futura.
+6. **Envía la solicitud — no hay ningún pago que hacer.** El trámite tiene una duración estimada de 15 días hábiles; si después de ese tiempo tu solicitud sigue "en trámite", puedes contactar directamente a la DNDA.
+7. **Descarga tu certificado de registro** las veces que necesites desde tu cuenta — este documento es tu prueba oficial de autoría y fecha ante cualquier disputa futura.
+
+*Si en el futuro alguien te cobra una tarifa "oficial" por registrar tu obra, desconfía — el registro directo ante la DNDA no tiene costo. Solo se paga si contratas a alguien para que te asesore o gestione el trámite por ti, lo cual es opcional.*
 
 **Mientras tanto, documenta de forma informal**
 
@@ -399,7 +401,7 @@ Afiliarte a SAYCO como compositor y a ACINPRO como intérprete/productor fonogr�
 
 **El panorama global: tu sociedad de gestión, según tu país**
 
-La Confederación Internacional de Sociedades de Autores y Compositores (CISAC) agrupa a 227 sociedades de gestión colectiva en 116 países, lo que da una idea de cuán extendido está este sistema en todo el mundo. Esta tabla cubre las principales sociedades por región — identifica la de tu país como primer paso para empezar a cobrar lo que te corresponde:
+La Confederación Internacional de Sociedades de Autores y Compositores (CISAC) agrupaba, según su reporte más reciente disponible (2024), a 227 sociedades de gestión colectiva en 116 países — cifra que puede variar ligeramente año a año, pero que da una idea de cuán extendido está este sistema en todo el mundo. Esta tabla cubre las principales sociedades por región — identifica la de tu país como primer paso para empezar a cobrar lo que te corresponde:
 
 **América Latina y el Caribe**
 
@@ -408,7 +410,7 @@ La Confederación Internacional de Sociedades de Autores y Compositores (CISAC) 
 | Colombia | SAYCO | ACINPRO |
 | México | SACM | AMPROFON |
 | Argentina | SADAIC | CAPIF |
-| Brasil | UBC y otras asociaciones (centralizadas vía ECAD) | ABPD |
+| Brasil | UBC y otras asociaciones (centralizadas vía ECAD) | Pro-Música Brasil |
 | Chile | SCD | — |
 | Perú | APDAYC | — |
 | Uruguay | AGADU | — |
@@ -481,11 +483,12 @@ Un distribuidor digital (DistroKid, TuneCore, CD Baby, entre muchos otros según
 - Administración de tu publishing/composición
 - Asesoría legal o de carrera
 
-**Los tres modelos de cobro más comunes**
+**Los cuatro modelos de cobro más comunes**
 
-1. **Suscripción anual fija** (ej. $20-40 USD/año) — te quedas con el 100% de las regalías, pero pagas sin importar si generas ingresos o no.
-2. **Comisión por porcentaje** (ej. 10-15% de tus regalías) — no pagas nada por adelantado, pero el distribuidor se queda con un porcentaje de todo lo que generes, para siempre o mientras dure el contrato.
-3. **Modelo híbrido con valor agregado** — algunos distribuidores/sellos combinan una comisión con servicios reales (estrategia, contenido, apoyo de marketing) a cambio de un porcentaje más alto pero justificado por el trabajo que realmente hacen.
+1. **Suscripción anual fija** (aproximadamente $25-45 USD/año en distribuidores conocidos como DistroKid) — te quedas con el 100% de las regalías, pero pagas sin importar si generas ingresos o no.
+2. **Pago único por lanzamiento** (aproximadamente $10 USD por sencillo, $15-30 USD por álbum en distribuidores como CD Baby) — a veces combinado con una comisión pequeña (5-10%) sobre las regalías generadas, de por vida del lanzamiento.
+3. **Comisión por porcentaje sin costo fijo** (ej. 10-15% de tus regalías) — no pagas nada por adelantado, pero el distribuidor se queda con un porcentaje de todo lo que generes, para siempre o mientras dure el contrato.
+4. **Modelo híbrido con valor agregado** — algunos distribuidores/sellos combinan una comisión con servicios reales (estrategia, contenido, apoyo de marketing) a cambio de un porcentaje más alto pero justificado por el trabajo que realmente hacen.
 
 **Cómo evaluar si un distribuidor "vale" su comisión**
 
@@ -789,7 +792,7 @@ En orden de peso real para el algoritmo: los compartidos y mensajes directos (la
 
 **TikTok**
 
-Funciona por pruebas escalonadas: tu video se muestra primero a un grupo pequeño de no-seguidores. Si ese grupo lo completa a una tasa alta (generalmente sobre 75%), el algoritmo lo prueba con un grupo más grande. Si la tasa de finalización cae, el video deja de distribuirse — sin importar cuántos seguidores tengas.
+Funciona por pruebas escalonadas: tu video se muestra primero a un grupo pequeño (decenas a un par de cientos de personas), en su mayoría no-seguidores. TikTok no publica una cifra oficial exacta de qué tasa de finalización activa la siguiente ola de distribución, pero el patrón observado de forma consistente es claro: entre mejor sea la tasa de finalización en esa primera prueba, más amplio es el siguiente grupo al que se distribuye el video — y ese ciclo se repite mientras el rendimiento se sostenga. Si la tasa de finalización cae, el video deja de distribuirse — sin importar cuántos seguidores tengas.
 
 **La verdad incómoda que hay que aceptar**
 
