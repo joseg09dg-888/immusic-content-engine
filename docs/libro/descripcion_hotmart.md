@@ -59,3 +59,13 @@ Si haces música — o si diriges a alguien que la hace — esto es lo que neces
 - Acceso indefinido para seguir promoviéndolo mientras el producto exista
 
 Si tu audiencia vive dentro del mundo de la música — artistas, productores, estudiantes de industria musical, creadores de contenido urbano — esto no es "otro producto más" en tu catálogo de afiliado. Es el que responde algo que ya te están preguntando.
+
+---
+
+## Público objetivo (para el campo de Hotmart)
+
+Artistas independientes, productores musicales, cantautores, compositores, DJs y managers de artistas — principalmente en Latinoamérica y España — que ya están lanzando o quieren lanzar música por su cuenta (streaming, redes sociales) y quieren entender cómo funciona el negocio detrás de la música: derechos de autor, contratos, regalías y estrategia de marca, sin depender de un sello tradicional ni de un abogado costoso. Rango de edad aproximado: 16-40 años. Nivel: principiante a intermedio en el negocio musical (no requiere conocimiento previo).
+
+## Palabras clave (para el campo de Hotmart)
+
+music business, industria musical, negocio musical, derechos de autor, propiedad intelectual musical, regalías musicales, contratos discográficos, artista independiente, distribución musical, sello discográfico independiente, marketing musical, marca personal para artistas, monetización de música, streaming, regalías Spotify, SAYCO, ACINPRO, inteligencia artificial música, curso de industria musical, música y negocios, cómo vivir de la música
