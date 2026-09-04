@@ -69,3 +69,64 @@ Artistas independientes, productores musicales, cantautores, compositores, DJs y
 ## Palabras clave (para el campo de Hotmart)
 
 music business, industria musical, negocio musical, derechos de autor, propiedad intelectual musical, regalías musicales, contratos discográficos, artista independiente, distribución musical, sello discográfico independiente, marketing musical, marca personal para artistas, monetización de música, streaming, regalías Spotify, SAYCO, ACINPRO, inteligencia artificial música, curso de industria musical, música y negocios, cómo vivir de la música
+
+---
+
+## PROMPT COMPLETO para el generador de páginas de venta con IA de Hotmart
+
+*(Copia y pega todo este bloque en el campo de prompt)*
+
+Crea una página de ventas altamente persuasiva para un infoproducto digital, usando la estructura de embudo de conversión "Problema → Agitación → Solución → Beneficios → Autoridad → Oferta → Objeciones → Llamado a la acción" (la estructura de carta de ventas de mayor conversión probada en infoproductos educativos).
+
+**DATOS DEL PRODUCTO:**
+
+- Nombre: Music Business Para Todos Los Humanos
+- Autor/Marca: IM Music (sello discográfico independiente, identidad de marca "REBEL LUXURY")
+- Formato: Ebook digital en PDF
+- Extensión: 92 páginas
+- Precio: $16,90 USD
+- Idioma: Español
+
+**PÚBLICO OBJETIVO:**
+
+Artistas independientes, productores musicales, cantautores, compositores, DJs y managers de artistas — principalmente en Latinoamérica y España — que ya están lanzando o quieren lanzar música por su cuenta y quieren entender el negocio detrás de la música (derechos de autor, contratos, regalías, estrategia de marca) sin depender de un sello tradicional ni pagar un abogado costoso. Edad aproximada: 16-40 años. Nivel principiante-intermedio, no requiere conocimiento previo.
+
+**EL PROBLEMA (usar para la sección de Agitación):**
+
+La mayoría de artistas independientes está perdiendo dinero ahora mismo sin saberlo: regalías que nunca cobran porque no están afiliados a su sociedad de gestión de derechos, contratos que firman a ciegas sin entender cláusulas como el "recoupment", derechos que regalan por miedo a que "no llegue otra oportunidad". No es falta de talento — es que nadie les explicó las reglas del negocio en un idioma que entendieran.
+
+**LA SOLUCIÓN / QUÉ ENTREGA EL PRODUCTO:**
+
+Una guía completa y accesible (no un manual legal para abogados) que cubre: derechos de autor explicados simple, cómo se reparte de verdad el dinero del streaming, anatomía de un contrato discográfico y 10 banderas rojas a evitar antes de firmar, un mapa de sociedades de gestión de derechos en más de 15 países, la metodología real de construcción de marca (neurociencia, arquetipo, algoritmos) que usa un sello discográfico en operación, todas las formas de generar ingresos más allá del streaming, y un capítulo completo sobre inteligencia artificial en la industria musical (2026). Incluye casos prácticos, checklists, plantillas de contratos y splits, y glosario.
+
+**3 VENTAJAS PRINCIPALES (usar como bloque de 3 columnas/íconos):**
+
+1. Aprende a proteger tu música — qué firmar y qué no firmar, y qué derechos nadie te puede quitar
+2. Deja de perder regalías — cobra lo que ya te pertenece por ley
+3. Construye una marca que sí se vea — la metodología real de un sello discográfico, no teoría genérica
+
+**GANCHO / HEADLINE PRINCIPAL (usar como titular):**
+
+"¿Sabes cuánto dinero de tu música se está quedando en el camino ahora mismo, sin que te enteres?"
+
+**COPY DE APOYO PARA LA SECCIÓN DE SOLUCIÓN:**
+
+Music Business Para Todos Los Humanos es la guía que un sello discográfico independiente escribió para dejar de ver a artistas firmar contratos a ciegas, regalar sus derechos por miedo, y perder dinero que legalmente ya era suyo. No es teoría reciclada — es la misma metodología que usa un sello real en operación.
+
+**TONO Y ESTILO:**
+
+Directo, urbano-profesional, sin tecnicismos legales innecesarios, en segunda persona ("tú"). Usa especificidad concreta (números, capítulos, cifras reales) en vez de adjetivos vacíos tipo "increíble" o "revolucionario". Genera curiosidad con preguntas abiertas, apela a pérdida potencial (dinero que ya es del lector y no está cobrando) más que a promesas exageradas. Cero urgencia falsa, cero testimonios inventados — no incluyas testimonios de clientes ya que el producto es de reciente lanzamiento.
+
+**ESTRUCTURA REQUERIDA DE LA PÁGINA:**
+
+1. Headline + subheadline (usar el gancho de arriba)
+2. Agitación del problema (2-3 párrafos, usar el problema descrito arriba)
+3. Presentación de la solución (el producto como la respuesta directa)
+4. Bloque de 3 ventajas principales (íconos + texto corto)
+5. Qué incluye el producto (lista de contenidos/capítulos)
+6. Autoridad de marca (quién es IM Music, por qué confiar)
+7. Precio y llamado a la acción claro
+8. Sección de preguntas frecuentes (anticipar objeciones: "¿necesito experiencia previa?", "¿aplica a cualquier género musical?", "¿en qué formato lo recibo?")
+9. CTA final de cierre
+
+**PALABRAS CLAVE PARA SEO/METADATA:** music business, industria musical, derechos de autor, regalías musicales, contratos discográficos, artista independiente, distribución musical, marketing musical, monetización de música, inteligencia artificial música
