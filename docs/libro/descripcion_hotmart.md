@@ -35,7 +35,7 @@ Si haces música — o si diriges a alguien que la hace — esto es lo que neces
 
 ## Descripción para el Programa de Afiliados de Hotmart
 
-*(Reemplaza [XX]% por la comisión real que vas a ofrecer antes de publicar)*
+*(Comisión de afiliado: 80%. Tu margen neto real es de ~$2.95 USD por venta despues de la comision de Hotmart (9.9% + $0.50) y del afiliado -- ver calculo completo mas abajo)*
 
 **Music Business Para Todos Los Humanos** es la guía de negocio musical que resuelve un dolor real y constante en un nicho que casi nadie está atendiendo bien: millones de artistas independientes en todo el mundo hispanohablante que están perdiendo dinero — regalías sin cobrar, contratos firmados a ciegas, derechos regalados — simplemente porque nadie les explicó las reglas del juego en un idioma que entendieran.
 
@@ -49,7 +49,7 @@ Si haces música — o si diriges a alguien que la hace — esto es lo que neces
 
 **Lo que te llevas como afiliado:**
 
-- **[XX]% de comisión** por cada venta que generes
+- **80% de comisión** por cada venta que generes
 - Acceso a la descripción del producto, bullets de valor y ángulos de copy ya redactados, listos para adaptar a tus propios canales
 - Un producto evergreen — sin lanzamientos de temporada ni fecha de vencimiento, puedes promoverlo indefinidamente
 
