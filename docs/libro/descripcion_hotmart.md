@@ -35,22 +35,27 @@ Si haces música — o si diriges a alguien que la hace — esto es lo que neces
 
 ## Descripción para el Programa de Afiliados de Hotmart
 
-*(Comisión de afiliado: 70%. Tu margen neto real es de ~$4.42 USD por venta despues de la comision de Hotmart (9.9% + $0.50) y del afiliado)*
+*(Comisión de afiliado: 70%. Tu margen neto real es de ~$4.42 USD por venta después de la comisión de Hotmart (9.9% + $0.50) y del afiliado)*
 
-**Music Business Para Todos Los Humanos** es la guía de negocio musical que resuelve un dolor real y constante en un nicho que casi nadie está atendiendo bien: millones de artistas independientes en todo el mundo hispanohablante que están perdiendo dinero — regalías sin cobrar, contratos firmados a ciegas, derechos regalados — simplemente porque nadie les explicó las reglas del juego en un idioma que entendieran.
+¿Cuántos productos has promocionado que suenan bien pero que, en el fondo, tu audiencia no necesitaba de verdad? Este no es uno de esos.
 
-**Por qué es fácil de vender:**
+**Music Business Para Todos Los Humanos** ataca un dolor que casi ningún infoproducto en español está resolviendo: millones de artistas independientes en todo el mundo hispanohablante están perdiendo dinero ahora mismo — regalías que nunca cobran, contratos que firman a ciegas, derechos que regalan sin saberlo — no por falta de talento, sino porque nadie les explicó las reglas del negocio en un idioma que entendieran. Si tu audiencia hace música, produce, canta, escribe canciones o dirige un proyecto musical, ya está buscando esta respuesta. Tú solo tienes que ponérsela enfrente.
 
-- **Precio de entrada bajo, fricción mínima.** A $16,90 USD, es una decisión de compra rápida para cualquiera que ya sospecha que está dejando dinero sobre la mesa — no requiere una venta larga ni convencer con presentaciones extensas.
-- **Dolor universal, audiencia enorme.** Cualquier persona que haga música, produzca, cante, escriba canciones o dirija un proyecto musical es cliente potencial — un nicho global, sin fecha de caducidad, que crece cada vez que sale un artista nuevo a internet.
-- **Autoridad real detrás del producto.** No es un ebook genérico de "gurú" — está escrito por IM Music, un sello discográfico independiente en operación real, con metodología propia (no teoría reciclada de otros libros).
-- **Contenido verificado y actual.** Incluye información 2026 sobre inteligencia artificial en la industria musical, un tema en tendencia que genera curiosidad y comparticiones orgánicas.
-- **Gancho de copy ya probado.** La página de ventas está construida sobre pérdida potencial ("¿sabes cuánto dinero se está quedando en el camino?") — uno de los ángulos de conversión más fuertes en nichos financieros/educativos.
+**Por qué te va a convertir mejor que la mayoría de lo que promocionas:**
 
-**Lo que te llevas como afiliado:**
+- **70% de comisión — de las más altas que vas a encontrar en el nicho de industria musical.** Cada venta te deja una ganancia real, no una propina.
+- **Precio de entrada bajo, fricción casi cero.** A $16,90 USD, tu audiencia no necesita "pensarlo" — es una decisión de segundos para alguien que ya sospecha que está dejando dinero sobre la mesa. Menos objeciones, más conversión.
+- **Nicho evergreen, sin fecha de vencimiento.** No es un lanzamiento de temporada que se enfría en dos semanas — cada artista nuevo que sube su primera canción a Spotify es un comprador potencial nuevo, todos los días, para siempre.
+- **Autoridad real, no otro "gurú" reciclando contenido.** Escrito por IM Music, un sello discográfico independiente en operación, con metodología propia — tu audiencia lo siente, y eso baja la resistencia a comprar.
+- **Copy de venta ya construido y probado en pérdida potencial** — uno de los ángulos psicológicos que más convierte en nichos financieros y educativos. No tienes que inventar el ángulo, ya está.
+- **Contenido 2026, con el tema del momento incluido** (inteligencia artificial en la industria musical) — el gancho perfecto para redes, sin que tengas que forzar la relevancia.
 
-- **70% de comisión** por cada venta que generes
-- Acceso a la descripción del producto, bullets de valor y ángulos de copy ya redactados, listos para adaptar a tus propios canales
-- Un producto evergreen — sin lanzamientos de temporada ni fecha de vencimiento, puedes promoverlo indefinidamente
+**Sé de los primeros en promocionarlo.** Es un producto recién lanzado — todavía no está saturado de afiliados compitiendo por la misma audiencia. Quien entra primero en un nicho evergreen se queda con la mejor posición cuando ese nicho madura.
 
-Si tu audiencia son músicos independientes, productores, estudiantes de industria musical, o creadores de contenido dentro del mundo urbano/musical, este producto convierte porque resuelve algo que tu propia audiencia ya está buscando resolver.
+**Lo que recibes al afiliarte:**
+
+- 70% de comisión por cada venta, sin letra pequeña
+- Descripción del producto, bullets de valor y ángulos de copy ya redactados — listos para adaptar a tus redes, tu lista de correo o tu canal
+- Acceso indefinido para seguir promoviéndolo mientras el producto exista
+
+Si tu audiencia vive dentro del mundo de la música — artistas, productores, estudiantes de industria musical, creadores de contenido urbano — esto no es "otro producto más" en tu catálogo de afiliado. Es el que responde algo que ya te están preguntando.
