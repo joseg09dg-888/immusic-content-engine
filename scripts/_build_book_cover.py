@@ -63,7 +63,10 @@ def main():
     draw_centered(draw, "MUSIC BUSINESS", f_title, y, BLANCO)
     y += 150
     draw_centered(draw, "PARA TODOS", f_title, y, BLANCO)
-    y += 190
+    y += 150
+    f_title_sm = ImageFont.truetype(str(SCEAGEUS), 92)
+    draw_centered(draw, "LOS HUMANOS", f_title_sm, y, BLANCO)
+    y += 170
 
     # Divider line
     line_w = 340

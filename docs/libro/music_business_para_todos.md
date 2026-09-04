@@ -1,4 +1,4 @@
-# MUSIC BUSINESS PARA TODOS
+# MUSIC BUSINESS PARA TODOS LOS HUMANOS
 ### La guía REBEL LUXURY de la industria musical
 **IM Music**
 
@@ -1674,4 +1674,4 @@ No lanzamos música. Jaqueamos mentes.
 
 ---
 
-*MUSIC BUSINESS PARA TODOS — IM Music, REBEL LUXURY. No lanzamos música. Jaqueamos mentes.*
+*MUSIC BUSINESS PARA TODOS LOS HUMANOS — IM Music, REBEL LUXURY. No lanzamos música. Jaqueamos mentes.*

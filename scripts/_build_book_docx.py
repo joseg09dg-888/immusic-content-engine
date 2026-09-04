@@ -14,7 +14,7 @@ from docx.oxml import OxmlElement
 ROOT = Path(__file__).resolve().parent.parent
 MD_PATH = ROOT / "docs" / "libro" / "music_business_para_todos.md"
 COVER_IMG = ROOT / "docs" / "libro" / "portada_music_business.png"
-OUT_PATH = ROOT / "docs" / "libro" / "Music_Business_Para_Todos_IM_Music.docx"
+OUT_PATH = ROOT / "docs" / "libro" / "Music_Business_Para_Todos_Los_Humanos_IM_Music.docx"
 
 VIOLETA = RGBColor(0x5E, 0x17, 0xEB)
 NEGRO = RGBColor(0x00, 0x00, 0x00)
