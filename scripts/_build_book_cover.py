@@ -16,6 +16,17 @@ BLANCO = (0xFF, 0xFF, 0xFF)
 SCEAGEUS = ASSETS / "fonts" / "sceageus.otf"
 ANTON = ASSETS / "fonts" / "Anton-Regular.ttf"
 LOGO = ASSETS / "logo" / "logo_immusic.png"
+MIC_ILLUS = ASSETS / "illustrations" / "illus_mic.png"
+
+
+def load_illustration_as_black_alpha(path, opacity=1.0):
+    """These illustration assets already carry real alpha (black linework,
+    transparent elsewhere) — just scale the existing alpha for opacity."""
+    import numpy as np
+    im = Image.open(path).convert("RGBA")
+    arr = np.array(im)
+    arr[:, :, 3] = (arr[:, :, 3].astype(float) * opacity).astype(np.uint8)
+    return Image.fromarray(arr, "RGBA")
 
 
 def white_logo(path, target_w):
@@ -44,6 +55,17 @@ def draw_centered(draw, text, font, y, fill, canvas_w=W, tracking=0):
 
 def main():
     img = Image.new("RGB", (W, H), VIOLETA)
+
+    # Fondo: ilustracion de microfono, lineas finas negras semi-transparentes,
+    # grande, ocupando la mayor parte del lienzo (regla de marca: 60-80%).
+    mic = load_illustration_as_black_alpha(MIC_ILLUS, opacity=0.4)
+    mic_w = int(W * 0.95)
+    ratio = mic_w / mic.width
+    mic = mic.resize((mic_w, int(mic.height * ratio)), Image.LANCZOS)
+    mic_x = (W - mic.width) // 2
+    mic_y = 40
+    img.paste(mic, (mic_x, mic_y), mic)
+
     draw = ImageDraw.Draw(img)
 
     logo = white_logo(LOGO, target_w=520)
