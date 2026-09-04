@@ -130,3 +130,35 @@ Directo, urbano-profesional, sin tecnicismos legales innecesarios, en segunda pe
 9. CTA final de cierre
 
 **PALABRAS CLAVE PARA SEO/METADATA:** music business, industria musical, derechos de autor, regalías musicales, contratos discográficos, artista independiente, distribución musical, marketing musical, monetización de música, inteligencia artificial música
+
+---
+
+## Sección final de la página: Servicios IM Music + Síguenos
+
+*(Para agregar al final de la página de ventas, después del CTA de compra — convierte la página en punto de contacto con el sello, no solo en checkout del libro)*
+
+### Bloque de servicios (texto para pegar)
+
+**Este libro es solo el comienzo. Esto es lo que hacemos en IM Music.**
+
+Si ya tienes tu música lista y quieres que alguien más se encargue de la parte estratégica, en IM Music ofrecemos:
+
+- **Marco estratégico de marca, arquetipo y concepto** — construimos tu identidad de artista desde cero, con neurociencia y psicología aplicada
+- **Distribución musical a todas las plataformas de streaming** — con gestión y administración de regalías de master y publishing
+- **Producción y masterización** — conexión directa con productores e ingenieros altamente calificados
+- **Videos musicales de talla mundial** — grabación, producción, posproducción y colorización
+- **Contenido viral que genera atención y retención** — diseño gráfico, campañas digitales de reconocimiento y posicionamiento
+- **Campañas de pauta y remarketing** (Metodología 7 Maletas) — embudos de conversión y páginas de aterrizaje persuasivas
+- **Financiamiento para proyectos musicales** — aliados estratégicos para que tu carrera no dependa solo de tu bolsillo
+- **Agentes de inteligencia artificial** — comunicación automatizada, análisis de datos y eficiencia de procesos
+
+**¿Quieres que evaluemos tu proyecto?** Escríbenos por Instagram y cuéntanos en qué punto está tu carrera.
+
+### Bloque de síguenos (texto para pegar)
+
+**No te quedes solo con el libro — síguenos donde publicamos contenido gratis todas las semanas:**
+
+📸 Instagram: **[@immusicsello](https://instagram.com/immusicsello)**
+▶️ YouTube: **IM Music** — *(pon aquí el link exacto de tu canal)*
+
+Contenido sobre negocio musical, neurociencia aplicada al marketing, y todo lo que no te van a enseñar en ningún curso tradicional — gratis, tres veces por semana.
