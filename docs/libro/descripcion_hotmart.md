@@ -160,5 +160,6 @@ Si ya tienes tu música lista y quieres que alguien más se encargue de la parte
 
 📸 Instagram: **[@immusicsello](https://instagram.com/immusicsello)**
 ▶️ YouTube: **[IM Music](https://youtube.com/@immusicsello)**
+🎵 TikTok: **[@immusicsello](https://tiktok.com/@immusicsello)** *(confirma si este handle es correcto)*
 
 Contenido sobre negocio musical, neurociencia aplicada al marketing, y todo lo que no te van a enseñar en ningún curso tradicional — gratis, tres veces por semana.
