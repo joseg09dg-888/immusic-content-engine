@@ -55,7 +55,8 @@ Esto no es opcional: es lo que hace que el video se sienta IM Music y no un vide
 - **Color de marca — violeta `#5E17EB`:** debe aparecer visualmente en el video de alguna forma. No hace falta que sea el fondo completo, pero sí debe ser identificable: puede ser una luz de fondo (gel violeta si grabas con iluminación de color), un overlay de color en la edición, un fondo de escena, o un elemento gráfico (marco, línea, destello) en ese tono exacto.
 - **Colores secundarios:** negro puro `#000000` y crema `#F2EDE5` — como acentos, nunca como color dominante en lugar del violeta.
 - **Logo:** el logo de IM Music va al cierre del video (outro). Se entrega el archivo en PNG con fondo transparente.
-- **Tono actoral/voz:** directo, con autoridad, sin sonar a comercial de curso online. Como alguien que ya sabe del negocio y te está ahorrando el error que ellos ya cometieron.
+- **Tono actoral/voz:** directo, cercano, sin sonar a comercial de curso online.
+- **⚠️ Perfil de quien habla — MUY IMPORTANTE:** la creadora habla como **alguien que leyó el libro y lo está recomendando** — no como vocera de IM Music ni con autoridad de marca. Su identidad principal en el video es "lo leí y me pareció excelente, se los recomiendo" — un testimonio genuino de lectora, de persona a persona. Opcionalmente puede darle contexto a por qué le importa el tema (por ejemplo "trabajo con artistas" o "soy artista"), pero eso es solo contexto, no la razón por la que habla del libro — la razón es que lo leyó. Debe evitar frases tipo "nosotros en IM Music" o "es lo que usamos" — eso lo dice IM Music, no ella.
 
 ---
 
@@ -93,15 +94,16 @@ Abajo están los dos guiones. Se pueden grabar el mismo día, con la misma sesi�
 
 **Objetivo:** detener el scroll de alguien que nunca ha oído hablar de IM Music ni del libro. Nivel de consciencia: problema.
 **Duración sugerida:** 30-45 segundos.
-**Estilo:** hablado a cámara, directo, tono de advertencia/revelación — no de venta.
+**Estilo:** hablado a cámara, como quien acaba de leer algo que le voló la cabeza y tiene que contarlo — no como venta.
+**Quién habla:** ella, como lectora — le pasó/vio el problema, leyó el libro, lo está recomendando.
 
 | Tiempo | Visual | Texto en pantalla (Anton) | Voz / actuación |
 |---|---|---|---|
 | 0-3s | Primer plano, mirada directa a cámara, fondo con luz/overlay violeta | "¿SABES CUÁNTO DINERO DE TU MÚSICA SE ESTÁ QUEDANDO EN EL CAMINO?" | Tono serio, directo — sin sonreír, como si fuera a contar un secreto |
 | 3-10s | Se mantiene el plano o corta a un segundo ángulo | "CADA VEZ QUE SUENA TU CANCIÓN, HAY UN PAGO QUE TE CORRESPONDE" | Explica: cada reproducción, cada uso, genera un derecho que casi nadie cobra |
 | 10-18s | Corte a texto grande en pantalla sobre fondo violeta | "LA MAYORÍA DE ARTISTAS INDEPENDIENTES NUNCA LO COBRA" | "No es falta de talento. Es que nadie te explicó cómo funciona el negocio detrás de la música." |
-| 18-26s | Vuelve a cámara, tono cambia a más cercano | "ESO ES LO QUE HACE ESTE LIBRO" | Presenta brevemente: guía que explica derechos, contratos, regalías y marca, sin tecnicismos legales |
-| 26-35s | Insert del libro/portada o mockup, logo IM Music entra | "MUSIC BUSINESS PARA TODOS LOS HUMANOS — LINK EN BIO" | CTA claro: "Búscalo en el link de la bio antes de tu próximo lanzamiento, no después." |
+| 18-26s | Vuelve a cámara, tono cambia a más cercano y personal | "POR ESO LEÍ ESTE LIBRO" | "Yo lo leí, y por eso lo estoy recomendando: explica derechos, contratos, regalías y marca, sin tecnicismos legales." |
+| 26-35s | Insert del libro/portada o mockup, logo IM Music entra | "MUSIC BUSINESS PARA TODOS LOS HUMANOS — LINK EN BIO" | CTA claro: "Léanselo antes de su próximo lanzamiento, no después. Se los recomiendo de verdad." |
 
 ---
 
@@ -109,15 +111,15 @@ Abajo están los dos guiones. Se pueden grabar el mismo día, con la misma sesi�
 
 **Objetivo:** convertir a alguien que ya nos sigue o ya vio el video 1. Nivel de consciencia: solución/producto.
 **Duración sugerida:** 20-35 segundos.
-**Estilo:** recomendación directa y personal, como si le contaras a un amigo artista por qué debería comprarlo — con autoridad, sin rodeos.
+**Estilo:** testimonio directo y personal — ella ya leyó el libro, le pareció excelente y lo recomienda. No es IM Music hablando de sí mismo, es ella hablando del libro.
 
 | Tiempo | Visual | Texto en pantalla (Anton) | Voz / actuación |
 |---|---|---|---|
-| 0-4s | Cámara directa, energía alta desde el segundo 1 | "TE LO DIGO DIRECTO" | "Si haces música y todavía no sabes cómo funcionan tus regalías, tus contratos o tu marca — necesitas este libro." |
-| 4-12s | Corte a lista de bullets en pantalla (violeta de fondo) | "DERECHOS · CONTRATOS · REGALÍAS · MARCA · IA" | Menciona 2-3 contenidos concretos: "10 banderas rojas antes de firmar un contrato, cómo se reparte de verdad el dinero de Spotify, y la metodología real de marca que usamos en IM Music" |
-| 12-20s | Vuelve a cámara | "NO ES OTRO CURSO RECICLADO" | "Lo escribió un sello discográfico que está operando ahora mismo. No es teoría — es lo que usamos." |
-| 20-28s | Mockup del libro + precio en pantalla | "$16,90 USD · 92 PÁGINAS" | "Por menos de lo que cuesta una comida, evitas el error que le costó dinero real a otros artistas." |
-| 28-35s | Logo IM Music, CTA final | "LINK EN BIO" | CTA con urgencia honesta: "Consíguelo antes de tu próximo lanzamiento." |
+| 0-4s | Cámara directa, energía alta desde el segundo 1 | "LEÍ ESTE LIBRO Y ES EXCELENTE" | "Leí este libro y me pareció excelente. Se los recomiendo." |
+| 4-12s | Corte a lista de bullets en pantalla (violeta de fondo) | "DERECHOS · CONTRATOS · REGALÍAS · MARCA · IA" | "Habla de todo lo que a un artista independiente nadie le explica: derechos, contratos, cómo se reparte de verdad el dinero de Spotify, marca, hasta inteligencia artificial en la industria." |
+| 12-20s | Vuelve a cámara | "SE LOS RECOMIENDO SI HACEN MÚSICA" | "Lo escribió IM Music, un sello discográfico independiente que está operando ahora mismo. No es teoría reciclada — y por eso lo recomiendo." |
+| 20-28s | Mockup del libro + precio en pantalla | "$16,90 USD · 92 PÁGINAS" | "Por lo que cuesta, no hay comparación con lo que te puede ahorrar." |
+| 28-35s | Logo IM Music, CTA final | "LINK EN BIO" | CTA con urgencia honesta: "Consíganlo antes de su próximo lanzamiento. Se los recomiendo de verdad." |
 
 ---
 
