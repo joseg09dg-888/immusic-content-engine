@@ -70,6 +70,8 @@ Spanish with a clear, neutral Colombian (Bogotá) accent.
 
 **Regla de oro:** usa exactamente esta misma voz en los 10 clips de las 3 etapas. Si cambia una palabra de la descripción de voz entre clips, el modelo puede generar un tono distinto y se va a notar el salto en la edición.
 
+**Sobre manos duplicadas, ojos raros, objetos que aparecen de la nada:** todos los prompts de video (secciones 4, 5, 6 y la plantilla de la sección 9) ya incluyen ahora una frase fija de control de anatomía justo después de "Single continuous take, no cuts or scene changes." — obliga al modelo a mantener exactamente dos manos con cinco dedos, prohíbe que aparezcan objetos no descritos (como el libro saliendo de la nada), y pide contacto visual estable con parpadeo normal. Si el video generado sigue mostrando manos de más u objetos raros, es una limitación del modelo en ese clip puntual — regenera ese clip 1-2 veces más, casi siempre cambia el resultado.
+
 ---
 
 ## 4. VIDEO 1 — ETAPA FRÍA (problema) — 4 clips de 10s
@@ -79,7 +81,7 @@ Objetivo: detener el scroll de alguien que nunca oyó hablar de IM Music. Usa la
 ### Clip 1 — Hook (0-10s)
 
 ```
-Slow, continuous zoom-in toward the subject's face, starting from the very first frame and moving steadily closer, then holding steady on the close-up for the rest of the clip. Single continuous take, no cuts or scene changes. She looks directly at the camera with a serious, confessional expression and says: "¿Sabes cuánto dinero de tu música se está quedando en el camino ahora mismo, sin que te enteres?"
+Slow, continuous zoom-in toward the subject's face, starting from the very first frame and moving steadily closer, then holding steady on the close-up for the rest of the clip. Single continuous take, no cuts or scene changes. Anatomically correct body at all times: exactly two arms and two hands, five fingers per hand, no extra, duplicated, blurred, or merged limbs, no distorted or morphing anatomy. Do not add any props, objects, books, papers, phones, or items that are not explicitly described in this prompt — her hands stay empty and either still or performing only the exact gesture written below, nothing appears out of nowhere. Natural steady eye contact with the camera, normal human blink rate, no jittery, rapid, wandering, crossed, or distorted eye movement. Any gesture must be slow, subtle, and anatomically natural — no exaggerated, rapid, jerky, or repeated movement, no extra limbs appearing during the gesture. She looks directly at the camera with a serious, confessional expression and says: "¿Sabes cuánto dinero de tu música se está quedando en el camino ahora mismo, sin que te enteres?"
 
 Voice: a youthful female voice — a woman in her mid-20s, bright and fairly high-pitched, light and breezy, casual relaxed pace.
 
@@ -89,7 +91,7 @@ Spanish with a clear, neutral Colombian (Bogotá) accent.
 ### Clip 2 — Agitación (10-20s)
 
 ```
-(static camera, no movement) realistic arm movements and subtle micro-movements. Single continuous take, no cuts or scene changes. She raises one hand slightly as she explains, then says: "Cada vez que suena tu canción, hay un pago que te corresponde. Y la mayoría de artistas independientes nunca lo cobra."
+(static camera, no movement) realistic arm movements and subtle micro-movements. Single continuous take, no cuts or scene changes. Anatomically correct body at all times: exactly two arms and two hands, five fingers per hand, no extra, duplicated, blurred, or merged limbs, no distorted or morphing anatomy. Do not add any props, objects, books, papers, phones, or items that are not explicitly described in this prompt — her hands stay empty and either still or performing only the exact gesture written below, nothing appears out of nowhere. Natural steady eye contact with the camera, normal human blink rate, no jittery, rapid, wandering, crossed, or distorted eye movement. Any gesture must be slow, subtle, and anatomically natural — no exaggerated, rapid, jerky, or repeated movement, no extra limbs appearing during the gesture. She raises one hand slightly as she explains, then says: "Cada vez que suena tu canción, hay un pago que te corresponde. Y la mayoría de artistas independientes nunca lo cobra."
 
 Voice: a youthful female voice — a woman in her mid-20s, bright and fairly high-pitched, light and breezy, casual relaxed pace.
 
@@ -99,7 +101,7 @@ Spanish with a clear, neutral Colombian (Bogotá) accent.
 ### Clip 3 — Revelación (20-30s)
 
 ```
-Very gentle, almost imperceptible slow push-in on the speaker, from a medium shot to a medium close-up over the whole clip. Single continuous take, no cuts or scene changes. She nods slowly with a knowing expression, then says: "No es falta de talento. Es que nadie te explicó cómo funciona el negocio detrás de la música. Por eso leí este libro."
+Very gentle, almost imperceptible slow push-in on the speaker, from a medium shot to a medium close-up over the whole clip. Single continuous take, no cuts or scene changes. Anatomically correct body at all times: exactly two arms and two hands, five fingers per hand, no extra, duplicated, blurred, or merged limbs, no distorted or morphing anatomy. Do not add any props, objects, books, papers, phones, or items that are not explicitly described in this prompt — her hands stay empty and either still or performing only the exact gesture written below, nothing appears out of nowhere. Natural steady eye contact with the camera, normal human blink rate, no jittery, rapid, wandering, crossed, or distorted eye movement. Any gesture must be slow, subtle, and anatomically natural — no exaggerated, rapid, jerky, or repeated movement, no extra limbs appearing during the gesture. She nods slowly with a knowing expression, then says: "No es falta de talento. Es que nadie te explicó cómo funciona el negocio detrás de la música. Por eso leí este libro."
 
 Voice: a youthful female voice — a woman in her mid-20s, bright and fairly high-pitched, light and breezy, casual relaxed pace.
 
@@ -109,7 +111,7 @@ Spanish with a clear, neutral Colombian (Bogotá) accent.
 ### Clip 4 — CTA (30-40s)
 
 ```
-(static camera, no movement) realistic arm movements and subtle micro-movements. Single continuous take, no cuts or scene changes. She points up toward the top of the frame as she says: "Music Business Para Todos Los Humanos. Búscalo en el link de la bio antes de tu próximo lanzamiento, no después."
+(static camera, no movement) realistic arm movements and subtle micro-movements. Single continuous take, no cuts or scene changes. Anatomically correct body at all times: exactly two arms and two hands, five fingers per hand, no extra, duplicated, blurred, or merged limbs, no distorted or morphing anatomy. Do not add any props, objects, books, papers, phones, or items that are not explicitly described in this prompt — her hands stay empty and either still or performing only the exact gesture written below, nothing appears out of nowhere. Natural steady eye contact with the camera, normal human blink rate, no jittery, rapid, wandering, crossed, or distorted eye movement. Any gesture must be slow, subtle, and anatomically natural — no exaggerated, rapid, jerky, or repeated movement, no extra limbs appearing during the gesture. She points up toward the top of the frame as she says: "Music Business Para Todos Los Humanos. Búscalo en el link de la bio antes de tu próximo lanzamiento, no después."
 
 Voice: a youthful female voice — a woman in her mid-20s, bright and fairly high-pitched, light and breezy, casual relaxed pace.
 
@@ -125,7 +127,7 @@ Objetivo: para quien ya vio el video 1, vio contenido de IM Music o nos sigue. N
 ### Clip 1 — Gancho de curiosidad (0-10s)
 
 ```
-Slow subtle push-in, cinematic. Single continuous take, no cuts or scene changes. She tilts her head curiously, then says: "Si haces música, hay algo que probablemente no sabes sobre tus regalías, tus contratos o tu marca."
+Slow subtle push-in, cinematic. Single continuous take, no cuts or scene changes. Anatomically correct body at all times: exactly two arms and two hands, five fingers per hand, no extra, duplicated, blurred, or merged limbs, no distorted or morphing anatomy. Do not add any props, objects, books, papers, phones, or items that are not explicitly described in this prompt — her hands stay empty and either still or performing only the exact gesture written below, nothing appears out of nowhere. Natural steady eye contact with the camera, normal human blink rate, no jittery, rapid, wandering, crossed, or distorted eye movement. Any gesture must be slow, subtle, and anatomically natural — no exaggerated, rapid, jerky, or repeated movement, no extra limbs appearing during the gesture. She tilts her head curiously, then says: "Si haces música, hay algo que probablemente no sabes sobre tus regalías, tus contratos o tu marca."
 
 Voice: a youthful female voice — a woman in her mid-20s, bright and fairly high-pitched, light and breezy, casual relaxed pace.
 
@@ -135,7 +137,7 @@ Spanish with a clear, neutral Colombian (Bogotá) accent.
 ### Clip 2 — Puente personal (10-20s)
 
 ```
-(static camera, no movement) realistic arm movements and subtle micro-movements. Single continuous take, no cuts or scene changes. She smiles slightly, then says: "Yo tampoco lo sabía, hasta que leí un libro que me cambió completamente cómo veo esto."
+(static camera, no movement) realistic arm movements and subtle micro-movements. Single continuous take, no cuts or scene changes. Anatomically correct body at all times: exactly two arms and two hands, five fingers per hand, no extra, duplicated, blurred, or merged limbs, no distorted or morphing anatomy. Do not add any props, objects, books, papers, phones, or items that are not explicitly described in this prompt — her hands stay empty and either still or performing only the exact gesture written below, nothing appears out of nowhere. Natural steady eye contact with the camera, normal human blink rate, no jittery, rapid, wandering, crossed, or distorted eye movement. Any gesture must be slow, subtle, and anatomically natural — no exaggerated, rapid, jerky, or repeated movement, no extra limbs appearing during the gesture. She smiles slightly, then says: "Yo tampoco lo sabía, hasta que leí un libro que me cambió completamente cómo veo esto."
 
 Voice: a youthful female voice — a woman in her mid-20s, bright and fairly high-pitched, light and breezy, casual relaxed pace.
 
@@ -145,7 +147,7 @@ Spanish with a clear, neutral Colombian (Bogotá) accent.
 ### Clip 3 — CTA suave, de comentario (20-30s)
 
 ```
-Slow, continuous zoom-in toward the subject's face, starting from the very first frame and moving steadily closer, then holding steady on the close-up for the rest of the clip. Single continuous take, no cuts or scene changes. She says: "Si quieres que te cuente qué aprendí, comenta LIBRO y te cuento."
+Slow, continuous zoom-in toward the subject's face, starting from the very first frame and moving steadily closer, then holding steady on the close-up for the rest of the clip. Single continuous take, no cuts or scene changes. Anatomically correct body at all times: exactly two arms and two hands, five fingers per hand, no extra, duplicated, blurred, or merged limbs, no distorted or morphing anatomy. Do not add any props, objects, books, papers, phones, or items that are not explicitly described in this prompt — her hands stay empty and either still or performing only the exact gesture written below, nothing appears out of nowhere. Natural steady eye contact with the camera, normal human blink rate, no jittery, rapid, wandering, crossed, or distorted eye movement. Any gesture must be slow, subtle, and anatomically natural — no exaggerated, rapid, jerky, or repeated movement, no extra limbs appearing during the gesture. She says: "Si quieres que te cuente qué aprendí, comenta LIBRO y te cuento."
 
 Voice: a youthful female voice — a woman in her mid-20s, bright and fairly high-pitched, light and breezy, casual relaxed pace.
 
@@ -161,7 +163,7 @@ Objetivo: convertir a quien ya está calentado (comentó, visitó la página, vi
 ### Clip 1 — Recomendación directa (0-10s)
 
 ```
-(static camera, no movement) realistic arm movements and subtle micro-movements. Single continuous take, no cuts or scene changes. She says with direct, confident energy: "Leí este libro y es excelente. Se los recomiendo."
+(static camera, no movement) realistic arm movements and subtle micro-movements. Single continuous take, no cuts or scene changes. Anatomically correct body at all times: exactly two arms and two hands, five fingers per hand, no extra, duplicated, blurred, or merged limbs, no distorted or morphing anatomy. Do not add any props, objects, books, papers, phones, or items that are not explicitly described in this prompt — her hands stay empty and either still or performing only the exact gesture written below, nothing appears out of nowhere. Natural steady eye contact with the camera, normal human blink rate, no jittery, rapid, wandering, crossed, or distorted eye movement. Any gesture must be slow, subtle, and anatomically natural — no exaggerated, rapid, jerky, or repeated movement, no extra limbs appearing during the gesture. She says with direct, confident energy: "Leí este libro y es excelente. Se los recomiendo."
 
 Voice: a youthful female voice — a woman in her mid-20s, bright and fairly high-pitched, light and breezy, casual relaxed pace.
 
@@ -173,7 +175,7 @@ Spanish with a clear, neutral Colombian (Bogotá) accent.
 *Nota: esta línea es algo larga para 10s hablados cómodos. Si al generarla se ve apurada, divídela en dos clips de 10s.*
 
 ```
-Very gentle, almost imperceptible slow push-in on the speaker, from a medium shot to a medium close-up over the whole clip. Single continuous take, no cuts or scene changes. She counts briefly on her fingers as she says: "Habla de derechos, contratos, cómo se reparte de verdad el dinero de Spotify, marca, hasta inteligencia artificial en la industria musical. Lo escribió IM Music, un sello discográfico independiente que está operando ahora mismo."
+Very gentle, almost imperceptible slow push-in on the speaker, from a medium shot to a medium close-up over the whole clip. Single continuous take, no cuts or scene changes. Anatomically correct body at all times: exactly two arms and two hands, five fingers per hand, no extra, duplicated, blurred, or merged limbs, no distorted or morphing anatomy. Do not add any props, objects, books, papers, phones, or items that are not explicitly described in this prompt — her hands stay empty and either still or performing only the exact gesture written below, nothing appears out of nowhere. Natural steady eye contact with the camera, normal human blink rate, no jittery, rapid, wandering, crossed, or distorted eye movement. Any gesture must be slow, subtle, and anatomically natural — no exaggerated, rapid, jerky, or repeated movement, no extra limbs appearing during the gesture. She counts briefly on her fingers as she says: "Habla de derechos, contratos, cómo se reparte de verdad el dinero de Spotify, marca, hasta inteligencia artificial en la industria musical. Lo escribió IM Music, un sello discográfico independiente que está operando ahora mismo."
 
 Voice: a youthful female voice — a woman in her mid-20s, bright and fairly high-pitched, light and breezy, casual relaxed pace.
 
@@ -183,7 +185,7 @@ Spanish with a clear, neutral Colombian (Bogotá) accent.
 ### Clip 3 — Precio + CTA (20-30s)
 
 ```
-(static camera, no movement) realistic arm movements and subtle micro-movements. Single continuous take, no cuts or scene changes. She holds up her hands slightly as she says: "Dieciséis con noventa dólares, noventa y dos páginas. Por lo que cuesta, no hay comparación con lo que te puede ahorrar. Consíganlo antes de su próximo lanzamiento — link en bio."
+(static camera, no movement) realistic arm movements and subtle micro-movements. Single continuous take, no cuts or scene changes. Anatomically correct body at all times: exactly two arms and two hands, five fingers per hand, no extra, duplicated, blurred, or merged limbs, no distorted or morphing anatomy. Do not add any props, objects, books, papers, phones, or items that are not explicitly described in this prompt — her hands stay empty and either still or performing only the exact gesture written below, nothing appears out of nowhere. Natural steady eye contact with the camera, normal human blink rate, no jittery, rapid, wandering, crossed, or distorted eye movement. Any gesture must be slow, subtle, and anatomically natural — no exaggerated, rapid, jerky, or repeated movement, no extra limbs appearing during the gesture. She holds up her hands slightly as she says: "Dieciséis con noventa dólares, noventa y dos páginas. Por lo que cuesta, no hay comparación con lo que te puede ahorrar. Consíganlo antes de su próximo lanzamiento — link en bio."
 
 Voice: a youthful female voice — a woman in her mid-20s, bright and fairly high-pitched, light and breezy, casual relaxed pace.
 
@@ -228,7 +230,7 @@ Using the reference image, keep the SAME person — same face and identity, same
 
 [CÁMARA — pega aquí el movimiento de cámara de esta toma]
 
-Single continuous take, no cuts or scene changes.
+Single continuous take, no cuts or scene changes. Anatomically correct body at all times: exactly two arms and two hands, five fingers per hand, no extra, duplicated, blurred, or merged limbs, no distorted or morphing anatomy. Do not add any props, objects, books, papers, phones, or items that are not explicitly described in this prompt — her hands stay empty and either still or performing only the exact gesture written below, nothing appears out of nowhere. Natural steady eye contact with the camera, normal human blink rate, no jittery, rapid, wandering, crossed, or distorted eye movement. Any gesture must be slow, subtle, and anatomically natural — no exaggerated, rapid, jerky, or repeated movement, no extra limbs appearing during the gesture.
 
 [ACCIÓN opcional — un gesto], she says: "[GUIÓN — pega aquí la línea exacta de esta toma]"
 
