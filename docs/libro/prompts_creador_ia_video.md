@@ -6,9 +6,9 @@
 
 ---
 
-## ⚠️ Antes de empezar — una nota importante
+## ⚠️ Rótulo de contenido con IA — ya incluido
 
-Los guiones de esta campaña están escritos en primera persona, como si la creadora hubiera leído el libro de verdad ("lo leí y se los recomiendo"). Eso es exactamente lo que evitaste a propósito en la página de Hotmart ("cero testimonios inventados"). Como esta persona es 100% generada con IA y nunca leyó nada, lo más honesto — y lo que te cubre frente a las políticas de anuncios de Meta/TikTok, que cada vez piden más declarar cuando un anuncio usa un actor generado con IA — es agregar en pantalla o en la descripción algo como **"Contenido generado con IA"**. No cambia el guion ni el resultado, pero evita que esto se lea como un testimonio falso de una persona real. Tú decides si lo agregas; te lo dejo marcado para que no se te pase.
+Los guiones de esta campaña están escritos en primera persona, como si la creadora hubiera leído el libro de verdad ("lo leí y se los recomiendo"). Como esta persona es 100% generada con IA, cada uno de los 3 videos lleva ahora un rótulo fijo en pantalla **"Contenido generado con IA"** (paso a paso en la sección 7, punto de edición) además de la etiqueta en la descripción de cada publicación. No cambia ningún guion — solo evita que esto se lea como un testimonio falso de una persona real, y te cubre frente a las políticas de anuncios de Meta/TikTok sobre actores generados con IA.
 
 ---
 
@@ -199,8 +199,10 @@ Spanish with a clear, neutral Colombian (Bogotá) accent.
 3. Recorta 2-3 frames al inicio/final de cada clip si hay un micro-salto entre cortes (es normal, la IA no siempre empieza/termina en el mismo frame exacto).
 4. Agrega subtítulos quemados en **Anton**, siguiendo la identidad visual del brief del creador humano.
 5. Agrega un leve overlay o viñeta en tono violeta `#5E17EB` en la gradación de color, para reforzar marca además del acento violeta que ya lleva la imagen.
-6. Cierra cada uno de los 3 videos con el logo de IM Music (outro).
-7. Exporta cada video por separado, vertical 1080x1920 — quedan 3 archivos: frío, tibio, caliente.
+6. **Agrega el rótulo "Contenido generado con IA"**: un texto pequeño en Anton, esquina superior o inferior, semi-transparente (opacidad ~70%), presente durante TODO el video (no solo un segundo) — en los 3 videos, sin excepción.
+7. Cierra cada uno de los 3 videos con el logo de IM Music (outro).
+8. Exporta cada video por separado, vertical 1080x1920 — quedan 3 archivos: frío, tibio, caliente.
+9. Al publicar cada video en Instagram/TikTok/YouTube: activa la opción de "contenido generado con IA" si la plataforma la pide, y agrega "🤖 Contenido generado con IA" en la descripción del post.
 
 ---
 
@@ -211,5 +213,6 @@ Spanish with a clear, neutral Colombian (Bogotá) accent.
 - [ ] El violeta de marca aparece en la imagen (luz/accesorio)
 - [ ] Subtítulos en Anton
 - [ ] Logo IM Music en el cierre
-- [ ] Considera agregar "Contenido generado con IA" en pantalla o en la descripción (ver nota al inicio del documento)
+- [ ] Rótulo "Contenido generado con IA" visible durante todo el video, en las 3 piezas
+- [ ] "🤖 Contenido generado con IA" agregado en la descripción de cada publicación
 - [ ] No hay afirmaciones falsas o exageradas sobre el libro
