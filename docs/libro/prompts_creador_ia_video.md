@@ -14,11 +14,11 @@ Los guiones de esta campaña están escritos en primera persona, como si la crea
 
 ## 0. La identidad de la creadora IA
 
-Persona: mujer, ~25-28 años, look urbano/streetwear (bomber, cargo, sneakers, cadenas, argollas grandes), cercana pero con autoridad — coherente con la identidad REBEL LUXURY de IM Music. Voz e imagen se mantienen **idénticas en los 3 videos** (misma imagen de referencia, misma línea de voz, mismo acento) para que se sienta como una sola creadora recurrente, no un aviso genérico.
+Persona: mujer, ~25-28 años, look urbano/streetwear (bomber, cargo, sneakers, cadenas, argollas grandes) + **pasamontañas violeta de marca** que cubre cabello y cuello dejando toda la cara descubierta (ojos, nariz, boca, mentón) — cercana pero con un toque de misterio/anonimato, coherente con la identidad REBEL LUXURY de IM Music. Voz e imagen se mantienen **idénticas en los 3 videos** (misma imagen de referencia, misma línea de voz, mismo acento) para que se sienta como una sola creadora recurrente, no un aviso genérico.
 
 - **Voz:** mujer joven, 25-30 años
 - **Acento:** colombiano (Bogotá), neutro — coherente con el origen de IM Music y con SAYCO/ACINPRO mencionados en el libro. Alternativa si prefieres un acento menos localizado: "Spanish with a neutral Latin American accent."
-- **Toque de marca:** un acento violeta `#5E17EB` sutil en el vestuario/iluminación (no en el fondo completo) — igual que se le pide al creador humano en el otro brief.
+- **Toque de marca:** el pasamontañas en violeta exacto `#5E17EB` es ahora el elemento de marca principal (reemplaza el acento sutil en pulsera de la versión anterior) — muy visible, pero SIEMPRE con la cara completamente descubierta para que se pueda hablar y sincronizar labios sin problema.
 
 ---
 
@@ -27,17 +27,17 @@ Persona: mujer, ~25-28 años, look urbano/streetwear (bomber, cargo, sneakers, c
 *(Genera esto primero, en el generador de imagen — Nano Banana/Gemini imagen. Esta es LA foto de referencia que vas a usar en todos los prompts de video de los 3 pasos de abajo.)*
 
 ```
-A candid iPhone photo of a stylish Latina content creator in her mid-20s, medium olive-tan skin, expressive dark brown eyes, naturally full brows, soft natural makeup, long dark brown wavy hair worn down with natural loose texture. She has realistic skin texture with visible pores, subtle natural imperfections. She is speaking directly to the camera, headphones resting around her neck, holding a small wireless microphone with a fluffy windscreen close to her mouth, friendly and confident expression.
+A candid iPhone photo of a stylish Latina content creator in her mid-20s, medium olive-tan skin, expressive dark brown eyes, naturally full brows, soft natural makeup on the visible skin, realistic skin texture with visible pores, subtle natural imperfections. She wears a fitted deep violet balaclava (ski mask) in the exact brand violet tone (#5E17EB), covering her hair, ears, neck and the top of her head, with an open face cutout that fully exposes her eyes, nose, mouth and chin — the mask frames the face but never covers it, so her expressions and mouth movement while talking stay completely visible. She is speaking directly to the camera, headphones resting around her neck over the balaclava, holding a small wireless microphone with a fluffy windscreen close to her mouth, friendly and confident expression.
 
 Shot vertically as an iPhone photo, eye-level framing, medium portrait composition, natural smartphone lens look, authentic social media reel aesthetic.
 
-She is wearing an oversized black bomber jacket with subtle streetwear branding over a cropped graphic tank top, baggy cargo pants, chunky white sneakers, large gold hoop earrings, a couple of thin layered chains, and a chunky ring — urban streetwear look, hip-hop/urban-artist coherent. One visible bracelet carries a subtle deep violet stone accent at the wrist as the brand touch.
+She is wearing an oversized black bomber jacket with subtle streetwear branding over a cropped graphic tank top, baggy cargo pants, chunky white sneakers, large gold hoop earrings, a couple of thin layered chains, and a chunky ring — urban streetwear look, hip-hop/urban-artist coherent, mysterious/anonymous vibe reinforced by the violet balaclava as the main brand signature.
 
 Standing against a dark matte wall with graffiti-style texture, a single soft violet-toned LED light strip glowing along one edge of the frame, minimal urban background (concrete, industrial), uncluttered composition that keeps all attention on the subject.
 
 Soft natural daylight combined with the subtle violet accent light and a gentle direct iPhone flash for crisp facial detail, gentle contrast, slight grain, candid dump vibe, realistic lighting, authentic smartphone capture.
 
-Maintain the same pose, hairstyle, outfit, framing, expression, background, and overall composition. Preserve realistic proportions, accurate hands and facial features, natural skin texture, true-to-life colors, sharp focus, Instagram influencer aesthetic, iPhone photo realism.
+Maintain the same pose, balaclava color and fit, outfit, framing, expression, background, and overall composition. Preserve realistic proportions, accurate hands and facial features on the exposed part of the face, natural skin texture, true-to-life colors, sharp focus, Instagram influencer aesthetic, iPhone photo realism.
 
 No text, no watermark, no distortion.
 ```
@@ -51,11 +51,11 @@ No text, no watermark, no distortion.
 ```
 Using the reference image as the ONLY source of identity, generate a professional 3×3 character sheet showing the exact same person from multiple angles and expressions.
 
-The identity must remain absolutely identical to the reference: same facial structure, same eye shape and spacing, same nose, same lips, same jawline, same hairstyle and hairline, same skin tone, same proportions, same age, same ethnicity, same facial asymmetries and unique identifying features. Do NOT beautify, stylize, or reinterpret the person in any way.
+The identity must remain absolutely identical to the reference: same facial structure on the exposed part of the face, same eye shape and spacing, same nose, same lips, same jawline, same skin tone, same proportions, same age, same ethnicity, same facial asymmetries and unique identifying features. The deep violet balaclava (#5E17EB) must keep the exact same color, fit and face cutout in every portrait, always leaving eyes, nose, mouth and chin fully exposed. Do NOT beautify, stylize, or reinterpret the person in any way.
 
 Create a clean character sheet with nine evenly spaced portraits on a neutral light gray background. Include: front view (neutral), left profile (90°), right profile (90°), left three-quarter view, right three-quarter view, slight downward gaze, slight upward gaze, serious expression, neutral expression.
 
-Lighting should be soft and perfectly consistent across every frame. Hair, clothing, makeup and accessories must remain identical in every portrait. Ultra high realism. Extremely accurate identity preservation. No artistic interpretation, no beauty filters, no skin smoothing.
+Lighting should be soft and perfectly consistent across every frame. Balaclava, clothing, makeup and accessories must remain identical in every portrait. Ultra high realism. Extremely accurate identity preservation. No artistic interpretation, no beauty filters, no skin smoothing.
 ```
 
 ---
