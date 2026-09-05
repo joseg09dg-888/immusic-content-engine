@@ -14,7 +14,7 @@ Los guiones de esta campaña están escritos en primera persona, como si la crea
 
 ## 0. La identidad de la creadora IA
 
-Persona: mujer, ~25-28 años, look urbano-profesional, cercana pero con autoridad — coherente con la identidad REBEL LUXURY de IM Music. Voz e imagen se mantienen **idénticas en los 3 videos** (misma imagen de referencia, misma línea de voz, mismo acento) para que se sienta como una sola creadora recurrente, no un aviso genérico.
+Persona: mujer, ~25-28 años, look urbano/streetwear (bomber, cargo, sneakers, cadenas, argollas grandes), cercana pero con autoridad — coherente con la identidad REBEL LUXURY de IM Music. Voz e imagen se mantienen **idénticas en los 3 videos** (misma imagen de referencia, misma línea de voz, mismo acento) para que se sienta como una sola creadora recurrente, no un aviso genérico.
 
 - **Voz:** mujer joven, 25-30 años
 - **Acento:** colombiano (Bogotá), neutro — coherente con el origen de IM Music y con SAYCO/ACINPRO mencionados en el libro. Alternativa si prefieres un acento menos localizado: "Spanish with a neutral Latin American accent."
@@ -31,9 +31,9 @@ A candid iPhone photo of a stylish Latina content creator in her mid-20s, medium
 
 Shot vertically as an iPhone photo, eye-level framing, medium portrait composition, natural smartphone lens look, authentic social media reel aesthetic.
 
-She is wearing an oversized black leather jacket over a fitted white top, dark jeans, small gold hoop earrings, and a thin bracelet with a subtle deep violet stone accent visible at the wrist.
+She is wearing an oversized black bomber jacket with subtle streetwear branding over a cropped graphic tank top, baggy cargo pants, chunky white sneakers, large gold hoop earrings, a couple of thin layered chains, and a chunky ring — urban streetwear look, hip-hop/urban-artist coherent. One visible bracelet carries a subtle deep violet stone accent at the wrist as the brand touch.
 
-Standing against a dark matte wall with a single soft violet-toned LED light strip glowing along one edge of the frame, minimal urban background, uncluttered composition that keeps all attention on the subject.
+Standing against a dark matte wall with graffiti-style texture, a single soft violet-toned LED light strip glowing along one edge of the frame, minimal urban background (concrete, industrial), uncluttered composition that keeps all attention on the subject.
 
 Soft natural daylight combined with the subtle violet accent light and a gentle direct iPhone flash for crisp facial detail, gentle contrast, slight grain, candid dump vibe, realistic lighting, authentic smartphone capture.
 
