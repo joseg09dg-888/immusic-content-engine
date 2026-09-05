@@ -216,3 +216,44 @@ Spanish with a clear, neutral Colombian (Bogotá) accent.
 - [ ] Rótulo "Contenido generado con IA" visible durante todo el video, en las 3 piezas
 - [ ] "🤖 Contenido generado con IA" agregado en la descripción de cada publicación
 - [ ] No hay afirmaciones falsas o exageradas sobre el libro
+
+---
+
+## 9. PROMPT MAESTRO ÚNICO (plantilla — la misma para las 10 tomas)
+
+*Una sola plantilla. La usas 10 veces, cambiando solo `[CÁMARA]` y `[ACCIÓN+GUIÓN]` por lo de la tabla de abajo. Todo lo demás (identidad, voz, acento) se queda igual siempre.*
+
+```
+Using the reference image, keep the SAME person — same face and identity, same outfit, same background and lighting.
+
+[CÁMARA — pega aquí el movimiento de cámara de esta toma]
+
+Single continuous take, no cuts or scene changes.
+
+[ACCIÓN opcional — un gesto], she says: "[GUIÓN — pega aquí la línea exacta de esta toma]"
+
+Voice: a youthful female voice — a woman in her mid-20s, bright and fairly high-pitched, light and breezy, casual relaxed pace.
+
+Spanish with a clear, neutral Colombian (Bogotá) accent.
+```
+
+### Los 10 valores a insertar
+
+**VIDEO 1 — FRÍA**
+
+1. `[CÁMARA]`: Slow, continuous zoom-in toward the subject's face, holding on the close-up. → `[ACCIÓN+GUIÓN]`: with a serious expression, "¿Sabes cuánto dinero de tu música se está quedando en el camino ahora mismo, sin que te enteres?"
+2. `[CÁMARA]`: (static camera, no movement) realistic arm movements. → raising one hand slightly, "Cada vez que suena tu canción, hay un pago que te corresponde. Y la mayoría de artistas independientes nunca lo cobra."
+3. `[CÁMARA]`: Very gentle slow push-in, medium to medium close-up. → nodding slowly, "No es falta de talento. Es que nadie te explicó cómo funciona el negocio detrás de la música. Por eso leí este libro."
+4. `[CÁMARA]`: (static camera, no movement) realistic arm movements. → pointing up, "Music Business Para Todos Los Humanos. Búscalo en el link de la bio antes de tu próximo lanzamiento, no después."
+
+**VIDEO 2 — TIBIA**
+
+5. `[CÁMARA]`: Slow subtle push-in, cinematic. → tilting her head curiously, "Si haces música, hay algo que probablemente no sabes sobre tus regalías, tus contratos o tu marca."
+6. `[CÁMARA]`: (static camera, no movement) realistic arm movements. → smiling slightly, "Yo tampoco lo sabía, hasta que leí un libro que me cambió completamente cómo veo esto."
+7. `[CÁMARA]`: Slow, continuous zoom-in, holding on close-up. → "Si quieres que te cuente qué aprendí, comenta LIBRO y te cuento."
+
+**VIDEO 3 — CALIENTE**
+
+8. `[CÁMARA]`: (static camera, no movement) realistic arm movements. → with direct, confident energy, "Leí este libro y es excelente. Se los recomiendo."
+9. `[CÁMARA]`: Very gentle slow push-in, medium to medium close-up. → counting briefly on her fingers, "Habla de derechos, contratos, cómo se reparte de verdad el dinero de Spotify, marca, hasta inteligencia artificial en la industria musical. Lo escribió IM Music, un sello discográfico independiente que está operando ahora mismo."
+10. `[CÁMARA]`: (static camera, no movement) realistic arm movements. → holding up her hands slightly, "Dieciséis con noventa dólares, noventa y dos páginas. Por lo que cuesta, no hay comparación con lo que te puede ahorrar. Consíganlo antes de su próximo lanzamiento — link en bio."
