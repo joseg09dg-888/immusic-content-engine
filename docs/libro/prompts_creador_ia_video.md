@@ -14,7 +14,7 @@ Los guiones de esta campaña están escritos en primera persona, como si la crea
 
 ## 0. La identidad de la creadora IA
 
-Persona: mujer, ~25-28 años, look urbano/streetwear (bomber, cargo, sneakers, cadenas, argollas grandes) + **gorro de lana (beanie) violeta de marca** puesto normal en la cabeza — cara completamente visible y descubierta en todo momento, solo cambia el gorro. Cercana pero con autoridad, coherente con la identidad REBEL LUXURY de IM Music. Voz e imagen se mantienen **idénticas en los 3 videos** (misma imagen de referencia, misma línea de voz, mismo acento) para que se sienta como una sola creadora recurrente, no un aviso genérico.
+Persona: mujer, ~25-28 años, **extremadamente atractiva, belleza nivel modelo** — rasgos marcados y simétricos, mirada magnética, glam natural. Es justamente esa belleza la que debe detener el scroll. Look urbano/streetwear (bomber, cargo, sneakers, cadenas, argollas grandes) + **gorro de lana (beanie) violeta de marca** puesto normal en la cabeza — cara completamente visible y descubierta en todo momento, solo cambia el gorro. Cercana pero con autoridad, coherente con la identidad REBEL LUXURY de IM Music. Voz e imagen se mantienen **idénticas en los 3 videos** (misma imagen de referencia, misma línea de voz, mismo acento) para que se sienta como una sola creadora recurrente, no un aviso genérico.
 
 - **Voz:** mujer joven, 25-30 años
 - **Acento:** colombiano (Bogotá), neutro — coherente con el origen de IM Music y con SAYCO/ACINPRO mencionados en el libro. Alternativa si prefieres un acento menos localizado: "Spanish with a neutral Latin American accent."
@@ -27,7 +27,7 @@ Persona: mujer, ~25-28 años, look urbano/streetwear (bomber, cargo, sneakers, c
 *(Genera esto primero, en el generador de imagen — Nano Banana/Gemini imagen. Esta es LA foto de referencia que vas a usar en todos los prompts de video de los 3 pasos de abajo.)*
 
 ```
-A candid iPhone photo of a stylish Latina content creator in her mid-20s, medium olive-tan skin, expressive dark brown eyes, naturally full brows, soft natural makeup, realistic skin texture with visible pores, subtle natural imperfections. She wears a fitted deep violet knit beanie (gorro de lana) in the exact brand violet tone (#5E17EB), worn normally on top of the head like a regular streetwear beanie — it does NOT cover the face at all, her full face stays completely visible (forehead, eyes, nose, mouth, chin, jaw), only a bit of hair peeks out from under the edge of the beanie. She is speaking directly to the camera, headphones resting around her neck, holding a small wireless microphone with a fluffy windscreen close to her mouth, friendly and confident expression.
+A candid iPhone photo of a stunningly beautiful Latina content creator in her mid-20s, model-level attractiveness, flawless symmetrical facial features, striking large expressive dark brown eyes with long lashes, high cheekbones, smooth glowing medium olive-tan skin, naturally full arched brows, plump defined lips, soft glam natural makeup (subtle contour, glossy lips, soft eyeliner), realistic skin texture with fine natural detail — the kind of face that stops the scroll on its own. She wears a fitted deep violet knit beanie (gorro de lana) in the exact brand violet tone (#5E17EB), worn normally on top of the head like a regular streetwear beanie — it does NOT cover the face at all, her full face stays completely visible (forehead, eyes, nose, mouth, chin, jaw), only a bit of glossy dark hair peeks out from under the edge of the beanie. She is speaking directly to the camera, headphones resting around her neck, holding a small wireless microphone with a fluffy windscreen close to her mouth, warm confident smile, magnetic screen presence.
 
 Shot vertically as an iPhone photo, eye-level framing, medium portrait composition, natural smartphone lens look, authentic social media reel aesthetic.
 
@@ -37,7 +37,7 @@ Standing against a dark matte wall with graffiti-style texture, a single soft vi
 
 Soft natural daylight combined with the subtle violet accent light and a gentle direct iPhone flash for crisp facial detail, gentle contrast, slight grain, candid dump vibe, realistic lighting, authentic smartphone capture.
 
-Maintain the same pose, beanie color and fit, outfit, framing, expression, background, and overall composition. Preserve realistic proportions, accurate hands and facial features, natural skin texture, true-to-life colors, sharp focus, Instagram influencer aesthetic, iPhone photo realism.
+Maintain the same pose, beanie color and fit, outfit, framing, expression, background, and overall composition. Preserve realistic proportions, accurate hands and facial features, striking model-level beauty, natural skin texture, true-to-life colors, sharp focus, Instagram influencer aesthetic, iPhone photo realism.
 
 No text, no watermark, no distortion.
 ```
@@ -51,7 +51,7 @@ No text, no watermark, no distortion.
 ```
 Using the reference image as the ONLY source of identity, generate a professional 3×3 character sheet showing the exact same person from multiple angles and expressions.
 
-The identity must remain absolutely identical to the reference: same facial structure, same eye shape and spacing, same nose, same lips, same jawline, same skin tone, same proportions, same age, same ethnicity, same facial asymmetries and unique identifying features. Her full face must stay completely visible in every portrait — the violet knit beanie (#5E17EB) never covers the face, it only sits on top of the head like a normal beanie, same color and fit in every frame. Do NOT beautify, stylize, or reinterpret the person in any way.
+The identity must remain absolutely identical to the reference: same striking model-level beautiful facial structure, same eye shape and spacing, same nose, same lips, same jawline, same skin tone, same proportions, same age, same ethnicity, same unique identifying features. Her full face must stay completely visible in every portrait — the violet knit beanie (#5E17EB) never covers the face, it only sits on top of the head like a normal beanie, same color and fit in every frame. Do NOT change or downgrade her attractiveness — keep the exact same flawless, glam-model look in every angle.
 
 Create a clean character sheet with nine evenly spaced portraits on a neutral light gray background. Include: front view (neutral), left profile (90°), right profile (90°), left three-quarter view, right three-quarter view, slight downward gaze, slight upward gaze, serious expression, neutral expression.
 
