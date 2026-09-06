@@ -28,12 +28,17 @@ Dos problemas que reportaste al generar con Google Flow, y cómo los resolvimos 
 
 **1. Los dedos/movimientos de manos complejos casi nunca salen bien.** Es una limitación conocida de estos modelos de video (no solo Veo — pasa con todos), no un error tuyo de prompt. La solución no es escribir un prompt más detallado sobre los dedos, es **quitar el movimiento de manos por completo**. Ya reescribí los 4 clips que tenían gestos de manos (subir la mano, apuntar, contar con los dedos, levantar ambas manos) para que ahora sus manos se queden quietas todo el clip, igual que los otros 6 que ya no tenían gesto. Vas a perder algo de dinamismo visual, pero vas a dejar de perder generaciones (y plata) en clips con manos deformes.
 
-**2. La consistencia de voz/acento entre generaciones separadas es muy difícil de controlar en Flow.** Cada clip se genera de forma independiente y el modelo de voz interno no "recuerda" cómo sonó en el clip anterior, así que aunque el texto de `Voice:`/`Accent:` sea idéntico, el tono real puede variar. La solución más confiable no es seguir ajustando ese texto — es **no depender del audio nativo de Veo**:
+**2. La consistencia de voz/acento entre generaciones separadas es muy difícil de controlar en Flow — confirmado, ya lo probaste en más de 3 videos y sigue variando.** Esto no se arregla con más texto en el prompt: cada clip se genera de forma independiente y el modelo de voz interno de Veo no tiene memoria de cómo sonó en el clip anterior, así que aunque `Voice:`/`Accent:` sea idéntico palabra por palabra, el tono, el acento y hasta el ritmo pueden salir distintos cada vez. Seguir editando esa descripción no va a resolverlo — es un límite técnico de la herramienta, no de tu prompt.
 
-- Genera los 10 clips igual (con el `says: "..."` para que la boca se mueva de forma coherente con esas palabras), pero al editar en CapCut **silencia el audio original de cada clip**.
-- Graba o genera UNA sola narración de voz en off, consistente, para las líneas de cada video — usando **edge-tts** (ya está en el stack del proyecto) con la misma voz configurada una sola vez, o grabando tú/otra persona con un tono cercano al de la marca.
-- Pon esa narración como pista de audio sobre el video silenciado. El lipsync no va a ser perfecto al 100%, pero en formato reel/short con subtítulos quemados eso casi no se nota, y ganas voz 100% consistente en los 3 videos — que es lo que realmente rompe la ilusión de "una sola creadora" si varía.
-- Si prefieres mantener el audio nativo de Veo por ahora: genera cada clip 2-3 veces y quédate con el que suene más parecido a los demás, en vez de intentar forzarlo por prompt — el prompt ya está al máximo de lo que se puede controlar por texto.
+**Por eso el plan ya no es "lograr que Veo genere la voz consistente" — es dejar de usar el audio de Veo del todo:**
+
+1. Genera los 10 clips igual que hasta ahora (con el `says: "..."` para que la boca se mueva de forma coherente con esas palabras) — el video/imagen sí es controlable, la voz nativa no.
+2. En CapCut, **silencia el audio original de cada uno de los 10 clips** (mute de pista, no lo dejes de fondo ni bajito).
+3. Genera UNA sola narración de audio en off para todo el guion de cada video, de una sola vez, con **edge-tts** (ya está instalado en el proyecto) usando siempre la misma voz — por ejemplo `es-CO-SalomeNeural` (voz femenina colombiana de Microsoft, disponible en edge-tts). Como es la misma llamada al mismo motor, sale idéntica siempre: mismo tono, mismo acento, mismo ritmo, en los 3 videos.
+4. Corta esa narración en los mismos 3-4 fragmentos de cada video y ponla como pista de audio sobre el clip silenciado correspondiente.
+5. El lipsync no va a calzar al 100%, pero en formato reel/short vertical con subtítulos quemados encima eso casi no se nota — y a cambio tienes voz perfectamente consistente en los 3 videos, que es lo que de verdad sostiene la ilusión de "una sola creadora recurrente".
+
+Si de verdad prefieres mantener el audio nativo de Veo, la única alternativa es generar cada clip 2-3 veces y quedarte con el que suene más parecido a los demás — pero dado que ya lo probaste en más de 3 videos sin resultado, te recomiendo pasar directo al doblaje con edge-tts en vez de seguir gastando generaciones en esto.
 
 ---
 
