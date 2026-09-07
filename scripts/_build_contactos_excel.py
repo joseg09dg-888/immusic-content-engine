@@ -8,7 +8,7 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 
 ROOT = Path(__file__).resolve().parent.parent
-CSV_PATH = ROOT / "docs" / "libro" / "contactos_artistas_afiliados.csv"
+CSV_PATH = ROOT / "docs" / "libro" / "contactos_master.csv"
 OUT_PATH = ROOT / "docs" / "libro" / "Contactos_Artistas_Afiliados_IM_Music.xlsx"
 
 VIOLETA = "5E17EB"
