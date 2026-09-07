@@ -41,6 +41,14 @@ Escribirle en frío a managers de superestrellas globales casi nunca funciona �
 - **Managers de roster pequeño-mediano** (gestionan 3-10 artistas) — suelen responder correos ellos mismos, a diferencia de agencias grandes con equipo de asistentes filtrando todo.
 - Prioriza el género/escena donde IM Music ya tiene contexto y lenguaje compartido (urbano, independiente, Latinoamérica) — la propuesta se siente más genuina viniendo de alguien del mismo mundo.
 
+**El filtro más importante de todos: engagement real, no tamaño de audiencia.** Un artista con 300K seguidores donde la gente comenta, compra su merch y le hace caso a lo que recomienda convierte muchísimo más que uno con 3M de seguidores pasivos que solo scrollean. Antes de escribirle a alguien, revisa:
+
+- **Tasa de interacción** — (likes + comentarios) / seguidores en sus últimos 10-15 posts. Si esa proporción es baja, esa audiencia no actúa sobre lo que el artista dice, por más grande que sea.
+- **¿Vende merch propio y le funciona?** Es la señal más fuerte de que tiene una base dispuesta a gastar por él — el mismo tipo de fan que va a comprar el libro solo porque él lo recomendó.
+- **¿Interactúa él mismo con su audiencia** (responde comentarios, hace historias con preguntas, etc.)**?** Además de indicar relación real con sus fans, casi siempre significa que su equipo es chico y accesible — vas a poder contactarlo de verdad.
+
+En resumen: **engagement + base que compra > número de seguidores.** Ese cruce es lo que de verdad predice si van a lograr ventas reales a través del link, no la fama del artista.
+
 ---
 
 ## Cómo conseguir los correos (métodos legítimos)
