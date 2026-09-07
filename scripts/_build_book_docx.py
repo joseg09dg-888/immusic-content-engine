@@ -20,7 +20,12 @@ OUT_NAME = {
     "PT": "Music_Business_Para_Todos_Os_Humanos_IM_Music_PT.docx",
 }[LANG]
 MD_PATH = ROOT / "docs" / "libro" / f"music_business_para_todos{SUFFIX}.md"
-COVER_IMG = ROOT / "docs" / "libro" / "portada_music_business.png"
+COVER_NAME = {
+    "ES": "portada_music_business.png",
+    "EN": "portada_music_business_EN.png",
+    "PT": "portada_music_business_PT.png",
+}[LANG]
+COVER_IMG = ROOT / "docs" / "libro" / COVER_NAME
 OUT_PATH = ROOT / "docs" / "libro" / OUT_NAME
 
 VIOLETA = RGBColor(0x5E, 0x17, 0xEB)

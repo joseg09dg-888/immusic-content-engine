@@ -6,7 +6,31 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parent.parent
 ASSETS = ROOT / "assets"
-OUT_PATH = ROOT / "docs" / "libro" / "portada_music_business.png"
+
+LANG = sys.argv[1] if len(sys.argv) > 1 else "ES"
+
+COVER_TEXT = {
+    "ES": dict(
+        out="portada_music_business.png",
+        title_lines=[("MUSIC BUSINESS", 128), ("PARA TODOS", 128), ("LOS HUMANOS", 92)],
+        subtitle=["LA GUIA REBEL LUXURY DE LA", "INDUSTRIA MUSICAL"],
+        tagline="NO LANZAMOS MUSICA. JAQUEAMOS MENTES.",
+    ),
+    "EN": dict(
+        out="portada_music_business_EN.png",
+        title_lines=[("MUSIC BUSINESS", 128), ("FOR EVERY", 128), ("HUMAN", 92)],
+        subtitle=["THE REBEL LUXURY GUIDE TO", "THE MUSIC INDUSTRY"],
+        tagline="WE DONT LAUNCH MUSIC. WE HACK MINDS.",
+    ),
+    "PT": dict(
+        out="portada_music_business_PT.png",
+        title_lines=[("MUSIC BUSINESS", 128), ("PARA TODOS", 128), ("OS HUMANOS", 92)],
+        subtitle=["O GUIA REBEL LUXURY DA", "INDUSTRIA MUSICAL"],
+        tagline="NAO LANCAMOS MUSICA. HACKEAMOS MENTES.",
+    ),
+}[LANG]
+
+OUT_PATH = ROOT / "docs" / "libro" / COVER_TEXT["out"]
 
 W, H = 1800, 2700
 VIOLETA = (0x5E, 0x17, 0xEB)
@@ -74,7 +98,6 @@ def main():
     img.paste(logo, (logo_x, logo_y), logo)
 
     f_kicker = ImageFont.truetype(str(ANTON), 46)
-    f_title = ImageFont.truetype(str(SCEAGEUS), 128)
     f_sub = ImageFont.truetype(str(ANTON), 44)
     f_foot = ImageFont.truetype(str(ANTON), 34)
 
@@ -82,25 +105,22 @@ def main():
     draw_centered(draw, "IM MUSIC", f_kicker, y, CREMA, tracking=10)
     y += 100
 
-    draw_centered(draw, "MUSIC BUSINESS", f_title, y, BLANCO)
-    y += 150
-    draw_centered(draw, "PARA TODOS", f_title, y, BLANCO)
-    y += 150
-    f_title_sm = ImageFont.truetype(str(SCEAGEUS), 92)
-    draw_centered(draw, "LOS HUMANOS", f_title_sm, y, BLANCO)
-    y += 170
+    for text, size in COVER_TEXT["title_lines"]:
+        f_title = ImageFont.truetype(str(SCEAGEUS), size)
+        draw_centered(draw, text, f_title, y, BLANCO)
+        y += 150 if size >= 128 else 170
 
     # Divider line
     line_w = 340
     draw.line([((W - line_w) / 2, y), ((W + line_w) / 2, y)], fill=CREMA, width=3)
     y += 60
 
-    draw_centered(draw, "LA GUIA REBEL LUXURY DE LA", f_sub, y, CREMA, tracking=3)
+    draw_centered(draw, COVER_TEXT["subtitle"][0], f_sub, y, CREMA, tracking=3)
     y += 58
-    draw_centered(draw, "INDUSTRIA MUSICAL", f_sub, y, CREMA, tracking=3)
+    draw_centered(draw, COVER_TEXT["subtitle"][1], f_sub, y, CREMA, tracking=3)
 
     y_foot = H - 260
-    draw_centered(draw, "NO LANZAMOS MUSICA. JAQUEAMOS MENTES.", f_foot, y_foot, CREMA, tracking=2)
+    draw_centered(draw, COVER_TEXT["tagline"], f_foot, y_foot, CREMA, tracking=2)
     draw_centered(draw, "@IMMUSICSELLO", f_foot, y_foot + 60, CREMA, tracking=2)
 
     img.save(OUT_PATH)
