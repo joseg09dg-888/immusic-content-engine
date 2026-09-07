@@ -12,9 +12,16 @@ from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
 ROOT = Path(__file__).resolve().parent.parent
-MD_PATH = ROOT / "docs" / "libro" / "music_business_para_todos.md"
+LANG = sys.argv[1] if len(sys.argv) > 1 else "ES"
+SUFFIX = {"ES": "", "EN": "_EN", "PT": "_PT"}[LANG]
+OUT_NAME = {
+    "ES": "Music_Business_Para_Todos_Los_Humanos_IM_Music.docx",
+    "EN": "Music_Business_For_Every_Human_IM_Music_EN.docx",
+    "PT": "Music_Business_Para_Todos_Os_Humanos_IM_Music_PT.docx",
+}[LANG]
+MD_PATH = ROOT / "docs" / "libro" / f"music_business_para_todos{SUFFIX}.md"
 COVER_IMG = ROOT / "docs" / "libro" / "portada_music_business.png"
-OUT_PATH = ROOT / "docs" / "libro" / "Music_Business_Para_Todos_Los_Humanos_IM_Music.docx"
+OUT_PATH = ROOT / "docs" / "libro" / OUT_NAME
 
 VIOLETA = RGBColor(0x5E, 0x17, 0xEB)
 NEGRO = RGBColor(0x00, 0x00, 0x00)
