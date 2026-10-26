@@ -70,23 +70,26 @@ def build_banner():
     pad = 40
     img.paste(logo, (pad, pad), logo)
 
-    f_kicker = ImageFont.truetype(str(ANTON), 22)
-    f_greet = ImageFont.truetype(str(ANTON), 28)
-    f_title = ImageFont.truetype(str(SCEAGEUS), 64)
-    f_cta = ImageFont.truetype(str(ANTON), 24)
+    f_kicker = ImageFont.truetype(str(ANTON), 20)
+    f_greet = ImageFont.truetype(str(ANTON), 26)
+    f_title = ImageFont.truetype(str(SCEAGEUS), 58)
+    f_desc = ImageFont.truetype(str(ANTON), 21)
+    f_cta = ImageFont.truetype(str(ANTON), 23)
 
     tx = pad
-    ty = pad + logo.height + 18
+    ty = pad + logo.height + 14
 
     draw.text((tx, ty), "IM MUSIC", font=f_kicker, fill=CREMA)
-    ty += 34
+    ty += 28
     draw.text((tx, ty), "HOLA, RED DE MUSICOS DE MEDELLIN", font=f_greet, fill=CREMA)
-    ty += 50
+    ty += 40
     draw.text((tx, ty), "MUSIC BUSINESS", font=f_title, fill=BLANCO)
-    ty += 70
+    ty += 60
     draw.text((tx, ty), "PARA TODOS LOS HUMANOS", font=f_title, fill=BLANCO)
-    ty += 82
-    draw.text((tx, ty), "YA DISPONIBLE · $16,90 USD · LINK EN COMENTARIOS", font=f_cta, fill=CREMA)
+    ty += 68
+    draw.text((tx, ty), "DERECHOS, CONTRATOS Y REGALIAS PARA ARTISTAS INDEPENDIENTES", font=f_desc, fill=CREMA)
+    ty += 36
+    draw.text((tx, ty), "YA DISPONIBLE · $16,90 USD · LINK EN COMENTARIOS Y EN LA BIO", font=f_cta, fill=CREMA)
 
     # Nota: todo el texto queda en el 65% superior del banner para no
     # quedar tapado por la foto de perfil que Facebook superpone abajo.
@@ -119,8 +122,8 @@ def build_square():
     f_title = ImageFont.truetype(str(SCEAGEUS), 64)
     f_title_sm = ImageFont.truetype(str(SCEAGEUS), 50)
     f_sub = ImageFont.truetype(str(ANTON), 24)
-    f_price = ImageFont.truetype(str(SCEAGEUS), 48)
-    f_cta = ImageFont.truetype(str(ANTON), 28)
+    f_price = ImageFont.truetype(str(ANTON), 56)
+    f_cta = ImageFont.truetype(str(ANTON), 24)
 
     y = logo_y + logo.height + 42
     draw_centered(draw, "IM MUSIC", f_kicker, y, CREMA, W, tracking=6)
@@ -131,32 +134,37 @@ def build_square():
     draw_centered(draw, "PARA TODOS", f_title, y, BLANCO, W)
     y += 72
     draw_centered(draw, "LOS HUMANOS", f_title_sm, y, BLANCO, W)
-    y += 80
+    y += 70
 
     line_w = 260
     draw.line([((W - line_w) / 2, y), ((W + line_w) / 2, y)], fill=CREMA, width=3)
-    y += 36
+    y += 28
 
     draw_centered(draw, "PARA LA RED DE MUSICOS DE MEDELLIN", f_sub, y, CREMA, W, tracking=2)
-    y += 60
+    y += 50
 
     # Price badge
-    badge_w, badge_h = 420, 150
+    badge_w, badge_h = 520, 180
     bx = (W - badge_w) // 2
     by = y
     draw.rounded_rectangle([bx, by, bx + badge_w, by + badge_h], radius=18, fill=CREMA)
     bd = draw.textbbox((0, 0), "$16,90 USD", font=f_price)
     btw = bd[2] - bd[0]
-    draw.text((bx + (badge_w - btw) / 2 - bd[0], by + 22), "$16,90 USD", font=f_price, fill=VIOLETA)
-    cta_text = "COMPRA AQUI — LINK EN COMENTARIOS"
+    draw.text((bx + (badge_w - btw) / 2 - bd[0], by + 24), "$16,90 USD", font=f_price, fill=VIOLETA)
+    cta_text = "COMPRA AQUI"
     cd = draw.textbbox((0, 0), cta_text, font=f_cta)
     ctw = cd[2] - cd[0]
-    draw.text((bx + (badge_w - ctw) / 2 - cd[0], by + 96), cta_text, font=f_cta, fill=VIOLETA)
-    y = by + badge_h + 50
+    draw.text((bx + (badge_w - ctw) / 2 - cd[0], by + 100), cta_text, font=f_cta, fill=VIOLETA)
+    cta_text2 = "LINK EN COMENTARIOS Y EN LA BIO"
+    cd2 = draw.textbbox((0, 0), cta_text2, font=f_cta)
+    ctw2 = cd2[2] - cd2[0]
+    draw.text((bx + (badge_w - ctw2) / 2 - cd2[0], by + 134), cta_text2, font=f_cta, fill=VIOLETA)
+    y = by + badge_h + 40
 
     draw_centered(draw, "92 PAGINAS · DERECHOS, CONTRATOS Y REGALIAS", f_sub, y, CREMA, W, tracking=1)
+    y += 48
 
-    y_foot = H - 90
+    y_foot = y
     draw_centered(draw, "NO LANZAMOS MUSICA. JAQUEAMOS MENTES.", ImageFont.truetype(str(ANTON), 22), y_foot, CREMA, W, tracking=1)
     draw_centered(draw, "@IMMUSICSELLO", ImageFont.truetype(str(ANTON), 22), y_foot + 32, CREMA, W, tracking=1)
 
