@@ -69,14 +69,20 @@ COL = {
     "opex_step_up_valor_anual": 2_700_000 * 12,
     "opex_step_up_nota": "Nuevo Gerente Comercial de tiempo completo desde Año 3, segun el gatillo de escalamiento definido en el plan de negocios (>4-5 proyectos/mes sostenidos).",
     "produccion": {
-        "precio_unit": 4_000_000, "cvu": 2_000_000,
-        "vol_mensual_por_anio": [3, 4, 5, 6, 6],
-        "nota": "Precio y costo variable anclados en la linea 'PRODUCCION MUSICAL' del plan anterior (supuesto a validar con cotizaciones reales). Volumen reducido de 100/mes (escala agencia) a 2-4 proyectos/mes reales de un sello boutique.",
+        "precio_unit": 4_000_000, "cvu": 3_600_000,
+        "vol_mensual_por_anio": [0, 0, 0, 0, 0],
+        "nota": "SUPERADA por el modelo de Campamento de Creacion (ver 'campamento' abajo), validado con investigacion real en docs/sello_plan/investigacion_campamentos_musicales.md. La produccion para terceros ya no se vende como proyecto suelto mes a mes (ese formato no deja margen real, ver correccion anterior) -- se empaqueta en camps de 12 artistas, que SI es la forma rentable de monetizarla. Se deja la linea en cero (no se elimina el codigo) para que el historial de correcciones quede trazable.",
     },
     "marca_personal": {
         "precio_unit": 11_000_000, "cvu": 3_500_000,
         "vol_mensual_por_anio": [1.5, 2, 2.5, 3, 3],
         "nota": "Precio anclado en 'ARTISTA TRADICIONAL PERSONALIZADO' del plan anterior. CVU reducido fuertemente (31.8% vs 69% del plan anterior) porque el Content Engine propio sustituye al equipo creativo humano que encarecia este servicio en el modelo de agencia -- ventaja de costo real, no supuesto optimista sin base.",
+    },
+    "campamento": {
+        "ingreso_por_camp": 60_000_000,
+        "costo_por_camp": 18_900_000,
+        "camps_por_anio": [2, 3, 3, 4, 4],
+        "nota": "VALIDADO con investigacion real (docs/sello_plan/investigacion_campamentos_musicales.md): camp de 12 artistas x 3 noches, ingreso 12x$5.000.000 = $60.000.000 COP (dato del fundador, razonable). Costos: finca 3 noches $3.500.000 (cotizacion real, Copacabana) + alimentacion ~20 personas x3 dias $5.400.000 (SUPUESTO, sin fuente Medellin verificada) + 3-6 productores/ingenieros freelance x3 dias a $400.000/dia c/u, punto medio $5.400.000 (SUPUESTO, sin fuente verificada) + Filmmaker+Disenadora+Comunicadora 3 dias $3.600.000 (se asume ADICIONAL al retainer/freelance mensual ya presupuestado, porque el camp es carga de trabajo extra sobre la operacion normal, no sustituye proyectos regulares -- para no subestimar costos) + transporte/logistica $1.000.000. Total costo ~$18.900.000, margen ~$41.100.000 (68.5%), dentro del rango validado 65-71%. Volumen: 2-4 camps/ano para EMPEZAR (no mensual, es un evento, no un servicio recurrente) -- supuesto a validar.",
     },
     "roster_cap": 15,
     "roster_por_anio": [2, 4, 7, 11, 15],
@@ -148,14 +154,20 @@ DXB = {
     ],
     "opex_crecimiento_anual": 0.06,
     "produccion": {
-        "precio_unit": 3_500, "cvu": 1_750,
+        "precio_unit": 3_500, "cvu": 3_150,
         "vol_mensual_por_anio": [1, 1.5, 2, 2.5, 3],
-        "nota": "Precio = conversion directa del precio colombiano (decision de pricing propia, no dato de mercado). Volumen deliberadamente mas bajo que Colombia (sin base de clientes ni validacion de demanda local) -- es un supuesto de arranque conservador, no una proyeccion de mercado.",
+        "nota": "CORREGIDO, mismo criterio que Colombia: margen real bajo (10%), esta linea es casi punto de equilibrio y puerta de entrada de relacion/A&R, no motor de rentabilidad. Precio = conversion directa del precio colombiano (decision de pricing propia, no dato de mercado). Volumen deliberadamente mas bajo que Colombia (sin base de clientes ni validacion de demanda local) -- es un supuesto de arranque conservador, no una proyeccion de mercado.",
     },
     "marca_personal": {
         "precio_unit": 9_600, "cvu": 3_050,
         "vol_mensual_por_anio": [0.5, 0.75, 1, 1.5, 2],
         "nota": "Mismo comentario que produccion: precio convertido, volumen deliberadamente conservador por falta de validacion de demanda.",
+    },
+    "campamento": {
+        "ingreso_por_camp": 48_280,
+        "costo_por_camp": 50_500,
+        "camps_por_anio": [0, 0, 0, 0, 0],
+        "nota": "NO VIABLE al precio actual -- VALIDADO con investigacion real (docs/sello_plan/investigacion_campamentos_musicales.md): convirtiendo el mismo precio colombiano (12 x $5.000.000 COP) a AED (~AED 48.280), solo villa (AED 22.000-25.000) + catering (AED 27.000) para ~20 personas x3 dias ya consumen AED 49.000-52.000 (91-96% del ingreso) -- sin margen para produccion, staff ni vuelos del equipo desde Medellin. Se deja en CERO camps/ano explicitamente: requeriria un precio por artista significativamente mayor, sin cifra validada todavia -- no se inventa una. No se incluye como ingreso en este mercado.",
     },
     "roster_cap": 15,
     "roster_por_anio": [1, 2, 3, 5, 7],
@@ -212,6 +224,10 @@ def compute(p):
     ing_prod, cog_prod = linea_servicio(p["produccion"])
     ing_marca, cog_marca = linea_servicio(p["marca_personal"])
 
+    camp = p["campamento"]
+    ing_camp = [c * camp["ingreso_por_camp"] for c in camp["camps_por_anio"]]
+    cog_camp = [c * camp["costo_por_camp"] for c in camp["camps_por_anio"]]
+
     # Marca 360 (roster): precio REAL confirmado de la plataforma x ocupacion (supuesto)
     m360 = p["marca_360"]
     precio_mensual_360 = m360["precio_mensual_usd"] * p["fx_usd"]
@@ -239,8 +255,8 @@ def compute(p):
     filas = []
     fc = [-nti]
     for i in range(n):
-        ingresos = ing_prod[i] + ing_marca[i] + ing_360[i] + reg_gross[i] + ing_youtube[i] + ing_libro[i]
-        cogs = cog_prod[i] + cog_marca[i] + reg_comision[i]
+        ingresos = ing_prod[i] + ing_marca[i] + ing_camp[i] + ing_360[i] + reg_gross[i] + ing_youtube[i] + ing_libro[i]
+        cogs = cog_prod[i] + cog_marca[i] + cog_camp[i] + reg_comision[i]
         ub = ingresos - cogs
         opex = opex_anual[i]
         ebitda = ub - opex
@@ -251,6 +267,7 @@ def compute(p):
         filas.append(dict(
             ano=i + 1, ing_prod=ing_prod[i], cog_prod=cog_prod[i],
             ing_marca=ing_marca[i], cog_marca=cog_marca[i],
+            ing_camp=ing_camp[i], cog_camp=cog_camp[i], camps=camp["camps_por_anio"][i],
             ing_360=ing_360[i], roster_size=roster[i], ocupacion=ocup[i],
             reg_gross=reg_gross[i], reg_comision=reg_comision[i],
             ing_youtube=ing_youtube[i], ing_libro=ing_libro[i],
@@ -342,6 +359,11 @@ def sheet_supuestos(name, p, results):
         ws.cell(row=row, column=1, value=f"Ingreso {key}: volumen mensual por ano")
         ws.cell(row=row, column=2, value=str(cfg["vol_mensual_por_anio"]))
         row += 1
+    camp = p["campamento"]
+    ws.cell(row=row, column=1, value="Campamento de Creacion: ingreso y costo por camp, # camps/ano")
+    ws.cell(row=row, column=2, value=f"ingreso={camp['ingreso_por_camp']} / costo={camp['costo_por_camp']} / camps={camp['camps_por_anio']}")
+    ws.cell(row=row, column=4, value=camp["nota"]).font = FONT_FLAG
+    row += 1
     ws.cell(row=row, column=1, value="Roster: tope maximo de artistas firmados")
     ws.cell(row=row, column=2, value=p["roster_cap"])
     ws.cell(row=row, column=4, value=p["roster_nota"]).font = FONT_FLAG
@@ -448,6 +470,7 @@ def sheet_resultados(name, p, results):
     labels = [
         ("Ingresos -- Produccion musical a terceros (clientes externos)", "ing_prod"),
         ("Ingresos -- Desarrollo de marca personal (clientes externos)", "ing_marca"),
+        ("Ingresos -- Campamento de Creacion / turismo artistico", "ing_camp"),
         ("Ingresos -- Marca 360 (roster, USD $2,999.99/mes x ocupacion)", "ing_360"),
         ("Ingresos -- Regalias de catalogo (proyectos especiales, bruto)", "reg_gross"),
         ("Ingresos -- YouTube propio (AdSense/Content ID)", "ing_youtube"),
@@ -455,6 +478,7 @@ def sheet_resultados(name, p, results):
         ("INGRESOS TOTALES", "ingresos"),
         ("(-) COGS produccion", "cog_prod"),
         ("(-) COGS marca personal", "cog_marca"),
+        ("(-) COGS campamento (finca, catering, produccion freelance, transporte)", "cog_camp"),
         ("(-) Comision Nexus sobre regalias de catalogo (8%)", "reg_comision"),
         ("(-) COGS TOTAL", "cogs"),
         ("UTILIDAD BRUTA", "utilidad_bruta"),
@@ -466,6 +490,10 @@ def sheet_resultados(name, p, results):
         ("UTILIDAD NETA", "utilidad_neta"),
     ]
     style_header_row(ws, row, ["Rubro"] + [f"Ano {i+1}" for i in range(5)])
+    row += 1
+    ws.cell(row=row, column=1, value="Memo -- campamentos de creacion realizados en el ano")
+    for i, fila in enumerate(results["filas"]):
+        ws.cell(row=row, column=2 + i, value=fila["camps"])
     row += 1
     ws.cell(row=row, column=1, value="Memo -- artistas en roster (firmados)")
     for i, fila in enumerate(results["filas"]):

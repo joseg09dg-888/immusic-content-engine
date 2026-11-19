@@ -1,0 +1,128 @@
+Artículo XX. Consejo Asesor.
+La sociedad contará con un Consejo Asesor, conformado por los socios fundadores y por los asesores externos que designe la Asamblea General de Accionistas.
+
+Este órgano tendrá carácter consultivo y no decisorio, y su función será emitir recomendaciones y lineamientos estratégicos sobre:
+
+ a) Nuevas líneas de negocio, alianzas estratégicas o joint ventures.
+ b) Admisión de nuevos socios o inversionistas.
+ c) Aprobación de proyectos de inversión o gasto que superen el cinco por ciento (5%) del patrimonio social.
+ d) Políticas de gobierno corporativo y de resolución de conflictos.
+El Consejo Asesor se reunirá ordinariamente una (1) vez cada semestre y extraordinariamente cuando lo solicite el Representante Legal o cualquiera de los socios.
+
+Las convocatorias se realizarán por correo electrónico con al menos cinco (5) días hábiles de anticipación.
+Las decisiones del Consejo Asesor se adoptarán por mayoría simple de sus miembros y quedarán consignadas en actas que se archivarán junto con las de la Asamblea.
+Aunque sus recomendaciones no son vinculantes, el Representante Legal deberá justificar por escrito a la Asamblea las razones de su no adopción, cuando así ocurra.
+NUEVO – Artículo XX. Política de firmas y delegación de autoridad.
+Con el fin de garantizar la transparencia, trazabilidad y control interno en las decisiones administrativas, financieras y contractuales de la sociedad, se establecen los siguientes lineamientos en materia de política de firmas y delegación de autoridad:
+Representación principal: El Representante Legal actuará como firmante principal en todos los actos, contratos, títulos valores y documentos que comprometan a la sociedad, conforme a las facultades que le confieren la ley y los presentes estatutos.
+
+Autorización conjunta: Para actos o contratos cuyo valor supere el equivalente a cien (100) salarios mínimos mensuales legales vigentes (SMMLV), se requerirá firma conjunta del Representante Legal y de uno de los suplentes, o la autorización previa de la Asamblea General de Accionistas o del Consejo Asesor, cuando este último exista.
+
+Delegación: El Representante Legal podrá delegar parcialmente la facultad de firma para actos administrativos o financieros menores, mediante resolución interna debidamente registrada en el libro de actas de la sociedad.
+Dicha delegación deberá establecer expresamente:
+
+El nombre del delegado,
+El tipo de documento o transacción que puede firmar,
+El monto máximo autorizado,
+El plazo de la delegación.
+
+Firmas electrónicas o digitales:
+ Los documentos firmados mediante mecanismos electrónicos, digitales o biométricos, se considerarán válidos y con plena eficacia jurídica, siempre que cumplan con las disposiciones de la Ley 527 de 1999, el Decreto 2364 de 2012, y las normas que la modifiquen o sustituyan.
+
+Responsabilidad:
+Los firmantes responderán solidariamente ante la sociedad y ante terceros por los actos ejecutados sin la debida autorización o por fuera de los límites establecidos en el presente artículo o en las resoluciones internas de delegación.
+
+PARÁGRAFO. La Asamblea General podrá modificar periódicamente los límites de cuantía establecidos en este artículo mediante acuerdo adoptado por la mayoría simple de las acciones representadas, con el fin de ajustarlos a la realidad económica de la empresa.
+​​NUEVO ARTÍCULO — Valoración de Acciones.
+Para efectos de compraventa, recompra, transmisión por exclusión o ejecuciones que afecten el parque accionario de la sociedad, el valor de las acciones se determinará conforme al siguiente procedimiento:
+
+ a) Regla primaria: valoración según fórmula mixta compuesta por (i) valor patrimonial contable ajustado y (ii) valor de mercado calculado mediante múltiplos sobre EBITDA o ingresos normalizados, ponderados en proporción que la Asamblea fije (por defecto 50% patrimonial / 50% múltiplos).
+ b) Regla supletoria: en caso de imposibilidad técnica de aplicar la regla primaria por falta de información, se acudirá a método de flujo de caja descontado (DCF) sobre proyecciones validadas por contador. 
+ 
+Si las partes no se ponen de acuerdo sobre la aplicación de la regla o sobre los parámetros (múltiplos, periodo de proyección, tasa de descuento), se designará un perito valuador inscrito en la Cámara de Comercio de Medellín, elegido de común acuerdo; si no se logra acuerdo, será designado por la Cámara conforme a lista de peritos. El avalúo del perito será vinculante para efectos de la operación.
+
+Los costos del proceso de valoración se distribuirán en la proporción que el perito determine o, en su defecto, por mitades.
+NUEVO ARTÍCULO — Fallecimiento o Incapacidad y Derecho Preferente de Compra.
+En caso de fallecimiento o incapacidad permanente y total de un accionista, sus herederos o causahabientes tendrán derecho a recibir las acciones sucesibles, salvo que los demás accionistas ejerciten su derecho preferente de compra sobre las mismas.
+
+Los socios o la sociedad dispondrán de un plazo de sesenta (60) días hábiles contados a partir de la notificación formal del fallecimiento o incapacidad para manifestar por escrito su intención de adquirir total o parcialmente las acciones ofrecidas, conforme al procedimiento de derecho de preferencia previsto en el artículo correspondiente. La oferta deberá incluir la valoración conforme al método estatutario. 
+
+Si los socios o la sociedad no ejercen el derecho de preferencia dentro del plazo señalado, las acciones serán transmitidas a los herederos, cumpliendo los requisitos legales; no obstante, cualquier transmisión estará sujeta a las demás restricciones estatutarias sobre cesión.
+NUEVO: Artículo XX. Derecho de preferencia, retracto y procedimientos especiales.
+La negociación de las acciones está enmarcada dentro del principio de lealtad, transparencia y equidad, respetando el derecho de los accionistas a enajenar sus acciones solo después de haber ofrecido su adquisición en primer lugar a la sociedad y, en segundo término, a los demás accionistas, de conformidad con las siguientes reglas:
+1. Oferta inicial:
+Todo accionista que desee enajenar, ceder, donar, pignorar o transferir en cualquier forma la totalidad o parte de sus acciones deberá ofrecerlas en primer lugar a la sociedad y luego a los demás accionistas, mediante comunicación escrita al Representante Legal, indicando:
+número de acciones,
+precio propuesto o fórmula de valoración,
+condiciones de pago
+Si acepta o no la venta parcial.
+
+2. Procedimiento:
+El Representante Legal notificará la oferta a los accionistas dentro de los cinco (5) días hábiles siguientes a su recepción. Los accionistas tendrán diez (10) días hábiles contados desde la notificación para ejercer su derecho de preferencia.
+Si varios accionistas manifiestan interés, las acciones se distribuirán a prorrata de las que posean.
+3. Valoración en caso de desacuerdo:
+Si las partes no se ponen de acuerdo en el precio o condiciones, se apelará al método de valoración de acciones descrito en estos estatutos y en caso de aún no ponerse de acuerdo, designará un (1) perito especializado en valoración de empresas, de la lista de la Cámara de Comercio de Medellín, cuyo avalúo será obligatorio para las partes. El costo del peritaje se asumirá por partes iguales entre oferente y adquirentes.
+4. Transmisión indirecta:
+Se considerará igualmente sujeta al derecho de preferencia cualquier operación que implique un cambio en la propiedad o control del accionista, sea persona natural o jurídica, que resulte en una transferencia indirecta de acciones.
+6. Acciones sujetas a vesting:
+Cuando un socio haya recibido acciones por aportes de trabajo o conocimiento especializado, dichas acciones no podrán ser transferidas durante el periodo de consolidación (vesting). Solo podrán ser recompradas por la sociedad al valor nominal o por los demás socios en caso de retiro anticipado.
+7. Ejercicio posterior:
+Si ni la sociedad ni los accionistas ejercen el derecho de adquisición dentro de los plazos previstos, el oferente podrá enajenar libremente las acciones en los mismos términos de la oferta dentro del año siguiente.
+PARÁGRAFO 1. Las acciones no podrán ser dadas en garantía, pignoradas o transferidas fiduciariamente sin la autorización de la Asamblea General de Accionistas aprobada por el setenta por ciento (70%) de las acciones suscritas.
+PARÁGRAFO 2. Cualquier operación efectuada en contravención a este artículo carecerá de efectos frente a la sociedad y no será registrada en el Libro de Accionistas.
+NUEVO ARTÍCULO — Conflictos de Interés: Declaración y Abstención.
+Los administradores, representantes legales, miembros del Consejo Asesor y accionistas con funciones ejecutivas deberán revelar por escrito cualquier relación, interés económico o circunstancia que pueda generar conflicto de interés respecto de asuntos sometidos a decisión social. La declaración deberá constar en acta.
+
+La persona que tenga un conflicto manifiesto deberá abstenerse de participar en la deliberación y votación sobre el asunto y retirarse de la sesión si así lo exigen las circunstancias. La Asamblea o el órgano competente deberá registrar la declaración de conflicto y la decisión adoptada.
+
+El incumplimiento de la obligación de declaratoria de conflicto o la participación indebida en la decisión dará lugar a responsabilidades por los perjuicios causados y podrá habilitar la adopción de sanciones, incluida la exclusión conforme al artículo de 
+NUEVO ARTÍCULO — Vesting y Condiciones de Consolidación.
+Cuando la asignación o promesa de asignación de acciones tenga por contraprestación el aporte de trabajo, know-how o servicios profesionales del socio, la adquisición definitiva de dichas acciones quedará sujeta a un plan de consolidación (vesting) de tres (3) años contado desde la fecha de la suscripción o del acta de reconocimiento del aporte, con cliff de un (1) año.
+
+Salvo pacto en contrario, el calendario de consolidación será el siguiente: 0% al inicio; 33% al cumplirse el primer aniversario (end of cliff); 33% al segundo año; 34% al tercer año. La consolidación estará condicionada al cumplimiento de los hitos y obligaciones pactados en el acuerdo de aporte (metas técnicas, comerciales o de gestión) y acreditados mediante acta suscrita por los socios.
+
+En caso de retiro voluntario o terminación por justa causa del socio antes de finalizar su periodo de vesting, la sociedad podrá recomprar las acciones no consolidadas al valor nominal. En caso de terminación sin justa causa, la recompra se hará conforme a la valoración proporcional establecida en el artículo de valoración.
+
+En caso de fallecimiento o incapacidad permanente del socio durante el período de vesting, las acciones consolidadas hasta la fecha se transmitirán a sus herederos, salvo que los socios sobrevivientes ejerzan su derecho preferente de compra en los términos establecidos en estos estatutos; las acciones no consolidadas se extinguirán y retornarán a la sociedad, salvo acuerdo distinto adoptado por la Asamblea.
+
+El plan de vesting deberá documentarse en un anexo o pacto de accionistas, que formará parte integral del libro de actas.
+
+ NUEVO ARTÍCULO — Derechos de Arrastre (Drag-Along) y Acompañamiento (Tag-Along).
+Drag-Along: Si accionistas que representen al menos el setenta y cinco por ciento (75%) del capital suscrito acuerdan vender la totalidad de sus acciones a un tercero (Oferta de Compra Mayoritaria), podrán exigir que los demás accionistas vendan sus acciones en las mismas condiciones económicas y contractuales, obligando a la enajenación de la totalidad del capital social. El procedimiento de ejercicio del drag along incluirá: comunicación fehaciente a los demás accionistas, entrega de copia íntegra de la oferta y plazo no inferior a treinta (30) días para el cumplimiento.
+
+Tag-Along: En caso de que un accionista o grupo de accionistas mayoritarios vendan su participación a un tercero, los accionistas minoritarios tendrán el derecho de vender conjuntamente su porcentaje en las mismas condiciones (precio y forma de pago). Para el ejercicio del tag along el comprador deberá aceptar la incorporación de los minoritarios en la operación bajo las mismas condiciones.
+
+Los mecanismos anteriores no exoneran al comprador mayoritario de cumplir con las demás obligaciones de notificación y con las reglas previstas de derecho de preferencia y peritaje en su caso.
+NUEVO ARTÍCULO — Titularidad de la Propiedad Intelectual y Obligación de Confidencialidad.
+La sociedad será titular exclusiva y absoluta de todos los derechos patrimoniales sobre los desarrollos, invenciones, software, aplicaciones, código fuente, documentación técnica, metodologías, especificaciones, know-how, marcas, nombres de dominio, diseños y demás activos intangibles creados, desarrollados o adaptados por los socios, empleados, contratistas o terceros en ejecución del objeto social o con recursos de la sociedad, salvo pacto expreso y por escrito en contrario aprobado por la Asamblea.
+
+Los socios, administradores, empleados y contratistas estarán obligados a suscribir los acuerdos de cesión de derechos de autor y propiedad industrial necesarios para formalizar la transferencia a favor de la sociedad y a suscribir acuerdos de confidencialidad con alcance indefinido en el tiempo respecto de la información reservada.
+
+La divulgación no autorizada de información confidencial, o la negativa a suscribir los acuerdos arriba referidos, será considerada falta grave y podrá dar lugar a las sanciones previstas en estos estatutos, incluyendo la exclusión y la recompra de acciones en los términos establecidos.
+
+La sociedad queda facultada para inscribir, patentar o registrar los activos intangibles en su propio nombre ante las autoridades competentes y para adoptar las medidas judiciales o administrativas que resulten procedentes para su protección.
+
+NUEVO ARTÍCULO — Exclusión de Socios y Régimen de Buy-Sell.
+Podrá acordarse la exclusión de un socio por cualquiera de las siguientes causales: 
+Incumplimiento grave y reiterado de obligaciones estatutarias o contractuales;
+Comisión de actos que perjudiquen gravemente la reputación o la actividad de la sociedad
+Competencia directa o indirecta con la sociedad sin autorización
+ Violación de acuerdos de confidencialidad o cesión de propiedad intelectual
+ Insolvencia o condena por delitos dolosos que afecten la operatividad de la sociedad.
+No declarar el conflicto de intereses
+
+La decisión de exclusión requerirá la aprobación del setenta y cinco por ciento (75%) de las acciones suscritas, sin computar el voto del socio sujeto a exclusión, y deberá adoptarse en Asamblea convocada expresamente para tal propósito, garantizando el derecho de defensa del socio afectado y el registro probatorio correspondiente.
+
+Procedido el acuerdo de exclusión, la sociedad o los socios podrán ejercitar la recompra de las acciones del socio excluido conforme a las siguientes reglas:
+ a) Si la exclusión se funda en conducta dolosa o gravemente culposa, la recompra podrá efectuarse al valor nominal de las acciones.
+ b) En casos de exclusión no dolosa, la recompra se hará conforme al procedimiento de valoración previsto en el artículo de Valoración de Acciones.
+
+El pago de la recompra podrá pactarse en hasta doce (12) meses, mediante cuotas periódicas, garantizadas conforme acuerden las partes o mediante pignoración de activos.
+
+Contra la decisión de exclusión procederán los recursos legales ordinarios y, en todo caso, las partes podrán acudir al mecanismo de resolución de conflictos establecido en estos estatutos.
+NUEVO ARTÍCULO — Libros Sociales, Custodia y Data-Room Corporativo.
+La sociedad mantendrá los libros sociales exigidos por la ley (Libro de Registro de Accionistas, Libro de Actas, Libro de Registro de Acciones, entre otros) en formato físico y en versión digital con integridad probatoria.
+
+La sociedad habilitará un data-room corporativo (repositorio electrónico seguro) donde se custodiarán las actas, estados financieros, contratos relevantes, políticas internas, propiedad intelectual registrada y demás documentos societarios. El acceso al data-room será otorgado a los accionistas en función de su participación y mediante autenticación segura.
+
+El Representante Legal y el Revisor Fiscal (si aplica) serán responsables de la actualización y veracidad de la información en el data-room. Cualquier socio podrá solicitar copia de documentos específicos y el Representante Legal dispondrá su entrega dentro de los cinco (5) días hábiles siguientes, salvo cuando se trate de información sujeta a reserva legal o secreto industrial, en cuyo caso se aplicarán medidas de protección.

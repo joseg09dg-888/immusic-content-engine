@@ -1,0 +1,88 @@
+FORMATO DE AUTORIZACIÓN DE USO DE IMAGEN Y VOZ
+TU PIXEL COLOMBIA
+NIT:
+Dirección: 
+Correo:
+Teléfono: 
+1. Datos del autorizante
+Nombre completo: ___________________________________________
+ Tipo y número de documento: _________________________________
+ Dirección: _________________________________________________
+ Teléfono / Celular: __________________________________________
+ Correo electrónico: _________________________________________
+( ) Actúo en nombre propio
+( ) Actúo como representante legal de: ___________________________
+ (Sólo llenar si el autorizado es menor de edad)
+ Nombre del menor: ____________________________________________
+ Tipo y número de documento: ___________________________________
+ Edad: ______ años
+2. Objeto de la autorización
+Mediante el presente documento, autorizo de manera libre, previa, expresa, voluntaria e informada a TU PIXEL COLOMBIA para que capte, grabe, reproduzca, comunique públicamente y difunda mi imagen, voz y/o nombre en fotografías, videos, piezas audiovisuales, gráficas o cualquier otro formato derivado de producciones realizadas con fines publicitarios, promocionales, comerciales, institucionales o informativos, a través de los medios que la empresa considere pertinentes, tales como pantallas digitales, redes sociales, página web, televisión, material impreso u otros.
+3. Condiciones de uso
+La autorización se otorga a título gratuito y sin límite territorial o temporal, para los fines indicados.
+No se autoriza la alteración o manipulación que distorsione la imagen o afecte la dignidad, buen nombre u honra del autorizante.
+TU PIXEL COLOMBIA no cederá la imagen a terceros salvo en cumplimiento del objeto contractual o normativo.
+El autorizante podrá en cualquier momento revocar esta autorización, conforme al artículo 9 de la Ley 1581 de 2012, mediante comunicación escrita dirigida al correo: dejar el correo electrónico de tu pixel
+
+4. Protección de datos personales
+En cumplimiento de la Ley 1581 de 2012 y normas concordantes, EL AUTORIZANTE autoriza de manera expresa a TU PIXEL COLOMBIA  para recolectar, almacenar, usar, circular y suprimir sus datos personales con las siguientes finalidades:
+a) Gestionar el uso autorizado de su imagen en campañas, piezas y materiales audiovisuales.
+ b) Cumplir con obligaciones legales y contractuales derivadas de la relación existente.
+ c) Contactarlo para fines administrativos, informativos o logísticos relacionados con la producción audiovisual.
+ d) Enviar comunicaciones comerciales, publicitarias o promocionales, propias o de aliados comerciales de TU PIXEL COLOMBIA, relacionadas con servicios o actividades afines.
+EL AUTORIZANTE declara conocer que puede ejercer los derechos de acceso, corrección, actualización o supresión de sus datos personales, y que podrá presentar consultas o reclamos al correo electrónico: [correo de TU PIXEL], conforme a la Política de Tratamiento de Datos Personales disponible en [enlace o dirección física de la política].
+5. Vigencia
+Esta autorización tiene vigencia indefinida, salvo revocatoria expresa por escrito del autorizante.
+6. Firmas
+En constancia de lo anterior, firmo el presente documento en ______, a los _________ del mes de ___________________ de _____________
+Autorizante / Representante Legal:
+ Firma: ______________________________
+ Nombre completo: ____________________
+ Documento: _________________________
+(Solo si el autorizado es menor de edad)
+ Firma del menor (si aplica): ___________________
+ Firma del padre/madre/representante: ___________________
+ Documento representante: ___________________
+FORMATO PARA REALIZAR EN FORMULARIO DIGITAL
+
+ AUTORIZACIÓN DE USO DE IMAGEN Y VOZ – TU PIXEL COLOMBIA
+Descripción:
+ Al diligenciar este formulario, usted autoriza a TU PIXEL COLOMBIA - JUAN CAMILO PULGARÍN, para el uso de su imagen, voz y/o nombre en producciones audiovisuales, gráficas o digitales con fines publicitarios, institucionales o comerciales, conforme a la Ley 1581 de 2012.
+SECCIÓN 1 – Datos del autorizante
+Nombre completo (respuesta corta)
+Tipo de documento (lista desplegable): C.C. / T.I. / C.E. / Pasaporte
+Número de documento (respuesta corta)
+Dirección (respuesta corta)
+Teléfono / Celular (respuesta corta)
+Correo electrónico (respuesta corta)
+¿Actúa en nombre propio o en representación de un menor de edad? (opción múltiple)
+
+En nombre propio
+En representación de un menor
+
+(Si elige "en representación de un menor", activar sección condicional con los siguientes campos:)
+ 8. Nombre completo del menor (respuesta corta)
+ 9. Tipo y número de documento del menor (respuesta corta)
+ 10. Edad del menor (respuesta corta)
+SECCIÓN 2 – Objeto de la autorización
+Texto descriptivo:
+Autorizo a TU PIXEL COLOMBIA - JUAN CAMILO PULGARÍN para captar, grabar, reproducir y difundir mi imagen, voz y/o nombre (o la del menor representado) en piezas audiovisuales, gráficas o digitales con fines publicitarios, institucionales o comerciales, sin límite temporal ni territorial.
+Pregunta obligatoria: (CHECKBOX)
+ Confirmo que autorizo el uso de mi imagen y voz conforme a la descripción anterior. (casilla de verificación)
+SECCIÓN 3 – Tratamiento de datos personales
+Texto descriptivo:
+En cumplimiento de la Ley 1581 de 2012 y normas concordantes, EL AUTORIZANTE autoriza de manera expresa a TU PIXEL COLOMBIA  para recolectar, almacenar, usar, circular y suprimir sus datos personales con las siguientes finalidades:
+a) Gestionar el uso autorizado de su imagen en campañas, piezas y materiales audiovisuales.
+ b) Cumplir con obligaciones legales y contractuales derivadas de la relación existente.
+ c) Contactarlo para fines administrativos, informativos o logísticos relacionados con la producción audiovisual.
+ d) Enviar comunicaciones comerciales, publicitarias o promocionales, propias o de aliados comerciales de TU PIXEL COLOMBIA, relacionadas con servicios o actividades afines.
+EL AUTORIZANTE declara conocer que puede ejercer los derechos de acceso, corrección, actualización o supresión de sus datos personales, y que podrá presentar consultas o reclamos al correo electrónico: [correo de TU PIXEL], conforme a la Política de Tratamiento de Datos Personales disponible en [enlace o dirección física de la política].
+Pregunta obligatoria (CHECKBOX):
+ Declaro haber leído y aceptado la Política de Tratamiento de Datos Personales. (casilla de verificación)
+SECCIÓN 4 – Confirmación y firma
+Lugar de diligenciamiento (respuesta corta)
+Fecha (fecha)
+Firma digital (subir archivo o usar campo de dibujo si usas complemento de firma electrónica)
+
+Mensaje final:
+ ¡Gracias! Su autorización ha sido registrada correctamente.

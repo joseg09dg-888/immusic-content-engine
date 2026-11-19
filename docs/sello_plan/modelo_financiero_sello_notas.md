@@ -15,23 +15,34 @@ Se agregaron al equipo (el principio lean de marketing/video 100% automatizado s
 
 Este OPEX nuevo pesa doble en el modelo: sube el gasto mensual recurrente **y** sube el capital de trabajo (6 meses de OPEX), por lo que el NTI sube más de lo que parece a primera vista.
 
+## Corrección de margen: Producción Musical para terceros (según experiencia real del usuario)
+
+Esta línea estaba modelada con 50% de margen (heredado, erróneo, del plan anterior). Según experiencia real del usuario en la industria, la producción musical para terceros normalmente **no deja margen real** una vez se contabilizan costos de estudio, tiempo de productor/ingeniero y equipo: es casi punto de equilibrio, y su función real es ser puerta de entrada de relación/A&R con artistas externos, no motor de rentabilidad. Se bajó el margen a **10% real** (C.V.U. del 90% del precio) en ambos mercados. No se tocó ninguna otra línea de ingreso.
+
+## Nueva línea: Campamento de Creación / turismo artístico (reemplaza la producción suelta)
+
+Validado con investigación real (`docs/sello_plan/investigacion_campamentos_musicales.md`): empacar la producción en un camp de **12 artistas × 3 noches** es la forma real de monetizarla — no venderla como proyecto suelto mes a mes (eso ya se corrigió a margen casi nulo). La línea "Producción musical para terceros" queda en cero (superada, no borrada del código) y se reemplaza por esto:
+
+- **Medellín:** ingreso $60.000.000 COP/camp (12 × $5.000.000, dato del fundador). Costos: finca 3 noches $3.500.000 (cotización real) + alimentación ~20 personas × 3 días $5.400.000 (**supuesto, sin fuente Medellín verificada**) + 3-6 productores/ingenieros freelance × 3 días, punto medio $5.400.000 (**supuesto, sin fuente verificada**) + Filmmaker+Diseñadora+Comunicadora 3 días $3.600.000 (se asume **adicional** al retainer mensual, no cubierto por él, para no subestimar costo) + transporte $1.000.000 = **$18.9M costo, margen ~$41.1M (68.5%)**. Volumen: **2 a 4 camps/año** (ramp [2,3,3,4,4]) — es un evento, **no un servicio mensual recurrente**.
+- **Dubái: NO viable al precio actual.** Convirtiendo el mismo precio (~AED 48.280 de ingreso), solo villa+catering para ~20 personas×3 días ya consumen AED 49.000-52.000 (91-96% del ingreso) — sin margen para producción, staff ni vuelos del equipo desde Medellín. Se deja en **0 camps/año** explícitamente — no se inventa un precio mayor sin validar.
+
 ## Medellín, Colombia (COP)
 
-- **Inversión requerida (NTI):** $210,275,000 COP (~USD $50,100) — subió $23.7M por los 3 roles nuevos (CAPEX del streamer ya incluido también).
-- **Roster:** crece de 2 artistas (Año 1) a 15 (Año 5) — el tope duro definido. Ocupación del plan Marca 360 (qué % del roster paga el plan completo): 30% → 70% a lo largo de 5 años, **supuesto propio, no dato de mercado**.
-- **Año 1:** Ingresos $445.5M, EBITDA $82.1M (bajó de $129.5M, -36.6%), Utilidad Neta $40.7M (bajó de $71.5M, -43%).
-- **Año 5:** Ingresos $2,335.4M, EBITDA $1,716.9M, Utilidad Neta $1,103.4M.
-- **VAN (30% descuento): $745.2M COP positivo (bajó de $853.6M). TIR: 104.2%** (bajó de 123.9% — una caída real y material, no marginal, pero el negocio sigue siendo fuertemente rentable bajo estos supuestos).
-- **Lectura honesta:** el impacto de estos 3 roles SÍ es material (no un redondeo), especialmente en Año 1 donde la utilidad neta cae casi a la mitad. El negocio absorbe el golpe porque sigue apalancado en el mismo supuesto de fondo (ocupación del plan Marca 360 a $2,999.99 USD/mes/artista) — ese sigue siendo, con mucho, el supuesto más determinante de todo el modelo, más que cualquier línea de OPEX.
+- **Inversión requerida (NTI):** $210,275,000 COP (~USD $50,100) — sin cambio (el camp no agrega CAPEX).
+- **Roster:** crece de 2 artistas (Año 1) a 15 (Año 5). Ocupación Marca 360: 30% → 70%, **supuesto propio, no dato de mercado**.
+- **Año 1:** Ingresos **$421.5M** (bajó de $445.5M — el camp genera menos ingreso bruto que la producción suelta que reemplaza), EBITDA **$92.3M** (subió de $24.5M, +277%), Utilidad Neta **$47.3M** (subió de $3.3M).
+- **Año 5:** Ingresos $2,287.4M, EBITDA $1,737.3M, Utilidad Neta $1,116.6M.
+- **VAN (30% descuento): $770.0M COP positivo (subió de $612.1M). TIR: 107.1%** (subió de 90.2%).
+- **Lectura honesta — ojo con esto:** el camp mejora la rentabilidad porque tiene mucho mejor margen (68.5% vs 10% de la producción suelta), **a pesar de generar menos ingreso bruto total** (2-4 eventos/año vs 36-72 proyectos/año de la producción mensual que reemplaza). No hay que confundir "margen alto por evento" con "impacto financiero enorme": cada camp aporta ~$41M de margen, y con solo 2-4 al año eso son $82-164M/año — real y valioso, pero sigue siendo secundario frente a Marca 360, que para el Año 5 mueve más de $1.700M. El camp es un complemento rentable, no el motor principal del negocio.
 
 ## Dubái, EAU (AED)
 
-- **Inversión requerida (NTI):** AED 358,506 (~USD $97,600) — subió AED 46,230 (+14.9%) por los 3 roles nuevos.
-- **Roster:** crece de 1 artista (Año 1) a 7 (Año 5) — mucho más lento que Colombia, sin escena local. Ocupación Marca 360: 15% → 55%, más conservadora que Colombia.
-- **Año 1:** Ingresos AED 120,262, EBITDA -AED 393,438 (empeoró de -AED 300,978), Utilidad Neta -AED 418,003.
-- **Año 5:** Ingresos AED 870,882, EBITDA +AED 136,400 (bajó de +AED 253,129, casi a la mitad), Utilidad Neta +AED 111,835 — **sigue siendo el único año positivo**.
-- **VAN (25% descuento): -AED 1,025,510 (empeoró de -AED 706,041). TIR: sigue sin ser calculable.**
-- **Lectura honesta:** el escenario Dubái se aleja más de la viabilidad con este OPEX adicional — el margen de maniobra que tenía (llegar a positivo en Año 5) se reduce a la mitad, y el VAN acumulado empeora un 45%. Si se insiste en el escenario Dubái con el mismo equipo full-time ampliado, el caso de negocio se debilita; valdría la pena evaluar una versión aún más lean para esta sede específicamente (ej. sin Comunicadora dedicada, o compartiendo el rol con Colombia de forma remota) antes de presentarlo a un inversionista.
+- **Inversión requerida (NTI):** AED 358,506 (~USD $97,600) — sin cambio (el camp no se incluye aquí).
+- **Roster:** crece de 1 artista (Año 1) a 7 (Año 5). Ocupación Marca 360: 15% → 55%.
+- **Año 1:** EBITDA -AED 410,238, Utilidad Neta -AED 434,803.
+- **Año 5:** EBITDA +AED 86,000, Utilidad Neta +AED 61,435 — sigue siendo el único año positivo.
+- **VAN (25% descuento): -AED 1,106,000. TIR: sigue sin ser calculable.** Sin cambio frente al corte anterior — el camp no se incluyó como ingreso en Dubái porque no es viable al precio actual.
+- **Lectura honesta:** Dubái pierde, de nuevo, una fuente de rentabilidad que sí funciona en Medellín (el camp), ampliando la brecha entre ambos mercados. Confirma el patrón de todo este modelo: lo que funciona en Medellín no se traslada 1:1 a Dubái sin ajustar precio, y para Dubái siempre hace falta validación adicional antes de presentarlo con la misma confianza.
 
 ## Qué es un dato real confirmado vs. qué sigue siendo supuesto
 
