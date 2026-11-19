@@ -98,6 +98,8 @@ COL = {
     },
     "legal_puntual_anual": 2_000_000,
     "legal_nota": "Se elimina el retainer fijo de abogado externo: el fundador cubre la funcion legal del dia a dia directamente. Se deja solo una provision puntual anual para casos de alta complejidad (ej. negociacion de contrato compleja, registro de marca, litigio puntual) -- monto estimado, no cotizado.",
+    "streamer_upside_por_anio": [0, 500_000, 800_000, 1_000_000, 1_200_000],
+    "streamer_upside_nota": "MEMO -- NO incluido en Ingresos Totales ni en TIR/VAN. Upside opcional: % de ingresos del streamer SOLO SI se negocia un reparto -- no es un ingreso garantizado, el retorno esperado real de esta alianza es exposicion de marca/roster (cualitativo). Cifra puramente ilustrativa, sin streamer identificado ni acuerdo real.",
     "depreciacion_anios": 5,
 }
 
@@ -123,6 +125,8 @@ DXB = {
          "Estimacion de consultora (businesslinkuae.com), NO es tarifa oficial de gobierno. Elegido IFZA sobre Dubai Media City porque no exige capital minimo de AED 50,000."),
         ("Visas (1 inversionista + 1 empleado, ano 1)", 18_750,
          "NO CONFIRMADO: rangos de fuentes de baja confiabilidad (visa inversionista AED 7,000-20,000+, visa empleado AED 3,000-7,500); se usa el punto medio de cada rango."),
+        ("Alianza con streamer: setup de transmision -- convertido de Colombia", 2_623,
+         "SUPUESTO CONSERVADOR convertido via FX: no hay streamer identificado ni cotizacion real en EAU ni en Colombia. Retorno esperado es exposicion de marca/roster (cualitativo), NO ingreso garantizado."),
     ],
     "imprevistos_pct": 0.15,
     "capital_trabajo_meses": 6,
@@ -170,6 +174,8 @@ DXB = {
     },
     "legal_puntual_anual": 3_000,
     "legal_nota": "Se elimina el retainer fijo de abogado externo, igual que en Colombia. Provision puntual anual ajustada al alza vs. la conversion directa de Colombia (AED 1,749) porque los honorarios legales puntuales en EAU probablemente son mayores -- sigue siendo un supuesto sin cotizacion real.",
+    "streamer_upside_por_anio": [0, 440, 700, 875, 1_050],
+    "streamer_upside_nota": "MEMO -- NO incluido en Ingresos Totales ni en TIR/VAN. Mismo concepto que Colombia, convertido via FX; sin streamer identificado ni acuerdo real en EAU.",
     "depreciacion_anios": 5,
 }
 
@@ -242,6 +248,7 @@ def compute(p):
             ing_360=ing_360[i], roster_size=roster[i], ocupacion=ocup[i],
             reg_gross=reg_gross[i], reg_comision=reg_comision[i],
             ing_youtube=ing_youtube[i], ing_libro=ing_libro[i],
+            streamer_upside_memo=p["streamer_upside_por_anio"][i],
             ingresos=ingresos, cogs=cogs, utilidad_bruta=ub, opex=opex,
             ebitda=ebitda, depreciacion=depre_anual, uai=uai, impuesto=impuesto,
             utilidad_neta=un,
@@ -365,6 +372,10 @@ def sheet_supuestos(name, p, results):
     ws.cell(row=row, column=2, value=str(p["libro"]["ingreso_anual_por_anio"]))
     ws.cell(row=row, column=4, value=p["libro"]["nota"]).font = FONT_FLAG
     row += 1
+    ws.cell(row=row, column=1, value="MEMO (no sumado a ingresos): upside opcional ingreso compartido con streamer, por ano")
+    ws.cell(row=row, column=2, value=str(p["streamer_upside_por_anio"]))
+    ws.cell(row=row, column=4, value=p["streamer_upside_nota"]).font = FONT_FLAG
+    row += 1
     ws.cell(row=row, column=1, value="Tasa de descuento (TIR/VAN)")
     ws.cell(row=row, column=2, value=p["tasa_descuento"])
     row += 1
@@ -457,6 +468,11 @@ def sheet_resultados(name, p, results):
     ws.cell(row=row, column=1, value="Memo -- % ocupacion plan Marca 360")
     for i, fila in enumerate(results["filas"]):
         ws.cell(row=row, column=2 + i, value=fila["ocupacion"])
+    row += 1
+    c = ws.cell(row=row, column=1, value="Memo -- upside opcional streamer (NO incluido en Ingresos Totales, no garantizado)")
+    c.font = FONT_FLAG
+    for i, fila in enumerate(results["filas"]):
+        ws.cell(row=row, column=2 + i, value=fila["streamer_upside_memo"]).font = FONT_FLAG
     row += 1
     bold_rows = {"INGRESOS TOTALES", "UTILIDAD BRUTA", "EBITDA", "UTILIDAD NETA"}
     for label, key in labels:

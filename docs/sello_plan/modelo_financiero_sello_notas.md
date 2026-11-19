@@ -2,18 +2,22 @@
 
 Acompaña a `modelo_financiero_sello.xlsx`. Versión 3: estructura de ingresos del roster corregida — tope duro de 12-15 artistas, servicio "Marca 360" al precio REAL de la plataforma (USD $2,999.99/mes/artista), regalías de catálogo como línea única (inversión propia en proyectos especiales, caso por caso), más YouTube propio y el libro. Legal reducido casi a cero (el fundador cubre el día a día).
 
+## Nueva línea: alianza con streamer (CAPEX único, sin ingreso garantizado)
+
+Se agregó un CAPEX único de setup de transmisión (cámara + capturadora + micrófono + kit de luces) para firmar/apoyar a un creador de contenido en vivo a cambio de exposición de marca/roster: **$3,000,000 COP (Medellín) / AED 2,623 (Dubái)**, ambos marcados como **supuesto conservador — no hay streamer identificado ni cotización real**. No se modela ningún ingreso garantizado de esta línea: el retorno esperado es marketing/exposición, cualitativo. Se deja una fila de **memo** (NO sumada a Ingresos Totales ni a TIR/VAN) con un upside opcional muy conservador, solo por si se llegara a negociar un % de los ingresos del streamer — explícitamente marcado como no garantizado.
+
 ## Medellín, Colombia (COP)
 
-- **Inversión requerida (NTI):** $183,125,000 COP (~USD $43,600).
+- **Inversión requerida (NTI):** $186,575,000 COP (~USD $44,400) — subió ~$3.45M por el CAPEX de la alianza con streamer (con imprevistos).
 - **Roster:** crece de 2 artistas (Año 1) a 15 (Año 5) — el tope duro definido. Ocupación del plan Marca 360 (qué % del roster paga el plan completo): 30% → 70% a lo largo de 5 años, **supuesto propio, no dato de mercado**.
 - **Año 1:** Ingresos $445.5M, EBITDA $129.5M, Utilidad Neta $72.0M.
 - **Año 5:** Ingresos $2,335.4M, EBITDA $1,781.4M, Utilidad Neta $1,145.7M.
-- **VAN (30% descuento): $856.4M COP positivo. TIR: 125.4%.**
+- **VAN (30% descuento): $853.6M COP positivo. TIR: 123.9%** (bajó marginalmente por el CAPEX adicional del streamer, cambio no material).
 - **Lectura honesta:** esta TIR es alta porque el precio de Marca 360 ($2,999.99 USD/mes/artista = ~$36,000 USD/año) es un precio real y alto del producto, no una fantasía inventada — pero **todo el resultado depende de poder cobrarlo de forma sostenida a artistas emergentes/boutique**, que es exactamente lo que NO está validado comercialmente. Si la ocupación real resulta menor que el supuesto (30%→70%), o si estos artistas no pueden pagar ese ticket sin financiamiento, el resultado cae con fuerza. Esta es la variable más importante a validar de todo el modelo.
 
 ## Dubái, EAU (AED)
 
-- **Inversión requerida (NTI):** AED 309,259 (~USD $84,200).
+- **Inversión requerida (NTI):** AED 312,276 (~USD $85,000) — incluye el CAPEX convertido de la alianza con streamer.
 - **Roster:** crece de 1 artista (Año 1) a 7 (Año 5) — mucho más lento que Colombia, sin escena local. Ocupación Marca 360: 15% → 55%, más conservadora que Colombia.
 - **Año 1:** Ingresos AED 120,262, EBITDA -AED 300,978, Utilidad Neta -AED 324,940.
 - **Año 5:** Ingresos AED 870,882, EBITDA +AED 253,129, Utilidad Neta +AED 229,167 — **primer año con resultado positivo**.
