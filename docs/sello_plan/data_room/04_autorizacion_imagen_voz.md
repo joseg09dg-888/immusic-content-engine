@@ -1,6 +1,6 @@
 # AUTORIZACIÓN DE USO DE IMAGEN Y VOZ — IM MUSIC
 
-**ADVERTENCIA LEGAL:** Este documento es un BORRADOR generado con asistencia de IA a partir de una plantilla de referencia de un tercero (Tu Pixel Colombia), adaptado para IM Music. NO ha sido revisado por un abogado. Debe revisarse antes de cada uso con un abogado colombiano.
+**ADVERTENCIA LEGAL:** Este documento se adaptó de una plantilla de un tercero (Tu Pixel Colombia) que ya fue revisada por un abogado en su momento para esa empresa. La ADAPTACIÓN en sí —cambiar la entidad a IM Music y ajustar los fines de uso (artistas, streamer aliado, campamentos)— NO ha sido confirmada todavía por un abogado. Antes de usarse con un tercero real, un abogado colombiano debe revisar específicamente los cambios hechos frente al original, no el documento completo desde cero.
 
 ---
 

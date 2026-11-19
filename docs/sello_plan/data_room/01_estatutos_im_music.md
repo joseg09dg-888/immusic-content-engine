@@ -1,6 +1,6 @@
 # ESTATUTOS DE IM MUSIC S.A.S.
 
-**ADVERTENCIA LEGAL:** Este documento es un BORRADOR generado con asistencia de IA a partir de una plantilla de referencia. NO ha sido revisado por un abogado. NO debe firmarse, radicarse ante Cámara de Comercio, ni usarse para ningún efecto legal sin la revisión previa de un abogado colombiano especializado en derecho societario y de entretenimiento. Los corchetes [ASÍ] marcan información que falta por definir o confirmar.
+**ADVERTENCIA LEGAL:** Este documento se adaptó a partir de los estatutos de Intelligent Markets S.A.S., una plantilla que ya fue revisada por un abogado en su momento. La ADAPTACIÓN en sí —el nuevo objeto social de sello discográfico, los cambios de entidad y los ajustes específicos hechos aquí— NO ha sido confirmada todavía por un abogado. Antes de firmar o radicar este documento ante Cámara de Comercio, un abogado colombiano especializado en derecho societario y de entretenimiento debe revisar específicamente los cambios hechos frente al original, no el documento completo desde cero. Los corchetes [ASÍ] marcan información que falta por definir o confirmar. Para cualquier entidad en Dubái/EAU, no existe documento base revisado para esa jurisdicción: se requiere redacción y revisión completas por un abogado habilitado en EAU.
 
 ---
 

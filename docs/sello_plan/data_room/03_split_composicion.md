@@ -1,6 +1,6 @@
 # ACUERDO DE REPARTO DE REGALÍAS / SPLIT DE COMPOSICIÓN — IM MUSIC
 
-**ADVERTENCIA LEGAL:** Este documento es un BORRADOR generado con asistencia de IA, adaptado de un split de composición real ya utilizado por IM Music para su catálogo propio. NO ha sido revisado por un abogado. Debe revisarse antes de cada uso con un abogado colombiano especializado en propiedad intelectual.
+**ADVERTENCIA LEGAL:** Este documento se adaptó de un split de composición real ya utilizado por IM Music para su catálogo propio, una plantilla que ya fue revisada por un abogado en su momento. La ADAPTACIÓN en sí —generalizarlo como plantilla reutilizable para nuevos coautores y obras— NO ha sido confirmada todavía por un abogado. Antes de usarse con un coautor específico, un abogado colombiano especializado en propiedad intelectual debe revisar los datos concretos de esa obra, no el documento completo desde cero.
 
 ---
 

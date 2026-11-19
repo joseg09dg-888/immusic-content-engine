@@ -1,6 +1,6 @@
 # CONTRATO DE ASOCIACIÓN / ALIANZA ESTRATÉGICA — IM MUSIC
 
-**ADVERTENCIA LEGAL:** Este documento es un BORRADOR generado con asistencia de IA, adaptado de un contrato de asociación/joint venture de la antigua agencia Intelligent Markets (el original estaba redactado como un acuerdo de control sobre un contratista frente a un cliente específico; aquí se generaliza como una alianza genuina entre dos partes independientes). NO ha sido revisado por un abogado. Debe revisarse antes de cada uso con un abogado colombiano especializado en derecho comercial.
+**ADVERTENCIA LEGAL:** Este documento se adaptó del contrato de asociación/joint venture de la antigua agencia Intelligent Markets, una plantilla que ya fue revisada por un abogado en su momento para ese acuerdo específico (un acuerdo de control sobre un contratista frente a un cliente nombrado). La ADAPTACIÓN en sí —generalizarlo como una alianza genuina entre dos partes independientes (ej. un streamer) y eliminar las restricciones agresivas del original— NO ha sido confirmada todavía por un abogado. Antes de firmar con cualquier aliado real, un abogado colombiano especializado en derecho comercial debe revisar específicamente los términos nuevos definidos aquí, no el documento completo desde cero.
 
 ---
 

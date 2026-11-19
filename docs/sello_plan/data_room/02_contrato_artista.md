@@ -1,6 +1,6 @@
 # CONTRATO DE ARTISTA — IM MUSIC
 
-**ADVERTENCIA LEGAL:** Este documento es un BORRADOR generado con asistencia de IA a partir de plantillas de referencia (incluyendo el contrato fonográfico real que IM Music ya tiene firmado con Nexus para su catálogo). NO ha sido revisado por un abogado. NO debe firmarse con ningún artista sin la revisión previa de un abogado colombiano especializado en propiedad intelectual y derecho del entretenimiento. Los corchetes [ASÍ] marcan información pendiente de definir.
+**ADVERTENCIA LEGAL:** Este documento se adaptó a partir del contrato fonográfico real que IM Music ya tiene firmado con Nexus, una plantilla que ya fue revisada por un abogado en su momento para esa relación específica (sello-distribuidor). La ADAPTACIÓN en sí —invertir la relación para que sea sello-artista, la tarifa Élite 360, la modalidad de inversión en catálogo caso por caso— NO ha sido confirmada todavía por un abogado. Antes de firmar con cualquier artista, un abogado colombiano especializado en propiedad intelectual y derecho del entretenimiento debe revisar específicamente los cambios hechos aquí frente al original de Nexus, no el documento completo desde cero. Los corchetes [ASÍ] marcan información pendiente de definir. Para artistas o relaciones domiciliadas en Dubái/EAU, no existe documento base revisado para esa jurisdicción: se requiere redacción y revisión completas por un abogado habilitado en EAU.
 
 ---
 

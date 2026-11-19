@@ -1,6 +1,6 @@
 # CONTRATO DE PRESTACIÓN DE SERVICIOS — IM MUSIC
 
-**ADVERTENCIA LEGAL:** Este documento es un BORRADOR generado con asistencia de IA, adaptado de un contrato marco de servicios de la antigua agencia Intelligent Markets. NO ha sido revisado por un abogado. Debe revisarse antes de cada uso con un abogado colombiano especializado en derecho laboral y comercial, especialmente respecto al riesgo de "contrato realidad" si la relación con el contratista se ejerce de forma que se asemeje a una relación laboral.
+**ADVERTENCIA LEGAL:** Este documento se adaptó del contrato marco de servicios de la antigua agencia Intelligent Markets, una plantilla que ya fue revisada por un abogado en su momento para esa relación (agencia-cliente). La ADAPTACIÓN en sí —invertir la relación para que sea sello-contratista freelance (Productor, Ingeniero de Sonido, Filmmaker, Diseñadora, Comunicadora)— NO ha sido confirmada todavía por un abogado. Antes de firmar con cualquier contratista, un abogado colombiano especializado en derecho laboral y comercial debe revisar específicamente los cambios hechos aquí frente al original, con especial atención al riesgo de "contrato realidad" si la relación se ejerce con subordinación de hecho.
 
 ---
 
