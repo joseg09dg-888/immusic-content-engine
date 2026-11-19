@@ -36,6 +36,8 @@ A diferencia del plan original, IM Music **no depende de una agencia matriz** pa
 
 El sello se diseña deliberadamente **lean**: solo se contratan o se paga por proyecto aquello que el Content Engine no puede hacer (producción de audio, decisiones creativas, relación humana con artistas y contrapartes legales/comerciales). Todo lo que es generación de contenido digital, diseño gráfico, copywriting y voz en off ya está automatizado y operando (ver `src/content_engine/`, `src/core/brand.py`), por lo que **no se presupuestan** roles de Filmmaker, Traficker de pauta ni Desarrollador de IA como personal fijo o freelance recurrente — son funciones que el sistema ya cubre a costo marginal casi nulo.
 
+El equipo que sí existe (fijo y freelance) no se presupuesta para hacer tareas sueltas, sino para **ejecutar la metodología propia de desarrollo de marca de artista completo** del fundador — el know-how diferencial del sello. Por eso el equipo debe ser propio y no tercerizado a una agencia externa: la metodología es el activo, y solo un equipo interno, entrenado directamente en ella, puede aplicarla de forma consistente en cada artista firmado.
+
 ### 3.2 Roles reales del sello
 
 | Rol | Naturaleza | Función |
@@ -45,7 +47,7 @@ El sello se diseña deliberadamente **lean**: solo se contratan o se paga por pr
 | Productor Musical | Freelance por proyecto | Dirección creativa y producción de grabaciones |
 | Ingeniero de Sonido | Freelance por proyecto | Grabación, mezcla y masterización |
 | Social Media Manager | Fijo o part-time | Supervisión y curaduría del contenido generado por el Content Engine, interacción con comunidad; no genera contenido desde cero manualmente |
-| Abogado | Asesor externo | Contratos con artistas, derechos de autor, registro de marca, cumplimiento normativo |
+| Función legal | Cubierta directamente por el CEO/Director | Contratos con artistas, derechos de autor, registro de marca, cumplimiento normativo — el fundador ya tiene esta capacidad, por lo que no se presupuesta como cargo ni retainer fijo; solo se contempla asesoría externa puntual para casos de alta complejidad (ej. litigios, estructuración en un segundo país) |
 | Contador | Asesor externo | Estados financieros, impuestos, nómina |
 
 No hay junta directiva compartida con terceros: las decisiones estratégicas las toma el CEO del sello, con el inversionista según los términos que se acuerden en la ronda de capital.
@@ -126,7 +128,7 @@ La estructura es intencionalmente mínima:
 
 - **Roles fijos (1-2 personas):** CEO/Director y, según volumen, un Social Media Manager part-time.
 - **Roles variables/freelance (por proyecto):** Productor Musical, Ingeniero de Sonido, Gerente Comercial (puede ser por comisión en lugar de salario fijo en etapa temprana).
-- **Asesores externos (no nómina):** Abogado, Contador.
+- **Asesores externos (no nómina):** Contador. (La función legal la cubre directamente el CEO/Director, que ya tiene esta capacidad — solo se recurre a abogado externo puntual en casos de alta complejidad).
 
 Esta estructura puede escalar agregando un segundo rol fijo (Gerente Comercial de tiempo completo) cuando el flujo de proyectos de producción externa supere, de forma sostenida, los 4-5 proyectos mensuales.
 
@@ -158,17 +160,23 @@ A diferencia del plan original, la identidad de marca de IM Music **ya existe y 
 
 No hay trabajo de diseño de identidad pendiente: el trabajo restante es de **aplicación consistente** de esta identidad a nuevos mercados (adaptación de idioma/tono si se opera en Dubái) y a materiales de inversionista, no de creación desde cero.
 
+**La marca es, para el fundador, el intangible más importante del negocio** — más que cualquier línea de ingreso individual. El estándar no es solo mantener los colores, la tipografía y el logo ya definidos, sino que **cada pieza de comunicación que se produzca (contenido del Content Engine, materiales del servicio Élite 360, piezas de la plataforma, el libro) debe ejecutarse con el mismo nivel de impacto** que ya define a REBEL LUXURY — no genérico, no diluido. Esto no es una meta de diseño aislada: es lo que hace que la inversión en catálogo, en servicios y en contenido se acumule como valor de marca a largo plazo, en vez de diluirse en piezas sueltas sin identidad consistente.
+
 ---
 
 ## 10. ESTRATEGIAS DE GENERACIÓN DE INGRESOS
 
 Líneas de ingreso reales y relevantes para un sello de este tamaño (se elimina toda línea de ingreso de servicios de marketing a empresas, que pertenecía a la agencia):
 
-1. **Producción musical para terceros:** servicio de grabación/mezcla/masterización cobrado por proyecto. *Volumen realista: 2-4 proyectos externos por mes* (no 100 — esa cifra del plan anterior correspondía al modelo de agencia de automatización masiva, no a un sello boutique). Precio por proyecto: **supuesto a validar** con cotizaciones reales de mercado (ver limitación de datos en Sección 5.1 sobre tarifas de estudio en Medellín).
+1. **Producción musical para terceros:** servicio de grabación/mezcla/masterización cobrado por proyecto. *Volumen realista: 2-4 proyectos externos por mes* (no 100 — esa cifra del plan anterior correspondía al modelo de agencia de automatización masiva, no a un sello boutique). Precio por proyecto: **supuesto a validar** con cotizaciones reales de mercado (ver limitación de datos en Sección 5.1 sobre tarifas de estudio en Medellín). El estudio propio cumple una función doble: genera este ingreso directo y es la herramienta para **firmar y retener un productor** que fortalezca la calidad y el ritmo de lanzamientos del catálogo propio.
 2. **Desarrollo de marca personal para artistas:** servicio de posicionamiento y estrategia de contenido para artistas externos al roster. Volumen y precio: **supuesto a validar**.
-3. **Regalías de catálogo propio:** ingresos de streaming vía Nexus (menos 8% de comisión) de los artistas firmados por el sello. Depende directamente del crecimiento del catálogo y del desempeño de cada lanzamiento — es la línea de ingreso con mayor potencial a largo plazo pero la más lenta de construir.
-4. **Licencias y sincronización (sync):** uso de música del catálogo en medios audiovisuales de terceros. Línea de ingreso incipiente, sin pipeline activo todavía — oportunidad a desarrollar, no ingreso proyectable en el corto plazo.
-5. **Eventos y shows en vivo:** ingreso futuro, condicionado al crecimiento de base de fans de los artistas del roster; no se proyecta en los primeros 12-18 meses.
+3. **Regalías de catálogo propio:** ingresos de streaming vía Nexus (menos 8% de comisión) de los artistas firmados por el sello. Esta línea depende directamente de la **inversión activa del sello en el desarrollo de sus propios artistas** (financiar grabación, video musical y lanzamiento de canciones, no solo prestar el servicio a terceros) — es la línea de ingreso con mayor potencial a largo plazo pero la más lenta de construir, y requiere capital de trabajo propio destinado a esa inversión (ver Modelo Financiero). Esta inversión tiene además un **retorno secundario no financiero**: un lanzamiento exitoso financiado por el sello funciona como vitrina/prueba de la metodología de desarrollo de artista, lo que atrae tanto a nuevos artistas al roster Élite 360 como a nuevos usuarios de los planes de la plataforma — es decir, parte del retorno de esta inversión es marketing/adquisición, no solo la regalía directa. No se proyecta un valor monetario para este efecto (sería especulativo), pero se señala como justificación estratégica adicional de la inversión en catálogo.
+4. **Ingresos del canal de YouTube propio:** monetización publicitaria (AdSense/Content ID) del canal de YouTube del sello, independiente de las regalías de streaming vía Nexus. Volumen de vistas y CPM: **supuesto a validar** — depende del ritmo de publicación de contenido (apalancado en el Content Engine) y del crecimiento organic del canal.
+5. **Licencias y sincronización (sync):** uso de música del catálogo en medios audiovisuales de terceros. Línea de ingreso incipiente, sin pipeline activo todavía — oportunidad a desarrollar, no ingreso proyectable en el corto plazo.
+6. **Eventos y shows en vivo:** ingreso futuro, condicionado al crecimiento de base de fans de los artistas del roster; no se proyecta en los primeros 12-18 meses.
+7. **Libro "Music Business Para Todos Los Humanos":** producto existente y ya en venta (Hotmart, incluyendo programa de afiliados), con ediciones en español, inglés y portugués. Es una línea de ingreso real y activa, aunque menor en escala frente a las anteriores — se incluye en el Modelo Financiero IM Music — Sello como ingreso adicional, no como línea de crecimiento principal.
+
+**Nota sobre jerarquía de ingresos del ecosistema IM Music:** dentro del conjunto completo del proyecto (sello + plataforma SaaS + libro + YouTube), el dinero real viene de las líneas de **escala masiva**: la plataforma SaaS (planes Básico y Pro, suscripción sin límite de usuarios), el libro "Music Business Para Todos Los Humanos" (ya en venta, Hotmart) y el canal de YouTube propio — estas tres son, por diseño, el motor de ingresos del negocio. El servicio Élite 360 (roster de 12-15 artistas) y la inversión en catálogo propio **no son el motor de caja principal** — son lo que **robustece** el negocio: construyen la credibilidad, la metodología probada y el moat de marca que hacen creíble y defendible la oferta de la plataforma frente a la competencia, y van creciendo de forma acumulativa en el tiempo. Esta jerarquía se desarrolla con más detalle en el plan de negocios de la plataforma SaaS (documento separado).
 
 Todas las cifras de precio/ticket por servicio que no tengan fuente verificada en este documento se presentan como **supuestos pendientes de validar** en el Modelo Financiero IM Music — Sello, y deben confirmarse con cotizaciones reales antes de presentarse a un inversionista como dato cerrado.
 
