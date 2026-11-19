@@ -1,0 +1,86 @@
+PARA CALCULAR EL COSTO FIJO UNITARIO DE UN PRODUCTO FABRICADO O UN SERVICIO EN EL CUAL EL TIEMPO AFECTA EL COSTO,,,
+,,,
+PYME TRAD PERSONALIZADO,,,
+,,,
+PASO,OPERACIÓN,CIFRA,RESULTADO
+1.  Días del año laboral,360 días,360.0,
+2.  Dìas del año laboral - Días no laborados en el año,360 - 50 -16,294,Días realmente laborados en el año
+3.  Días realmente laborados en el año / Meses del año,294 / 12,24.5,Días realmente laborados en el mes
+4.  Jornada laboral diaria - Tiempo de ocio,40 horas - 12 hora,28,Horas de jornada real de trabajo diario
+5.  Jornada real de trabajo diario x Nº empleados que participan directamente,40 horas x 5 personas,140,Horas reales totales diarias
+6.  Horas totales diarias x Días realmente laborados en el mes,30 horas x 24.5 días,3430,Horas reales totales mensuales
+7.  Egresos fijos mensuales / Horas reales totales mensuales,18.913.972 / 735 horas,30681.58568,Valor fijo real de una hora
+8.  Valor fijo de una hora / Minutos de una hora,25.733 / 60 minutos,511.3597614,Valor fijo real de un minuto
+9.  Valor fijo real de una hora x Horas requeridas para fabricar el producto o prestar el servicio,25.733 x 56 horas,1718168.798,COSTO FIJO UNITARIO
+,,515450.6395,
+,,,
+MICROPYME AUTOMATIZADO,,,
+,,,
+PASO,OPERACIÓN,CIFRA,RESULTADO
+1.  Días del año laboral,360 días,360.0,
+2.  Dìas del año laboral - Días no laborados en el año,360 - 50 -16,294,Días realmente laborados en el año
+3.  Días realmente laborados en el año / Meses del año,294 / 12,24.5,Días realmente laborados en el mes
+4.  Jornada laboral diaria - Tiempo de ocio,8 horas - 2 hora,6,Horas de jornada real de trabajo diario
+5.  Jornada real de trabajo diario x Nº empleados que participan directamente,6 horas x 2 persona,12,Horas reales totales diarias
+6.  Horas totales diarias x Días realmente laborados en el mes,6 horas x 24.5 días,294,Horas reales totales mensuales
+7.  Egresos fijos mensuales / Horas reales totales mensuales,18.913.972 / 147 horas,357951.833,Valor fijo real de una hora
+8.  Valor fijo de una hora / Minutos de una hora,128.666 / 60 minutos,5965.863883,Valor fijo real de un minuto
+9.  Valor fijo real de una hora x Horas requeridas para fabricar el producto o prestar el servicio,128.666 x 2 horas,715903.6659,COSTO FIJO UNITARIO
+,,71590.36659,
+,,,
+ARTISTA TRADICIONAL PERSONALIZADO,,,
+,,,
+PASO,OPERACIÓN,CIFRA,RESULTADO
+1.  Días del año laboral,360 días,360.0,
+2.  Dìas del año laboral - Días no laborados en el año,360 - 50 -16,294,Días realmente laborados en el año
+3.  Días realmente laborados en el año / Meses del año,294 / 12,24.5,Días realmente laborados en el mes
+4.  Jornada laboral diaria - Tiempo de ocio,40 horas - 12 hora,28,Horas de jornada real de trabajo diario
+5.  Jornada real de trabajo diario x Nº empleados que participan directamente,40 horas x 5 persona,140,Horas reales totales diarias
+6.  Horas totales diarias x Días realmente laborados en el mes,6 horas x 24.5 días,3430,Horas reales totales mensuales
+7.  Egresos fijos mensuales / Horas reales totales mensuales,18.913.972 / 147 horas,30681.58568,Valor fijo real de una hora
+8.  Valor fijo de una hora / Minutos de una hora,128.666 / 60 minutos,511.3597614,Valor fijo real de un minuto
+9.  Valor fijo real de una hora x Horas requeridas para fabricar el producto o prestar el servicio,128.666 x 56 hors,1718168.798,COSTO FIJO UNITARIO
+,,515450.6395,
+,,,
+ARTIST AUTOMATIZADO,,,
+,,,
+PASO,OPERACIÓN,CIFRA,RESULTADO
+1.  Días del año laboral,360 días,360.0,
+2.  Dìas del año laboral - Días no laborados en el año,360 - 50 -16,294,Días realmente laborados en el año
+3.  Días realmente laborados en el año / Meses del año,294 / 12,24.5,Días realmente laborados en el mes
+4.  Jornada laboral diaria - Tiempo de ocio,8 horas - 2 hora,6,Horas de jornada real de trabajo diario
+5.  Jornada real de trabajo diario x Nº empleados que participan directamente,6 horas x 2 persona,12,Horas reales totales diarias
+6.  Horas totales diarias x Días realmente laborados en el mes,6 horas x 24.5 días,294,Horas reales totales mensuales
+7.  Egresos fijos mensuales / Horas reales totales mensuales,18.913.972 / 147 horas,357951.833,Valor fijo real de una hora
+8.  Valor fijo de una hora / Minutos de una hora,128.666 / 60 minutos,5965.863883,Valor fijo real de un minuto
+9.  Valor fijo real de una hora x Horas requeridas para fabricar el producto o prestar el servicio,128.666 x 2 horas,715903.6659,COSTO FIJO UNITARIO
+,,71590.36659,
+,,,
+PROCCION MUSICAL,,,
+,,,
+PASO,OPERACIÓN,CIFRA,RESULTADO
+1.  Días del año laboral,360 días,360.0,
+2.  Dìas del año laboral - Días no laborados en el año,360 - 50 -16,294,Días realmente laborados en el año
+3.  Días realmente laborados en el año / Meses del año,294 / 12,24.5,Días realmente laborados en el mes
+4.  Jornada laboral diaria - Tiempo de ocio,8 horas - 2 hora,6,Horas de jornada real de trabajo diario
+5.  Jornada real de trabajo diario x Nº empleados que participan directamente,6 horas x 1 persona,6,Horas reales totales diarias
+6.  Horas totales diarias x Días realmente laborados en el mes,6 horas x 24.5 días,147,Horas reales totales mensuales
+7.  Egresos fijos mensuales / Horas reales totales mensuales,18.913.972 / 147 horas,715903.6659,Valor fijo real de una hora
+8.  Valor fijo de una hora / Minutos de una hora,128.666 / 60 minutos,11931.72777,Valor fijo real de un minuto
+9.  Valor fijo real de una hora x Horas requeridas para fabricar el producto o prestar el servicio,128.666 x 8 horas,5727229.327,COSTO FIJO UNITARIO
+,,286361.4664,
+,,,
+,,,
+DISTRIBUCION,,,
+,,,
+PASO,OPERACIÓN,CIFRA,RESULTADO
+1.  Días del año laboral,360 días,360.0,
+2.  Dìas del año laboral - Días no laborados en el año,360 - 50 -16,294,Días realmente laborados en el año
+3.  Días realmente laborados en el año / Meses del año,294 / 12,24.5,Días realmente laborados en el mes
+4.  Jornada laboral diaria - Tiempo de ocio,8 horas - 2 hora,6,Horas de jornada real de trabajo diario
+5.  Jornada real de trabajo diario x Nº empleados que participan directamente,6 horas x 1 persona,6,Horas reales totales diarias
+6.  Horas totales diarias x Días realmente laborados en el mes,6 horas x 24.5 días,147,Horas reales totales mensuales
+7.  Egresos fijos mensuales / Horas reales totales mensuales,18.913.972 / 147 horas,715903.6659,Valor fijo real de una hora
+8.  Valor fijo de una hora / Minutos de una hora,128.666 / 60 minutos,11931.72777,Valor fijo real de un minuto
+9.  Valor fijo real de una hora x Horas requeridas para fabricar el producto o prestar el servicio,128.666 x 2 horas,1431807.332,COSTO FIJO UNITARIO
+,,214771.0998,

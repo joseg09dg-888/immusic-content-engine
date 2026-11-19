@@ -1,0 +1,65 @@
+Alquiler el espacio : mensual ( seguro),,6500000.0,10.0,,,,,,,,,,
+productor x campamento: ,,2000000.0,,,,,,,,,,,
+filmmaker x campamento ,,1500000.0,,,,,,,,,,,
+compositor x campamento: ,,2000000.0,,,,,,,,,,,
+,,750000.0,,,,,,,,,,,
+"transporte : 220.000 - 280.000 24 horas automovil, camioneta 380.000 a 1.300.000, camioneta 7 puestos 700.000 pesos a 900.000, furgonetas van a 500.000, 650.000, 750.000, 850.000",,3000000.0,,,,,,,,,,,
+,,300000.0,,,,,,,,,,,
+tarjeta de crédito edad y cédula.,,1500000.0,,,,,,,,,,,
+logística:,,17550000,,,,,,,,,,,
+,,2632500,,,,,,,,,,,
+comida y bebidas: 3.000.000 aprox 10 personas,,20182500,,,,,,,,,,,
+aseo y limpieza: 300.000,,2018250,,,,,,,,,,,
+alojamiento ( hoteles ) 1.500.000 la noche,,2119162.5,1.05,,,,,,,,,,
+depósito para daños 10%,,4137412.5,,,,,,,,,,,
+,,21191625,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+,,,,,,,,,,,,,
+(A) Línea / Mes,(B) Mes 1 Exp.,(C) Mes 2 Exp.,(D) Mes 3 Exp.,(E) Mes 4 Exp.,(F) Mes 5 Exp.,(G) Mes 6 Exp.,(H) Mes 7 Exp.,(Yo) Mes 8 Exp.,(J) Mes 9 Exp.,(K) Mes 10 Exp.,(L) Mes 11 Exp.,(M) Mes 12 Exp.,(N) Total Año 1
+F24: Línea 1: Pymes Trad. Personalizado,,,,,,,,,,,,,
+F25: Precio Unitario,12090083.0,12090083.0,12090083.0,12090083.0,12090083.0,12090083.0,12090083.0,12090083.0,12090083.0,12090083.0,12090083.0,12090083.0,
+F26: Clientes nuevos,1.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,67
+F27: Clientes Retenidos,0.0,1,6,11,15,18,21,24,26,28,30,32,
+F28: Total de clientes activos,1,7,12,17,21,24,27,30,32,34,36,38,
+F29: Ingreso Pymes Trad.,12090083,84630581,145080996,205531411,253891743,290161992,326432241,362702490,386882656,411062822,435242988,459423154,3373133157
+,,,,,,,,,,,,,
+F30: Línea 2: Micropymes Automatizado,,,,,,,,,,,,,
+F31: Precio Unitario,911839.0,911839.0,911.839,911.839,911.839,911.839,911.839,911.839,911.839,911.839,911.839,911.839,
+F32: Suscriptores nuevos,50.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,1832796.39
+F33: Suscriptores retenidos,0.0,50.0,41,34,28,23,19,16,13,11,9,7,
+F34: Total de suscriptores activos,911889,911939,1011.839,1011.839,1011.839,1011.839,1011.839,1011.839,1011.839,1011.839,1011.839,1011.839,
+F35: Ingreso Micropymes Auto.,0,0,0,0,0,0,0,0,0,0,0,0,1833946.39
+,,,,,,,,,,,,,
+F36: Línea 3: Artista Trad. Personalizado,,,,,,,,,,,,,
+F37: Precio Unitario,14.752.083,14.752.083,14.752.083,14.752.083,14.752.083,14.752.083,14.752.083,14.752.083,14.752.083,14.752.083,14.752.083,14.752.083,
+F38: Artistas Nuevos,1.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,6.0,0
+F39: Artistas Retenidos,0.0,1,6,6,6,6,6,6,6,6,6,6,
+F40: Total Artistas Activos,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,
+F41: Ingreso Artistas Trad.,0,0,0,0,0,0,0,0,0,0,0,0,61
+,,,,,,,,,,,,,
+F42: Línea 4: Artista Automatizado,,,,,,,,,,,,,
+F43: Precio Unitario,911.839,911.839,911.839,911.839,911.839,911.839,911.839,911.839,911.839,911.839,911.839,911.839,
+F44: Suscriptores nuevos,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,5.0,0
+F45: Suscriptores retenidos,0.0,711,711,711,711,711,711,711,711,711,711,711,
+F46: Total de suscriptores activos,0,0,0,0,0,0,0,0,0,0,0,0,
+F47: Ingreso Artistas Auto.,0,0,0,0,0,0,0,0,0,0,0,0,60
+,,,,,,,,,,,,,
+F48: Línea 5: Producción Musical,,,,,,,,,,,,,
+F49: Precio Unitario,4.157.021,4.157.021,4.157.021,4.157.021,4.157.021,4.157.021,4.157.021,4.157.021,4.157.021,4.157.021,4.157.021,4.157.021,
+F50: Producciones Nuevas,1.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,3.0,0
+F51: Ingreso Producción Musical,0,0,0,0,0,0,0,0,0,0,0,0,0
+,,,,,,,,,,,,,
+F52: Línea 6: Distribución,,,,,,,,,,,,,
+F53: Precio Unitario,532.615,532.615,532.615,532.615,532.615,532.615,532.615,532.615,532.615,532.615,532.615,532.615,
+F54: Clientes Nuevos Distribución,50.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,100.0,34
+F55: Clientes Retenidos Distribución,0.0,0,0,0,0,0,0,0,0,0,0,0,
+F56: Distribución total de clientes,1,3,3,3,3,3,3,3,3,3,3,3,
+F57: Ingreso Distribución,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,#VALUE!,0
+,,,,,,,,,,,,,
+F58: TOTAL INGRESOS PROYECTADOS DEL MES,,,,,,,,,,,,,
+F59: (Suma de Ingresos de Líneas 1-6),13001977,85542526,145082018.8,#ERROR!,#ERROR!,#ERROR!,#ERROR!,#ERROR!,#ERROR!,#ERROR!,#ERROR!,#ERROR!,3373133157

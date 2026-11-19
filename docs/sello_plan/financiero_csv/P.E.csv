@@ -1,0 +1,70 @@
+EGRESOS FIJOS MENSUALES DE LA EMPRESA (para el cálculo del punto de equilibrio y el del valor minuto).,,,,,
+,,,,,
+Concepto,Valor (COP),Notas,,,
+A. INGRESOS (Supuesto para análisis),,,,,
+Ingresos Mensuales Proyectados (Ejemplo),79166667.0,(Promedio mensual del Año 1 Esc. Optimista),,,
+B. COSTOS VARIABLES (Directos del Servicio),,,,,
+Porcentaje de Costo Variable (%CV),0.28,(O 1 - Margen Bruto Objetivo),,,
+Costos Variables Totales (CVT),22166666.76,(Para el nivel de ingresos proyectado),,,
+C. MARGEN DE CONTRIBUCIÓN,,,,,
+Margen de Contribución Total (MCT),57000000.24,(Cuánto queda para cubrir fijos y generar utilidad),,,
+Porcentaje de Margen de Contribución (%MC),0.72,(Debe ser igual a tu Margen Bruto %),,,
+D. COSTOS FIJOS TOTALES (CFT),,,,,
+Total Gastos de Personal (Mensual),26700000,,,,
+Arriendo (Mensual),6500000,,,,
+Herramientas Tecnológicas (Mensual),10071244,,,,
+Marketing y Promoción (Base Mensual),31200000,,,,
+Gastos Administrativos y Generales (Mensual),1300000,,,,
+Costos Fijos Totales Mensuales (CFT),75771244,,,,
+E. PUNTO DE EQUILIBRIO (PE),,,,,
+Punto de Equilibrio en Ingresos (PE$) Mensual,105237838.9,(Ingresos necesarios para cubrir todos los costos),,,
+F. ANÁLISIS CON INGRESOS PROYECTADOS,,,,,
+Ingresos Mensuales Proyectados,79166667.0,,,,
+Utilidad / (Pérdida) Operativa Estimada (Antes de Dep. e Imp.),7638889.0,(Ingresos - CV - CF) o (Margen Contribución - CF),,,
+Margen de Seguridad (Ingresos),-26071171.89,(Cuánto pueden caer los ingresos antes de perder),,,
+Margen de Seguridad (%),132.9320065,(Margen de Seguridad en Ingresos / Ingresos Proy.),,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+CÁLCULO DE LA DEPRECIACIÓN,,,,,
+,,,,,
+(Col A) ACTIVO,(Col B) VIDA ÚTIL (Meses),(Col C) CANTIDAD,(Col D) VALOR UNITARIO (COP),(Col E) TOTAL (COP),(Col F) DEPRECIACIÓN MENSUAL (COP)
+Equipos de Cómputo y Oficina,,,,,
+Computadores Administración/Gestión (ej. Huawei D15 o similar),36.0,3.0,2800000.0,8400000,233333.3333
+Computador Diseño Gráfico/Edición Video (ej. Dell Alienware o potente),36.0,1.0,10000000.0,10000000,277777.7778
+Celular (ej. iPhone 13/14 256GB),24.0,1.0,4000000.0,4000000,166666.6667
+Subtotal Cómputo,,,,,
+Equipos Audiovisuales (Cine y Foto),,,,,
+Cámara Calidad Cine (ej. Blackmagic/Sony A7SIII),48.0,1.0,12000000.0,12000000,250000
+Kit de Lentes Cine/Foto (Zoom + Fijo),60.0,1.0,7000000.0,7000000,116666.6667
+Trípode Profesional Video,60.0,1.0,2000000.0,2000000,33333.33333
+Estabilizador (Gimbal),48.0,1.0,3500000.0,3500000,72916.66667
+Kit de Luces (LED Continuas para Foto/Video),48.0,1.0,4500000.0,4500000,93750
+"Micrófonos (Set: Solapa, Boom, Grabadora audio)",48.0,1.0,3000000.0,3000000,62500
+"Monitor Externo, Baterías, Tarjetas, Filtros",36.0,1.0,4000000.0,4000000,111111.1111
+Subtotal Audiovisual,,,,,
+Adecuaciones y Mobiliario,,,,,
+Adecuaciones Oficina y Estudio Musical,120.0,1.0,40000000.0,40000000,333333.3333
+"Mobiliario de Oficina (Escritorios, sillas, etc.)",60.0,1.0,5000000.0,5000000,83333.33333
+Línea Blanca Fotos (Ciclorama/Fondos),60.0,1.0,1500000.0,1500000,25000
+Subtotal Adecuaciones,,,,,
+TOTAL CAPEX (Sin Imprevistos),,,,,
+Imprevistos (ej. ~11.8% para llegar a $117.3M),,,,,
+TOTAL CAPEX CON IMPREVISTOS,,,,,
+TOTAL DEPRECIACIÓN MENSUAL,,,,,1859722.222
+TOTAL DEPRECIACIÓN ANUAL,,,,,22316666.67
+,,,,,
+PUNTO DE EQUILIBRIO EN UNIDADES,,,,,
+,,,,,
+PRODUCTO,P.V.U.,% DE,P.E (Uds),P.E (Uds),
+,,PARTIC.,,,
+PYME TRAD PERSONALIZADO,8894437.75,0.3,3.54956126,4,
+MICROPYME AUTOMATIZADO,781674,0.1,13.46313666,14,
+ARTISTA TRADICIONAL PERSONALIZADO,11017382.75,0.3,2.865594523,3,
+ARTIST AUTOMATIZADO,781674,0.1,13.46313666,14,
+PROCCION MUSICAL,4000000,0.05,1.315472986,2,
+DISTRIBUCION,781674,0.15,,,

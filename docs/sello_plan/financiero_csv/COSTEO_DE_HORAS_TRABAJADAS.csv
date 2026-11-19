@@ -1,0 +1,39 @@
+Neuromarketing + IA,,,,
+COMPONENTE,DETALLE,HORAS ESTIMADAS,COSTO HORA (COP),COSTO TOTAL POR LÍNEA (COP)
+A. COSTOS DE PERSONAL INTERNO (DIRECTO),,,,
+1. Traficker (y Gerente de Marketing),"Análisis, setup, optimización campañas",20.0,57692.0,1153840
+2. Gerente General (y Comercial),"Estrategia alto nivel, relación cliente (gasto es interno ajustar)",5.0,57692.0,288460
+3. Filmmaker,Creación piezas video cortas para Ads (costo de atencion al cliente),15.0,23077.0,346155
+Subtotal Personal Interno,,40.0,,0
+B. COSTOS DE FREELANCERS (DIRECTO),,,,0
+1. Desarrollador Freelance,"Landing pages, integraciones (costo indiercto)",8.0,40000.0,320000
+2. Freelance Diseño Gráfico & Branding,Diseño y estrategia de marca para campaña (costo indirecto),Costo Proyecto,3000000.0,3000000
+Subtotal Freelancers,,,,
+C. SUBTOTAL COSTOS DIRECTOS (A + B),,,,
+D. OVERHEAD ASIGNADO (Costos Fijos),(Horas Personal Interno * Costo Overhead/hr),40.0,25641.0,1025640
+(Costo Overhead por Hora = $25.641),,,,
+E. COSTO TOTAL ESTIMADO DEL PAQUETE (C + D),,,,6134095
+F. MARGEN DE UTILIDAD DESEADO,0.45,,,2760342.75
+G. PRECIO DE VENTA SUGERIDO (E + F),,,,8894437.75
+VALOR EN DOLARES,,,,2161956.0
+,,,,
+Neuromarketing + IA + Desarrollo artistico,,,,
+COMPONENTE,DETALLE,HORAS ESTIMADAS,COSTO HORA (COP),COSTO TOTAL POR LÍNEA (COP)
+A. COSTOS DE PERSONAL INTERNO (DIRECTO),,,,
+1. Traficker (y Gerente de Marketing),"Análisis, setup, optimización campañas",20.0,57692.0,1153840
+2. Gerente General (y Comercial),"Estrategia macro, relación cliente VIP",5.0,57692.0,288460
+3. Filmmaker,Creación piezas video cortas para Ads,15.0,23077.0,346155
+4. Director del Sello,"Visión estratégica, alineación con mercado",10.0,34615.0,346150
+5. Director Artístico,"Conceptualización, dirección creativa",12.0,46154.0,553848
+Subtotal Personal Interno,,62.0,,
+B. COSTOS DE FREELANCERS (DIRECTO),,,,
+1. Desarrollador Freelance,"Landing pages, integraciones",8.0,40000.0,320000
+2. Freelance Diseño Gráfico & Branding,Diseño y estrategia de marca para campaña,Proyecto,3000000.0,3000000
+Subtotal Freelancers,,,,
+C. SUBTOTAL COSTOS DIRECTOS (A + B),,,,6008453
+D. OVERHEAD ASIGNADO (Costos Fijos),(Horas Personal Interno * Costo Overhead/hr),62.0,25641.0,1589742
+(Costo Overhead por Hora = $25.641),,,,
+E. COSTO TOTAL ESTIMADO DEL PAQUETE (C + D),,,,7598195
+F. MARGEN DE UTILIDAD DESEADO,0.45,,,3419187.75
+G. PRECIO DE VENTA SUGERIDO (E + F),,,,11017382.75
+VALOR EN DOLARES,,,,2677976.0
