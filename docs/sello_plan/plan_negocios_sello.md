@@ -16,7 +16,12 @@ Este plan evalúa dos escenarios de sede/mercado para la operación y/o expansi�
 - **Medellín, Colombia:** mercado de origen y base operativa, con ecosistema de música urbana/latina consolidado y entidades de gestión de derechos (SAYCO, ACINPRO) operando hace décadas — punto de partida geográfico, no límite del género o idioma del roster.
 - **Dubái, EAU:** mercado emergente con señales de demanda de música latina/urbana (presencia creciente de eventos y headliners latinos), marco fiscal corporativo favorable, pero con infraestructura de derechos musicales locales recién creada y sin cifras país-específicas verificables en reportes de industria.
 
-Las proyecciones financieras detalladas (CAPEX, OPEX, punto de equilibrio, flujo de caja, TIR/VAN) se presentan en un documento separado: **Modelo Financiero IM Music — Sello**. Este documento cubre la tesis de negocio, el mercado, la operación, el equipo, los riesgos y los aspectos legales de cada escenario.
+Este documento cubre la tesis de negocio, el mercado, la operación, el equipo, los riesgos y los aspectos legales de cada escenario. Se apoya en 7 documentos complementarios que no se repiten aquí por extensión pero son parte integral del paquete completo:
+- **Modelo Financiero IM Music — Sello** (Medellín + Dubái completo) y **Modelo Financiero IM Music — Sello — Dubái (Lean)**: CAPEX, OPEX, punto de equilibrio, flujo de caja, TIR/VAN de cada escenario.
+- **Manual de Funciones y Procesos IM Music**: las fases, herramientas, métricas y automatizaciones de cada uno de los 8 roles del equipo.
+- **Flujos de Decisión y Herramientas IM Music**: los flujos paso a paso ("si pasa A → X, si pasa B → Y") de los 5 procesos críticos del negocio, y el stack tecnológico completo.
+- **Matriz de Riesgos IM Music**: 61 riesgos específicos con probabilidad × impacto, responsable y, en 18 casos, un precedente real documentado de otro sello/distribuidor.
+- **Plan de Negocios IM Music — Elite Artist Platform** y su **Modelo Financiero** (documentos separados, negocio distinto pero conectado): la plataforma SaaS es donde vive el verdadero motor de ingreso masivo del ecosistema (Básico/Pro) y donde se vende el tier Élite 360 — el sello es quien lo entrega. No se repiten aquí los números de la plataforma para evitar doble conteo de ingresos/costos (ver Sección 10).
 
 ---
 
@@ -36,7 +41,12 @@ A diferencia del plan original, IM Music **no depende de una agencia matriz** pa
 
 ### 3.1 Principio rector
 
-El sello se diseña deliberadamente **lean**: solo se contratan o se paga por proyecto aquello que el Content Engine no puede hacer (producción de audio, decisiones creativas, relación humana con artistas y contrapartes legales/comerciales). Todo lo que es generación de contenido digital, diseño gráfico, copywriting y voz en off ya está automatizado y operando (ver `src/content_engine/`, `src/core/brand.py`), por lo que **no se presupuestan** roles de Filmmaker, Traficker de pauta ni Desarrollador de IA como personal fijo o freelance recurrente — son funciones que el sistema ya cubre a costo marginal casi nulo.
+El sello se diseña deliberadamente **lean**: solo se contratan o se paga por proyecto aquello que el Content Engine no puede hacer (producción de audio, decisiones creativas, relación humana con artistas y contrapartes legales/comerciales). Todo lo que es generación de contenido digital masivo/repetitivo, diseño gráfico de plantilla y voz en off ya está automatizado y operando (ver `src/content_engine/`, `src/core/brand.py`), por lo que **no se presupuesta** un Traficker de pauta ni un Desarrollador de IA como personal fijo o freelance recurrente — son funciones que el sistema ya cubre a costo marginal casi nulo.
+
+Sí se presupuestan tres roles humanos adicionales que el Content Engine **no puede reemplazar**, porque son de dirección y criterio, no de ejecución repetitiva:
+- **Comunicadora / Estrategia de Contenido:** define QUÉ se publica y CUÁNDO — el plan editorial y la parrilla de contenido (calendario). El Content Engine ejecuta la generación, pero no decide la estrategia; alguien tiene que dirigirlo.
+- **Filmmaker / Editor con IA:** edita el material humano real (grabaciones de los artistas, contenido tipo "CONTENIDO HUMANO" ya existente en el proyecto) usando herramientas de IA de edición — distinto del video 100% sintético que ya genera el Content Engine.
+- **Diseñadora Gráfica:** diseño a la medida para campañas, portadas y piezas que exceden el sistema de plantillas automatizado (que cubre el contenido recurrente, no el trabajo creativo bespoke).
 
 El equipo que sí existe (fijo y freelance) no se presupuesta para hacer tareas sueltas, sino para **ejecutar la metodología propia de desarrollo de marca de artista completo** del fundador — el know-how diferencial del sello. Por eso el equipo debe ser propio y no tercerizado a una agencia externa: la metodología es el activo, y solo un equipo interno, entrenado directamente en ella, puede aplicarla de forma consistente en cada artista firmado.
 
@@ -46,9 +56,13 @@ El equipo que sí existe (fijo y freelance) no se presupuesta para hacer tareas 
 |---|---|---|
 | CEO / Director del Sello | Fijo | Dirección general, A&R, relación con artistas e inversionistas, decisión final de catálogo |
 | Gerente Comercial | Fijo o por comisión | Captación de artistas y clientes de producción, negociación de contratos, licencias y sync |
+| Project Manager — Élite 360 | Fijo (cuando haya ocupación en el roster) | Coordina la entrega real del servicio 360 a cada artista del roster: management musical, producción de video, branding, Meta Ads gestionado, campamentos musicales. Convierte el contrato cerrado por el Gerente Comercial en ejecución concreta. |
 | Productor Musical | Freelance por proyecto | Dirección creativa y producción de grabaciones |
 | Ingeniero de Sonido | Freelance por proyecto | Grabación, mezcla y masterización |
 | Social Media Manager | Fijo o part-time | Supervisión y curaduría del contenido generado por el Content Engine, interacción con comunidad; no genera contenido desde cero manualmente |
+| Comunicadora / Estrategia de Contenido | Fijo o part-time | Plan editorial y parrilla de contenido — dirige al Content Engine, no lo reemplaza |
+| Filmmaker / Editor con IA | Freelance por proyecto | Edición de material humano real (grabaciones de artistas) con herramientas de IA, distinto del video sintético automatizado |
+| Diseñadora Gráfica | Freelance por proyecto | Diseño a la medida para campañas y piezas que exceden el sistema de plantillas automatizado |
 | Función legal | Cubierta directamente por el CEO/Director | Contratos con artistas, derechos de autor, registro de marca, cumplimiento normativo — el fundador ya tiene esta capacidad, por lo que no se presupuesta como cargo ni retainer fijo; solo se contempla asesoría externa puntual para casos de alta complejidad (ej. litigios, estructuración en un segundo país) |
 | Contador | Asesor externo | Estados financieros, impuestos, nómina |
 
@@ -118,36 +132,67 @@ Hay además una razón adicional, cualitativa y no cuantificada en este document
 
 1. **Selección de talento:** scouting directo y por convocatoria, priorizando artistas con tracción orgánica inicial (seguidores, streams) sobre potencial no probado.
 2. **Producción musical:** preproducción → grabación (estudio propio o alianzas) → mezcla y masterización → entrega final.
-3. **Marketing y contenido:** toda la generación de piezas, guiones y calendarización se apoya en el Content Engine existente; el Social Media Manager cura y aprueba, no produce desde cero.
+3. **Marketing y contenido:** la Comunicadora define la parrilla editorial y dispara en paralelo el briefing al Content Engine (piezas masivas/automatizadas), al Filmmaker/Editor con IA (edición de material humano real) y a la Diseñadora Gráfica (piezas bespoke); el Social Media Manager cura y publica, no produce desde cero. El resultado de cada ciclo retroalimenta la siguiente parrilla.
 4. **Distribución:** vía Nexus (8% de comisión) a todas las plataformas de streaming relevantes en cada mercado.
 5. **Gestión de derechos de autor:** registro de obras ante la entidad correspondiente al mercado de operación (SAYCO/ACINPRO en Colombia; EMRA en EAU, sujeto a las limitaciones de la Sección 5.2) y protección de los derechos del artista y del sello.
 6. **Organización del trabajo:** gestión de proyectos online, comunicación asincrónica entre freelancers y el equipo fijo.
+
+### 6.1 Equipamiento físico
+
+El sello es dueño del equipo de **filmación en vivo** (lo que el Content Engine no puede generar sintéticamente), no de edición: cámara híbrida + 1 lente, kit de 2-3 luces, trípode y micrófono lapel/shotgun, más estudio de audio propio (tratamiento acústico, micrófonos, interfaz, monitores, licencia DAW). El Filmmaker/Editor con IA y la Diseñadora Gráfica, al ser freelance, traen su propia estación de edición/diseño — el sello no duplica ese costo. Cifras exactas y notas de cada rubro (todas marcadas como supuesto a validar salvo donde se indique lo contrario) están en el **Modelo Financiero IM Music — Sello**, hoja CAPEX.
+
+### 6.2 Herramientas y stack tecnológico
+
+Para que el equipo (mayormente freelance/part-time) opere como un sistema interconectado y no como procesos sueltos:
+- **Notion:** gestión de proyectos/tareas y documentación compartida — una sola herramienta ligera para un equipo de este tamaño, no un stack enterprise.
+- **WhatsApp Business:** comunicación interna y con artistas/clientes.
+- **Make:** automatización entre herramientas — conecta la "Máquina de Captación" (bots de WhatsApp con IA, DM automático en redes, email marketing) con tareas automáticas para el Gerente Comercial y, si se cierra el trato, para el Project Manager de Élite 360.
+- **CapCut Pro** (Filmmaker) y **Canva Pro** (Diseñadora Gráfica): herramientas de edición/diseño asistidas por IA.
+- **Google Drive:** repositorio de archivos pesados (audio, video, diseño).
+- SLA por tipo de tarea dentro de Notion como mecanismo de control de plazos (qué tan rápido se entrega cada tipo de pieza/proceso), en vez de una herramienta de time-tracking dedicada, innecesaria a esta escala.
+
+El detalle completo de cada rol (fases, subpasos, responsable, herramienta específica, métrica de éxito y qué se puede automatizar) está en el documento **Manual de Funciones y Procesos IM Music**, y los flujos de decisión paso a paso ("si pasa A → X, si pasa B → Y") para firma de artista, onboarding de la plataforma, producción de un lanzamiento, manejo de una crisis de marca/streamer, y resolución de problemas de pago/regalías, están en **Flujos de Decisión y Herramientas IM Music** (ambos documentos separados).
 
 ---
 
 ## 7. PLAN DE RECURSOS HUMANOS
 
-La estructura es intencionalmente mínima:
+La estructura es intencionalmente lean, pero completa — 8 roles reales, no 2:
 
-- **Roles fijos (1-2 personas):** CEO/Director y, según volumen, un Social Media Manager part-time.
-- **Roles variables/freelance (por proyecto):** Productor Musical, Ingeniero de Sonido, Gerente Comercial (puede ser por comisión en lugar de salario fijo en etapa temprana).
-- **Asesores externos (no nómina):** Contador. (La función legal la cubre directamente el CEO/Director, que ya tiene esta capacidad — solo se recurre a abogado externo puntual en casos de alta complejidad).
+- **Roles fijos o part-time:** CEO/Director, Gerente Comercial, Project Manager — Élite 360 (activo cuando haya ocupación en el roster), Social Media Manager, Comunicadora/Estrategia de Contenido.
+- **Roles variables/freelance (por proyecto):** Productor Musical, Ingeniero de Sonido, Filmmaker/Editor con IA, Diseñadora Gráfica.
+- **Asesores externos (no nómina):** Contador, Asesor Legal Externo (solo casos puntuales de alta complejidad — el CEO/Director cubre lo rutinario).
 
 Esta estructura puede escalar agregando un segundo rol fijo (Gerente Comercial de tiempo completo) cuando el flujo de proyectos de producción externa supere, de forma sostenida, los 4-5 proyectos mensuales.
+
+**Manual de funciones:** cada uno de estos roles tiene su proceso completo documentado por fases (qué hace, con qué herramienta, con qué métrica de éxito, qué se puede automatizar, y cómo su trabajo dispara el de otro rol — ej. la Comunicadora dispara en paralelo al Content Engine, al Filmmaker y a la Diseñadora, y recibe de vuelta las métricas para ajustar la siguiente parrilla) en el documento separado **Manual de Funciones y Procesos IM Music**. No se repite aquí por extensión, pero es parte integral de este plan.
 
 ---
 
 ## 8. GESTIÓN DE RIESGOS
 
-| Riesgo | Mitigación |
+Este plan se apoya en una **matriz de riesgos exhaustiva y aparte** (documento **Matriz de Riesgos IM Music**, 61 riesgos específicos en 8 categorías: industria, mercado, político/regulatorio, financiero, marca, marketing, administrativo/comercial y legal), con probabilidad × impacto, responsable de mitigación y, de forma deliberada, **respaldada en casos reales documentados de otros sellos y distribuidores** (no en supuestos genéricos) — porque lo que le puede pasar a IM Music ya le pasó, en alguna forma, a un comparable real. 18 de esos riesgos citan una fuente verificable.
+
+**Los 5 riesgos más críticos de la matriz (score máximo 25):**
+
+| Riesgo | Precedente real citado | Responsable |
+|---|---|---|
+| Dependencia total del fundador (CEO, legal, ventas, relación con artistas a la vez) | — | CEO/Director |
+| Ocupación del roster Élite 360 no alcanza el supuesto de $2.999,99 USD/mes/artista | Lucki vs. Empire Distribution — demanda por ruptura de exclusividad tras +$600K invertidos | Gerente Comercial |
+| Artistas emergentes no pueden sostener el ticket de Élite 360 | — | CEO/Director |
+| Desarrollador único de la plataforma — punto único de falla | — | CEO/Director |
+| La plataforma maneja dinero de terceros (regalías) sin revisión legal/seguridad | UMG/Believe vs. TuneCore (acuerdo de $500M); DistroKid retuvo $14K de un artista por disputa de terceros | Asesor Legal Externo |
+
+Otros precedentes reales que la matriz completa documenta y que son directamente relevantes para decisiones ya tomadas en este plan: **d4vd** (soltado por su sello + bloqueado de Twitch en 24 horas, 2026) y **Dr Disrespect** (4 marcas cancelaron su patrocinio en días) — ambos casos de riesgo reputacional por asociación con un artista o streamer, aplicables directamente a la alianza con streamer (Sección 4) y a la firma de artistas (Sección 6); **Michael Smith**, imputado criminalmente por fraude de streams con IA/bots, y el caso **RBX vs. Spotify** (demanda colectiva por streams fraudulentos) — relevantes para la línea de regalías de catálogo propio (Sección 10.3).
+
+Riesgos adicionales ya resueltos en el diseño de este plan (no requieren mitigación activa porque el plan ya los evita):
+
+| Riesgo | Cómo ya se mitigó en el diseño del plan |
 |---|---|
-| Cambios en gustos musicales / saturación del mercado | Roster deliberadamente multigénero (no solo urbano/latino) y multi-idioma; foco en desarrollo de marca del artista, no solo en un sencillo |
-| Cero artistas firmados al inicio — todo el catálogo está por construir | Captación activa como prioridad del primer año: meta de firmar los primeros 3-5 artistas (de cualquier género, idioma o nacionalidad) antes de proyectar ingresos de catálogo propio |
-| Flujo de caja insuficiente en etapa temprana | Mezcla de ingresos por producción a terceros (más predecible) con regalías de catálogo propio (más lenta) |
-| Riesgos legales de derechos de autor/contratos | Asesoría legal especializada desde el primer contrato, no reactiva |
-| Entorno regulatorio de derechos musicales inmaduro (EAU) | No proyectar ingresos de EMRA hasta que tenga historial comercial (post diciembre 2026) |
-| Dependencia de Nexus como distribuidor único | Evaluar, a partir del año 2, una segunda vía de distribución o negociación de mejores términos según volumen de catálogo |
-| Obsolescencia tecnológica del Content Engine propio | Mantenimiento y actualización continua del stack (Pillow/FFmpeg/edge-tts) como parte de la operación, no como proyecto aparte |
+| Cambios en gustos musicales / saturación del mercado | Roster deliberadamente multigénero (no solo urbano/latino) y multi-idioma |
+| Entorno regulatorio de derechos musicales inmaduro (EAU) | No se proyectan ingresos de EMRA hasta que tenga historial comercial (post diciembre 2026) |
+| Dependencia de Nexus como distribuidor único | Evaluar, a partir del año 2, una segunda vía de distribución según volumen de catálogo |
+| Obsolescencia tecnológica del Content Engine propio | Mantenimiento y actualización continua del stack (Pillow/FFmpeg/edge-tts) como parte de la operación |
 
 ---
 
@@ -171,7 +216,7 @@ No hay trabajo de diseño de identidad pendiente: el trabajo restante es de **ap
 
 Líneas de ingreso reales y relevantes para un sello de este tamaño (se elimina toda línea de ingreso de servicios de marketing a empresas, que pertenecía a la agencia):
 
-1. **Producción musical para terceros:** servicio de grabación/mezcla/masterización cobrado por proyecto. *Volumen realista: 2-4 proyectos externos por mes* (no 100 — esa cifra del plan anterior correspondía al modelo de agencia de automatización masiva, no a un sello boutique). Precio por proyecto: **supuesto a validar** con cotizaciones reales de mercado (ver limitación de datos en Sección 5.1 sobre tarifas de estudio en Medellín). El estudio propio cumple una función doble: genera este ingreso directo y es la herramienta para **firmar y retener un productor** que fortalezca la calidad y el ritmo de lanzamientos del catálogo propio.
+1. **Producción musical para terceros:** servicio de grabación/mezcla/masterización cobrado por proyecto. **Corrección de expectativa, con base en experiencia real de la industria:** esta línea, por sí sola, normalmente NO deja un margen significativo — los costos de estudio, tiempo de ingeniero/productor y equipo absorben la mayor parte del ingreso. No se debe presentar a un inversionista como un motor de rentabilidad. Su función real dentro del negocio es doble: (a) cubrir costos fijos del estudio (casi punto de equilibrio, no utilidad), y (b) ser la **herramienta de relación** que permite firmar y retener un productor, y descubrir/evaluar artistas externos antes de ofrecerles un contrato de roster — es decir, es más una puerta de entrada al funnel de A&R que una línea de ingreso real. *Volumen realista: 2-4 proyectos externos por mes* (no 100, cifra de agencia del plan anterior). Precio por proyecto y margen real: **supuesto a validar** con cotizaciones de mercado en Medellín — pero el supuesto de partida debe ser margen bajo/nulo, no alto, hasta que se demuestre lo contrario.
 2. **Desarrollo de marca personal para artistas:** servicio de posicionamiento y estrategia de contenido para artistas externos al roster. Volumen y precio: **supuesto a validar**.
 3. **Regalías de catálogo propio:** ingresos de streaming vía Nexus (menos 8% de comisión) de los artistas firmados por el sello. Esta línea depende directamente de la **inversión activa del sello en el desarrollo de sus propios artistas** (financiar grabación, video musical y lanzamiento de canciones, no solo prestar el servicio a terceros) — es la línea de ingreso con mayor potencial a largo plazo pero la más lenta de construir, y requiere capital de trabajo propio destinado a esa inversión (ver Modelo Financiero). Esta inversión tiene además un **retorno secundario no financiero**: un lanzamiento exitoso financiado por el sello funciona como vitrina/prueba de la metodología de desarrollo de artista, lo que atrae tanto a nuevos artistas al roster Élite 360 como a nuevos usuarios de los planes de la plataforma — es decir, parte del retorno de esta inversión es marketing/adquisición, no solo la regalía directa. No se proyecta un valor monetario para este efecto (sería especulativo), pero se señala como justificación estratégica adicional de la inversión en catálogo.
 4. **Ingresos del canal de YouTube propio:** monetización publicitaria (AdSense/Content ID) del canal de YouTube del sello, independiente de las regalías de streaming vía Nexus. Volumen de vistas y CPM: **supuesto a validar** — depende del ritmo de publicación de contenido (apalancado en el Content Engine) y del crecimiento organic del canal.
@@ -242,3 +287,42 @@ El mercado colombiano de música grabada crece de forma sostenida y por encima d
 El escenario Dubái se presenta con una lógica distinta y deliberada: no es una réplica del negocio colombiano en otra ciudad, sino una apuesta de **creación de industria**. EAU es la región de mayor crecimiento mundial en música grabada (MENA), tiene un entorno fiscal corporativo favorable, demanda en vivo creciente y verificable por música latina (J Balvin/UNTOLD, Dubai Latin Fest) — y, a la vez, carece por completo de un sello boutique de referencia en ese género y apenas estrena infraestructura de derechos musicales (EMRA, 2025). Para un inversionista, eso significa entrar antes de que exista competencia establecida, no después. **No cuenta hoy con datos de mercado país-específicos ni con infraestructura de regalías con historial comprobado**, así que se presenta como una opción de expansión de alta convicción pero de validación pendiente, no como una alternativa equivalente y lista para ejecutar en el corto plazo sin investigación local adicional.
 
 Las cifras de inversión requerida, estructura de costos, punto de equilibrio y retorno proyectado para cada escenario se desarrollan en el documento **Modelo Financiero IM Music — Sello**, construido exclusivamente con supuestos de volumen reales para un sello de este tamaño y con cada cifra sin fuente verificable marcada explícitamente como pendiente de validación.
+
+---
+
+## 15. ANÁLISIS DOFA
+
+**Fortalezas:**
+- Identidad de marca REBEL LUXURY ya desarrollada y en uso real (no por construir).
+- Content Engine propio ya construido y funcionando — ventaja de costo estructural frente a cualquier sello boutique comparable.
+- Metodología de desarrollo de artista propia del fundador, aplicable a cualquier género/idioma — no depende de un nicho.
+- Conexión directa con la plataforma SaaS: el sello es el caso de uso real que valida y vende el tier Élite 360.
+
+**Debilidades:**
+- Cero artistas firmados a la fecha — todo el catálogo, la reputación de roster y la tracción están por construirse desde cero.
+- Dependencia total del fundador (CEO, legal, ventas, relación con artistas) — riesgo de punto único de falla ya identificado como el riesgo más crítico de la matriz.
+- Varias líneas de ingreso (producción musical, licencias/sync) tienen margen bajo o no comprobado — la rentabilidad real depende casi enteramente de la ocupación del roster Élite 360, un supuesto no validado.
+- Capital y track record limitados frente a sellos multinacionales o fondos especializados en música.
+
+**Oportunidades:**
+- Vacío de mercado para un sello boutique multigénero con tecnología propia, tanto en Medellín (mercado maduro y creciente) como en Dubái (categoría sin crear).
+- Alianza con un streamer y financiamiento de catálogo como palancas de exposición masiva de bajo costo relativo.
+- Expansión futura hacia financiamiento de artistas (ver Sección 16) apalancando la plataforma.
+
+**Amenazas:**
+- Precedentes reales de otros sellos/distribuidores (ver Matriz de Riesgos: casos Lucki vs. Empire, UMG/TuneCore, d4vd, Dr Disrespect) muestran que disputas contractuales, fraude y crisis reputacionales son recurrentes en esta industria, no hipotéticas.
+- Entorno regulatorio inmaduro en Dubái (EMRA sin historial comercial hasta diciembre 2026).
+- Saturación de lanzamientos diarios en plataformas de streaming — competir por atención es cada vez más difícil incluso con buen producto.
+
+---
+
+## 16. OPORTUNIDADES FUTURAS NO DESARROLLADAS
+
+El plan anterior (integrado con la agencia) identificaba varias ideas de proyectos asociados que nunca se desarrollaron ni se investigaron a fondo. Se listan aquí explícitamente para que no se pierdan, pero **ninguna se incluye en las proyecciones financieras de este plan** — son oportunidades a evaluar en el futuro, no compromisos ni líneas de ingreso actuales:
+
+- **Financiamiento de artistas:** el módulo de elegibilidad de financiamiento ya existe en el código de la plataforma SaaS (inspirado en un partnership declarado con Sound Royalties en el material de marketing anterior, no confirmado ni activo). Si se desarrolla, conectaría directamente el sello (quien conoce y desarrolla al artista) con la plataforma (quien ejecuta el financiamiento) — pendiente de validar legal y comercialmente antes de proyectar ingreso.
+- **Escuela de música / alianza con el municipio de Medellín:** idea del plan anterior de una escuela pública o semi-pública de música en asociación con el municipio — sin ningún desarrollo, contacto ni validación a la fecha.
+- **Eventos por plataformas de streaming:** seguimiento y eventos personalizados para artistas basados en su desempeño en plataformas de streaming — concepto mencionado en el plan anterior, sin desarrollar.
+- **Conceptos tipo "Sound de a Tierra" / "Sound of the World":** formatos de evento/branded content inspirados en conceptos similares a "W Sound" de WestCol, uno enfocado en artistas colombianos y otro en artistas extranjeros — mencionados en el plan anterior como ideas, sin ningún desarrollo, derecho de uso del formato, ni validación legal de que un concepto así se pueda replicar sin infringir derechos de terceros.
+
+Estas cuatro ideas se heredan del plan anterior únicamente como **registro de oportunidades a explorar**, no como parte del modelo de negocio actual.

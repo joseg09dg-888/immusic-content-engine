@@ -6,23 +6,32 @@ Acompaña a `modelo_financiero_sello.xlsx`. Versión 3: estructura de ingresos d
 
 Se agregó un CAPEX único de setup de transmisión (cámara + capturadora + micrófono + kit de luces) para firmar/apoyar a un creador de contenido en vivo a cambio de exposición de marca/roster: **$3,000,000 COP (Medellín) / AED 2,623 (Dubái)**, ambos marcados como **supuesto conservador — no hay streamer identificado ni cotización real**. No se modela ningún ingreso garantizado de esta línea: el retorno esperado es marketing/exposición, cualitativo. Se deja una fila de **memo** (NO sumada a Ingresos Totales ni a TIR/VAN) con un upside opcional muy conservador, solo por si se llegara a negociar un % de los ingresos del streamer — explícitamente marcado como no garantizado.
 
+## Nuevo OPEX: 3 roles humanos (Comunicadora, Filmmaker/Editor IA, Diseñadora)
+
+Se agregaron al equipo (el principio lean de marketing/video 100% automatizado se mantiene, pero estos 3 roles cubren dirección de estrategia y trabajo bespoke que el Content Engine no hace):
+- **Comunicadora / Estrategia de Contenido** (fijo/part-time): ajustada por analogía al Social Media Manager ya existente — $2,000,000 COP/mes / AED 6,000/mes, **sin cotización propia independiente**.
+- **Filmmaker / Editor con IA** (freelance, ~1.5 proyectos/mes): $1,200,000 COP/mes / AED 1,049/mes, **estimación conservadora sin cotización real**.
+- **Diseñadora Gráfica** (freelance, ~1.5 proyectos/mes): $750,000 COP/mes / AED 656/mes, **estimación conservadora sin cotización real**.
+
+Este OPEX nuevo pesa doble en el modelo: sube el gasto mensual recurrente **y** sube el capital de trabajo (6 meses de OPEX), por lo que el NTI sube más de lo que parece a primera vista.
+
 ## Medellín, Colombia (COP)
 
-- **Inversión requerida (NTI):** $186,575,000 COP (~USD $44,400) — subió ~$3.45M por el CAPEX de la alianza con streamer (con imprevistos).
+- **Inversión requerida (NTI):** $210,275,000 COP (~USD $50,100) — subió $23.7M por los 3 roles nuevos (CAPEX del streamer ya incluido también).
 - **Roster:** crece de 2 artistas (Año 1) a 15 (Año 5) — el tope duro definido. Ocupación del plan Marca 360 (qué % del roster paga el plan completo): 30% → 70% a lo largo de 5 años, **supuesto propio, no dato de mercado**.
-- **Año 1:** Ingresos $445.5M, EBITDA $129.5M, Utilidad Neta $72.0M.
-- **Año 5:** Ingresos $2,335.4M, EBITDA $1,781.4M, Utilidad Neta $1,145.7M.
-- **VAN (30% descuento): $853.6M COP positivo. TIR: 123.9%** (bajó marginalmente por el CAPEX adicional del streamer, cambio no material).
-- **Lectura honesta:** esta TIR es alta porque el precio de Marca 360 ($2,999.99 USD/mes/artista = ~$36,000 USD/año) es un precio real y alto del producto, no una fantasía inventada — pero **todo el resultado depende de poder cobrarlo de forma sostenida a artistas emergentes/boutique**, que es exactamente lo que NO está validado comercialmente. Si la ocupación real resulta menor que el supuesto (30%→70%), o si estos artistas no pueden pagar ese ticket sin financiamiento, el resultado cae con fuerza. Esta es la variable más importante a validar de todo el modelo.
+- **Año 1:** Ingresos $445.5M, EBITDA $82.1M (bajó de $129.5M, -36.6%), Utilidad Neta $40.7M (bajó de $71.5M, -43%).
+- **Año 5:** Ingresos $2,335.4M, EBITDA $1,716.9M, Utilidad Neta $1,103.4M.
+- **VAN (30% descuento): $745.2M COP positivo (bajó de $853.6M). TIR: 104.2%** (bajó de 123.9% — una caída real y material, no marginal, pero el negocio sigue siendo fuertemente rentable bajo estos supuestos).
+- **Lectura honesta:** el impacto de estos 3 roles SÍ es material (no un redondeo), especialmente en Año 1 donde la utilidad neta cae casi a la mitad. El negocio absorbe el golpe porque sigue apalancado en el mismo supuesto de fondo (ocupación del plan Marca 360 a $2,999.99 USD/mes/artista) — ese sigue siendo, con mucho, el supuesto más determinante de todo el modelo, más que cualquier línea de OPEX.
 
 ## Dubái, EAU (AED)
 
-- **Inversión requerida (NTI):** AED 312,276 (~USD $85,000) — incluye el CAPEX convertido de la alianza con streamer.
+- **Inversión requerida (NTI):** AED 358,506 (~USD $97,600) — subió AED 46,230 (+14.9%) por los 3 roles nuevos.
 - **Roster:** crece de 1 artista (Año 1) a 7 (Año 5) — mucho más lento que Colombia, sin escena local. Ocupación Marca 360: 15% → 55%, más conservadora que Colombia.
-- **Año 1:** Ingresos AED 120,262, EBITDA -AED 300,978, Utilidad Neta -AED 324,940.
-- **Año 5:** Ingresos AED 870,882, EBITDA +AED 253,129, Utilidad Neta +AED 229,167 — **primer año con resultado positivo**.
-- **VAN (25% descuento): -AED 703,025. TIR: no calculable** (los flujos acumulados descontados nunca llegan a cero en el horizonte de 5 años).
-- **Lectura honesta:** el escenario Dubái mejora sustancialmente frente a la versión anterior de este modelo gracias al precio real de Marca 360, y de hecho cruza a resultado positivo en el Año 5 — pero el VAN acumulado de los 5 años sigue siendo negativo y la TIR sigue sin ser calculable. No es una propuesta claramente viable dentro de este horizonte; sería distinto si se evaluara a 7-8 años, pero eso no se modeló aquí.
+- **Año 1:** Ingresos AED 120,262, EBITDA -AED 393,438 (empeoró de -AED 300,978), Utilidad Neta -AED 418,003.
+- **Año 5:** Ingresos AED 870,882, EBITDA +AED 136,400 (bajó de +AED 253,129, casi a la mitad), Utilidad Neta +AED 111,835 — **sigue siendo el único año positivo**.
+- **VAN (25% descuento): -AED 1,025,510 (empeoró de -AED 706,041). TIR: sigue sin ser calculable.**
+- **Lectura honesta:** el escenario Dubái se aleja más de la viabilidad con este OPEX adicional — el margen de maniobra que tenía (llegar a positivo en Año 5) se reduce a la mitad, y el VAN acumulado empeora un 45%. Si se insiste en el escenario Dubái con el mismo equipo full-time ampliado, el caso de negocio se debilita; valdría la pena evaluar una versión aún más lean para esta sede específicamente (ej. sin Comunicadora dedicada, o compartiendo el rol con Colombia de forma remota) antes de presentarlo a un inversionista.
 
 ## Qué es un dato real confirmado vs. qué sigue siendo supuesto
 
