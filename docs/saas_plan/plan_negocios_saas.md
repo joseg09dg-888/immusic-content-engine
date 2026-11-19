@@ -2,11 +2,11 @@
 
 ## 1. Resumen Ejecutivo
 
-IM Music — Elite Artist Platform es una plataforma SaaS de distribución musical digital, nacida dentro del ecosistema de IM Music (el sello discográfico) como una herramienta propia que ahora se constituye en un negocio independiente y escalable. A diferencia de los distribuidores DIY genéricos (DistroKid, TuneCore, CD Baby, UnitedMasters), IM Music Platform integra en un solo producto: distribución a las plataformas de streaming principales, administración de regalías y splits, un módulo de evaluación de elegibilidad para financiamiento de artistas, un marketplace de beats, tracking de certificaciones RIAA y un agente legal con IA — todo pensado desde y para el mercado de artistas independientes latinoamericanos, con una pasarela de pago local (Wompi, Colombia) además de Stripe.
+IM Music — Elite Artist Platform es una plataforma SaaS de distribución musical digital de **vocación global desde el día uno**, nacida dentro del ecosistema de IM Music (el sello discográfico) como una herramienta propia que ahora se constituye en un negocio independiente y escalable. A diferencia de los distribuidores DIY genéricos (DistroKid, TuneCore, CD Baby, UnitedMasters), IM Music Platform integra en un solo producto: distribución a las plataformas de streaming principales, administración de regalías y splits, un módulo de evaluación de elegibilidad para financiamiento de artistas, un marketplace de beats, tracking de certificaciones RIAA y un agente legal con IA. Los planes Básico y Pro son autoservicio puro: **cualquier artista en cualquier país puede suscribirse en línea desde el lanzamiento, sin restricción geográfica ni de género** — la pasarela de pago local (Wompi, Colombia) es una ventaja adicional para el mercado LatAm, además de Stripe para el resto del mundo, no una limitación de alcance.
 
 **Estado real del producto:** existe hoy un backend funcional (Node.js/Express/TypeScript, PostgreSQL vía Neon) y un frontend (React/Vite) con la mayoría de estos módulos ya codificados — no es solo una idea en papel. Sin embargo, el producto **no está en producción, no ha pasado por QA formal, no tiene revisión legal de sus términos de servicio**, y el código tiene dos definiciones de precios distintas en archivos separados que deben consolidarse antes de publicar nada (ver sección 5 para la estructura real de 3 planes que sí está completa). Este plan presenta la oportunidad de negocio y la hoja de ruta para llevarlo de prototipo funcional a producto lanzable.
 
-El sello IM Music actúa como primer cliente ancla y caso de uso real: sus propios artistas (incluyendo el ya firmado "LA S — El Diablo del Chanteo") pueden ser los primeros usuarios reales de la plataforma antes de abrirla al mercado.
+El sello IM Music, aunque todavía no tiene artistas firmados (ver Plan de Negocios del Sello), actúa como primer cliente ancla planeado: los primeros artistas que el sello firme serán los primeros usuarios reales de la plataforma antes de abrirla al mercado general — esto es parte de la hoja de ruta, no un hecho ya consumado.
 
 ### Etapa de Financiamiento Recomendada: PRE-SEED
 
@@ -20,7 +20,7 @@ Con base en la auditoría real del producto (prototipo funcional backend+fronten
 
 **Qué es:** una plataforma SaaS de autoservicio para que artistas y sellos independientes distribuyan su música a las plataformas de streaming, administren sus regalías y colaboraciones, y accedan a herramientas adicionales de crecimiento y financiamiento — todo desde un solo panel.
 
-**Para quién:** artistas independientes (principalmente urbano/latino en una primera fase), productores que quieren vender beats, y sellos pequeños que gestionan varios artistas bajo una sola cuenta.
+**Para quién:** artistas independientes de cualquier género, idioma y país — no está limitado a urbano/latino —, productores que quieren vender beats, y sellos pequeños que gestionan varios artistas bajo una sola cuenta. El go-to-market (sección 7) empieza en Medellín/LatAm porque ahí está la red y credibilidad inicial del equipo, no porque el producto esté restringido a esa audiencia.
 
 **Estado real de desarrollo:**
 - Backend funcional con integración real a la API de Spotify, Stripe y Wompi.
@@ -41,7 +41,7 @@ Lo correcto y honesto es presentar esto como **arquitectura blockchain-ready**: 
 
 **SAM — Artistas independientes LatAm/Colombia:** Colombia facturó ~USD $105.2M en música grabada en 2025 (+17.9%, IFPI 2026, ya verificado en el plan del sello), con 78% proveniente de streaming. El universo de artistas emergentes colombianos (16-31 años) se estimó en el plan de negocio viejo en ~35.000 a nivel nacional y ~5.250 en Medellín (estimación propia del plan anterior basada en cruces de DANE/SAYCO — **no es una cifra oficial, es un supuesto heredado, válido como orden de magnitud pero a validar**).
 
-**SOM — Lanzamiento inicial:** fase 1 cerrada al roster propio de IM Music (caso de uso real, bajo riesgo). Fase 2: artistas independientes de Medellín, apalancando la red del propio sello y su comunidad (ej. grupo de Facebook "Red de Músicos en Medellín", 10k seguidores, ya usado como canal de promoción del libro del sello). No hay una cifra de penetración de mercado proyectada todavía — se recomienda definirla en el Modelo Financiero con supuestos conservadores (decenas de artistas en año 1, no miles).
+**SOM — Lanzamiento inicial:** aunque Básico y Pro están disponibles globalmente desde el lanzamiento (autoservicio, sin restricción geográfica), el ESFUERZO de marketing/ventas se concentra por fases para no diluir un presupuesto pequeño: fase 1 cerrada al roster propio de IM Music, una vez el sello firme sus primeros artistas (caso de uso real, bajo riesgo). Fase 2: artistas independientes de Medellín, apalancando la red del propio sello y su comunidad (ej. grupo de Facebook "Red de Músicos en Medellín", 10k seguidores, ya usado como canal de promoción del libro del sello). Fuera de ese foco inicial de marketing, cualquier artista del mundo que llegue por canales orgánicos (búsqueda, referidos, redes) puede suscribirse igual. No hay una cifra de penetración de mercado proyectada todavía — se recomienda definirla en el Modelo Financiero con supuestos conservadores (decenas de artistas en año 1, no miles).
 
 ## 4. Análisis Competitivo
 
@@ -87,7 +87,7 @@ El Modelo Financiero debe proyectar Básico/Pro como una curva de adopción masi
 
 ## 7. Estrategia Go-to-Market
 
-**Fase 1 — Roster propio del sello:** usar a los artistas ya firmados por IM Music como primeros usuarios reales, antes de abrir la plataforma al público. Permite validar flujos de pago, distribución y soporte con bajo riesgo reputacional.
+**Fase 1 — Roster propio del sello:** una vez el sello firme sus primeros artistas (ver Plan de Negocios del Sello — hoy no hay ninguno firmado todavía), usarlos como primeros usuarios reales de la plataforma antes de abrirla al público. Permite validar flujos de pago, distribución y soporte con bajo riesgo reputacional. La plataforma en sí (Básico/Pro) no espera a esta fase para aceptar usuarios externos — es la prioridad de foco comercial, no una puerta cerrada.
 
 **Fase 2 — Músicos independientes en Medellín/Colombia:** apalancar la red del sello (comunidad "Red de Músicos en Medellín", estudios locales, relaciones ya construidas en el plan de afiliados del libro del sello) para onboarding orgánico antes de pagar adquisición.
 

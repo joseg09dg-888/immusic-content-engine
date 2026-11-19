@@ -1,0 +1,122 @@
+,,,,,
+"Explicación de las Columnas:
+
+Columna A (ID del Riesgo):Número de identificación único para cada riesgo.
+
+Columna B (Descripción del Riesgo):Descripción detallada del riesgo.
+
+Columna C (Área de Impacto):Área de la empresa que se vería afectada por el riesgo (ej., Finanzas, Reputación, Operaciones, Legal, etc.).
+
+Columna D (Probabilidad):Probabilidad de que el riesgo ocurra (Alta, Media, Baja).
+
+Columna E (Impacto):Impacto potencial del riesgo (Severo, Moderado, Leve).
+
+Columna F (Nivel de Riesgo):Nivel de riesgo calculado combinando la probabilidad y el impacto (Alto, Medio, Bajo). Utilice esta fórmula en Excel: ""=IF(D2=""Alta"",IF(E2=""Severo"",""Alto"",IF(E2=""Moderado"",""Alto"",""Medio"")),IF(D2=""Media"",IF(E2=""Severo"",""Alto"",IF(E2=""Moderado"",""Medio"",""Bajo"")),""Bajo""))""
+
+Columna G (Estrategia de Mitigación):Estrategia a seguir para mitigar el riesgo (Evitar, Transferir, Mitigar, Aceptar).
+
+Columna H (Plan de Contingencia):Planifique a seguir si el riesgo se materializa (acciones específicas a tomar).
+
+Columna I (Responsable de la Mitigación):Persona o departamento responsable de implementar las medidas de mitigación.
+
+Columna J (Fecha de Implementación):Fecha en la que se implementaron las medidas de mitigación.
+
+Columna K (Fecha de Revisión):Fecha programada para revisar la efectividad de las medidas de mitigación.
+
+Columna L (Efectividad de la Mitigación):Evaluación de la efectividad de las medidas implementadas (Efectiva, En Proceso, Inefectiva).
+
+Columna M (Notas/Comentarios):Cualquier nota o comentario adicional sobre el riesgo o las medidas de mitigación.
+
+III. Metodologías y Herramientas
+
+Matriz de Riesgos (Probabilidad vs. Impacto):
+
+Utilizar una escala de 3 niveles para la probabilidad (Alta, Media, Baja) y el impacto (Severo, Moderado, Leve).
+
+Definir los criterios para asignar los niveles de probabilidad e impacto.
+
+Análisis FODA:
+
+Utilizar el análisis FODA para identificar los riesgos y oportunidades internos y externos.
+
+Software de Gestión de Riesgos (opcional):
+
+Si el volumen de riesgos es elevado, considere utilizar un software especializado para la gestión de riesgos (ej., RiskWatch, Cura).",,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,

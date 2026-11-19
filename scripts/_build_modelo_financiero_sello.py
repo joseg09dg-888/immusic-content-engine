@@ -46,6 +46,8 @@ COL = {
          "Anclado en precio unitario del plan anterior ($2.75M c/u); se excluye la estacion de edicion dedicada de $10M porque la edicion ya esta scripteada/automatizada."),
         ("Adecuacion basica de oficina (mobiliario)", 5_000_000,
          "Supuesto a validar: estimacion propia, sin cotizacion."),
+        ("Alianza con streamer: setup de transmision (camara + capturadora + microfono + kit de luces)", 3_000_000,
+         "SUPUESTO CONSERVADOR: no hay streamer identificado ni cotizacion real -- es una estimacion generica de equipo basico de streaming. El retorno esperado de esta inversion es exposicion de marca/roster en contenido en vivo (cualitativo), NO un ingreso garantizado. Ver linea de upside opcional no garantizado en Ingresos."),
     ],
     "imprevistos_pct": 0.15,
     "capital_trabajo_meses": 6,
