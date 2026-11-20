@@ -1,5 +1,23 @@
 # Modelo Financiero IM Music — Sello (notas en lenguaje simple)
 
+## Corrección de arriendo: el espacio tiene que caber 4 funciones, no solo oficina
+
+Gap real detectado por el usuario: el arriendo modelado ($2M COP/mes) era explícitamente "espacio reducido", pero el sello necesita un espacio que quepa oficina administrativa + estudio de grabación + área de foto/contenido + área de streaming/transmisión en vivo (para el streamer aliado y conciertos virtuales). $2M no alcanza.
+
+- **Medellín:** subió a **$5.000.000 COP/mes** (punto medio del rango real de mercado que dio el usuario: $4M-$9M COP/mes según ubicación/tamaño), flagueado como supuesto a validar con ese rango explícito en Supuestos_COL.
+- **Dubái:** subió a **AED 17.500/mes**, con referencia real encontrada: Al Quoz, el distrito de bodegas/estudios creativos de Dubái (galerías, estudios fotográficos, showrooms — calza con lo que necesita el sello), unidades de 2.100-2.700 pies² por AED 15.800-19.200/mes, antes de IVA 5% y comisión de agencia (fuentes: Dubizzle y PropertyFinder, listados 2026). Se agregó también la **comisión de agencia inmobiliaria** (~10% de la renta anual, práctica común en Dubái) como CAPEX único de AED 21.000.
+- **No se modeló compra de sede propia** (~$3.000M COP) — es 12+ veces toda la Necesidad Total de Inversión actual (~$240M), decisión de Año 4-5+ con EBITDA acumulado real, no algo para el Año 1.
+
+### Impacto honesto
+
+**Medellín:** NTI $240.45M→**$258.45M COP**. Año1 EBITDA $172.99M→**$136.99M** (-21%), Utilidad Neta $97.6M→**$74.2M**. VAN $995.6M→**$913.3M**, TIR 119.6%→**107.3%**.
+
+**Medellín reducido (Escenario B):** NTI $222.58M (subió de $204.58M). VAN $1,014.9M, TIR 126.2% (bajó de 141.9%).
+
+**Dubái:** NTI AED 438,583→**AED 546,283**. Año5 EBITDA AED 236,458→**AED 25,498** (-89%), y lo más importante: **Utilidad Neta Año5 pasa de +AED 208,831 a -AED 6,959** — **Dubái ya no tiene NINGÚN año con utilidad neta positiva en todo el horizonte de 5 años** bajo el modelo completo (equipo fijo desde el día 1). VAN -AED 1,110,909→**-AED 1,712,425** (empeoró 54%).
+
+**Lectura honesta:** este es, otra vez, el mismo patrón de todo este modelo — cada corrección de costo real hace que Dubái se vea peor, nunca mejor, porque los costos reales ahí (ahora también el arriendo) son sistemáticamente más altos que lo que el modelo anterior asumía. El escenario de Dubái completo (equipo fijo local desde el día 1) queda cada vez más lejos de ser defendible frente a un inversionista sin: (a) validar demanda real, o (b) usar el modelo Dubái Lean/por fases en su lugar (que sí es positivo, ver `modelo_financiero_sello_dubai_lean_notas.md`).
+
 ## Reorganización del workbook (formato/estructura, sin cambiar ningún número)
 
 El usuario reportó que `modelo_financiero_sello.xlsx` era ilegible comparado con el Excel de referencia (`financiero_viejo.xlsx`). Se corrigieron 4 problemas reales:

@@ -75,8 +75,8 @@ COL = {
              "Cifra ya es costo total. Mismo cambio de estructura y misma razon que el Filmmaker. Supuesto a validar: referencia salarial propia junior-mid, sin cotizacion dura."),
         ],
         "ADECUACIONES Y ARRIENDO": [
-            ("Arriendo (espacio reducido vs. oficina+estudio de agencia)", 2_000_000,
-             "Reducido vs. los $6.5M/mes del plan anterior (escala de agencia); supuesto a validar."),
+            ("Arriendo (espacio que cubre oficina + estudio de grabacion + area de foto/contenido + area de streaming/transmision en vivo)", 5_000_000,
+             "CORREGIDO: el gap real es que el espacio necesita caber las 4 funciones (oficina administrativa, estudio de grabacion -- CAPEX de audio ya presupuestado, area de fotografia/contenido visual, y area de streaming/transmision en vivo para el streamer aliado y conciertos virtuales). Supuesto a validar, RANGO REAL DE MERCADO $4M-$9M COP/mes en Medellin segun el usuario, dependiendo de ubicacion y tamano -- se usa $5,000,000 como punto medio razonable, no el piso de $2M que subestimaba el espacio necesario."),
         ],
         "HERRAMIENTAS Y TECNOLOGIA": [
             ("Notion (gestion de proyectos y documentacion)", 67_200, "Supuesto: plan Team, ~2 puestos, sin cotizacion exacta."),
@@ -181,6 +181,8 @@ DXB = {
          "NO CONFIRMADO: rangos de fuentes de baja confiabilidad, punto medio de cada rango."),
         ("Alianza con streamer: setup de transmision -- convertido de Colombia", 2_623,
          "SUPUESTO CONSERVADOR: no hay streamer identificado ni cotizacion real."),
+        ("Comision de agencia inmobiliaria (one-time, ~10% de la renta anual de Al Quoz)", 21_000,
+         "CONFIRMADO como practica comun del mercado de Dubai (comision de agencia ~10% de la renta anual, pagada una sola vez al firmar) -- calculada sobre AED 17.500/mes x12 = AED 210.000/ano x10%. Ver nota de arriendo en Supuestos_DXB para la fuente de Al Quoz."),
     ],
     "imprevistos_pct": 0.15,
     "capital_trabajo_meses": 6,
@@ -200,8 +202,8 @@ DXB = {
              "Mismo cambio de estructura que el Filmmaker. NO CONFIRMADO: posicionado por analogia."),
         ],
         "ADECUACIONES Y ARRIENDO": [
-            ("Arriendo (unidad pequena, ~150 sqft, tarifa de micro-unidad)", 3_575,
-             "CONFIRMADO el dato de tarifa por sqft (Nikoliers 2024, rango AED 283-290/sqft/ano); el tamano de 150 sqft es supuesto propio."),
+            ("Arriendo (Al Quoz: oficina + estudio + area de foto/contenido + area de streaming)", 17_500,
+             "CORREGIDO con referencia real reciente: Al Quoz, el distrito de bodegas/estudios creativos de Dubai (galerias, estudios fotograficos, showrooms), tiene unidades de 2.100-2.700 pies2 por AED 15.800-19.200/mes, antes de IVA 5% y comision de agencia ~10% unica al firmar. Fuentes: listados Dubizzle y PropertyFinder, pisos de 2026. Se usa AED 17.500/mes como punto medio del rango real. Reemplaza el supuesto anterior de micro-unidad de 150 sqft, que no cabia oficina+estudio+foto+streaming."),
         ],
         "HERRAMIENTAS Y TECNOLOGIA": [
             ("Notion", 59, "NO CONFIRMADO: conversion directa, sin cotizacion de EAU."),
