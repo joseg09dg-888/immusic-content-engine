@@ -23,7 +23,7 @@ Los Coautores manifiestan que han participado creativamente en la elaboración d
 
 | N.º | Nombre | Identificación | Rol | Sociedad de gestión colectiva | % Participación |
 |---|---|---|---|---|---|
-| 1 | IM MUSIC S.A.S. | NIT [NIT] | Sello / productor | — | [%] |
+| 1 | IM MUSIC S.A.S. | NIT [NIT] | Sello / productor | — | [% según negociación — referencia interna: 10-20% cuando IM Music cofinancia producción/grabación sin coescribir la letra; 0% cuando solo distribuye sin inversión creativa o financiera en la obra; definir el % exacto caso por caso en el anexo de cada proyecto] |
 | 2 | [NOMBRE] | [DOCUMENTO] | [Compositor / Productor / etc.] | SAYCO / ACINPRO (según corresponda) | [%] |
 | 3 | | | | | |
 
