@@ -33,6 +33,10 @@ La suma total de participaciones debe ser 100%. Estos porcentajes son vinculante
 
 Los porcentajes de la sección 3 determinan la participación de cada Coautor en: regalías de autor (editoriales), regalías mecánicas, regalías por ejecución pública, regalías por sincronización, y cualquier otro ingreso derivado de la explotación de la Obra. Cualquier modificación de este reparto requiere acuerdo por escrito firmado por todos los Coautores.
 
+**Este Acuerdo, por sí solo, no genera pago de regalías.** Firmarlo es necesario pero no suficiente: es un acuerdo privado entre los Coautores sobre cómo repartirse lo que llegue a cobrarse, no un trámite de cobro. Para que los porcentajes acordados aquí efectivamente generen pago, cada Obra debe además declararse formalmente ante **SAYCO** (sociedad de gestión colectiva de autores y compositores — regalías de autor, mecánicas y de ejecución pública, mediante el formato de Declaración de Obra PO02-F19, usando este Acuerdo como soporte de los porcentajes) y, cuando aplique a derechos conexos de intérprete o productor fonográfico, ante **ACINPRO**. La DNDA, SAYCO y ACINPRO son tres registros distintos: la DNDA certifica autoría con fecha cierta (no recauda regalías), SAYCO recauda regalías de autor/compositor, y ACINPRO recauda derechos conexos — ninguno sustituye a los otros.
+
+Nota sobre coautoría (Ley 23 de 1982): el artículo 21 establece que, en obras realizadas en colaboración, el término de protección patrimonial (80 años) se cuenta desde la muerte del **último** co-autor, no de cada uno por separado. El artículo 30 establece que los derechos morales (ver Sección 7) son perpetuos, inalienables e irrenunciables — ceder el 100% de los derechos patrimoniales aquí no elimina el derecho moral de ningún Coautor a ser reconocido como tal.
+
 ## 5. EXPLOTACIÓN DE LA OBRA
 
 Ninguna explotación comercial, cesión de derechos o licencia de la Obra podrá realizarse sin la aprobación unánime de los Coautores, salvo acuerdo en contrario, y sin perjuicio del acuerdo de administración y distribución que IM Music tenga vigente con Nexus (comisión del 8%) para la explotación ordinaria vía plataformas de streaming.
