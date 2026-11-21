@@ -1,6 +1,6 @@
 # Matriz de Riesgos IM Music — Notas
 
-61 riesgos específicos en 8 categorías (Industria, Mercado, Político/Regulatorio, Financiero, Marca, Marketing, Administrativo/Comercial, Legal), cubriendo tanto el Sello como la Plataforma SaaS, con el formato de la matriz de referencia del usuario (ID, Probabilidad×Impacto, Estrategia de Mitigación, Plan de Contingencia, Responsable, fechas, Efectividad, Notas).
+62 riesgos específicos en 8 categorías (Industria, Mercado, Político/Regulatorio, Financiero, Marca, Marketing, Administrativo/Comercial, Legal), cubriendo tanto el Sello como la Plataforma SaaS, con el formato de la matriz de referencia del usuario (ID, Probabilidad×Impacto, Estrategia de Mitigación, Plan de Contingencia, Responsable, fechas, Efectividad, Notas).
 
 ## Top 5 riesgos críticos (score más alto)
 
@@ -40,6 +40,10 @@ El sello no tiene artistas firmados y la plataforma es un prototipo pre-producci
 ## Roles usados (solo los reales del proyecto)
 
 CEO/Director del Sello (el fundador, cubre legal rutinario), Gerente Comercial, Project Manager (Élite 360), Productor Musical/Ingeniero de Sonido, Contador (externo), Desarrollador full-stack (plataforma), Asesor Legal Externo (casos puntuales). No se usaron roles del archivo de referencia viejo que ya no existen (Traficker, Gerente Administrativo/RRHH, Director Artístico, etc.).
+
+## Riesgo agregado en auditoría de consistencia: R-LEG-011
+
+Se detectó que la matriz no tenía ningún riesgo sobre fuga de la metodología propietaria a través de Filmmaker, Diseñadora Gráfica y Comunicadora — los 3 roles que pasaron de freelance a planta fija precisamente por tener acceso a esa metodología (ver `plan_negocios_sello.md`). R-LEG-005 solo cubre el registro de marca ante la SIC, no esto. Se agregó **R-LEG-011** (Probabilidad 2 × Impacto 5 = Nivel 10), con mitigación anclada en el Acuerdo de Confidencialidad y la protección de secreto empresarial (Decisión 486) ya existentes en el Data Room.
 
 ## Estructura del archivo
 
