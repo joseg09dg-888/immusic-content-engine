@@ -153,63 +153,141 @@ Esta sección no es una lista decorativa. Cada caso real tiene al menos una deci
 
 Esta sección complementa el párrafo general de "Competencia" de las Secciones 5.1 y 5.2 con un análisis más profundo de competidores específicos en cuatro frentes: Medellín, Colombia nacional, mundial, y Dubái/EAU. Cada DOFA es del competidor como negocio propio (sus propias fortalezas, oportunidades, debilidades y amenazas), no un DOFA de IM Music frente a él. Donde la evidencia lo permite, se anota brevemente la implicación para IM Music. Cuando la información pública verificable no alcanza para construir un DOFA completo y honesto, este documento lo dice explícitamente en vez de rellenarlo con contenido genérico.
 
-**Nota metodológica:** la investigación se hizo por búsqueda web en noviembre de 2026. Para negocios pequeños o locales sin presencia digital fuerte, la ausencia de resultados no prueba que el negocio no exista — prueba que no se pudo verificar en esta ronda de investigación.
+**Nota metodológica:** la investigación se hizo por búsqueda web en noviembre de 2026, en dos rondas — la segunda con técnicas más profundas (registro mercantil, LinkedIn, Spotify/sitios oficiales) después de que el fundador confirmara que los 3 competidores de Medellín son sellos reales aunque no aparecieran así en la primera búsqueda superficial. Para negocios pequeños o locales sin presencia digital fuerte, la ausencia de resultados no prueba que el negocio no exista — prueba que no se pudo verificar en esta ronda de investigación. Cada entrada cierra con una conclusión **"Cómo superar a [competidor]"**: una acción concreta y específica para IM Music basada en una brecha real detectada, no una generalidad.
+
+**Estructura de 6 dimensiones por competidor:** cada entrada se analiza en Administrativo, Financiero, Legal, Comercial, Marketing y Tecnología, seguido del DOFA y la conclusión "Cómo superarlo". Donde falta evidencia pública verificable en una dimensión específica, se dice explícitamente en esa dimensión en vez de omitirla o rellenarla con contenido genérico.
 
 #### Medellín — los 3 competidores puntuales señalados por el fundador
 
-**Vion Music.** Se encontró una cuenta de Instagram, `@vionmusic`, con aproximadamente 21.000 seguidores según un agregador externo (socialveins.com, dato de tercero, no verificado directamente), ubicada en Medellín. Esa misma fuente la describe como cuenta de "creador de contenido general", no confirma que sea un sello discográfico, casa productora o management de artistas. **No se encontró evidencia suficiente para construir un DOFA real de este competidor.** No se sabe si es un sello, qué artistas atiende, ni su modelo de negocio. Se recomienda verificar directamente en Instagram (bio, publicaciones, artistas etiquetados) antes de tratarlo como competidor confirmado.
+**Vion Music** (razón social probable: Vion Music Network S.A.S.)
 
-**Kaital Music.** No se encontró ningún resultado verificable con este nombre ni con las variantes de ortografía probadas (Kaytal, Caital), combinado con Medellín, sello, productora o Instagram. **No se puede construir ningún DOFA — no hay evidencia pública indexada de que este negocio exista con ese nombre exacto.** Puede ser un proyecto muy reciente, de bajísimo perfil público, o el nombre puede estar mal escrito o ser coloquial/interno (ej. un apodo que usan en la escena local sin presencia web indexada). Se recomienda que el fundador confirme la ortografía exacta o el handle de redes sociales para una segunda búsqueda dirigida.
+| Dimensión | Hallazgos |
+|---|---|
+| **Administrativo** | Fundada por "Christian Hernández" (nombre solo aparece en la versión en español del sitio oficial, no en la versión en inglés). Sin tamaño de equipo, organigrama o estructura de gestión encontrados — LinkedIn de la empresa devolvió error de acceso (403), no se pudo confirmar headcount por esa vía. |
+| **Financiero** | Clasificada como microempresa (Datacrédito Empresas, agregador privado). Sin capital social, ingresos o inversión levantada encontrados en ninguna fuente pública. |
+| **Legal** | Constituida el 16-07-2015 en Medellín (dirección Calle 24 39 07) — dato de agregador privado, pendiente de verificar en RUES oficial (rues.org.co). Sin evidencia de contratos tipo artista; no se encontró ningún artista propio bajo contrato. |
+| **Comercial** | Distribución global a 250+ plataformas vía plataforma propia (app.vionmusic.co); gestión y optimización de canales de YouTube (MCN); "producción y cinematografía profesional" para contenido; consultoría personalizada; "VION CLUB" (cursos y mentoría); programa VIP de "song pitching a majors" para sellos/estudios B2B. Sin precios públicos en ningún servicio. |
+| **Marketing** | Sitio bilingüe ES/EN con inconsistencias de traducción entre versiones (el nombre del fundador solo aparece en una). Reclama "más de 15 años de experiencia", cifra que no cuadra con la constitución legal de 2015 (11 años) — posible exageración de marketing o experiencia previa del fundador antes de constituir la empresa. Cero artistas, lanzamientos, cifras de streams o testimonios nombrados en todo el sitio. |
+| **Tecnología** | Plataforma de distribución propia (app.vionmusic.co). Ninguna mención de IA en ninguna parte del sitio oficial. |
 
-**Palma Production(s).** Es el único de los tres con evidencia real, aunque limitada: según Al Navío, fue "el primer estudio dedicado en exclusiva al nuevo género" urbano que surgió en Medellín, y sus primeros éxitos nacionales llegaron a través de artistas del colectivo "El Flow de Mi Tierra". No se encontró fundador, año exacto de fundación, catálogo actual, ni confirmación de si sigue operando hoy.
+| | Vion Music — DOFA |
+|---|---|
+| **Fortalezas** | Operación B2B ya resuelta (distribución propia a 250+ plataformas, MCN de YouTube) con alcance binacional Medellín-Tampa — más infraestructura de distribución construida que IM Music hoy. |
+| **Debilidades** | Cero evidencia pública de un artista, catálogo o resultado propio en 11 años de operación — ni un nombre, ni una cifra de streams, ni un caso de éxito en todo su sitio oficial. Sin mención de IA ni de ningún proceso propietario; "producción profesional" es un término genérico sin diferenciación técnica visible. |
+| **Oportunidades** | El programa VIP B2B ("song pitching a majors") sugiere que buscan posicionarse como puente hacia sellos grandes — un nicho de servicios que no compite directamente con el desarrollo de artista propio de IM Music. |
+| **Amenazas** | Su escala de distribución (250+ plataformas, MCN activo) ya resuelve de entrada un problema que a IM Music le toma construir — si decidieran ofrecer desarrollo de marca integral (no solo distribución), competirían directo por el mismo cliente. |
+
+*Cómo superar a Vion Music:* su mayor debilidad verificable es la ausencia total de prueba social — ningún artista, cifra o caso nombrado en 11 años. IM Music debe hacer exactamente lo contrario desde el día uno: publicar métricas y casos reales (como ya hace con Idania Dowman y el libro) de forma visible, porque un cliente que compare ambos sitios encontrará evidencia en uno y un vacío de resultados en el otro.
+
+**Kaital Music → Kapital Music & Entertainment S.A.S.** (confirmado; la ortografía original llevaba a un resultado equivocado)
+
+| Dimensión | Hallazgos |
+|---|---|
+| **Administrativo** | ~5 empleados reportados (EMIS, 2025). Su CEO y fundador, Fredy Marín, murió en accidente de tránsito en 2021 (El Peñol) — un evento de continuidad de liderazgo real, no hipotético, sin que se haya encontrado quién asumió la dirección desde entonces. |
+| **Financiero** | Ventas netas creciendo 58,11% en 2024 (EMIS); utilidad neta reportada por debajo de $1.000 millones COP (Informa Colombia, cifra exacta tras paywall). Sin capital social reportado en las fuentes consultadas. |
+| **Legal** | Kapital Music & Entertainment S.A.S., constituida el 17-04-2013 en Medellín (dirección Carrera 78 32F-21). Sin evidencia pública de contratos formales con artistas, aunque el catálogo histórico sugiere relaciones comerciales estables de largo plazo. |
+| **Comercial** | Sello discográfico y estudio de producción de trap/reggaetón. Catálogo histórico verificado: Jowell y Randy, Arcángel, Kevin Roldán; vínculos actuales: Blessd, Kris R, ROA, Hades666, Luar La L. |
+| **Marketing** | Presencia activa en Facebook, X/Threads y YouTube ("KapitalMusicTv"), se autodescribe como el sello "que define el estándar del trap en Colombia". Sin métricas de alcance de redes encontradas en esta ronda. |
+| **Tecnología** | Ninguna evidencia pública encontrada de uso de IA, plataforma propia, o herramienta tecnológica diferenciadora. |
+
+| | Kapital Music & Entertainment S.A.S. — DOFA |
+|---|---|
+| **Fortalezas** | Catálogo histórico verificable con artistas de impacto real (Arcángel, Kevin Roldán, Blessd) — una credibilidad de marca en la escena urbana de Medellín que IM Music, sin artistas firmados aún, no tiene. Crecimiento de ventas de +58% en 2024 indica negocio activo y en expansión, no estancado. |
+| **Debilidades** | Equipo reportado de solo ~5 personas pese al catálogo — sugiere operación artesanal, no un motor de contenido/marketing escalable; sin evidencia pública de IA, metodología documentada, ni estrategia de contenido sistemática. La pérdida de su CEO fundador en 2021 es un riesgo de continuidad de liderazgo real que ya ocurrió, no hipotético. |
+| **Oportunidades** | Ninguna identificada con evidencia directa en esta ronda — no hay información pública reciente (2025-2026) sobre su estrategia de crecimiento actual. |
+| **Amenazas** | Más de 600 productoras musicales nuevas en Medellín entre 2011 y 2021 (La República) compitiendo por el mismo talento emergente y la misma atención del público urbano. |
+
+*Cómo superar a Kapital Music:* no se puede competir en catálogo histórico (ellos ya tienen a Arcángel y Kevin Roldán, IM Music no tiene artistas firmados). La vía real es la escala de ejecución: un equipo de ~5 personas sin automatización no puede sostener el ritmo de publicación que exige el algoritmo actual (94% de entradas al Billboard Global 200 2025 viralizaron primero en TikTok, dato ya citado en la Sección 4). El Content Engine de IM Music permite publicar ese volumen con un equipo del mismo tamaño o menor — ofrecer explícitamente "la misma calidad de desarrollo, el doble de frecuencia de contenido" como propuesta de valor frente a un competidor con catálogo pero sin ese motor.
+
+**Palma Production(s)**
+
+| Dimensión | Hallazgos |
+|---|---|
+| **Administrativo** | Sin fundador, tamaño de equipo o estructura de gestión confirmados en ninguna fuente consultada. |
+| **Financiero** | Sin datos de capital, ingresos o inversión encontrados en esta ronda. |
+| **Legal** | Sin registro mercantil localizado en Cámara de Comercio de Medellín en esta ronda (la búsqueda por nombre requiere NIT o matrícula exacta, que no se tiene). Sin evidencia de contratos formales con artistas — sus lanzamientos recientes aparecen bajo licencia a terceros, no contratos directos visibles. |
+| **Comercial** | Estudio + sello de género urbano/trap/pop latino/reggaetón. **Hallazgo relevante:** sus lanzamientos recientes aparecen distribuidos "exclusive license to Disetti Music" o vía Jersey Records — no distribuye directamente, depende de acuerdos con otros sellos/distribuidores para llegar a plataformas. |
+| **Marketing** | Reclama 17-18 años de trayectoria, pero sus propias fuentes se contradicen entre sí (X dice "más de 17 años" con la cuenta creada en 2012; YouTube dice "18 años"). Presencia en YouTube/X/Facebook/Apple Music/Deezer, pero sin actividad indexada reciente (2024-2026) encontrada en esta búsqueda. |
+| **Tecnología** | Ninguna evidencia de IA o plataforma propia encontrada. |
 
 | | Palma Production(s) — DOFA parcial (evidencia limitada) |
 |---|---|
-| **Fortalezas** | Ser pionero: el primer estudio dedicado exclusivamente al género urbano naciente en Medellín le da legitimidad histórica y relación temprana con la escena local — un activo de marca que no se puede replicar, solo construir con tiempo. |
-| **Debilidades** | Sin presencia digital indexada reciente (2024-2026) encontrada en esta búsqueda — si la empresa no se actualizó en redes/prensa reciente, sugiere bajo nivel de actividad actual o muy bajo perfil de marketing, justo el punto donde el Content Engine de IM Music es una ventaja estructural. |
+| **Fortalezas** | Ser pionero: el primer estudio dedicado exclusivamente al género urbano naciente en Medellín le da legitimidad histórica y relación temprana con la escena local. |
+| **Debilidades** | Depende de licencias de distribución con terceros (Disetti Music, Jersey Records) en vez de tener su propio acuerdo de distribución — cede margen y control de catálogo que un sello con distribución propia no cede. Sin presencia digital indexada reciente (2024-2026) encontrada en esta búsqueda. |
 | **Oportunidades** | Ninguna identificada con evidencia directa — no hay información suficiente sobre su estrategia actual para inferir hacia dónde podría crecer. |
 | **Amenazas** | Más de 600 productoras musicales nuevas en Medellín entre 2011 y 2021 (La República) — un estudio pionero sin renovación de marca/contenido corre el riesgo real de quedar invisible frente a competidores nuevos con mejor estrategia digital. |
 
-*Implicación para IM Music:* si Palma Production(s) efectivamente tiene baja actividad digital reciente, no es un competidor directo activo hoy — es evidencia a favor de la tesis del plan de que ser pionero en género no es suficiente sin un motor de contenido constante (exactamente el rol del Content Engine).
+*Cómo superar a Palma Production(s):* su dependencia de licencias con terceros (Disetti Music, Jersey Records) para distribuir es la brecha explotable — IM Music ya tiene su propio acuerdo de distribución directo con Nexus (8% de comisión, Sección 1) desde el día uno, sin ceder catálogo ni márgenes a un intermediario adicional. Ofrecer eso como argumento directo a cualquier artista que hoy esté bajo un esquema de licencia similar al de Palma.
 
 #### Colombia nacional
 
-**Rich Music.** Sello independiente fundado en Miami en 2007 por Richard y Joshua Mendez (padre e hijo) junto con Jim Aquino, hoy con roster que incluye a Sech, Dalex, Justin Quiles y Dimelo Flow, y firma de distribución con Warner Music Latina desde 2017 (nominado Latin Label of the Year ese año en los Billboard Latin Music Awards). Confirmado activamente expandiéndose a Colombia, con planes de abrir oficina en Medellín y el productor paisa Animal ya en su roster (fuente: Billboard, PR Newswire).
+**Rich Music**
+
+| Dimensión | Hallazgos |
+|---|---|
+| **Administrativo** | 48 empleados totales (Built In; dato puede no estar actualizado a 2026). Fundado por Richard y Joshua Mendez (padre e hijo) junto con Jim Aquino; nombramientos corporativos ejecutivos reportados en 2021 (David Alvarado, SVP de Operaciones) — estructura con roles ejecutivos formales, no una operación informal. |
+| **Financiero** | Sin cifra de capital levantado o ingresos encontrada en esta ronda (empresa privada, sin perfil financiero público detallado en los resultados). |
+| **Legal** | HQ Miami, fundado 2007. Relación de distribución formal y de largo plazo con Warner Music Latina desde 2017 (nominado Latin Label of the Year ese año) — evidencia de contratos corporativos estables a gran escala. |
+| **Comercial** | Sello discográfico con roster de artistas firmados: Sech, Dalex, Justin Quiles, Dimelo Flow, y el productor paisa Animal. Distribución vía Warner Music Latina. **Tamaño confirmado: 48 empleados totales**, fue reportado expandiéndose a Colombia con planes de abrir oficina en Medellín — **esta segunda ronda de investigación NO encontró evidencia adicional (LinkedIn, prensa 2026) de que esa oficina esté operativa hoy**: sigue siendo un anuncio de intención, no una presencia confirmada en el terreno. |
+| **Marketing** | Casi 20 años de trayectoria, premiado/nominado (Latin Label of the Year 2017, Billboard Latin Music Awards), comunicados de prensa recurrentes (PR Newswire) — estrategia de relaciones públicas activa y profesionalizada. |
+| **Tecnología** | Ninguna evidencia específica de IA o tecnología propietaria encontrada en esta ronda. |
 
 | | Rich Music — DOFA |
 |---|---|
-| **Fortalezas** | Trayectoria de casi 20 años, roster de éxito comprobado en reggaetón/R&B urbano, distribución ya resuelta vía Warner Music Latina — resolvió exactamente el problema de distribución que IM Music resuelve con Nexus, pero a una escala mucho mayor. |
-| **Debilidades** | Es un sello de Miami entrando a Medellín, no un sello nativo de la ciudad — no tiene el conocimiento local ni la red de talento emergente que un sello con sede física y equipo permanente en Medellín sí tiene desde el día uno. |
+| **Fortalezas** | Trayectoria de casi 20 años, roster de éxito comprobado en reggaetón/R&B urbano, distribución ya resuelta vía Warner Music Latina, equipo de 48 personas — una escala de operación que IM Music no alcanzará en años. |
+| **Debilidades** | Es un sello de Miami entrando a Medellín, no un sello nativo de la ciudad; la oficina anunciada en Medellín no tiene confirmación operativa en esta ronda de búsqueda — puede seguir siendo solo un anuncio. |
 | **Oportunidades** | El anuncio explícito de abrir oficina en Medellín confirma que ellos mismos ven la ciudad como mercado prioritario de crecimiento — validación externa real de la tesis de mercado de este plan (Sección 5.1). |
 | **Amenazas** | Depende de una sola relación de distribución mayor (Warner) para su escala — el mismo riesgo de concentración que La Industria Inc. (Sección 5.3), aunque mitigado por mantener identidad de marca propia. |
 
-*Implicación para IM Music:* Rich Music expandiéndose a Medellín es el competidor directo más concreto y mejor financiado de los identificados en esta investigación — no es una amenaza hipotética, es un sello real con track record llegando al mismo mercado que este plan. IM Music no puede competir en escala de catálogo ni en relación con una major, pero sí en velocidad de producción de contenido (Content Engine) y en ser un operador local desde el primer día, no una sucursal.
+*Cómo superar a Rich Music:* su aterrizaje en Medellín sigue siendo, a la fecha de esta investigación (noviembre 2026), un anuncio sin confirmación operativa — la ventana para que IM Music se consolide primero como el operador *nativo* de la ciudad (estudio propio, equipo fijo, presencia constante desde el día uno, no una sucursal remota gestionada desde Miami) sigue abierta. La velocidad de instalación real, no la escala, es la variable que IM Music puede ganarle hoy.
 
 #### Mundial — competidores con enfoque de IA en desarrollo de artista
 
-**Greater Music Group.** En vez de firmar "artistas de IA" (voces/personajes sintéticos), usa IA de forma transversal en sus operaciones: A&R, desarrollo de artista, inteligencia de fans y optimización de catálogo (fuente: Music Ally, mayo 2026). Es el modelo más comparable estructuralmente a IM Music: artistas humanos reales, IA como herramienta operativa, no como producto final.
+**Greater Music Group**
+
+| Dimensión | Hallazgos |
+|---|---|
+| **Administrativo** | Sin datos de tamaño de equipo o estructura organizacional encontrados en ninguna fuente de esta ronda. |
+| **Financiero** | Sin perfil de Crunchbase verificable con este nombre exacto (existe una entidad distinta y no relacionada, "GMG Music Group", que no debe confundirse con esta); sin capital levantado o ingresos confirmados en ninguna fuente — su transparencia financiera pública es, en sí misma, baja. |
+| **Legal** | Forma societaria no determinada en esta ronda. Sin evidencia pública de un método propietario documentado y protegido legalmente. |
+| **Comercial** | Usa IA de forma transversal en A&R, desarrollo de artista, inteligencia de fans y optimización de catálogo (Music Ally, mayo 2026). No está claro si ofrece estos servicios a terceros o solo los aplica a su propio roster — esta ronda no encontró evidencia de un modelo B2B. |
+| **Marketing** | Posicionamiento como innovador en "IA aplicada a la industria musical", con cobertura de prensa especializada (Music Ally). Sin más detalle de estrategia de marca o canales propios encontrado. |
+| **Tecnología** | Diferenciador central: IA aplicada transversalmente a A&R, desarrollo de artista, inteligencia de fans y optimización de catálogo — sin detalle técnico público de qué herramientas o modelos usan específicamente. |
 
 | | Greater Music Group — DOFA |
 |---|---|
 | **Fortalezas** | Enfoque de IA aplicado a toda la operación (A&R, desarrollo, inteligencia de fans, catálogo), no a un solo paso del proceso — sugiere una ventaja de eficiencia operativa de alcance mayor al Content Engine actual de IM Music, que se concentra en contenido/marketing. |
-| **Debilidades** | No se encontró evidencia pública de un método propietario documentado y protegido legalmente (como el de IM Music, formalizado como secreto empresarial bajo Decisión 486) — su ventaja de IA parece ser más una práctica operativa que un activo de propiedad intelectual defendible. |
+| **Debilidades** | No se encontró evidencia pública de un método propietario documentado y protegido legalmente (como el de IM Music, formalizado como secreto empresarial bajo Decisión 486), ni de capital levantado o tamaño de equipo en ningún registro público verificable — su ventaja de IA parece ser más una práctica operativa opaca que un activo de propiedad intelectual defendible y comunicable. |
 | **Oportunidades** | Al operar a escala internacional con IA en todo el pipeline, puede capturar eficiencias de costo que un sello boutique de un solo mercado no alcanza todavía. |
 | **Amenazas** | Mayor escrutinio público y regulatorio sobre el uso de IA en la industria musical (ver el caso de IngaRose y el debate sobre contenido sintético en los charts, 2026) puede exponerlo a riesgo reputacional que un sello con artistas 100% humanos, como IM Music, no enfrenta de la misma forma. |
+
+*Cómo superar a Greater Music Group:* su ventaja de IA no está documentada públicamente como propiedad intelectual defendible — IM Music sí tiene esto (metodología formalizada y protegida bajo Decisión 486, Data Room completo). Frente a un inversionista o un artista, IM Music puede mostrar y explicar su método con rigor legal; Greater Music Group, por ahora, solo puede describir una práctica operativa interna sin ese respaldo — usar esa diferencia de forma explícita en cualquier pitch que compita por la misma narrativa de "IA aplicada a desarrollo de artista".
 
 *Mención aparte, no DOFA completo:* **Stage Zero** (de Timbaland) y **Higgsfield Records** representan el extremo opuesto del espectro: firman "artistas" de IA (TaTa, Kion) en vez de usar IA como herramienta para artistas humanos. Es un modelo de negocio fundamentalmente distinto al de IM Music, no un competidor directo por el mismo talento o audiencia, pero sí compite por el mismo capital de inversión e interés mediático en "IA + música" — relevante para contextualizar cualquier pitch a inversionistas que ya conozcan ese espacio.
 
 #### Dubái / EAU
 
-**GXR Records.** Sello independiente lanzado en 2022 por Galaxy Racer y Empire (distribuidora), liderado por el manager de artistas Elia Mssawir, enfocado en desarrollo de talento en territorios de Asia Occidental y Norte de África (WANA) (fuente: Gulf Business, ScenNoise).
+**GXR Records** (+ matriz Galaxy Racer)
+
+| Dimensión | Hallazgos |
+|---|---|
+| **Administrativo** | Liderado por Elia Mssawir (manager de artistas, head of label). Empleados de la matriz Galaxy Racer: entre <100 (Dealroom) y 60 (PitchBook) — no desglosado para GXR Records específicamente. |
+| **Financiero** | Capital de la matriz Galaxy Racer: las fuentes no coinciden — entre USD 10-50M (Dealroom) y USD 20M en una ronda de mayo 2025 (LeadIQ, comunicado de prensa). **Hallazgo de gobierno corporativo real:** reportes contradictorios sobre una posible adquisición de Galaxy Racer por Riva Technology and Entertainment (RTE) para formar una nueva entidad ("Celestial") — Dealroom la da como anunciada en mayo 2023 y luego cancelada, PitchBook reporta una fecha de adquisición distinta (agosto 2025) — señal de inestabilidad o reestructuración corporativa en curso, no un dato menor. |
+| **Legal** | Lanzado en 2022 como joint venture formal entre Galaxy Racer (medios/esports, Dubái) y Empire (distribuidora independiente, EEUU) — estructura de alianza corporativa, no un sello aislado. |
+| **Comercial** | Desarrollo de talento en territorios WANA (Asia Occidental/Norte de África), distribución vía Empire. **Esta segunda ronda buscó específicamente evidencia de expansión a talento latino/reggaetón en 2026 y no encontró ninguna** — el roster confirmado sigue siendo 100% WANA (Freek, Noel Kharman, Dyler, Hanody Awesome, Noor Stars). |
+| **Marketing** | Cobertura de prensa real y consistente (Gulf Business, ScenNoise) desde su lanzamiento en 2022, posicionado como "primer sello indie boutique" de la región. |
+| **Tecnología** | Ninguna evidencia específica de IA o tecnología propietaria encontrada — su diferenciador reportado es la alianza de distribución (Empire) y el respaldo de capital (Galaxy Racer), no tecnología. |
 
 | | GXR Records — DOFA |
 |---|---|
-| **Fortalezas** | Respaldo de Empire (distribuidora global real, con track record en mercados urbanos/hip-hop) y de Galaxy Racer (empresa de medios/esports con alcance regional) le da capital y distribución desde el lanzamiento, algo que IM Music no tiene en Dubái. |
-| **Debilidades** | Enfoque geográfico y cultural en talento WANA (árabe/Asia Occidental), no en música latina/urbana — no se encontró evidencia de que compita por el mismo nicho latino que J Balvin y Dubai Latin Fest ya validaron como demanda real (Sección 5.2). |
+| **Fortalezas** | Respaldo de Empire (distribuidora global real, con track record en mercados urbanos/hip-hop) y de Galaxy Racer (empresa de medios/esports con alcance regional, USD 10-50M levantados) le da capital y distribución desde el lanzamiento, algo que IM Music no tiene en Dubái. |
+| **Debilidades** | Enfoque geográfico y cultural 100% en talento WANA, sin ninguna señal confirmada de movimiento hacia música latina/urbana a la fecha de esta investigación (noviembre 2026); reportes contradictorios sobre una posible adquisición/reestructuración de su matriz sugieren posible inestabilidad corporativa. |
 | **Oportunidades** | Posición ya establecida como sello de referencia regional en Dubái podría facilitarle expandirse a otros géneros, incluido el latino, si detecta la misma señal de demanda que ya identificó este plan. |
-| **Amenazas** | Si decide entrar al nicho latino/urbano antes que IM Music, tiene más capital y relación de distribución ya resuelta para hacerlo rápido — es el competidor más capaz de cerrar la "ventana de oportunidad de ser pionero" que la Sección 5.2 identifica como la tesis central del escenario Dubái. |
+| **Amenazas** | Si decide entrar al nicho latino/urbano antes que IM Music, tiene más capital y relación de distribución ya resuelta para hacerlo rápido. |
 
-*Implicación para IM Music:* GXR Records confirma que el modelo de "sello boutique con desarrollo de artista real" sí funciona en Dubái — no hay que inventar la categoría de negocio, solo el nicho latino/urbano dentro de ella. También es la mayor amenaza concreta a la ventana de oportunidad de pionero: si GXR decide diversificar a talento latino antes que IM Music entre al mercado, la tesis de "crear la categoría" de la Sección 5.2 se debilita.
+*Cómo superar a GXR Records / aprovechar la ventana:* confirmado en dos rondas de investigación (mayo y noviembre 2026) que GXR sigue 100% enfocado en talento WANA, sin ninguna señal pública de interés en el nicho latino — la ventana de "ser pionero" de la Sección 5.2 sigue completamente abierta. Sumado a la posible reestructuración corporativa de su matriz (adquisición por RTE en disputa entre fuentes), el momento real de menor resistencia para que IM Music entre al nicho latino en Dubái es ahora, no después — cada trimestre que GXR no diversifica es una validación adicional, no una señal de que vayan a tardar para siempre.
+
+*Nota adicional — otros sellos de Medellín fuera de los 3 señalados:* la investigación también ubicó a **Codiscos** (fundado 1950) y **Discos Fuentes** (fundado 1934) como sellos históricos de Medellín, pero ambos operan a escala de major/legado (décadas de catálogo diversificado, no modelo boutique de desarrollo de artista urbano) — no son competidores directos por el mismo segmento de cliente que IM Music, Vion Music, Kapital Music o Palma Production(s) sí disputan.
 
 ---
 
