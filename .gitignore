@@ -48,3 +48,6 @@ logs/test_*.mp3
 logs/test_*.wav
 releases/
 assets/illustrations/archive/canva_p*.png
+
+# Carpeta de trabajo temporal para republicar Artifacts de Slides (no es contenido del proyecto)
+.deck_tmp/
