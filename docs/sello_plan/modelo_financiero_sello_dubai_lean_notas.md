@@ -1,4 +1,4 @@
-# Dubái — Modelo Lean/Por Fases v4 (resumen en lenguaje plano)
+# Dubái — Modelo Lean/Por Fases v5 (resumen en lenguaje plano)
 
 Este documento es una **alternativa** al modelo Dubái completo (`modelo_financiero_sello.xlsx`), no un reemplazo. El fundador **sí se radica en Dubái** y **sí monta estudio y oficina** desde el Año 1, pero a escala mínima, escalando por fases solo cuando los ingresos/flujo de caja lo justifiquen.
 
@@ -13,20 +13,21 @@ Este documento es una **alternativa** al modelo Dubái completo (`modelo_financi
 - **Regalías de catálogo / proyectos especiales**: UNA sola línea (no duplicada) — retorno vía Nexus (8% comisión) de canciones/EPs/álbumes que el sello financia con capital propio, con % de regalía negociado caso por caso. No es ingreso automático por artista del roster.
 - **Legal casi a cero** (AED 200/mes): el fundador cubre la función legal directamente.
 
-## Resultado — ahora SÍ es positivo
+## Resultado — v5: se agregó Representación/Entrada a Mercado, y mejora de forma sustancial
 
-| | Modelo Completo (referencia pre-corrección) | Modelo Lean v4 |
-|---|---|---|
-| Inversión requerida (NTI) | AED 318.259 | **AED 168.787** |
-| EBITDA Año 1 | -AED 327.892 | -AED 123.561 |
-| EBITDA Año 3 | — | **+AED 158.515** (primer año positivo) |
-| EBITDA Año 5 | -AED 247.663 | **+AED 374.674** |
-| Utilidad Neta Año 5 | — | **+AED 359.997** |
-| **VAN (25%)** | -AED 1.133.096 | **+AED 35.292** |
-| **TIR** | No calculable | **29,1%** |
-| Gatillo de escalamiento | N/A | Se activa en el **Año 4** (primera contratación local + upgrade de oficina) |
+| | Modelo Completo (cifras reales actuales, `modelo_financiero_sello.xlsx`) | Modelo Lean v4 (antes de esta ronda) | Modelo Lean v5 (esta ronda) |
+|---|---|---|---|
+| Inversión requerida (NTI) | AED 546.283 | AED 168.787 | **AED 168.787** (sin cambio, no requiere CAPEX nuevo) |
+| EBITDA Año 1 | -AED 612.678 | -AED 123.561 | **-AED 29.361** |
+| EBITDA Año 5 | +AED 25.498 | +AED 374.674 | **+AED 688.673** |
+| Utilidad Neta Año 5 | -AED 6.959 | +AED 359.997 | **+AED 673.996** |
+| **VAN (25%)** | -AED 1.712.425 | +AED 35.292 | **+AED 493.278** |
+| **TIR** | No calculable | 29,1% | **78,2%** |
+| Gatillo de escalamiento | N/A | Se activa en el Año 4 | Se activa en el **Año 4** (sin cambio) |
 
-**Lectura honesta:** el precio real del plan ELITE 360 (USD $2.999,99/mes/artista) es sustancialmente más alto que la tarifa que se había estimado antes, y eso cambia el resultado de fondo: con una curva de ocupación conservadora y un roster que tarda 5 años en llegar a 12 artistas, el negocio **se vuelve rentable a partir del Año 3** y termina con VAN y TIR positivos. Esto no es un número forzado — así salió con los supuestos declarados.
+**Lectura honesta — esta vez la corrección SÍ mejora el escenario, y hay que explicar por qué.** No es una mejora inventada: es un ingreso real (Representación/Entrada a Mercado, USD $1.500/mes blend × 1,5-5 clientes/año, mismo precio y volumen ya validados en Colombia y en el modelo completo de Dubái) que simplemente **nunca se había propagado a este archivo Lean** — ver "Pendiente de corrección" más abajo, ahora resuelto. Como es ingreso de margen casi puro (5% de COGS incidental, sin CAPEX ni nómina nueva) sobre una base de costos fijos que no cambia, su efecto en el flujo de caja descontado es grande: el valor presente de ese solo flujo adicional a 5 años (~AED 458.000) explica casi todo el salto de VAN. El supuesto que sostiene esto —que el fundador, no un Gerente Comercial contratado, entrega este servicio en los Años 1-3— es nuevo y debe validarse operativamente junto con el resto de la carga del fundador en este escenario (ver sección de riesgo operativo abajo, que ahora aplica también a esta línea).
+
+La tabla de "Modelo Completo" de referencia también se corrigió en esta ronda: la versión anterior de este documento comparaba contra cifras del modelo completo que ya estaban desactualizadas (NTI AED 318.259 vs. la cifra real actual de AED 546.283, por ejemplo) — ahora refleja el estado real y actual de `modelo_financiero_sello.xlsx`.
 
 ## El riesgo real a validar — no es financiero, es operativo
 
@@ -38,10 +39,14 @@ También queda sin resolver si el presupuesto de pauta de Meta Ads está incluid
 
 Todo lo de CAPEX (estudio, kit audiovisual, licencia de zona franca, visa), el costo de entrega del plan ELITE 360 (40%, estimación propia), la tasa de ocupación (85%, estimación), el volumen de copias del libro, y los montos de regalías de catálogo — ver la pestaña "Supuestos" del archivo para el detalle línea por línea, cada uno con su nota de fuente o de "no confirmado". El precio del plan ELITE 360 en sí ($2.999,99/mes) es el único dato de ingreso que es real, no estimado.
 
-## ⚠️ Pendiente de corrección (detectado en auditoría de consistencia, no resuelto aquí)
+## ✅ Pendientes de la ronda anterior, ya resueltos
 
-Este archivo quedó desactualizado en dos puntos frente a `modelo_financiero_sello.xlsx` (el modelo Dubái completo, ya corregido) y requiere una decisión humana antes de usarse frente a un inversionista o concurso:
+1. **Arriendo** — ya aclarado en la ronda anterior: el texto estaba mal redactado, no el número. AED 800/AED 2.775 siguen siendo correctos para la oficina pequeña del Año 4, no comparables con el arriendo Al Quoz de AED 17.500/mes (inmueble distinto, no una versión vieja de esa cifra). Sin cambios en esta ronda.
 
-1. **Arriendo — revisado y aclarado (ya NO es un pendiente, el texto de `Supuestos!D20`/`D25` estaba mal redactado, no el número).** La redacción original de `Supuestos!D20`/`D25` decía que el diferencial de AED 2.775/mes del Año 4 se calculaba contra "AED 3.575/mes del modelo completo", lo que sugería (incorrectamente) que era una cifra vieja/desactualizada del arriendo Al Quoz del modelo completo (hoy corregido a AED 17.500/mes, `OPEX_DXB!B16`). Verificado contra `Supuestos_DXB!D27` del modelo completo: el arriendo Al Quoz de AED 17.500/mes es para una unidad de **2.100-2.700 sqft** (bodega/estudio creativo de gran formato, uso mixto oficina+estudio+foto+streaming). La oficina pequeña del Año 4 de este modelo Lean es explícitamente de **~150 sqft** ("oficina/estudio dedicado pequeño"), calculada con una tarifa por sqft distinta y sí confirmada (Nikoliers 2024) para un local convencional — **no son el mismo tipo de espacio y no son comparables por sqft** (un local pequeño convencional cuesta más por sqft que una bodega de gran formato en Al Quoz). Por lo tanto, AED 3.575/mes para esa oficina pequeña **no es una versión obsoleta de AED 17.500 — es una cifra independiente y correcta para un inmueble distinto**, y no debe recalcularse contra el arriendo Al Quoz. Se corrigió el texto de `Supuestos!D20` y `D25` en el archivo para que ya no sugiera lo contrario. Los valores `B20=800` y `B25=2.775` NO cambiaron — eran correctos.
+2. **Línea "Representación / Entrada a Mercado"** — **agregada en esta ronda** (`EstadoResultados`, nueva fila 9, con su línea de COGS en la fila 12). Se resolvió la pregunta pendiente ("¿quién la entrega en Años 1-3?") asumiendo que la entrega el **CEO/fundador directamente** — es la persona ya presente desde el Año 1 en este escenario Lean (a diferencia del Gerente Comercial, que solo se contrata tras el gatillo de escalamiento), y el servicio de booking/representación es compatible con lo que el fundador ya hace en solitario en este escenario. Mismo precio/volumen real que el modelo completo y Colombia (USD $1.500/mes blend, 1,5→5 clientes/año), mismo 5% de COGS incidental. Esto es una propagación de un dato ya validado, no una cifra nueva inventada — pero el supuesto de que el fundador puede absorber esto sin contratar a nadie más debe validarse operativamente junto con el resto de su carga (ver sección de riesgo operativo arriba).
 
-2. **Falta la línea "Representación / Entrada a Mercado".** El modelo completo (`modelo_financiero_sello.xlsx`, hoja `EstadoResultados_DXB!A12`) incluye esta línea de ingreso desde la corrección más reciente, explícitamente "igual en ambos mercados, al mismo precio en USD" (ver `modelo_financiero_sello_notas.md`). Este archivo (`EstadoResultados`, filas 4-8) no la tiene. No se agregó aquí porque el modelo completo cubre su costo con el tiempo ya pagado del Gerente Comercial (OPEX fijo) — y en este escenario Lean el Gerente Comercial no se contrata hasta que se activa el gatillo de escalamiento (Año 4 en el caso base). Antes de agregar la línea hay que decidir quién la entrega en Año 1-3: ¿el fundador solo, absorbiendo ese tiempo adicional sobre la ya ajustada carga operativa del plan ELITE 360? Eso cambiaría también el supuesto de "costo casi nulo" que tiene la línea en el modelo completo.
+## Eventos de industria y rifa — por qué NO se propagaron a este escenario
+
+- **Eventos de industria** (Circulart, BOmm, BIME Bogotá, Latin Alternative Music Conference — agregados al modelo de Medellín en esta misma ronda): son eventos colombianos/internacionales sin relación directa con la operación en Dubái, no se agregan aquí. El único evento real de la región (**XP Music Futures**, Riad) no tiene costo de entrada anunciado públicamente — no se inventa una cifra. "Dubai Latin Fest", citado en el plan de negocios (Sección 5.2) como señal de demanda, no se pudo confirmar como un evento real indexable en esta investigación — queda señalado para que el documento de plan de negocios lo revise, no se modela ningún costo de participación para él aquí.
+- **Pauta puntual tipo "Última Hora Colombia"**: no se investigó un equivalente para Dubái en esta sesión — no se inventa un monto. Pendiente si se quiere modelar a futuro.
+- **Rifa de un año de Élite 360**: **NO se propaga a Dubái, por una razón legal real y verificada, no por omisión.** En EAU, el juego de azar (incluidas las loterías/rifas) está prohibido por ley federal, con el Artículo 355 tipificándolo como delito penal — no como infracción administrativa, que es el régimen colombiano. El regulador actual (General Commercial Gaming Regulatory Authority, GCGRA) confirma que **solo 3 loterías están autorizadas en todo el país** (The UAE Lottery, Big Ticket, Dubai Duty Free), todas de escala nacional y con licencia específica del Ministerio de Economía — no existe una vía de autorización municipal o de bajo trámite comparable a Coljuegos en Colombia para un negocio pequeño como IM Music. Fuentes: Al Tamimi & Co. (firma legal líder en EAU), Gulf News, Khaleej Times. Esto es una diferencia real y relevante entre los dos mercados: lo que en Colombia es una decisión de riesgo que el fundador ya tomó conscientemente (Sección 10.2 del plan de negocios), en EAU sería un delito penal sin una vía de autorización de bajo trámite disponible — no se recomienda ni se modela como estrategia de financiamiento para el escenario Dubái bajo ninguna circunstancia.
