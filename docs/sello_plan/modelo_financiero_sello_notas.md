@@ -113,6 +113,35 @@ Confirmado por el usuario: ambos tienen acceso a la metodología de marca ya for
 - Volumen y % de regalías de catálogo por inversión en proyectos especiales — depende de cuántos proyectos así se financien cada año, hoy en cero.
 - Vistas/RPM del canal de YouTube propio.
 
+## Nueva línea: eventos de industria, pauta puntual de lanzamiento, y rifa de Élite 360 (Medellín)
+
+El fundador preguntó si las estrategias de promoción y financiamiento ya descritas en `plan_negocios_sello.md` Secciones 10.1 y 10.2 (eventos como Circulart/BOmm/BIME/Latin Alternative Music Conference/XP Music Futures, pauta puntual en cuentas de farándula tipo Última Hora Colombia, y la rifa de un año de Élite 360) estaban reflejadas en el modelo financiero real. No lo estaban — se agregaron ahora.
+
+**1. Eventos de industria (OPEX_COL, nuevo bloque anual, fila 52+):** Circulart $300.000 COP (punto medio 200-400k, supuesto 2027), BOmm $0 (convocatoria, sin costo público), BIME Bogotá $680.000 COP (estimado por analogía con BIME Bilbao, NO tarifa real de Bogotá), Latin Alternative Music Conference $415.800 COP ($99 USD × 4.200 COP/USD, precio real confirmado), XP Music Futures $0 (costo no anunciado). Subtotal: **$1.395.800 COP/año**.
+
+**2. Pauta de lanzamiento puntual:** $9.000.000 COP/año (2 lanzamientos/año × $4,5M COP, punto medio del rango 4-5M que estima el fundador sin tarifa pública confirmada de Última Hora Colombia) — modelada aparte del presupuesto mensual de pauta digital ($1.200.000 COP/mes), tal como exige la Sección 10.1 (un solo post de 4-5M consumiría 2.7-3.3 meses de ese presupuesto si se tratara como gasto mensual).
+
+**3. Rifa de un año de Élite 360:** el fundador decidió ejecutarla pese al riesgo legal ya documentado (Sección 10.2 — Coljuegos, Ley 643/2001, 35+ procesos activos). Se modela el **efecto neto**, no el ingreso bruto: escenario central $50.000 COP × 910 boletas = $45.500.000 COP recaudados, menos ~$35M COP de costo incremental real (producción de 3-4 canciones+video, pauta dedicada, imprevistos — ya detallado en la Sección 10.2) = **+$10.500.000 COP neto, solo en Año 1** (nueva fila "Otros ingresos — financiamiento neto por rifa Elite 360" en `EstadoResultados_COL`, antes de Ingresos Totales).
+
+**Impacto honesto en cascada (Medellín, `EstadoResultados_COL` / `FlujoCaja_TIR_VAN_COL` / `RESUMEN_COMPARATIVO` / `COMPARATIVO_ESCENARIOS` Bloque 1):**
+
+| Indicador | Antes | Después |
+|---|---|---|
+| OPEX anual Año 1 | $291.200.000 | $301.595.800 |
+| Ingresos Totales Año 1 | $534.899.698 | $545.399.698 |
+| EBITDA Año 1 | $136.989.698 | $137.093.898 |
+| Utilidad Neta Año 1 | $74.242.803 | $74.310.534 |
+| EBITDA Año 5 | $2.010.689.941 | $2.000.294.141 |
+| Utilidad Neta Año 5 | $1.292.147.961 | $1.285.390.692 |
+| VAN (30%) | $913.329.955 | $902.122.153 |
+| TIR | 107,3% | 106,5% |
+
+**Lectura honesta:** el Año 1 mejora muy levemente (+$67.731 en utilidad neta) porque el ingreso neto de la rifa ($10,5M) casi compensa el nuevo costo anual de eventos+pauta puntual ($10,4M) — es casi un empate, no una mejora real de fondo. Los Años 2-5 **empeoran** de forma consistente (-$6,76M COP en utilidad neta cada año) porque el nuevo costo anual de eventos/pauta se mantiene, pero la rifa es un ingreso de una sola vez en el Año 1. El VAN baja ~1,2% y la TIR baja 0,8 puntos — es un impacto pequeño pero real, y debe reportarse así, no esconderse.
+
+**No se propagó a:** `modelo_financiero_sello_dubai_lean.xlsx` (Dubái Lean, archivo separado), ni al Bloque 4 "Medellín Reducido" / Escenario B de `COMPARATIVO_ESCENARIOS` (tiene su propia estructura de OPEX con Project Manager y equipo remoto que no es recalculable desde este workbook sin inventar cifras) — pendiente si se quiere consistencia total entre todos los escenarios.
+
+**Pendiente de validar, no inventado:** número real de lanzamientos/año que recibirían pauta puntual (se asumió 2, conservador); si los eventos se repiten cada año al mismo costo (se asumió flat, sin crecimiento, en los 5 años); costo real de la rifa si se cotiza formalmente (el costo incremental de $30-40M sigue siendo estimado, no cotizado, per Sección 10.2).
+
 ## Qué conclusión estratégica sugiere esto
 
 Medellín muestra un retorno fuerte, pero ese retorno está casi enteramente apalancado en un solo supuesto no validado: que el roster puede sostener el ticket de Marca 360. Antes de llevar esta TIR a un inversionista, hay que validar con al menos 2-3 artistas reales si pagarían ese servicio (o si se financiaría vía advance/financiamiento, como ya contempla la plataforma) — de lo contrario, el número es, en el mejor de los casos, una meta comercial, no una proyección. Dubái, incluso con el precio real del producto, no cierra el caso de negocio en 5 años — tratarlo como expansión financiada con las utilidades de Colombia, no como alternativa de lanzamiento día 1 con capital de inversionista.
