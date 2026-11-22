@@ -1,0 +1,287 @@
+4	MUSIC BUSINESS PARA TODOS LOS HUMANOS
+5	La guía REBEL LUXURY de la industria musical
+6	IM Music
+7	INTRODUCCIÓN
+21	Cómo usar este libro
+25	— IM Music, REBEL LUXURY
+26	ÍNDICE
+27	PARTE 1 — LAS REGLAS DEL JUEGO
+33	PARTE 2 — EL DINERO
+38	PARTE 3 — CONTRATOS
+44	PARTE 4 — CONSTRUIR MARCA Y AUDIENCIA
+51	PARTE 5 — MÁS ALLÁ DEL STREAMING
+56	PARTE 6 — TU EQUIPO Y TU FUTURO
+61	PARTE 7 — TENDENCIAS 2026
+63	PARTE 8 — ANEXO
+65	CIERRE
+73	PARTE 1 — LAS REGLAS DEL JUEGO
+74	CAPÍTULO 1: Qué es realmente la industria musical hoy
+78	Las tres capas de la industria musical moderna
+83	El mito que hay que enterrar
+91	Caso práctico: dos artistas, dos caminos
+96	Puntos clave del capítulo
+100	CAPÍTULO 2: Derechos de autor 101 — qué protege la ley y qué no
+102	Qué SÍ protege el derecho de autor:
+107	Qué NO protege el derecho de autor:
+114	El derecho de autor nace automáticamente
+116	Duración del derecho
+118	La diferencia entre "es mío" y "puedo probar que es mío"
+120	Caso práctico: la disputa que se pudo evitar
+123	Puntos clave del capítulo
+127	Guía paso a paso: cómo registrar tu primera obra en Colombia
+137	Mientras tanto, documenta de forma informal
+139	CAPÍTULO 3: Derechos morales vs. patrimoniales
+141	Derechos morales
+147	Derechos patrimoniales
+149	Por qué esto cambia todo
+152	Caso práctico: el remix no autorizado
+155	Puntos clave del capítulo
+159	CAPÍTULO 4: Composición vs. Grabación — dos negocios, no uno
+161	1. La Composición (Publishing / "la canción")
+163	2. La Grabación (Master / "el fonograma")
+165	Por qué importa la diferencia
+169	La lección práctica
+171	Caso práctico: el cover que sí genera dinero
+174	Puntos clave del capítulo
+178	CAPÍTULO 5: Los 6 tipos de derechos musicales explicados sin tecnicismos
+180	1. Derecho de reproducción
+182	2. Derecho de distribución
+184	3. Derecho de comunicación pública
+186	4. Derecho de sincronización ("sync")
+188	5. Derecho mecánico
+190	6. Derecho de transformación (obra derivada)
+192	Por qué memorizar esto te hace ganar dinero
+194	Caso práctico: el bar que nunca pagó
+197	Puntos clave del capítulo
+202	PARTE 2 — EL DINERO
+203	CAPÍTULO 6: Cómo te paga Spotify de verdad
+205	Cómo funciona el pro-rata, explicado simple
+210	Quién recibe qué, de cada stream
+215	Por qué "$/stream" es una métrica engañosa
+218	Caso práctico: 100,000 streams no valen lo mismo en todas partes
+221	Puntos clave del capítulo
+225	CAPÍTULO 7: Sociedades de gestión colectiva en el mundo — y por qué te importan sin importar dónde v
+228	SAYCO (Sociedad de Autores y Compositores de Colombia)
+230	ACINPRO (Asociación Colombiana de Intérpretes y Productores Fonográficos)
+232	Por qué la mayoría de artistas independientes NO cobran este dinero
+234	El error de pensar "eso es para artistas grandes"
+236	Cómo funciona la afiliación en la práctica
+238	El panorama global: tu sociedad de gestión, según tu país
+240	América Latina y el Caribe
+242	Norteamérica
+244	Europa
+246	Asia-Pacífico
+248	África
+251	Un matiz importante: acuerdos de reciprocidad
+253	Puntos clave del capítulo
+257	CAPÍTULO 8: Distribución digital — qué hace un distribuidor y qué no
+259	Lo que SÍ hace un distribuidor:
+263	Lo que NO hace un distribuidor (a menos que lo ofrezca explícitamente como servicio adicional):
+268	Los cuatro modelos de cobro más comunes
+273	Cómo evaluar si un distribuidor "vale" su comisión
+275	Caso práctico: comparando el costo real de dos modelos
+278	Puntos clave del capítulo
+282	CAPÍTULO 9: Modelos de distribución transparente — el ejemplo de IM Music
+284	Por qué el modelo tradicional se quedaba con más
+286	Por qué ese argumento ya no aplica igual
+288	Qué significa un modelo de comisión baja y transparente, en la práctica
+290	Lo que un modelo así NO incluye (y por qué eso es correcto)
+293	Caso práctico: comparando un modelo transparente contra el modelo tradicional
+296	Puntos clave del capítulo
+301	PARTE 3 — CONTRATOS
+302	CAPÍTULO 10: Anatomía de un contrato discográfico
+304	Las cláusulas que siempre debes localizar primero:
+305	1. Territorio
+307	2. Plazo (Term)
+309	3. Exclusividad
+311	4. Entrega mínima (Delivery Commitment)
+313	5. Regalías y participación
+315	6. Recuperación de costos (Recoupment)
+317	7. Propiedad de los masters
+319	8. Cláusula de salida (Termination)
+321	El concepto que cambia todo: Recoupment
+324	Caso práctico: leyendo el recoupment línea por línea
+327	Puntos clave del capítulo
+331	CAPÍTULO 11: Contratos de distribución vs. contratos de sello
+333	Contrato de distribución
+338	Contrato de sello discográfico
+343	La pregunta que define cuál necesitas
+346	Caso práctico: la trampa del contrato "de distribución" que en realidad es un contrato de sello
+349	Puntos clave del capítulo
+353	CAPÍTULO 12: Splits, colaboraciones y feats
+355	La regla de oro: acuérdalo ANTES de lanzar, nunca después
+357	Qué debe incluir un acuerdo de split, como mínimo:
+364	Errores comunes en splits
+368	Caso práctico: un feat con tres productores y dos vocalistas
+371	Puntos clave del capítulo
+375	CAPÍTULO 13: Sample clearance y uso de material de terceros
+377	Qué necesitas autorizar, específicamente, al usar un sample:
+381	Por qué las plataformas de streaming no te "atrapan" de inmediato
+383	Qué hacer si quieres usar un sample
+388	La alternativa más segura: interpolación
+390	Caso práctico: la canción viral que tuvo que retirarse
+393	Puntos clave del capítulo
+397	CAPÍTULO 14: Diez banderas rojas contractuales
+409	La regla más importante de todas
+411	Caso práctico: cómo se ve una bandera roja en la vida real
+414	Puntos clave del capítulo
+419	PARTE 4 — CONSTRUIR MARCA Y AUDIENCIA
+420	CAPÍTULO 15: Neurociencia aplicada al marketing musical
+422	El cerebro no procesa "contenido" — procesa patrones de amenaza y recompensa
+424	Los tres disparadores que capturan atención antes de que la persona "decida" prestarla:
+428	Cómo aplicar esto sin volverte manipulador
+430	Caso práctico: el mismo dato, dos formas de presentarlo
+433	Puntos clave del capítulo
+437	CAPÍTULO 16: Cómo deciden los algoritmos quién te ve
+439	YouTube
+441	Instagram
+443	TikTok
+445	La verdad incómoda que hay que aceptar
+447	Caso práctico: el video que "debería" haber funcionado
+450	Puntos clave del capítulo
+454	CAPÍTULO 17: REBEL LUXURY — construir una identidad que no se ve genérica
+456	Los tres pilares de una identidad de marca defendible
+460	Por qué la mayoría de artistas evita la consistencia visual radical
+462	Caso práctico: reconocible sin leer el nombre
+465	Puntos clave del capítulo
+469	METODOLOGÍA IM MUSIC: cómo se construye una marca de artista desde cero
+471	El proceso central: un ciclo de cinco pasos
+478	Dentro de este proceso: marco estratégico de marca, arquetipo y concepto
+481	Por qué neurociencia y psicología son el eje, no un adorno
+483	Campañas de conversión: la Metodología 7 Maletas
+488	Conversión hacia objetivos claros
+490	Acompañamiento más allá del contenido
+492	Puntos clave del capítulo
+496	CAPÍTULO 18: Consistencia por encima de perfección
+498	El cálculo que nadie hace
+500	La trampa del perfeccionismo
+502	Cómo se ve la consistencia en la práctica
+506	La regla de las 90 publicaciones
+508	Caso práctico: la cuenta que casi se rinde
+511	Puntos clave del capítulo
+516	PARTE 5 — MÁS ALLÁ DEL STREAMING
+517	CAPÍTULO 19: Sync licensing — tu música en TV, cine y publicidad
+519	Qué es exactamente un sync
+521	Por qué el sync paga tan bien comparado con el streaming
+523	Cómo se preparan los artistas independientes para conseguir syncs
+528	El error más común
+530	Caso práctico: la oportunidad que se perdió por no estar listo
+533	Puntos clave del capítulo
+537	CAPÍTULO 20: Marcas, patrocinios y colaboraciones comerciales
+539	Qué buscan las marcas al patrocinar artistas
+541	Tipos comunes de colaboración comercial
+546	Cómo poner precio a una colaboración comercial
+548	Caso práctico: por qué el número de seguidores no es el factor más importante
+551	Puntos clave del capítulo
+555	CAPÍTULO 21: Merch, shows en vivo y experiencias
+556	Merchandising
+558	Shows en vivo
+560	Experiencias
+562	La lógica de diversificación
+564	Caso práctico: sobrevivir un cambio de algoritmo
+567	Puntos clave del capítulo
+571	CAPÍTULO 22: Infoproductos y comunidad
+573	Qué es un infoproducto en el contexto musical
+575	Por qué tiene sentido para un sello o artista
+577	Qué hace que un infoproducto se venda
+582	El modelo de "escalera de valor"
+584	Caso práctico: la escalera de valor en acción
+587	Puntos clave del capítulo
+591	HERRAMIENTAS RÁPIDAS: Doce tácticas de marketing musical que puedes aplicar esta semana
+593	1. El hook de 3 segundos no negociable
+595	2. Reutiliza un video largo en cinco piezas de contenido
+597	3. Publica en el horario donde tu audiencia específica está activa
+599	4. Responde los primeros comentarios de cada publicación en la primera hora
+601	5. Usa el "loop" en contenido corto
+603	6. Construye en público, no solo el producto terminado
+605	7. Colabora con creadores de nicho, no solo con otros artistas
+607	8. Convierte cada dato de tu contenido educativo en una pieza independiente
+609	9. Usa encuestas y preguntas en Stories para generar datos de audiencia reales
+611	10. No elimines contenido que "no funcionó"
+613	11. Ten siempre un CTA claro y único por pieza de contenido
+615	12. Audita tu contenido cada 90 publicaciones
+617	Puntos clave del capítulo
+622	PARTE 6 — TU EQUIPO Y TU FUTURO
+623	CAPÍTULO 23: Cuándo necesitas manager, abogado o sello
+625	Manager
+628	Abogado especializado en entretenimiento
+631	Sello discográfico
+634	La secuencia recomendada para la mayoría de artistas independientes
+636	Caso práctico: el orden que le ahorró años de problemas
+639	Puntos clave del capítulo
+643	CAPÍTULO 24: Errores comunes que le cuestan la carrera a artistas independientes
+644	1. Firmar el primer contrato que llega, por miedo a que no llegue otro
+646	2. No registrar la propiedad de sus obras
+648	3. No separar finanzas personales de finanzas del proyecto musical
+650	4. Ignorar los splits hasta que hay dinero de por medio
+652	5. Confundir actividad con estrategia
+654	6. No diversificar ingresos
+656	7. No entender lo que firma
+658	Caso práctico: un error compuesto
+661	Puntos clave del capítulo
+665	CAPÍTULO 25: Casos reales — qué separa a los que lo logran
+667	Los que lo logran:
+674	Los que no lo logran:
+679	La conclusión de este libro
+681	HISTORIAS DE LA INDUSTRIA: Cuatro escenarios compuestos
+683	Escenario 1: El contrato que se firmó por miedo
+687	Escenario 2: La colaboración que casi termina en pleito
+691	Escenario 3: El sello que sí construyó confianza
+695	Escenario 4: El infoproducto que diversificó un negocio en crisis
+701	PARTE 7 — TENDENCIAS 2026
+702	CAPÍTULO 26: Inteligencia artificial y la industria musical — lo que está pasando ahora mismo
+704	El conflicto central: entrenamiento sin autorización
+707	Los acuerdos que están redefiniendo el terreno
+709	El ángulo que todo artista independiente debe conocer: quién queda afuera
+712	Cómo está respondiendo la plataforma que más te importa: Spotify
+715	Qué significa todo esto para un artista o sello independiente
+720	La postura de IM Music
+722	Puntos clave del capítulo
+728	PARTE 8 — ANEXO: MARCO LEGAL EN LATINOAMÉRICA
+729	CAPÍTULO 27: Derecho de autor musical en Latinoamérica — un mapa comparado
+731	Colombia
+736	México
+741	Argentina
+746	Chile
+750	Perú
+754	El principio que se mantiene constante en toda la región
+756	Recomendación práctica para artistas que se distribuyen internacionalmente
+760	CIERRE
+761	28. GLOSARIO REBEL LUXURY
+786	Glosario de algoritmos y redes sociales
+795	29. PLANTILLAS Y RECURSOS
+796	Checklist antes de firmar cualquier contrato
+807	Plantilla mínima de acuerdo de split
+810	Calculadora simple de recoupment
+813	Checklist de preparación para sync licensing
+820	Plantilla de calendario editorial semanal (L/M/V)
+823	Guiones plantilla para tus primeros videos de contenido
+827	Plantilla de EPK (Electronic Press Kit) mínimo
+830	30. ANEXO: PROYECCIÓN FINANCIERA DE TU PRIMER AÑO INDEPENDIENTE
+832	Paso 1: Define tus costos fijos del primer año
+834	Paso 2: Proyecta tus flujos de ingreso, de forma conservadora
+836	Paso 3: Interpreta el resultado, no solo el número final
+838	Paso 4: Ajusta las variables a tu realidad
+840	La lección central de este capítulo
+842	31. PREGUNTAS FRECUENTES
+843	¿Necesito registrar cada canción individualmente, o basta con registrar mi nombre artístico?
+845	¿Puedo usar música con derechos de autor en mis redes sociales si no gano dinero directamente con es
+847	¿Qué pasa si mi canción se vuelve viral con un sample no autorizado?
+849	¿Es mejor firmar con un sello o quedarme independiente para siempre?
+851	¿Cuánto debería cobrar por una colaboración con una marca?
+853	¿Tengo que declarar el uso de IA en mi proceso creativo aunque no use voces clonadas?
+855	¿Qué hago si un colaborador se niega a firmar un acuerdo de split?
+857	¿Cuánto tiempo toma empezar a ver resultados reales de una estrategia de contenido consistente?
+859	¿Necesito un abogado distinto en cada país donde distribuyo mi música?
+861	¿Puedo cambiar de distribuidor digital sin perder mis streams y estadísticas acumuladas?
+863	¿Qué debo hacer si descubro que alguien está usando mi música sin autorización?
+865	¿Vale la pena pagar por publicidad paga (ads) siendo un artista independiente pequeño?
+867	¿Cómo sé si mi contrato actual tiene una cláusula de recoupment razonable o abusiva?
+869	¿Debo preocuparme por que una IA "robe" mi estilo musical?
+871	32. SOBRE IM MUSIC
+875	IM Music — REBEL LUXURY
+877	RECURSOS Y PRÓXIMOS PASOS
+879	Fuentes que vale la pena seguir de cerca
+883	Un hábito simple que resume todo el libro
+885	Palabras finales
+891	— IM Music, REBEL LUXURY
