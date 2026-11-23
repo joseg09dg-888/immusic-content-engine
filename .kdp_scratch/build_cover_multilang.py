@@ -139,13 +139,9 @@ def build():
     c.setFont("Helvetica", 7)
     c.drawCentredString(bc_x + bc_w / 2, bc_y + bc_h / 2, cfg["barcode_note"])
 
-    c.saveState()
-    c.translate(x_spine_start + (SPINE_IN * INCH) / 2, PAGE_H / 2)
-    c.rotate(90)
-    c.setFillColor(colors.white)
-    c.setFont("Anton", 11)
-    c.drawCentredString(0, -4, cfg["spine_text"])
-    c.restoreState()
+    # Lomo sin texto: a este numero de paginas el lomo mide menos de 0.19", y KDP
+    # exige 0.0625" de margen a cada lado del texto, dejando menos de 5pt utiles.
+    # Cualquier texto legible viola ese margen y KDP lo rechaza en revision.
 
     img_path = cfg["front_img"]
     c.drawImage(img_path, x_front_start, BLEED_IN * INCH, width=(TRIM_W + BLEED_IN) * INCH,

@@ -107,13 +107,10 @@ def build():
     c.drawCentredString(bc_x + bc_w / 2, bc_y + bc_h / 2, "Zona reservada para codigo de barras (KDP)")
 
     # --- Lomo ---
-    c.saveState()
-    c.translate(x_spine_start + (SPINE_IN * INCH) / 2, PAGE_H / 2)
-    c.rotate(90)
-    c.setFillColor(colors.white)
-    c.setFont("Anton", 11)
-    c.drawCentredString(0, -4, "MUSIC BUSINESS PARA TODOS LOS HUMANOS -- IM MUSIC")
-    c.restoreState()
+    # Sin texto: a 83 paginas el lomo mide ~0.187", y KDP exige 0.0625" de margen
+    # a cada lado del texto, dejando menos de 5pt utiles. Cualquier texto legible
+    # viola ese margen y KDP lo rechaza (correo de revision, lomo "too close to
+    # the edges"). El lomo queda en violeta solido, sin inscripcion.
 
     # --- Portada frontal (reutiliza el arte ya existente) ---
     img = Image.open(FRONT_IMG)
